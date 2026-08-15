@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #eef2f5;
+  --foreground: #111d28;
+  --muted: #5a6b78;
+  --border: #dae1e7;
+
+  /* Marque SAR : marine, rouge d'urgence, blanc. Le lime fluo est la couleur
+     tertiaire, réservée aux fonds sombres où elle claque ; sur fond clair,
+     c'est le bleu ciel de l'écusson qui prend le relais des accents. */
+  --marine: #0b2338;
+  --marine-clair: #16405f;
+  --marine-fonce: #061725;
+  --lime: #c4ff3d;
+  --lime-fonce: #a9e21f;
+  --ciel: #2e86c1;
+  --ciel-pale: #6fbbe0;
+  --ciel-doux: #e3eff8;
+  --vert: #3f8f4e;
+  --vert-doux: #e6f2e8;
+
+  /* Rouge réservé à l'urgence : signalement, ligne 24/7. */
+  --urgence: #cc2f26;
+  --urgence-doux: #fbe8e6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-marine: var(--marine);
+  --color-marine-clair: var(--marine-clair);
+  --color-marine-fonce: var(--marine-fonce);
+  --color-lime: var(--lime);
+  --color-lime-fonce: var(--lime-fonce);
+  --color-ciel: var(--ciel);
+  --color-ciel-pale: var(--ciel-pale);
+  --color-ciel-doux: var(--ciel-doux);
+  --color-vert: var(--vert);
+  --color-vert-doux: var(--vert-doux);
+  --color-urgence: var(--urgence);
+  --color-urgence-doux: var(--urgence-doux);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Les chiffres du compteur doivent garder une largeur fixe pour ne pas
+   faire sautiller la mise en page quand ils s'incrémentent. */
+.chiffres-tabulaires {
+  font-variant-numeric: tabular-nums;
+}

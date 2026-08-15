@@ -1,0 +1,18 @@
+node_modules
+.next
+out
+build
+.DS_Store
+*.pem
+npm-debug.log*
+.env*.local
+.vercel
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Archive du contenu aspiré de l'ancien site Shopify (48 Mo de HTML brut).
+# Seul contenu-source/texte est versionné : c'est la copie de référence pour
+# écrire les nouvelles pages.
+contenu-source/pages
+contenu-source/blogue
+contenu-source/data

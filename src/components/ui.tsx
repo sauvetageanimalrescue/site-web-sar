@@ -1,0 +1,306 @@
+﻿import Image from "next/image";
+import type { ReactNode } from "react";
+import { IconArrowRight } from "@tabler/icons-react";
+import { Link } from "@/i18n/navigation";
+
+// Un lien de contenu peut pointer ailleurs (Patreon, par exemple) : le Link de
+// next-intl préfixerait la locale à une URL absolue.
+function LienAction({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className: string;
+  children: ReactNode;
+}) {
+  if (/^https?:\/\//.test(href)) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={className}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  );
+}
+
+// En-tête de page : bandeau marine avec image de fond optionnelle.
+export function EnTetePage({
+  surtitre,
+  titre,
+  intro,
+  image,
+}: {
+  surtitre?: string;
+  titre: string;
+  intro?: string;
+  image?: string;
+}) {
+  return (
+    <section className="relative isolate overflow-hidden bg-marine">
+      {image && (
+        <>
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/85 to-marine/50" />
+        </>
+      )}
+      <div className="relative mx-auto max-w-7xl px-4 py-14 sm:py-20">
+        {surtitre && (
+          <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">
+            {surtitre}
+          </p>
+        )}
+        <h1 className="mt-3 max-w-4xl whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+          {titre}
+        </h1>
+        {intro && (
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-white/80">
+            {intro}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+export function Section({
+  titre,
+  children,
+  fond = false,
+  etroite = false,
+}: {
+  titre?: string;
+  children: ReactNode;
+  fond?: boolean;
+  etroite?: boolean;
+}) {
+  return (
+    <section className={fond ? "bg-surface-2 py-14" : "py-14"}>
+      <div
+        className={`mx-auto px-4 ${etroite ? "max-w-3xl" : "max-w-7xl"}`}
+      >
+        {titre && (
+          <h2 className="mb-6 font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine">
+            {titre}
+          </h2>
+        )}
+        {children}
+      </div>
+    </section>
+  );
+}
+
+// Bloc de texte long : interlignage confortable, largeur de lecture limitée.
+export function Prose({ children }: { children: ReactNode }) {
+  return (
+    <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-foreground/90">
+      {children}
+    </div>
+  );
+}
+
+// Liste simple : une colonne, pas d'encadré, pas d'aplat de couleur. Seule la
+// puce porte l'accent, et le texte garde sa largeur de lecture.
+export function ListePuces({
+  items,
+  teinte = "bg-ciel",
+}: {
+  items: string[];
+  teinte?: string;
+}) {
+  return (
+    <ul className="max-w-3xl space-y-2.5">
+      {items.map((item) => (
+        <li key={item} className="flex gap-3 text-foreground/90">
+          <span
+            className={`mt-2 size-2 shrink-0 rounded-full ${teinte}`}
+            aria-hidden
+          />
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function CarteLien({
+  href,
+  titre,
+  texte,
+  libelleLien,
+  image,
+}: {
+  href: string;
+  titre: string;
+  texte: string;
+  libelleLien: string;
+  image?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition hover:border-ciel hover:shadow-lg"
+    >
+      {image && (
+        <div className="relative aspect-[16/9] overflow-hidden bg-surface-2">
+          <Image
+            src={image}
+            alt=""
+            fill
+            sizes="(max-width: 640px) 100vw, 33vw"
+            className="object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="font-[family-name:var(--font-titre)] text-xl font-semibold uppercase tracking-wide text-marine">
+          {titre}
+        </h3>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{texte}</p>
+        <span className="mt-4 flex items-center gap-1 text-sm font-semibold text-ciel">
+          {libelleLien}
+          <IconArrowRight
+            className="size-4 transition group-hover:translate-x-1"
+            aria-hidden
+          />
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+// Section large : un bloc de texte et une image côte à côte, l'image passant
+// d'un côté puis de l'autre au fil de la page.
+export function SectionAlternee({
+  surtitre,
+  titre,
+  texte,
+  points,
+  image,
+  actions,
+  cote = "droite",
+  fond = false,
+}: {
+  surtitre?: string;
+  titre: string;
+  texte: string;
+  points?: string[];
+  image: string;
+  actions?: { href: string; libelle: string; principal?: boolean }[];
+  cote?: "droite" | "gauche";
+  fond?: boolean;
+}) {
+  return (
+    <section className={fond ? "bg-surface-2 py-16" : "py-16"}>
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2">
+        <div className={cote === "gauche" ? "lg:order-2" : undefined}>
+          {surtitre && (
+            <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-ciel sm:text-xl">
+              {surtitre}
+            </p>
+          )}
+          <h2 className="mt-2 whitespace-pre-line font-[family-name:var(--font-titre)] text-3xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-4xl">
+            {titre}
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-muted">{texte}</p>
+
+          {points && points.length > 0 && (
+            <ul className="mt-6 space-y-2">
+              {points.map((p) => (
+                <li key={p} className="flex gap-3 text-foreground/90">
+                  <span
+                    className="mt-2 size-2 shrink-0 rounded-full bg-ciel"
+                    aria-hidden
+                  />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {actions && actions.length > 0 && (
+            <div className="mt-8 flex flex-wrap gap-3">
+              {actions.map((a) => (
+                <LienAction
+                  key={a.href}
+                  href={a.href}
+                  className={
+                    a.principal
+                      ? "rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
+                      : "rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
+                  }
+                >
+                  {a.libelle}
+                </LienAction>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div
+          className={`relative aspect-[4/3] overflow-hidden rounded-xl border border-border ${
+            cote === "gauche" ? "lg:order-1" : ""
+          }`}
+        >
+          <Image
+            src={image}
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Encadré d'appel à l'action en fin de page.
+export function AppelAction({
+  titre,
+  texte,
+  actions,
+}: {
+  titre: string;
+  texte?: string;
+  actions: { href: string; libelle: string; principal?: boolean }[];
+}) {
+  return (
+    <section className="bg-marine py-14">
+      <div className="mx-auto max-w-4xl px-4 text-center">
+        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
+          {titre}
+        </h2>
+        {texte && (
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/75">{texte}</p>
+        )}
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {actions.map((a) => (
+            <LienAction
+              key={a.href}
+              href={a.href}
+              className={
+                a.principal
+                  ? "rounded-md bg-lime px-6 py-3.5 font-semibold text-marine transition hover:bg-lime-fonce"
+                  : "rounded-md border border-white/30 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
+              }
+            >
+              {a.libelle}
+            </LienAction>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

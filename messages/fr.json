@@ -77,6 +77,18 @@
         "titre": "Devenir bénévole",
         "texte": "Cinq fonctions, de la répartition à distance au sauvetage technique."
       },
+      "dons": {
+        "titre": "Faire un don"
+      },
+      "formations": {
+        "titre": "Formations"
+      },
+      "stages": {
+        "titre": "Stages d'observation"
+      },
+      "ateliers": {
+        "titre": "Ateliers scolaires"
+      },
       "services": {
         "titre": "Nos services",
         "texte": "Secours technique, soutien aux municipalités, ateliers dans les écoles."

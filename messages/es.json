@@ -77,6 +77,18 @@
         "titre": "Ser voluntario",
         "texte": "Cinco funciones, del despacho a distancia al rescate técnico."
       },
+      "dons": {
+        "titre": "Donar"
+      },
+      "formations": {
+        "titre": "Formaciones"
+      },
+      "stages": {
+        "titre": "Jornadas de observación"
+      },
+      "ateliers": {
+        "titre": "Talleres escolares"
+      },
       "services": {
         "titre": "Nuestros servicios",
         "texte": "Rescate técnico, apoyo a los municipios, talleres en las escuelas."

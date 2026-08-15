@@ -77,6 +77,18 @@
         "titre": "Volunteer with us",
         "texte": "Five functions, from remote dispatch to technical rescue."
       },
+      "dons": {
+        "titre": "Donate"
+      },
+      "formations": {
+        "titre": "Training"
+      },
+      "stages": {
+        "titre": "Observation days"
+      },
+      "ateliers": {
+        "titre": "School workshops"
+      },
       "services": {
         "titre": "Our services",
         "texte": "Technical rescue, support for municipalities, workshops in schools."

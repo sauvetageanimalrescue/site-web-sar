@@ -9,13 +9,17 @@ import { FilInterventions } from "@/components/fil-interventions";
 import { lireStatistiques } from "@/lib/statistiques";
 import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 
-// Quatre portes d'entrée seulement : au-delà, une grille de cartes cesse
-// d'orienter le visiteur et devient un mur à parcourir.
+// Deux rangées de quatre. La première regroupe les gestes que le visiteur
+// peut poser tout de suite, la seconde ce que l'organisation offre.
 const CARTES = [
   { cle: "signalement", href: "/signalement", image: "/images/carte-signalement.jpg" },
   { cle: "membre", href: "/membre", image: "/images/carte-membre-2026.jpg" },
-  { cle: "services", href: "/services", image: "/images/carte-services.jpg" },
+  { cle: "dons", href: "/dons", image: "/images/carte-dons.jpg" },
   { cle: "recrutement", href: "/recrutement", image: "/images/carte-benevole.jpg" },
+  { cle: "services", href: "/services", image: "/images/carte-services.jpg" },
+  { cle: "formations", href: "/formations", image: "/images/carte-formations.jpg" },
+  { cle: "stages", href: "/stages", image: "/images/carte-stages.jpg" },
+  { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
 ] as const;
 
 function Hero() {
@@ -124,35 +128,6 @@ function Sections() {
         ]}
       />
 
-      <SectionAlternee
-        cote="gauche"
-        surtitre={t("territoireSurtitre")}
-        titre={t("territoireTitre")}
-        texte={t("territoireTexte")}
-        image="/images/territoire.jpg"
-        actions={[{ href: "/territoire", libelle: t("territoireAction") }]}
-      />
-
-      <SectionAlternee
-        fond
-        cote="droite"
-        surtitre={t("formationsSurtitre")}
-        titre={t("formationsTitre")}
-        texte={t("formationsTexte")}
-        image="/images/formations.jpg"
-        actions={[{ href: "/formations", libelle: t("formationsAction") }]}
-      />
-
-      <SectionAlternee
-        cote="gauche"
-        surtitre={t("stagesSurtitre")}
-        titre={t("stagesTitre")}
-        texte={t("stagesTexte")}
-        image="/images/stages.jpg"
-        actions={[
-          { href: "/stages", libelle: t("stagesAction"), principal: true },
-        ]}
-      />
     </>
   );
 }

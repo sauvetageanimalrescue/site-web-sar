@@ -132,7 +132,6 @@ function Sections() {
         surtitre={t("territoireSurtitre")}
         titre={t("territoireTitre")}
         texte={t("territoireTexte")}
-        points={t.raw("territoirePoints") as string[]}
         image="/images/territoire.jpg"
         actions={[{ href: "/territoire", libelle: t("territoireAction") }]}
       />
@@ -143,7 +142,6 @@ function Sections() {
         surtitre={t("formationsSurtitre")}
         titre={t("formationsTitre")}
         texte={t("formationsTexte")}
-        points={t.raw("formationsPoints") as string[]}
         image="/images/formations.jpg"
         actions={[{ href: "/formations", libelle: t("formationsAction") }]}
       />
@@ -153,7 +151,6 @@ function Sections() {
         surtitre={t("stagesSurtitre")}
         titre={t("stagesTitre")}
         texte={t("stagesTexte")}
-        points={t.raw("stagesPoints") as string[]}
         image="/images/stages.jpg"
         actions={[
           { href: "/stages", libelle: t("stagesAction"), principal: true },

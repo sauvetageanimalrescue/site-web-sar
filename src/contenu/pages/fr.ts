@@ -300,7 +300,7 @@ export const PAGES_FR: CataloguePages = {
     ],
     actions: [
       { href: "/signalement", libelle: "Signaler un animal", principal: true },
-      { href: "/territoire", libelle: "Voir le territoire couvert" },
+      { href: "/territoire", libelle: "Voir le territoire desservi" },
     ],
   },
 
@@ -337,7 +337,7 @@ export const PAGES_FR: CataloguePages = {
       },
     ],
     actions: [
-      { href: "/territoire", libelle: "Voir le territoire couvert", principal: true },
+      { href: "/territoire", libelle: "Voir le territoire desservi", principal: true },
     ],
   },
 

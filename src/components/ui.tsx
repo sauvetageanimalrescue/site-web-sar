@@ -202,7 +202,6 @@ export function SectionAlternee({
   surtitre,
   titre,
   texte,
-  points,
   image,
   actions,
   cote = "droite",
@@ -212,7 +211,6 @@ export function SectionAlternee({
   surtitre?: string;
   titre: string;
   texte: string;
-  points?: string[];
   image: string;
   actions?: { href: string; libelle: string; principal?: boolean }[];
   cote?: "droite" | "gauche";
@@ -234,20 +232,6 @@ export function SectionAlternee({
             {titre}
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted">{texte}</p>
-
-          {points && points.length > 0 && (
-            <ul className="mt-6 space-y-2">
-              {points.map((p) => (
-                <li key={p} className="flex gap-3 text-foreground/90">
-                  <span
-                    className="mt-2 size-2 shrink-0 rounded-full bg-ciel"
-                    aria-hidden
-                  />
-                  {p}
-                </li>
-              ))}
-            </ul>
-          )}
 
           {actions && actions.length > 0 && (
             <div className="mt-8 flex flex-wrap gap-3">
@@ -278,7 +262,7 @@ export function SectionAlternee({
               width={972}
               height={1594}
               sizes="(max-width: 1024px) 60vw, 30vw"
-              className="w-full max-w-[300px] rotate-6 rounded-xl shadow-2xl transition duration-500 hover:rotate-3 sm:max-w-[340px]"
+              className="w-full max-w-[240px] rotate-6 rounded-xl shadow-2xl transition duration-500 hover:rotate-3 sm:max-w-[272px]"
             />
           </div>
         ) : (

@@ -24,7 +24,7 @@
     "mission": "Notre mission",
     "direction": "Direction générale",
     "equipe": "L'équipe",
-    "territoire": "Territoire",
+    "territoire": "Territoire desservi",
     "partenaires": "Partenaires",
     "medias": "Dans les médias",
     "statistiques": "Statistiques",
@@ -90,7 +90,7 @@
       "Des interventions en hauteur, sur glace, en égout et en espace clos",
       "Une équipe de répartition qui traite chaque signalement, jour et nuit"
     ],
-    "territoireAction": "Voir le territoire couvert",
+    "territoireAction": "Voir le territoire desservi",
     "formationsTitre": "Savoir quoi faire\nen cas d'urgence",
     "formationsSurtitre": "Formations",
     "formationsTexte": "Nos formations s'adressent aux propriétaires d'animaux comme aux intervenants qui rencontrent des animaux dans leur travail : services de police, services d'incendie, entreprises et milieu animalier. Reconnaître une urgence, approcher sans se faire mordre, réagir correctement en attendant le vétérinaire.",
@@ -108,7 +108,7 @@
       "Le même tarif pour une ou deux personnes",
       "14 ans et plus, beau temps mauvais temps"
     ],
-    "stagesAction": "Réserver un stage",
+    "stagesAction": "Voir les dates disponibles",
     "interventionsTitre": "Dernières interventions",
     "interventionsTexte": "Chaque ligne est une mission fermée avec succès, publiée automatiquement depuis notre registre opérationnel.",
     "interventionsVide": "Aucune intervention récente à afficher.",

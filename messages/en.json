@@ -24,7 +24,7 @@
     "mission": "Our mission",
     "direction": "Executive director",
     "equipe": "The team",
-    "territoire": "Territory",
+    "territoire": "Service area",
     "partenaires": "Partners",
     "medias": "In the media",
     "statistiques": "Statistics",
@@ -90,7 +90,7 @@
       "Calls at height, on ice, in sewers and in confined spaces",
       "A dispatch team handling every report, day and night"
     ],
-    "territoireAction": "See the territory",
+    "territoireAction": "See the service area",
     "formationsTitre": "Knowing what to do\nin an emergency",
     "formationsSurtitre": "Training",
     "formationsTexte": "Our courses are built for pet owners and for anyone who encounters animals at work: police, fire services, businesses and animal care staff. Recognize an emergency, approach without being bitten, act correctly while the vet is still minutes away.",
@@ -108,7 +108,7 @@
       "The same price for one or two people",
       "14 and over, rain or shine"
     ],
-    "stagesAction": "Book an observation day",
+    "stagesAction": "See available dates",
     "interventionsTitre": "Latest rescues",
     "interventionsTexte": "Every line is a mission closed successfully, published automatically from our operational registry.",
     "interventionsVide": "No recent rescues to display.",

@@ -24,7 +24,7 @@
     "mission": "Nuestra misión",
     "direction": "Dirección general",
     "equipe": "El equipo",
-    "territoire": "Territorio",
+    "territoire": "Territorio atendido",
     "partenaires": "Socios",
     "medias": "En los medios",
     "statistiques": "Estadísticas",
@@ -90,7 +90,7 @@
       "Intervenciones en altura, sobre hielo, en alcantarillas y en espacios confinados",
       "Un equipo de despacho que atiende cada aviso, de día y de noche"
     ],
-    "territoireAction": "Ver el territorio cubierto",
+    "territoireAction": "Ver el territorio atendido",
     "formationsTitre": "Saber qué hacer\nen una urgencia",
     "formationsSurtitre": "Formaciones",
     "formationsTexte": "Nuestras formaciones se dirigen tanto a propietarios de animales como a profesionales que encuentran animales en su trabajo: policía, bomberos, empresas y sector animal. Reconocer una urgencia, acercarse sin que le muerdan, reaccionar correctamente mientras llega el veterinario.",
@@ -108,7 +108,7 @@
       "El mismo precio para una o dos personas",
       "A partir de 14 años, haga el tiempo que haga"
     ],
-    "stagesAction": "Reservar una jornada",
+    "stagesAction": "Ver las fechas disponibles",
     "interventionsTitre": "Últimas intervenciones",
     "interventionsTexte": "Cada línea es una misión cerrada con éxito, publicada automáticamente desde nuestro registro operativo.",
     "interventionsVide": "No hay intervenciones recientes que mostrar.",

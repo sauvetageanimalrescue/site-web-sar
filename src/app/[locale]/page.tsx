@@ -1,9 +1,9 @@
 ﻿import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { IconArrowRight, IconPhoneFilled } from "@tabler/icons-react";
+import { IconPhoneFilled } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
-import { SectionAlternee } from "@/components/ui";
+import { SectionAlternee, Chevron } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { FilInterventions } from "@/components/fil-interventions";
 import { lireStatistiques } from "@/lib/statistiques";
@@ -12,9 +12,9 @@ import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 // Quatre portes d'entrée seulement : au-delà, une grille de cartes cesse
 // d'orienter le visiteur et devient un mur à parcourir.
 const CARTES = [
-  { cle: "signalement", href: "/signalement", image: "/images/carte-signalement.jpg" },
+  { cle: "signalement", href: "/signalement", image: "/images/carte-membre-2026.jpg" },
   { cle: "membre", href: "/membre", image: "/images/carte-membre.jpg" },
-  { cle: "services", href: "/services", image: "/images/services-urgence.png" },
+  { cle: "services", href: "/services", image: "/images/carte-signalement.jpg" },
   { cle: "recrutement", href: "/recrutement", image: "/images/carte-benevole.jpg" },
 ] as const;
 
@@ -81,7 +81,7 @@ function Cartes() {
           <Link
             key={carte.cle}
             href={carte.href}
-            className="group relative isolate flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-xl bg-marine ring-1 ring-marine/20 transition hover:ring-2 hover:ring-lime"
+            className="group relative isolate flex aspect-square flex-col justify-end overflow-hidden rounded-xl bg-marine ring-1 ring-marine/20 transition hover:ring-2 hover:ring-lime"
           >
             <Image
               src={carte.image}
@@ -90,7 +90,9 @@ function Cartes() {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               className="-z-10 object-cover transition duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine via-marine/85 to-marine/10" />
+            {/* Dégradé resserré vers le bas : il doit porter le titre, pas
+                assombrir toute la photo. */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine from-5% via-marine/70 via-28% to-transparent to-62%" />
 
             {/* Le titre suffit : la carte entière est cliquable, et une
                 description sous chaque vignette alourdissait la rangée. */}
@@ -98,10 +100,7 @@ function Cartes() {
               <h3 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase leading-tight tracking-wide text-white">
                 {t(`cartes.${carte.cle}.titre`)}
               </h3>
-              <IconArrowRight
-                className="size-6 shrink-0 text-lime transition group-hover:translate-x-1"
-                aria-hidden
-              />
+              <Chevron className="size-6 shrink-0 text-lime transition group-hover:translate-x-1" />
             </div>
           </Link>
         ))}

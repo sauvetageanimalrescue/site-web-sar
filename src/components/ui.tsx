@@ -110,6 +110,22 @@ export function Prose({ children }: { children: ReactNode }) {
   );
 }
 
+// Chevron plein, dessiné plutôt que tracé : une pointe massive dont les bras
+// sont coupés à l'horizontale en haut et en bas. Les icônes de bibliothèque
+// sont des traits fins, impossibles à épaissir sans arrondir les bouts.
+export function Chevron({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+      className={className}
+    >
+      <polygon points="5,2 11.3,2 19,12 11.3,22 5,22 12.6,12" />
+    </svg>
+  );
+}
+
 // Liste simple : une colonne, pas d'encadré, pas d'aplat de couleur. Seule la
 // puce porte l'accent, et le texte garde sa largeur de lecture.
 export function ListePuces({

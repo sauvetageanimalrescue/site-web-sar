@@ -14,8 +14,8 @@ import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 const CARTES = [
   { cle: "signalement", href: "/signalement", image: "/images/hero-accueil.png" },
   { cle: "membre", href: "/membre", image: "/images/carte-membre-2026.jpg" },
+  { cle: "services", href: "/services", image: "/images/services-urgence.png" },
   { cle: "recrutement", href: "/recrutement", image: "/images/recrutement.jpg" },
-  { cle: "fiches", href: "/informations", image: "/images/formations.jpg" },
 ] as const;
 
 function Hero() {
@@ -75,28 +75,30 @@ function Cartes() {
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {CARTES.map((carte) => (
+          // Cartes sur fond marine, comme la bannière : sur une page claire,
+          // un aplat blanc sur blanc ne se détache de rien.
           <Link
             key={carte.cle}
             href={carte.href}
-            className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition hover:border-ciel hover:shadow-lg"
+            className="group flex flex-col overflow-hidden rounded-xl bg-marine ring-1 ring-marine transition hover:ring-2 hover:ring-lime hover:shadow-xl"
           >
-            <div className="relative aspect-[16/10] overflow-hidden bg-surface-2">
+            <div className="relative aspect-[16/10] overflow-hidden bg-marine-fonce">
               <Image
                 src={carte.image}
                 alt=""
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover transition duration-500 group-hover:scale-105"
+                className="object-cover opacity-90 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
               />
             </div>
             <div className="flex flex-1 flex-col p-5">
-              <h3 className="font-[family-name:var(--font-titre)] text-xl font-semibold uppercase tracking-wide text-marine">
+              <h3 className="font-[family-name:var(--font-titre)] text-xl font-semibold uppercase tracking-wide text-white">
                 {t(`cartes.${carte.cle}.titre`)}
               </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">
                 {t(`cartes.${carte.cle}.texte`)}
               </p>
-              <span className="mt-4 flex items-center gap-1 text-sm font-semibold text-ciel">
+              <span className="mt-4 flex items-center gap-1 text-sm font-semibold text-lime">
                 {c("enSavoirPlus")}
                 <IconArrowRight
                   className="size-4 transition group-hover:translate-x-1"

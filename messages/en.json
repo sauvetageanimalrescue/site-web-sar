@@ -77,9 +77,9 @@
         "titre": "Volunteer with us",
         "texte": "Five functions, from remote dispatch to technical rescue."
       },
-      "fiches": {
-        "titre": "Info sheets",
-        "texte": "What to do, what to avoid and who to call, animal by animal."
+      "services": {
+        "titre": "Our services",
+        "texte": "Technical rescue, support for municipalities, workshops in schools."
       }
     },
     "territoireTitre": "82 municipalities,\none team",
@@ -91,7 +91,7 @@
       "A dispatch team handling every report, day and night"
     ],
     "territoireAction": "See the territory",
-    "formationsTitre": "Knowing what to do\nbefore the vet",
+    "formationsTitre": "Knowing what to do\nin an emergency",
     "formationsSurtitre": "Training",
     "formationsTexte": "Our courses are built for pet owners and for anyone who encounters animals at work: police, fire services, businesses and animal care staff. Recognize an emergency, approach without being bitten, act correctly while the vet is still minutes away.",
     "formationsPoints": [
@@ -100,7 +100,7 @@
       "Custom training for emergency services"
     ],
     "formationsAction": "See the courses",
-    "stagesTitre": "A day\nin the truck",
+    "stagesTitre": "Join the team\nfor a day",
     "stagesSurtitre": "Observation days",
     "stagesTexte": "Eight straight hours with a team on duty, from the meeting point to the last call of the day. You watch the calls come in, the decisions get made and the animals leave safely. It is the most honest way to understand what we do.",
     "stagesPoints": [

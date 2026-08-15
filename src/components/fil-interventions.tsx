@@ -1,5 +1,5 @@
 ﻿import { getLocale, getTranslations } from "next-intl/server";
-import { IconPawFilled, IconMapPin } from "@tabler/icons-react";
+import { IconMapPin } from "@tabler/icons-react";
 import type { Locale } from "@/i18n/routing";
 import { libelleEspece, libelleCodeFin } from "@/lib/especes";
 import { lireInterventionsRecentes } from "@/lib/statistiques";
@@ -37,8 +37,7 @@ export async function FilInterventions({ limite = 8 }: { limite?: number }) {
               className="rounded-xl border border-border bg-surface p-4"
             >
               <div className="flex items-start justify-between gap-2">
-                <span className="flex items-center gap-2 font-semibold text-marine">
-                  <IconPawFilled className="size-5 shrink-0 text-ciel" aria-hidden />
+                <span className="font-semibold text-marine">
                   {libelleEspece(i.espece_code, locale)}
                 </span>
                 {i.sauves > 1 && (

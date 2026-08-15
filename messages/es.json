@@ -77,9 +77,9 @@
         "titre": "Ser voluntario",
         "texte": "Cinco funciones, del despacho a distancia al rescate técnico."
       },
-      "fiches": {
-        "titre": "Fichas informativas",
-        "texte": "Qué hacer, qué evitar y a quién llamar, animal por animal."
+      "services": {
+        "titre": "Nuestros servicios",
+        "texte": "Rescate técnico, apoyo a los municipios, talleres en las escuelas."
       }
     },
     "territoireTitre": "82 municipios,\nun solo equipo",
@@ -91,7 +91,7 @@
       "Un equipo de despacho que atiende cada aviso, de día y de noche"
     ],
     "territoireAction": "Ver el territorio cubierto",
-    "formationsTitre": "Saber qué hacer\nantes del veterinario",
+    "formationsTitre": "Saber qué hacer\nen una urgencia",
     "formationsSurtitre": "Formaciones",
     "formationsTexte": "Nuestras formaciones se dirigen tanto a propietarios de animales como a profesionales que encuentran animales en su trabajo: policía, bomberos, empresas y sector animal. Reconocer una urgencia, acercarse sin que le muerdan, reaccionar correctamente mientras llega el veterinario.",
     "formationsPoints": [
@@ -100,7 +100,7 @@
       "Formaciones a medida para servicios de emergencia"
     ],
     "formationsAction": "Ver las formaciones",
-    "stagesTitre": "Un día\nen el camión",
+    "stagesTitre": "Forme parte del equipo\ndurante un día",
     "stagesSurtitre": "Jornadas de observación",
     "stagesTexte": "Ocho horas seguidas con un equipo de servicio, desde el punto de encuentro hasta la última intervención del día. Ve llegar las llamadas, tomarse las decisiones y a los animales marcharse a salvo. Es la forma más honesta de entender lo que hacemos.",
     "stagesPoints": [

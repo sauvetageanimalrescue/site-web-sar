@@ -222,6 +222,50 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  services: {
+    surtitre: "Ce que nous offrons",
+    titre: "Nos services",
+    intro:
+      "Sauvetage Animal Rescue n'est pas un refuge. Nous sommes une équipe de secours technique : nous allons chercher l'animal là où il est coincé, nous le sécurisons, et nous le remettons entre de bonnes mains.",
+    image: "/images/services-urgence.png",
+    blocs: [
+      {
+        titre: "Secours et sauvetage",
+        texte: [
+          "Notre service principal. Travail en hauteur, espaces clos, glace, bords d'autoroute, capture d'animaux réactifs. Sur appel, partout sur le territoire de la Communauté métropolitaine de Montréal.",
+        ],
+      },
+      {
+        titre: "Soutien aux municipalités",
+        texte: [
+          "Les appels animaliers arrivent aux villes sans qu'elles disposent toujours du matériel de cordage ou de la formation en espace clos. Nous offrons cette capacité en soutien de vos services existants, plutôt que de vous obliger à l'équiper vous-mêmes.",
+        ],
+      },
+      {
+        titre: "Ateliers dans les écoles",
+        texte: [
+          "Des ateliers adaptés au primaire et au secondaire, donnés directement en classe. Reconnaître un animal en détresse, savoir qui appeler, comprendre la surpopulation animale et les métiers du milieu.",
+        ],
+      },
+      {
+        titre: "Assistance aux services d'urgence",
+        texte: [
+          "Un animal sur une scène d'intervention change la donne : il peut blesser un intervenant, fuir vers la circulation ou bloquer l'accès à une victime. Nous intervenons en appui des services de police et d'incendie, et nous formons leur personnel.",
+        ],
+      },
+    ],
+    actions: [
+      {
+        href: "/services/interventions",
+        libelle: "Secours et sauvetage",
+        principal: true,
+      },
+      { href: "/services/municipalites", libelle: "Municipalités" },
+      { href: "/ateliers/primaire", libelle: "Ateliers au primaire" },
+      { href: "/ateliers/secondaire", libelle: "Ateliers au secondaire" },
+    ],
+  },
+
   "services/interventions": {
     surtitre: "Notre service principal",
     titre: "Secours et sauvetage",

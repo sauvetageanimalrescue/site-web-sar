@@ -77,9 +77,9 @@
         "titre": "Devenir bénévole",
         "texte": "Cinq fonctions, de la répartition à distance au sauvetage technique."
       },
-      "fiches": {
-        "titre": "Fiches informatives",
-        "texte": "Quoi faire, quoi éviter et qui appeler, animal par animal."
+      "services": {
+        "titre": "Nos services",
+        "texte": "Secours technique, soutien aux municipalités, ateliers dans les écoles."
       }
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",
@@ -91,7 +91,7 @@
       "Une équipe de répartition qui traite chaque signalement, jour et nuit"
     ],
     "territoireAction": "Voir le territoire couvert",
-    "formationsTitre": "Savoir quoi faire\navant le vétérinaire",
+    "formationsTitre": "Savoir quoi faire\nen cas d'urgence",
     "formationsSurtitre": "Formations",
     "formationsTexte": "Nos formations s'adressent aux propriétaires d'animaux comme aux intervenants qui rencontrent des animaux dans leur travail : services de police, services d'incendie, entreprises et milieu animalier. Reconnaître une urgence, approcher sans se faire mordre, réagir correctement en attendant le vétérinaire.",
     "formationsPoints": [
@@ -100,7 +100,7 @@
       "Formations sur mesure pour les services d'urgence"
     ],
     "formationsAction": "Voir les formations",
-    "stagesTitre": "Une journée\ndans le camion",
+    "stagesTitre": "Faites partie de l'équipe\nle temps d'une journée",
     "stagesSurtitre": "Stages d'observation",
     "stagesTexte": "Huit heures consécutives avec une équipe en service, du point de rencontre jusqu'à la dernière intervention de la journée. Vous voyez les appels arriver, les décisions se prendre et les animaux repartir en sécurité. C'est la façon la plus honnête de comprendre ce que nous faisons.",
     "stagesPoints": [

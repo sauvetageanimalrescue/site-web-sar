@@ -29,13 +29,16 @@ function Hero() {
     // Bannière sur aplat marine, avec l'écusson en filigrane à droite : le
     // titre reste parfaitement lisible et l'identité s'impose d'entrée.
     <section className="relative isolate overflow-hidden bg-marine">
+      {/* Le fond est fourni déjà composé, sur le même marine que la section :
+          il se raccorde donc sans couture quelle que soit la largeur. Cadré à
+          droite pour que l'écusson reste hors du texte. */}
       <Image
-        src="/images/hero-filigrane.png"
+        src="/images/hero-fond.png"
         alt=""
-        width={1400}
-        height={1400}
+        fill
         priority
-        className="pointer-events-none absolute -right-24 top-1/2 -z-10 h-[190%] w-auto -translate-y-1/2 rotate-[15deg] opacity-[0.13] sm:-right-10"
+        sizes="100vw"
+        className="-z-10 object-cover object-right"
       />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">
         <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">

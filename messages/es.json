@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Sauvetage Animal Rescue • Rescate técnico de animales en peligro",
-    "description": "Desde 2010, Sauvetage Animal Rescue rescata animales en peligro en toda el área metropolitana de Montreal: árboles, tejados, alcantarillas, hielo y autopistas. Línea de aviso 24/7."
+    "description": "Sauvetage Animal Rescue rescata animales en peligro en todo el territorio de la Comunidad metropolitana de Montreal: árboles, tejados, alcantarillas, hielo. Socorro y rescate técnico. Línea de aviso abierta a toda hora."
   },
   "urgence": {
     "etiquette": "Animal en peligro",
@@ -59,7 +59,7 @@
   "accueil": {
     "heroSurtitre": "Sauvetage Animal Rescue",
     "heroTitre": "Nadie más va.\nNosotros sí.",
-    "heroTexte": "En los árboles, en los tejados, en las alcantarillas, sobre el hielo y a lo largo de las autopistas. Desde 2010, un equipo formado en rescate técnico atiende a los animales en peligro en toda el área metropolitana de Montreal.",
+    "heroTexte": "En los árboles, en los tejados, en las alcantarillas y sobre el hielo. Un equipo formado en socorro y en rescate técnico atiende a los animales en peligro en toda la Comunidad metropolitana de Montreal.",
     "heroSignaler": "Reportar un animal en peligro",
     "heroMembre": "Hacerse miembro",
     "sectionsTitre": "Por dónde empezar",

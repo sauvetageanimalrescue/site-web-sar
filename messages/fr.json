@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Sauvetage Animal Rescue • Secours technique d'animaux en détresse",
-    "description": "Depuis 2010, Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté métropolitaine de Montréal : arbres, toits, égouts, glaces, autoroutes. Ligne de signalement 24/7."
+    "description": "Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté métropolitaine de Montréal : arbres, toits, égouts, glaces. Secours et sauvetage technique. Ligne de signalement ouverte en tout temps."
   },
   "urgence": {
     "etiquette": "Animal en détresse",
@@ -59,7 +59,7 @@
   "accueil": {
     "heroSurtitre": "Sauvetage Animal Rescue",
     "heroTitre": "Personne d'autre n'y va,\nnous y allons.",
-    "heroTexte": "Dans les arbres, sur les toits, dans les égouts, sur les glaces et le long des autoroutes. Depuis 2010, une équipe formée au secours technique intervient auprès des animaux en détresse partout dans la région métropolitaine de Montréal.",
+    "heroTexte": "Dans les arbres, sur les toits, dans les égouts et sur les glaces. Une équipe formée au secours et au sauvetage technique intervient auprès des animaux en détresse partout dans la Communauté métropolitaine de Montréal.",
     "heroSignaler": "Signaler un animal en détresse",
     "heroMembre": "Devenir membre",
     "sectionsTitre": "Par où commencer",

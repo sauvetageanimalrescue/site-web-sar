@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Sauvetage Animal Rescue • Technical rescue for animals in distress",
-    "description": "Since 2010, Sauvetage Animal Rescue has rescued animals in distress across the Montréal metropolitan area: trees, rooftops, sewers, ice and highways. Reporting line open 24/7."
+    "description": "Sauvetage Animal Rescue rescues animals in distress across the Montréal Metropolitan Community: trees, rooftops, sewers, ice. Rescue and technical rescue. Reporting line open at all hours."
   },
   "urgence": {
     "etiquette": "Animal in distress",
@@ -59,7 +59,7 @@
   "accueil": {
     "heroSurtitre": "Sauvetage Animal Rescue",
     "heroTitre": "No one else will go.\nWe go.",
-    "heroTexte": "In trees, on rooftops, down sewers, out on the ice and along highways. Since 2010, a team trained in technical rescue has responded to animals in distress across the Montréal metropolitan area.",
+    "heroTexte": "In trees, on rooftops, down sewers and out on the ice. A team trained in rescue and in technical rescue responds to animals in distress across the Montréal Metropolitan Community.",
     "heroSignaler": "Report an animal in distress",
     "heroMembre": "Become a member",
     "sectionsTitre": "Where to start",

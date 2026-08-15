@@ -82,10 +82,10 @@ export const PAGES_FR: CataloguePages = {
   },
 
   territoire: {
-    surtitre: "Communauté métropolitaine de Montréal",
+    surtitre: "Communauté Métropolitaine de Montréal",
     titre: "Notre territoire",
     intro:
-      "Sauvetage Animal Rescue intervient sur l'ensemble du territoire de la Communauté métropolitaine de Montréal : 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière.",
+      "Sauvetage Animal Rescue intervient sur l'ensemble du territoire de la Communauté Métropolitaine de Montréal : 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière.",
     image: "/images/territoire.jpg",
     blocs: [
       {
@@ -232,7 +232,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Secours et sauvetage",
         texte: [
-          "Notre service principal. Travail en hauteur, espaces clos, glace, bords d'autoroute, capture d'animaux réactifs. Sur appel, partout sur le territoire de la Communauté métropolitaine de Montréal.",
+          "Notre service principal. Travail en hauteur, espaces clos, glace, bords d'autoroute, capture d'animaux réactifs. Sur appel, partout sur le territoire de la Communauté Métropolitaine de Montréal.",
         ],
       },
       {
@@ -294,7 +294,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Pour qui",
         texte: [
-          "Nous intervenons pour les citoyens, les services animaliers municipaux, les services de police et d'incendie, les refuges, les entreprises et les gestionnaires d'immeubles. Le service est offert sur l'ensemble du territoire de la Communauté métropolitaine de Montréal.",
+          "Nous intervenons pour les citoyens, les services animaliers municipaux, les services de police et d'incendie, les refuges, les entreprises et les gestionnaires d'immeubles. Le service est offert sur l'ensemble du territoire de la Communauté Métropolitaine de Montréal.",
         ],
       },
     ],

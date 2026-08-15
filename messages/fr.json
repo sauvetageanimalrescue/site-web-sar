@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Sauvetage Animal Rescue • Secours technique d'animaux en détresse",
-    "description": "Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté métropolitaine de Montréal : arbres, toits, égouts, glaces. Secours et sauvetage technique. Ligne de signalement ouverte en tout temps."
+    "description": "Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté Métropolitaine de Montréal : arbres, toits, égouts, glaces. Secours et sauvetage technique. Ligne de signalement ouverte en tout temps."
   },
   "urgence": {
     "etiquette": "Animal en détresse",
@@ -59,7 +59,7 @@
   "accueil": {
     "heroSurtitre": "Sauvetage Animal Rescue",
     "heroTitre": "Personne d'autre n'y va,\nnous y allons.",
-    "heroTexte": "Dans les arbres, sur les toits, dans les égouts et sur les glaces. Une équipe formée au secours et au sauvetage technique intervient auprès des animaux en détresse partout dans la Communauté métropolitaine de Montréal.",
+    "heroTexte": "Dans les arbres, sur les toits, dans les égouts et sur les glaces. Une équipe formée au secours et au sauvetage technique intervient auprès des animaux en détresse partout dans la Communauté Métropolitaine de Montréal.",
     "heroSignaler": "Signaler un animal en détresse",
     "heroMembre": "Devenir membre",
     "sectionsTitre": "Par où commencer",
@@ -96,7 +96,7 @@
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",
     "territoireSurtitre": "Notre territoire",
-    "territoireTexte": "Sauvetage Animal Rescue couvre l'ensemble de la Communauté métropolitaine de Montréal : Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Quatre mille kilomètres carrés où se croisent quartiers denses, banlieues, zones agricoles et milieux naturels protégés.",
+    "territoireTexte": "Sauvetage Animal Rescue couvre l'ensemble de la Communauté Métropolitaine de Montréal : Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Quatre mille kilomètres carrés où se croisent quartiers denses, banlieues, zones agricoles et milieux naturels protégés.",
     "territoirePoints": [
       "4,2 millions de résidents, près de la moitié de la population québécoise",
       "Des interventions en hauteur, sur glace, en égout et en espace clos",
@@ -345,7 +345,7 @@
   "signalement": {
     "titre": "Signaler un animal en détresse",
     "surtitre": "Ligne ouverte en tout temps",
-    "intro": "Un animal coincé, blessé, orphelin ou en danger sur le territoire de la Communauté métropolitaine de Montréal ? Voici comment nous joindre et ce qu'il faut nous dire.",
+    "intro": "Un animal coincé, blessé, orphelin ou en danger sur le territoire de la Communauté Métropolitaine de Montréal ? Voici comment nous joindre et ce qu'il faut nous dire.",
     "urgenceTitre": "C'est urgent : appelez",
     "urgenceTexte": "L'animal est en danger immédiat, blessé, dans l'eau ou coincé depuis plusieurs heures. Le téléphone reste le moyen le plus rapide : un répartiteur prend l'appel et mobilise une équipe.",
     "urgenceLigne": "Ligne de signalement",

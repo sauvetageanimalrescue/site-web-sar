@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Sauvetage Animal Rescue • Rescate técnico de animales en peligro",
-    "description": "Sauvetage Animal Rescue rescata animales en peligro en todo el territorio de la Comunidad metropolitana de Montreal: árboles, tejados, alcantarillas, hielo. Socorro y rescate técnico. Línea de aviso abierta a toda hora."
+    "description": "Sauvetage Animal Rescue rescata animales en peligro en todo el territorio de la Comunidad Metropolitana de Montreal: árboles, tejados, alcantarillas, hielo. Socorro y rescate técnico. Línea de aviso abierta a toda hora."
   },
   "urgence": {
     "etiquette": "Animal en peligro",
@@ -59,7 +59,7 @@
   "accueil": {
     "heroSurtitre": "Sauvetage Animal Rescue",
     "heroTitre": "Nadie más va.\nNosotros sí.",
-    "heroTexte": "En los árboles, en los tejados, en las alcantarillas y sobre el hielo. Un equipo formado en socorro y en rescate técnico atiende a los animales en peligro en toda la Comunidad metropolitana de Montreal.",
+    "heroTexte": "En los árboles, en los tejados, en las alcantarillas y sobre el hielo. Un equipo formado en socorro y en rescate técnico atiende a los animales en peligro en toda la Comunidad Metropolitana de Montreal.",
     "heroSignaler": "Reportar un animal en peligro",
     "heroMembre": "Hacerse miembro",
     "sectionsTitre": "Por dónde empezar",
@@ -96,7 +96,7 @@
     },
     "territoireTitre": "82 municipios,\nun solo equipo",
     "territoireSurtitre": "Nuestro territorio",
-    "territoireTexte": "Sauvetage Animal Rescue cubre toda la Comunidad metropolitana de Montreal: Montreal, Laval, la Montérégie, los Laurentides y Lanaudière. Cuatro mil kilómetros cuadrados donde se cruzan barrios densos, periferias, zonas agrícolas y espacios naturales protegidos.",
+    "territoireTexte": "Sauvetage Animal Rescue cubre toda la Comunidad Metropolitana de Montreal: Montreal, Laval, la Montérégie, los Laurentides y Lanaudière. Cuatro mil kilómetros cuadrados donde se cruzan barrios densos, periferias, zonas agrícolas y espacios naturales protegidos.",
     "territoirePoints": [
       "4,2 millones de residentes, casi la mitad de la población quebequense",
       "Intervenciones en altura, sobre hielo, en alcantarillas y en espacios confinados",
@@ -345,7 +345,7 @@
   "signalement": {
     "titre": "Reportar un animal en peligro",
     "surtitre": "Línea abierta a toda hora",
-    "intro": "¿Un animal atrapado, herido, huérfano o en peligro en el territorio de la Comunidad metropolitana de Montreal? Así puede contactarnos y esto es lo que necesitamos saber.",
+    "intro": "¿Un animal atrapado, herido, huérfano o en peligro en el territorio de la Comunidad Metropolitana de Montreal? Así puede contactarnos y esto es lo que necesitamos saber.",
     "urgenceTitre": "Es urgente: llame",
     "urgenceTexte": "El animal corre peligro inmediato, está herido, en el agua o lleva horas atrapado. El teléfono sigue siendo lo más rápido: un despachador atiende la llamada y moviliza a un equipo.",
     "urgenceLigne": "Línea de aviso",

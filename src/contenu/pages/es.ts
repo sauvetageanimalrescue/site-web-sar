@@ -80,10 +80,10 @@ export const PAGES_ES: CataloguePages = {
   },
 
   territoire: {
-    surtitre: "Comunidad metropolitana de Montreal",
+    surtitre: "Comunidad Metropolitana de Montreal",
     titre: "Nuestro territorio",
     intro:
-      "Sauvetage Animal Rescue interviene en todo el territorio de la Comunidad metropolitana de Montreal: 82 municipios repartidos en cinco regiones administrativas, Montreal, Laval, la Montérégie, los Laurentides y Lanaudière.",
+      "Sauvetage Animal Rescue interviene en todo el territorio de la Comunidad Metropolitana de Montreal: 82 municipios repartidos en cinco regiones administrativas, Montreal, Laval, la Montérégie, los Laurentides y Lanaudière.",
     image: "/images/territoire.jpg",
     blocs: [
       {

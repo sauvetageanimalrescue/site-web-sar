@@ -3,7 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { IconPhoneFilled } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
-import { SectionAlternee, Chevron } from "@/components/ui";
+import { Chevron } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { lireStatistiques } from "@/lib/statistiques";
 import { ORGANISATION, lienTelephone } from "@/lib/constantes";
@@ -87,7 +87,7 @@ function Cartes() {
           <Link
             key={carte.cle}
             href={carte.href}
-            className="group relative isolate flex aspect-square flex-col justify-end overflow-hidden rounded-xl bg-marine ring-1 ring-marine/20 transition hover:ring-2 hover:ring-lime"
+            className="group relative isolate flex aspect-square flex-col justify-end overflow-hidden rounded-xl bg-marine ring-1 ring-marine/20 transition hover:ring-2 hover:ring-marine"
           >
             <Image
               src={carte.image}
@@ -115,25 +115,37 @@ function Cartes() {
   );
 }
 
+// Déclaration centrée, sans image. Aucune photo ne peut rivaliser avec cette
+// phrase, et la carte de membre posée à côté la faisait passer pour une
+// publicité alors que c'est l'argument de fond de l'organisation.
 function Sections() {
   const t = useTranslations("accueil");
 
   return (
-    <>
-      <SectionAlternee
-        fond
-        cote="droite"
-        titre={t("soutienTitre")}
-        texte={t("soutienTexte")}
-        image="/images/carte-membre-2026-detouree.png"
-        presentation="objet"
-        actions={[
-          { href: "/membre", libelle: t("soutienMembre"), principal: true },
-          { href: "/dons", libelle: t("soutienDon") },
-        ]}
-      />
-
-    </>
+    <section className="bg-surface-2 py-20">
+      <div className="mx-auto max-w-3xl px-4 text-center">
+        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-5xl">
+          {t("soutienTitre")}
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          {t("soutienTexte")}
+        </p>
+        <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <Link
+            href="/membre"
+            className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
+          >
+            {t("soutienMembre")}
+          </Link>
+          <Link
+            href="/dons"
+            className="rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
+          >
+            {t("soutienDon")}
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
 

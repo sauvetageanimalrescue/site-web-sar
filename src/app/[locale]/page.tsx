@@ -62,17 +62,14 @@ function Hero() {
   );
 }
 
+// Aucun titre au-dessus des cartes : elles se lisent d'elles-mêmes et une
+// phrase d'introduction ne faisait que retarder le clic.
 function Cartes() {
   const t = useTranslations("accueil");
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <h2 className="font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine sm:text-4xl">
-        {t("sectionsTitre")}
-      </h2>
-      <p className="mt-2 max-w-2xl text-muted">{t("sectionsTexte")}</p>
-
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {CARTES.map((carte) => (
           // Le texte vit sur l'image, pas en dessous : la carte devient une
           // seule pièce plutôt qu'une vignette posée sur un bloc de texte.

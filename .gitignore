@@ -16,3 +16,8 @@ tsconfig.tsbuildinfo
 contenu-source/pages
 contenu-source/blogue
 contenu-source/data
+
+# Banque de photos converties depuis les HEIC de l'iPhone (87 Mo).
+# Réserve de travail : seules les photos réellement utilisées sont copiées
+# dans public/images et versionnées.
+photos-source

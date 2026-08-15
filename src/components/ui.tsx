@@ -191,6 +191,7 @@ export function SectionAlternee({
   actions,
   cote = "droite",
   fond = false,
+  presentation = "photo",
 }: {
   surtitre?: string;
   titre: string;
@@ -200,6 +201,9 @@ export function SectionAlternee({
   actions?: { href: string; libelle: string; principal?: boolean }[];
   cote?: "droite" | "gauche";
   fond?: boolean;
+  // « objet » présente l'image comme un objet posé, incliné et détouré,
+  // plutôt que comme une photo cadrée dans un rectangle.
+  presentation?: "photo" | "objet";
 }) {
   return (
     <section className={fond ? "bg-surface-2 py-16" : "py-16"}>
@@ -248,19 +252,34 @@ export function SectionAlternee({
           )}
         </div>
 
-        <div
-          className={`relative aspect-[4/3] overflow-hidden rounded-xl border border-border ${
-            cote === "gauche" ? "lg:order-1" : ""
-          }`}
-        >
-          <Image
-            src={image}
-            alt=""
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </div>
+        {presentation === "objet" ? (
+          <div
+            className={`flex justify-center ${cote === "gauche" ? "lg:order-1" : ""}`}
+          >
+            <Image
+              src={image}
+              alt=""
+              width={972}
+              height={1594}
+              sizes="(max-width: 1024px) 60vw, 30vw"
+              className="w-full max-w-[300px] rotate-6 rounded-xl shadow-2xl transition duration-500 hover:rotate-3 sm:max-w-[340px]"
+            />
+          </div>
+        ) : (
+          <div
+            className={`relative aspect-[4/3] overflow-hidden rounded-xl border border-border ${
+              cote === "gauche" ? "lg:order-1" : ""
+            }`}
+          >
+            <Image
+              src={image}
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        )}
       </div>
     </section>
   );

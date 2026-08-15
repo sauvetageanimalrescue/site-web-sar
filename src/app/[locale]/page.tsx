@@ -64,7 +64,6 @@ function Hero() {
 
 function Cartes() {
   const t = useTranslations("accueil");
-  const c = useTranslations("commun");
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
@@ -93,20 +92,16 @@ function Cartes() {
             />
             <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine via-marine/85 to-marine/10" />
 
-            <div className="p-5">
+            {/* Le titre suffit : la carte entière est cliquable, et une
+                description sous chaque vignette alourdissait la rangée. */}
+            <div className="flex items-center justify-between gap-3 p-5">
               <h3 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase leading-tight tracking-wide text-white">
                 {t(`cartes.${carte.cle}.titre`)}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/75">
-                {t(`cartes.${carte.cle}.texte`)}
-              </p>
-              <span className="mt-4 flex items-center gap-1 text-sm font-semibold text-lime">
-                {c("enSavoirPlus")}
-                <IconArrowRight
-                  className="size-4 transition group-hover:translate-x-1"
-                  aria-hidden
-                />
-              </span>
+              <IconArrowRight
+                className="size-6 shrink-0 text-lime transition group-hover:translate-x-1"
+                aria-hidden
+              />
             </div>
           </Link>
         ))}
@@ -125,7 +120,8 @@ function Sections() {
         cote="droite"
         titre={t("soutienTitre")}
         texte={t("soutienTexte")}
-        image="/images/carte-membre-2026.jpg"
+        image="/images/carte-membre-2026-detouree.png"
+        presentation="objet"
         actions={[
           { href: "/membre", libelle: t("soutienMembre"), principal: true },
           { href: "/dons", libelle: t("soutienDon") },

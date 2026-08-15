@@ -75,27 +75,29 @@ function Cartes() {
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {CARTES.map((carte) => (
-          // Cartes sur fond marine, comme la bannière : sur une page claire,
-          // un aplat blanc sur blanc ne se détache de rien.
+          // Le texte vit sur l'image, pas en dessous : la carte devient une
+          // seule pièce plutôt qu'une vignette posée sur un bloc de texte.
+          // Le dégradé part du marine opaque en bas pour garantir la lisibilité
+          // quelle que soit la photo.
           <Link
             key={carte.cle}
             href={carte.href}
-            className="group flex flex-col overflow-hidden rounded-xl bg-marine ring-1 ring-marine transition hover:ring-2 hover:ring-lime hover:shadow-xl"
+            className="group relative isolate flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-xl bg-marine ring-1 ring-marine/20 transition hover:ring-2 hover:ring-lime"
           >
-            <div className="relative aspect-[16/10] overflow-hidden bg-marine-fonce">
-              <Image
-                src={carte.image}
-                alt=""
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover opacity-90 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
-              />
-            </div>
-            <div className="flex flex-1 flex-col p-5">
-              <h3 className="font-[family-name:var(--font-titre)] text-xl font-semibold uppercase tracking-wide text-white">
+            <Image
+              src={carte.image}
+              alt=""
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className="-z-10 object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine via-marine/85 to-marine/10" />
+
+            <div className="p-5">
+              <h3 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase leading-tight tracking-wide text-white">
                 {t(`cartes.${carte.cle}.titre`)}
               </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">
+              <p className="mt-2 text-sm leading-relaxed text-white/75">
                 {t(`cartes.${carte.cle}.texte`)}
               </p>
               <span className="mt-4 flex items-center gap-1 text-sm font-semibold text-lime">

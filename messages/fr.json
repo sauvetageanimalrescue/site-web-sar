@@ -87,7 +87,7 @@
     "territoireTexte": "Sauvetage Animal Rescue couvre l'ensemble de la Communauté métropolitaine de Montréal : Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Quatre mille kilomètres carrés où se croisent quartiers denses, banlieues, zones agricoles et milieux naturels protégés.",
     "territoirePoints": [
       "4,2 millions de résidents, près de la moitié de la population québécoise",
-      "Des interventions en hauteur, sur glace, en égout et en bord d'autoroute",
+      "Des interventions en hauteur, sur glace, en égout et en espace clos",
       "Une équipe de répartition qui traite chaque signalement, jour et nuit"
     ],
     "territoireAction": "Voir le territoire couvert",
@@ -335,7 +335,7 @@
     "surtitre": "Ligne ouverte en tout temps",
     "intro": "Un animal coincé, blessé, orphelin ou en danger sur le territoire de la Communauté métropolitaine de Montréal ? Voici comment nous joindre et ce qu'il faut nous dire.",
     "urgenceTitre": "C'est urgent : appelez",
-    "urgenceTexte": "L'animal est en danger immédiat, blessé, dans l'eau, sur une voie rapide ou coincé depuis plusieurs heures. Le téléphone reste le moyen le plus rapide : un répartiteur prend l'appel et mobilise une équipe.",
+    "urgenceTexte": "L'animal est en danger immédiat, blessé, dans l'eau ou coincé depuis plusieurs heures. Le téléphone reste le moyen le plus rapide : un répartiteur prend l'appel et mobilise une équipe.",
     "urgenceLigne": "Ligne de signalement",
     "urgenceSansFrais": "Sans frais",
     "formulaireTitre": "Ce n'est pas une urgence immédiate",
@@ -353,7 +353,8 @@
     "horsTexte": "Nous sommes une équipe de secours technique. Certaines situations relèvent d'un autre service, et appeler le bon numéro fait gagner un temps précieux à l'animal.",
     "hors": [
       { "cas": "Maltraitance ou négligence animale", "vers": "Ligne signalement du MAPAQ, 1 844 ANIMAUX" },
-      { "cas": "Animal mort sur la chaussée", "vers": "Travaux publics de votre municipalité, ou 511 sur une autoroute" },
+      { "cas": "Animal sur une autoroute ou en bordure de route", "vers": "511, ministère des Transports. Ses patrouilleurs sont dépêchés et font appel à nous s'ils ont besoin d'assistance." },
+      { "cas": "Animal mort sur la chaussée", "vers": "Travaux publics de votre municipalité" },
       { "cas": "Chien errant ou capture en ville", "vers": "Service animalier de votre municipalité" },
       { "cas": "Danger pour des personnes", "vers": "911" },
       { "cas": "Grande faune blessée (cerf, orignal, ours)", "vers": "SOS Braconnage, 1 800 463-2191" },

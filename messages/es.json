@@ -87,7 +87,7 @@
     "territoireTexte": "Sauvetage Animal Rescue cubre toda la Comunidad metropolitana de Montreal: Montreal, Laval, la Montérégie, los Laurentides y Lanaudière. Cuatro mil kilómetros cuadrados donde se cruzan barrios densos, periferias, zonas agrícolas y espacios naturales protegidos.",
     "territoirePoints": [
       "4,2 millones de residentes, casi la mitad de la población quebequense",
-      "Intervenciones en altura, sobre hielo, en alcantarillas y junto a autopistas",
+      "Intervenciones en altura, sobre hielo, en alcantarillas y en espacios confinados",
       "Un equipo de despacho que atiende cada aviso, de día y de noche"
     ],
     "territoireAction": "Ver el territorio cubierto",
@@ -335,7 +335,7 @@
     "surtitre": "Línea abierta a toda hora",
     "intro": "¿Un animal atrapado, herido, huérfano o en peligro en el territorio de la Comunidad metropolitana de Montreal? Así puede contactarnos y esto es lo que necesitamos saber.",
     "urgenceTitre": "Es urgente: llame",
-    "urgenceTexte": "El animal corre peligro inmediato, está herido, en el agua, en una vía rápida o lleva horas atrapado. El teléfono sigue siendo lo más rápido: un despachador atiende la llamada y moviliza a un equipo.",
+    "urgenceTexte": "El animal corre peligro inmediato, está herido, en el agua o lleva horas atrapado. El teléfono sigue siendo lo más rápido: un despachador atiende la llamada y moviliza a un equipo.",
     "urgenceLigne": "Línea de aviso",
     "urgenceSansFrais": "Sin cargo",
     "formulaireTitre": "No es una emergencia inmediata",
@@ -353,7 +353,8 @@
     "horsTexte": "Somos un equipo de rescate técnico. Algunas situaciones corresponden a otro servicio, y llamar al número correcto le ahorra un tiempo precioso al animal.",
     "hors": [
       { "cas": "Maltrato o negligencia animal", "vers": "Línea del MAPAQ, 1 844 ANIMAUX" },
-      { "cas": "Animal muerto en la calzada", "vers": "Obras públicas de su municipio, o 511 en autopista" },
+      { "cas": "Animal en una autopista o al borde de la carretera", "vers": "511, ministerio de Transportes. Envía a sus patrulleros, que nos llaman si necesitan asistencia." },
+      { "cas": "Animal muerto en la calzada", "vers": "Obras públicas de su municipio" },
       { "cas": "Perro callejero o captura urbana", "vers": "Servicio animal de su municipio" },
       { "cas": "Peligro para las personas", "vers": "911" },
       { "cas": "Fauna mayor herida (ciervo, alce, oso)", "vers": "SOS Braconnage, 1 800 463-2191" },

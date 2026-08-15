@@ -87,7 +87,7 @@
     "territoireTexte": "Sauvetage Animal Rescue covers the entire Montréal metropolitan community: Montréal, Laval, the Montérégie, the Laurentides and Lanaudière. Four thousand square kilometres where dense neighbourhoods, suburbs, farmland and protected natural areas all meet.",
     "territoirePoints": [
       "4.2 million residents, close to half of Québec's population",
-      "Calls at height, on ice, in sewers and along highways",
+      "Calls at height, on ice, in sewers and in confined spaces",
       "A dispatch team handling every report, day and night"
     ],
     "territoireAction": "See the territory",
@@ -335,7 +335,7 @@
     "surtitre": "Line open at all hours",
     "intro": "An animal trapped, injured, orphaned or in danger anywhere in the Montréal metropolitan community? Here is how to reach us and what we need to know.",
     "urgenceTitre": "It's urgent: call us",
-    "urgenceTexte": "The animal is in immediate danger, injured, in the water, on a highway or has been stuck for hours. The phone is the fastest route: a dispatcher takes the call and mobilizes a team.",
+    "urgenceTexte": "The animal is in immediate danger, injured, in the water or has been stuck for hours. The phone is the fastest route: a dispatcher takes the call and mobilizes a team.",
     "urgenceLigne": "Reporting line",
     "urgenceSansFrais": "Toll free",
     "formulaireTitre": "It's not an immediate emergency",
@@ -353,7 +353,8 @@
     "horsTexte": "We are a technical rescue team. Some situations belong to another service, and calling the right number saves the animal precious time.",
     "hors": [
       { "cas": "Animal cruelty or neglect", "vers": "MAPAQ reporting line, 1 844 ANIMAUX" },
-      { "cas": "Dead animal on the roadway", "vers": "Your municipality's public works, or 511 on a highway" },
+      { "cas": "Animal on a highway or roadside", "vers": "511, Ministère des Transports. Their patrollers are dispatched and call us in if they need assistance." },
+      { "cas": "Dead animal on the roadway", "vers": "Your municipality's public works" },
       { "cas": "Stray dog or urban capture", "vers": "Your municipal animal services" },
       { "cas": "Danger to people", "vers": "911" },
       { "cas": "Injured large wildlife (deer, moose, bear)", "vers": "SOS Braconnage, 1 800 463-2191" },

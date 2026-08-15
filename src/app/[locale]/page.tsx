@@ -5,7 +5,6 @@ import { IconPhoneFilled } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
 import { SectionAlternee, Chevron } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
-import { FilInterventions } from "@/components/fil-interventions";
 import { lireStatistiques } from "@/lib/statistiques";
 import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 
@@ -147,10 +146,12 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <Hero />
-      <CompteurSauvetages initiales={stats} />
       <Cartes />
       <Sections />
-      <FilInterventions />
+      {/* Le compteur ferme la page : après l'argument du financement, il en
+          apporte la preuve chiffrée. Le fil des interventions vit désormais
+          uniquement sur la page des statistiques. */}
+      <CompteurSauvetages initiales={stats} />
     </>
   );
 }

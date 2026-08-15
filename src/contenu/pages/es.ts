@@ -156,7 +156,7 @@ export const PAGES_ES: CataloguePages = {
     ],
   },
 
-  "ateliers-scolaires": {
+  "ateliers/primaire": {
     surtitre: "Sensibilización",
     titre: "Talleres en escuelas primarias",
     intro:

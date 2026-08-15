@@ -156,7 +156,7 @@ export const PAGES_EN: CataloguePages = {
     ],
   },
 
-  "ateliers-scolaires": {
+  "ateliers/primaire": {
     surtitre: "Awareness",
     titre: "Elementary school workshops",
     intro:

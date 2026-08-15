@@ -158,9 +158,9 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
-  "ateliers-scolaires": {
+  "ateliers/primaire": {
     surtitre: "Sensibilisation",
-    titre: "Ateliers en écoles primaires",
+    titre: "Ateliers au primaire",
     intro:
       "Notre équipe se déplace directement en classe pour sensibiliser les jeunes à la protection et au sauvetage des animaux.",
     image: "/images/ecoles.jpg",
@@ -184,6 +184,116 @@ export const PAGES_FR: CataloguePages = {
           "Pour plus d'informations ou pour réserver, communiquez avec la direction générale à e.dussault@sar.quebec.",
         ],
       },
+    ],
+  },
+
+  "ateliers/secondaire": {
+    surtitre: "Sensibilisation",
+    titre: "Ateliers au secondaire",
+    intro:
+      "Un atelier conçu pour des adolescents, qui parle de responsabilité, de conséquences et de choix de carrière plutôt que de bons sentiments.",
+    image: "/images/ecoles.jpg",
+    blocs: [
+      {
+        titre: "Un ton différent du primaire",
+        texte: [
+          "Au secondaire, les élèves n'ont plus besoin qu'on leur explique qu'il faut aimer les animaux. Ils ont besoin de comprendre ce qui se passe réellement : pourquoi une portée de chatons finit dans une ruelle, ce que devient un animal abandonné en août, comment un geste banal comme relâcher un poisson rouge dans un ruisseau déséquilibre un milieu entier.",
+          "L'atelier s'appuie sur des interventions réelles, avec photos et vidéos, et laisse une large place aux questions. Les adolescents en posent beaucoup, et souvent des difficiles.",
+        ],
+      },
+      {
+        titre: "Ce qu'on aborde",
+        liste: [
+          "Les lois québécoises sur les animaux et ce qu'elles impliquent vraiment",
+          "La surpopulation animale et le rôle de la stérilisation",
+          "Le secours technique : cordage, capture, sécurité",
+          "Reconnaître une situation dangereuse et savoir ne pas intervenir",
+          "Les métiers du milieu animalier et les parcours pour y arriver",
+          "Le bénévolat dès 18 ans et les stages d'observation dès 14 ans",
+        ],
+      },
+      {
+        titre: "Format et réservation",
+        texte: [
+          "L'atelier dure une période de cours et s'adapte au groupe, du premier au cinquième secondaire. Il peut se donner en classe, en grand groupe ou dans le cadre d'une journée thématique.",
+          "Pour réserver une date, écrivez à la direction générale à e.dussault@sar.quebec.",
+        ],
+      },
+    ],
+  },
+
+  "services/interventions": {
+    surtitre: "Notre service principal",
+    titre: "Secours et sauvetage",
+    intro:
+      "Une équipe formée au secours technique, disponible en tout temps, pour les situations où un animal ne peut pas s'en sortir seul et où personne sur place n'a l'équipement pour intervenir sans danger.",
+    image: "/images/hero-accueil.png",
+    blocs: [
+      {
+        titre: "Les interventions que nous faisons",
+        liste: [
+          "Travail en hauteur : arbres, toits, pylônes, structures",
+          "Espaces clos : égouts, puisards, cheminées, murs, conduits",
+          "Milieux instables : glace, berges, cours d'eau",
+          "Bords d'autoroute et voies rapides",
+          "Capture d'animaux réactifs à l'aide d'équipement spécialisé",
+          "Transport vers les refuges et cliniques partenaires",
+        ],
+      },
+      {
+        titre: "Comment se déclenche une intervention",
+        texte: [
+          "Tout commence par un signalement, par téléphone, par le formulaire du site, par Messenger ou par un service partenaire. Un répartiteur recueille l'information, évalue l'urgence et attribue un niveau d'intervention. Selon la situation, un éclaireur va d'abord valider sur place, ou une équipe est mobilisée directement.",
+          "Chaque mission est documentée dans notre registre opérationnel, du premier appel jusqu'à sa fermeture. C'est ce registre qui alimente le compteur public de ce site.",
+        ],
+      },
+      {
+        titre: "Pour qui",
+        texte: [
+          "Nous intervenons pour les citoyens, les services animaliers municipaux, les services de police et d'incendie, les refuges, les entreprises et les gestionnaires d'immeubles. Le service est offert sur l'ensemble du territoire de la Communauté métropolitaine de Montréal.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+      { href: "/territoire", libelle: "Voir le territoire couvert" },
+    ],
+  },
+
+  "services/municipalites": {
+    surtitre: "Aux villes et aux MRC",
+    titre: "Services aux municipalités",
+    intro:
+      "Les appels concernant des animaux arrivent aux municipalités sans qu'elles disposent toujours de l'équipement ou de la formation pour y répondre. Nous agissons en soutien de vos services existants.",
+    image: "/images/territoire.jpg",
+    blocs: [
+      {
+        titre: "Le problème que ça règle",
+        texte: [
+          "Un chat perché à quinze mètres, un raton laveur dans un conduit municipal, un cerf blessé dans un parc, une famille de canards dans un puisard : ce sont des appels que reçoivent les services animaliers, les travaux publics et parfois le 911. Ils demandent du matériel de cordage certifié, une formation en espace clos et une connaissance du comportement animal.",
+          "Plutôt que d'équiper et de former chaque municipalité pour des situations qui surviennent quelques fois par année, nous offrons cette capacité en soutien.",
+        ],
+      },
+      {
+        titre: "Ce que nous offrons aux municipalités",
+        liste: [
+          "Intervention de secours technique sur appel",
+          "Soutien aux services animaliers et aux travaux publics",
+          "Assistance aux services de police et d'incendie",
+          "Formation du personnel municipal aux situations impliquant des animaux",
+          "Ateliers de sensibilisation dans les écoles du territoire",
+          "Présence lors d'événements municipaux",
+        ],
+      },
+      {
+        titre: "Prendre entente",
+        texte: [
+          "Les modalités s'établissent au cas par cas selon le volume d'appels, le territoire et les services déjà en place. Écrivez à la direction générale à e.dussault@sar.quebec pour en discuter.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/territoire", libelle: "Voir le territoire couvert", principal: true },
     ],
   },
 

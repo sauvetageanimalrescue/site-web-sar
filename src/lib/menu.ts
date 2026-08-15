@@ -14,9 +14,14 @@ export const MENU: SectionMenu[] = [
       { cle: "equipe", href: "/equipe" },
       { cle: "territoire", href: "/territoire" },
       { cle: "statistiques", href: "/statistiques" },
-      { cle: "ecoles", href: "/ateliers-scolaires" },
-      { cle: "partenaires", href: "/partenaires" },
       { cle: "medias", href: "/medias" },
+    ],
+  },
+  {
+    cle: "services",
+    liens: [
+      { cle: "interventions", href: "/services/interventions" },
+      { cle: "municipalites", href: "/services/municipalites" },
     ],
   },
   {
@@ -26,6 +31,7 @@ export const MENU: SectionMenu[] = [
       { cle: "dons", href: "/dons" },
       { cle: "patreon", href: "/patreon" },
       { cle: "partenariat", href: "/partenariat" },
+      { cle: "partenaires", href: "/partenaires" },
       { cle: "recrutement", href: "/recrutement" },
       { cle: "stages", href: "/stages" },
     ],
@@ -36,6 +42,8 @@ export const MENU: SectionMenu[] = [
       { cle: "isa", href: "/formations/initiation-secours-animal" },
       { cle: "psa", href: "/formations/premiers-secours-animal" },
       { cle: "servicesUrgence", href: "/formations/services-urgence" },
+      { cle: "atelierPrimaire", href: "/ateliers/primaire" },
+      { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
     ],
   },
 ];

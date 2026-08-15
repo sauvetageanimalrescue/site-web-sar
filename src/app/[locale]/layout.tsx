@@ -7,7 +7,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
 import { EnteteSite } from "@/components/entete-site";
 import { PiedSite } from "@/components/pied-site";
-import { BandeauUrgence } from "@/components/bandeau-urgence";
 import "../globals.css";
 
 const inter = Inter({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -64,7 +63,6 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>
-          <BandeauUrgence />
           <EnteteSite />
           <main className="flex-1">{children}</main>
           <PiedSite />

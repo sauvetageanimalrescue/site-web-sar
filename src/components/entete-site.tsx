@@ -96,9 +96,9 @@ export function EnteteSite() {
           </Link>
           <Link
             href="/signalement"
-            className="hidden rounded-md bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90 sm:block"
+            className="hidden rounded-md bg-urgence px-4 py-2 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-urgence/90 sm:block"
           >
-            {t("signalement")}
+            {t("signaler")}
           </Link>
           <button
             type="button"
@@ -125,9 +125,9 @@ export function EnteteSite() {
             <Link
               href="/signalement"
               onClick={() => setMobileOuvert(false)}
-              className="mb-3 block rounded-md bg-urgence px-4 py-3 text-center text-sm font-semibold text-white"
+              className="mb-3 block rounded-md bg-urgence px-4 py-3 text-center text-sm font-bold uppercase tracking-wider text-white"
             >
-              {t("signalement")}
+              {t("signaler")}
             </Link>
             {MENU.map((section) => (
               <div key={section.cle} className="border-t border-border py-2">

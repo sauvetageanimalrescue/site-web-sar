@@ -12,11 +12,14 @@ const CATALOGUES: Record<Locale, CataloguePages> = {
 
 export type { PageEditoriale, BlocPage } from "./types";
 
+// Repli sur le français quand une page n'est pas encore traduite : mieux vaut
+// une page lisible dans une autre langue qu'une erreur 404 pendant qu'on
+// rattrape les traductions.
 export function lirePageEditoriale(
   chemin: string,
   locale: Locale,
 ): PageEditoriale | null {
-  return CATALOGUES[locale][chemin] ?? null;
+  return CATALOGUES[locale][chemin] ?? PAGES_FR[chemin] ?? null;
 }
 
 // Tous les chemins connus, pour le prérendu statique et le plan du site.

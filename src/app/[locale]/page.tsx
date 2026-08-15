@@ -35,7 +35,7 @@ function Hero() {
         width={1400}
         height={1400}
         priority
-        className="pointer-events-none absolute -right-16 top-1/2 -z-10 h-[130%] w-auto -translate-y-1/2 opacity-[0.13] sm:-right-8"
+        className="pointer-events-none absolute -right-24 top-1/2 -z-10 h-[190%] w-auto -translate-y-1/2 rotate-[15deg] opacity-[0.13] sm:-right-10"
       />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">
         <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">

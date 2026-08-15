@@ -26,16 +26,17 @@ function Hero() {
   const t = useTranslations("accueil");
 
   return (
+    // Bannière sur aplat marine, avec l'écusson en filigrane à droite : le
+    // titre reste parfaitement lisible et l'identité s'impose d'entrée.
     <section className="relative isolate overflow-hidden bg-marine">
       <Image
-        src="/images/hero-accueil.jpg"
+        src="/images/hero-filigrane.png"
         alt=""
-        fill
+        width={1400}
+        height={1400}
         priority
-        sizes="100vw"
-        className="object-cover opacity-30"
+        className="pointer-events-none absolute -right-16 top-1/2 -z-10 h-[130%] w-auto -translate-y-1/2 opacity-[0.13] sm:-right-8"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/90 to-marine/40" />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">
         <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">
           {t("heroSurtitre")}

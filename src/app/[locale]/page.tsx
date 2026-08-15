@@ -29,16 +29,18 @@ function Hero() {
     // Bannière sur aplat marine, avec l'écusson en filigrane à droite : le
     // titre reste parfaitement lisible et l'identité s'impose d'entrée.
     <section className="relative isolate overflow-hidden bg-marine">
-      {/* Le fond est fourni déjà composé, sur le même marine que la section :
-          il se raccorde donc sans couture quelle que soit la largeur. Cadré à
-          droite pour que l'écusson reste hors du texte. */}
-      <Image
-        src="/images/hero-fond.png"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-10 object-cover object-right"
+      {/* Fond en image de style plutôt qu'en composant Image : l'optimiseur de
+          Next ré-encode en WebP et un grand aplat marine s'y dégrade en
+          aplats visibles. Ajusté sur la hauteur et ancré à droite, il n'est
+          jamais agrandi au-delà de sa taille réelle ; le marine de la section
+          prend le relais à gauche, dans la même teinte exactement. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-right bg-no-repeat"
+        style={{
+          backgroundImage: "url(/images/hero-fond.png)",
+          backgroundSize: "auto 100%",
+        }}
       />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">
         <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">

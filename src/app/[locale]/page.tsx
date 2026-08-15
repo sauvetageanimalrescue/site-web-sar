@@ -15,7 +15,7 @@ const CARTES = [
   { cle: "signalement", href: "/signalement", image: "/images/hero-accueil.png" },
   { cle: "membre", href: "/membre", image: "/images/carte-membre-2026.jpg" },
   { cle: "recrutement", href: "/recrutement", image: "/images/recrutement.jpg" },
-  { cle: "fiches", href: "/fiches", image: "/images/formations.jpg" },
+  { cle: "fiches", href: "/informations", image: "/images/formations.jpg" },
 ] as const;
 
 function Hero() {

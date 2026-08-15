@@ -16,7 +16,7 @@ const TEINTES: Record<Urgence, string> = {
 
 export default async function PageFiches({
   params,
-}: PageProps<"/[locale]/fiches">) {
+}: PageProps<"/[locale]/informations">) {
   const { locale } = await params;
   setRequestLocale(locale);
   const langue = locale as Locale;
@@ -40,7 +40,7 @@ export default async function PageFiches({
             return (
               <Link
                 key={fiche.slug}
-                href={`/fiches/${fiche.slug}`}
+                href={`/informations/${fiche.slug}`}
                 className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition hover:border-ciel hover:shadow-lg"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface-2">
@@ -96,7 +96,7 @@ export default async function PageFiches({
 
 export async function generateMetadata({
   params,
-}: PageProps<"/[locale]/fiches">) {
+}: PageProps<"/[locale]/informations">) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "fiches" });
   return { title: t("titre"), description: t("intro") };

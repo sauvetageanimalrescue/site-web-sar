@@ -26,7 +26,7 @@ export function generateStaticParams() {
 
 export default async function PageFiche({
   params,
-}: PageProps<"/[locale]/fiches/[slug]">) {
+}: PageProps<"/[locale]/informations/[slug]">) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const langue = locale as Locale;
@@ -187,7 +187,7 @@ export default async function PageFiche({
                 return (
                   <li key={autre.slug}>
                     <Link
-                      href={`/fiches/${autre.slug}`}
+                      href={`/informations/${autre.slug}`}
                       className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition hover:border-ciel hover:shadow-lg"
                     >
                       <div className="relative aspect-[16/10] overflow-hidden bg-surface-2">
@@ -225,13 +225,13 @@ export default async function PageFiche({
 
 export async function generateMetadata({
   params,
-}: PageProps<"/[locale]/fiches/[slug]">) {
+}: PageProps<"/[locale]/informations/[slug]">) {
   const { locale, slug } = await params;
   const texte = texteFiche(slug, locale as Locale);
   if (!texte) return {};
   return {
     title: texte.titre,
     description: texte.resume,
-    alternates: { canonical: `/${locale}/fiches/${slug}` },
+    alternates: { canonical: `/${locale}/informations/${slug}` },
   };
 }

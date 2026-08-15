@@ -22,6 +22,8 @@ export const MENU: SectionMenu[] = [
     liens: [
       { cle: "interventions", href: "/services/interventions" },
       { cle: "municipalites", href: "/services/municipalites" },
+      { cle: "atelierPrimaire", href: "/ateliers/primaire" },
+      { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
     ],
   },
   {
@@ -42,11 +44,11 @@ export const MENU: SectionMenu[] = [
       { cle: "isa", href: "/formations/initiation-secours-animal" },
       { cle: "psa", href: "/formations/premiers-secours-animal" },
       { cle: "servicesUrgence", href: "/formations/services-urgence" },
-      { cle: "atelierPrimaire", href: "/ateliers/primaire" },
-      { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
     ],
   },
 ];
 
 // Liens de premier niveau, hors menus déroulants.
-export const LIENS_DIRECTS: LienMenu[] = [{ cle: "fiches", href: "/fiches" }];
+export const LIENS_DIRECTS: LienMenu[] = [
+  { cle: "fiches", href: "/informations" },
+];

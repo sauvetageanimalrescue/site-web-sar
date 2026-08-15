@@ -115,7 +115,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Nos partenaires",
     intro:
       "Nos partenaires jouent un rôle déterminant dans la réalisation de notre mission. Leur soutien nous permet de secourir plus d'animaux, de leur offrir les soins nécessaires et de sensibiliser la communauté à la cause animale.",
-    image: "/images/certificat-partenaire.png",
+    image: "/images/remise-certificat.jpg",
     blocs: [
       {
         titre: "Le certificat de partenaire",

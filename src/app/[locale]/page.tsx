@@ -93,7 +93,7 @@ function Cartes() {
             />
             {/* Dégradé resserré vers le bas : il doit porter le titre, pas
                 assombrir toute la photo. */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine from-5% via-marine/70 via-28% to-transparent to-62%" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine from-8% via-marine/55 via-22% to-transparent to-50%" />
 
             {/* Le titre suffit : la carte entière est cliquable, et une
                 description sous chaque vignette alourdissait la rangée. */}

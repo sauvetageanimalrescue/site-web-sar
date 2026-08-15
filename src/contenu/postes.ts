@@ -13,8 +13,8 @@ export const POSTES: Poste[] = [
   { cle: "repartiteur", niveau: "EGS", image: "/images/services-urgence.png" },
   { cle: "messager", niveau: null, image: "/images/territoire.jpg" },
   { cle: "eclaireur", niveau: "1", image: "/images/recrutement.jpg" },
-  { cle: "patrouilleur", niveau: "2", image: "/images/hero-accueil.png" },
-  { cle: "sauveteur", niveau: "3", image: "/images/stages.png" },
+  { cle: "patrouilleur", niveau: "2", image: "/images/hero-accueil.jpg" },
+  { cle: "sauveteur", niveau: "3", image: "/images/stages.jpg" },
 ];
 
 type Fiche = {

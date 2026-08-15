@@ -7,7 +7,7 @@ export const FICHES: Fiche[] = [
     slug: "chat-dans-un-arbre",
     categorie: "domestique",
     urgence: "moderee",
-    image: "/images/hero-accueil.png",
+    image: "/images/hero-accueil.jpg",
     especes: ["11"],
   },
   {
@@ -35,7 +35,7 @@ export const FICHES: Fiche[] = [
     slug: "canetons-dans-une-grille-degout",
     categorie: "oiseaux",
     urgence: "urgente",
-    image: "/images/stages.png",
+    image: "/images/stages.jpg",
     especes: ["41", "42"],
   },
   {

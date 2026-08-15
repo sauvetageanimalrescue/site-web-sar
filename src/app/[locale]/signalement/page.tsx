@@ -121,7 +121,7 @@ export default async function PageSignalement({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/hero-accueil.png"
+        image="/images/hero-accueil.jpg"
       />
 
       <Section>

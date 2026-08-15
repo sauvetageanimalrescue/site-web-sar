@@ -9,7 +9,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Notre mission",
     intro:
       "Sauvetage Animal Rescue vient en aide aux animaux en détresse. Nous déployons des ressources humaines et matérielles pour mener des missions de secours et de sauvetage, auprès des citoyens, des entreprises et des municipalités.",
-    image: "/images/hero-accueil.png",
+    image: "/images/hero-accueil.jpg",
     blocs: [
       {
         titre: "Un vide dans la chaîne de secours",
@@ -271,7 +271,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Secours et sauvetage",
     intro:
       "Une équipe formée au secours technique, disponible en tout temps, pour les situations où un animal ne peut pas s'en sortir seul et où personne sur place n'a l'équipement pour intervenir sans danger.",
-    image: "/images/hero-accueil.png",
+    image: "/images/hero-accueil.jpg",
     blocs: [
       {
         titre: "Les interventions que nous faisons",

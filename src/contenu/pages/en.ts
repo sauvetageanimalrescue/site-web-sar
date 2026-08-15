@@ -7,7 +7,7 @@ export const PAGES_EN: CataloguePages = {
     titre: "Our mission",
     intro:
       "Sauvetage Animal Rescue helps animals in distress. We deploy people and equipment to carry out rescue missions for citizens, businesses and municipalities.",
-    image: "/images/hero-accueil.png",
+    image: "/images/hero-accueil.jpg",
     blocs: [
       {
         titre: "A gap in the emergency chain",

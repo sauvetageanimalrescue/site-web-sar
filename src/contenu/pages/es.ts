@@ -7,7 +7,7 @@ export const PAGES_ES: CataloguePages = {
     titre: "Nuestra misión",
     intro:
       "Sauvetage Animal Rescue ayuda a los animales en peligro. Desplegamos personas y equipos para llevar a cabo misiones de socorro y rescate, al servicio de ciudadanos, empresas y municipios.",
-    image: "/images/hero-accueil.png",
+    image: "/images/hero-accueil.jpg",
     blocs: [
       {
         titre: "Un vacío en la cadena de socorro",

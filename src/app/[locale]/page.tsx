@@ -14,7 +14,7 @@ import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 const CARTES = [
   { cle: "signalement", href: "/signalement", image: "/images/carte-signalement.jpg" },
   { cle: "membre", href: "/membre", image: "/images/carte-membre-2026.jpg" },
-  { cle: "services", href: "/services", image: "/images/carte-membre.jpg" },
+  { cle: "services", href: "/services", image: "/images/carte-services.jpg" },
   { cle: "recrutement", href: "/recrutement", image: "/images/carte-benevole.jpg" },
 ] as const;
 
@@ -24,7 +24,7 @@ function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-marine">
       <Image
-        src="/images/hero-accueil.png"
+        src="/images/hero-accueil.jpg"
         alt=""
         fill
         priority
@@ -154,7 +154,7 @@ function Sections() {
         titre={t("stagesTitre")}
         texte={t("stagesTexte")}
         points={t.raw("stagesPoints") as string[]}
-        image="/images/stages.png"
+        image="/images/stages.jpg"
         actions={[
           { href: "/stages", libelle: t("stagesAction"), principal: true },
         ]}

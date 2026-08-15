@@ -32,7 +32,7 @@ export default async function PageStages({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/stages.png"
+        image="/images/stages.jpg"
       />
 
       <Section>

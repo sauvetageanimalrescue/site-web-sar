@@ -12,9 +12,9 @@ import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 // Quatre portes d'entrée seulement : au-delà, une grille de cartes cesse
 // d'orienter le visiteur et devient un mur à parcourir.
 const CARTES = [
-  { cle: "signalement", href: "/signalement", image: "/images/carte-membre-2026.jpg" },
-  { cle: "membre", href: "/membre", image: "/images/carte-membre.jpg" },
-  { cle: "services", href: "/services", image: "/images/carte-signalement.jpg" },
+  { cle: "signalement", href: "/signalement", image: "/images/carte-signalement.jpg" },
+  { cle: "membre", href: "/membre", image: "/images/carte-membre-2026.jpg" },
+  { cle: "services", href: "/services", image: "/images/carte-membre.jpg" },
   { cle: "recrutement", href: "/recrutement", image: "/images/carte-benevole.jpg" },
 ] as const;
 

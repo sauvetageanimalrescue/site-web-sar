@@ -115,7 +115,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Missions internationales",
     intro:
       "Notre travail quotidien s'arrête aux limites de la Communauté Métropolitaine de Montréal. Certains sinistres, eux, ne s'arrêtent nulle part. Quand des animaux se comptent par milliers et que personne sur place n'a la formation pour aller les chercher, nous partons.",
-    image: "/images/carte-stages.jpg",
+    image: "/images/australie-2020.jpg",
     blocs: [
       {
         titre: "Australie, février 2020",

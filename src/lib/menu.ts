@@ -57,3 +57,16 @@ export const MENU: SectionMenu[] = [
 export const LIENS_DIRECTS: LienMenu[] = [
   { cle: "fiches", href: "/informations" },
 ];
+
+// Connexion : trois portes distinctes, parce que ce ne sont ni les mêmes
+// personnes, ni les mêmes comptes, ni les mêmes bases de données. Les
+// membres et les partenaires vivent dans le site public ; les intervenants
+// dans le registre des missions, qui est une application séparée.
+export const MENU_CONNEXION: SectionMenu = {
+  cle: "connexion",
+  liens: [
+    { cle: "connexionMembre", href: "/espace-membre" },
+    { cle: "connexionIntervenant", href: "https://sar-intranet.com" },
+    { cle: "connexionPartenaire", href: "/espace-partenaire" },
+  ],
+};

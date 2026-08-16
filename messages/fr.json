@@ -49,7 +49,10 @@
     "inspection": "Inspection",
     "reglementation": "Règlementation",
     "denombrement": "Dénombrement",
-    "sinistres": "Sinistres"
+    "sinistres": "Sinistres",
+    "connexionMembre": "Membre",
+    "connexionIntervenant": "Intervenant",
+    "connexionPartenaire": "Partenaire"
   },
   "compteur": {
     "titre": "Animaux sauvés",

@@ -49,7 +49,10 @@
     "inspection": "Inspection",
     "reglementation": "By-law enforcement",
     "denombrement": "Population counts",
-    "sinistres": "Disasters"
+    "sinistres": "Disasters",
+    "connexionMembre": "Member",
+    "connexionIntervenant": "Staff",
+    "connexionPartenaire": "Partner"
   },
   "compteur": {
     "titre": "Animals rescued",

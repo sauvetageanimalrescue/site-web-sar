@@ -49,7 +49,10 @@
     "inspection": "Inspección",
     "reglementation": "Reglamentación",
     "denombrement": "Conteo de población",
-    "sinistres": "Siniestros"
+    "sinistres": "Siniestros",
+    "connexionMembre": "Miembro",
+    "connexionIntervenant": "Personal",
+    "connexionPartenaire": "Socio"
   },
   "compteur": {
     "titre": "Animales rescatados",

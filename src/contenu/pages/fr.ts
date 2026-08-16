@@ -194,27 +194,53 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
-  // Squelette en attente des informations : titre de la série, diffuseur,
-  // année, nombre d'épisodes et plateforme. Aucun fait n'est avancé ici tant
-  // qu'il n'est pas confirmé.
   "serie-televisee": {
-    surtitre: "À l'écran",
+    surtitre: "Sauvetage animal, à TVA",
     titre: "Série télévisée",
     intro:
-      "Une série télévisée a suivi le travail de Sauvetage Animal Rescue. Cette page en rassemble les informations.",
+      "Une équipe de tournage a suivi nos intervenants pendant leurs missions. Le résultat est une série documentaire diffusée à TVA, qui montre le travail tel qu'il se fait, sans mise en scène.",
     image: "/images/carte-services.jpg",
     blocs: [
       {
         titre: "La série",
         texte: [
-          "Titre, diffuseur, année de diffusion et nombre d'épisodes : à confirmer.",
+          "Sauvetage animal est une série documentaire et un docu-réalité québécois. La première saison a été lancée en janvier 2021 sur les ondes de TVA. Elle est produite par Urbania, en collaboration avec Québecor Contenu.",
+          "La série suit l'escouade Sauvetage Animal Rescue, la seule escouade de sauvetage technique animalier certifiée au Canada. On y retrouve les fondateurs, Eric Dussault et Isabelle Vachon-Girard, ainsi que l'équipe de bénévoles qui les accompagne.",
+        ],
+        encadre: {
+          titre: "Fiche technique",
+          lignes: [
+            "Titre : Sauvetage animal",
+            "Genre : série documentaire, docu-réalité",
+            "Diffuseur : TVA et la plateforme TVA+",
+            "Production : Urbania, en collaboration avec Québecor Contenu",
+            "Première saison : janvier 2021",
+          ],
+        },
+      },
+      {
+        titre: "Ce qu'on y voit",
+        texte: [
+          "Des interventions réelles, filmées telles qu'elles se déroulent : le travail en hauteur, les espaces clos, les situations où l'animal est hors de portée et où chaque minute compte.",
+          "La caméra montre aussi ce qu'on voit rarement, l'attente, la préparation du matériel, les décisions prises sur place, et les moments où l'intervention ne se termine pas comme on l'aurait voulu.",
         ],
       },
       {
         titre: "Où la voir",
         texte: [
-          "Plateforme ou lien de visionnement : à confirmer.",
+          "Les épisodes sont diffusés sur TVA et offerts sur la plateforme TVA+. Notre chaîne YouTube rassemble également les épisodes et les capsules de la série.",
         ],
+      },
+    ],
+    actions: [
+      {
+        href: "https://www.youtube.com/c/sauvetageanimalrescue",
+        libelle: "Voir les épisodes sur YouTube",
+        principal: true,
+      },
+      {
+        href: "https://urbania.media/fr/productions/sauvetage-animal",
+        libelle: "La série chez Urbania",
       },
     ],
   },

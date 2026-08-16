@@ -266,6 +266,49 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  secteurs: {
+    surtitre: "Pour qui nous intervenons",
+    titre: "Secteurs d'activité",
+    intro:
+      "Un raton laveur dans un cimetière, des goélands sur un entrepôt, un chevreuil sur une piste d'aéroport : le problème n'est jamais tout à fait le même selon le milieu. Voici les secteurs où nous intervenons et ce que nous y faisons.",
+    image: "/images/carte-services.jpg",
+    blocs: [
+      {
+        titre: "Les milieux que nous desservons",
+        liste: [
+          "Municipalités",
+          "Services animaliers",
+          "Services de police et d'incendie",
+          "Aéroports",
+          "Ports et marinas",
+          "Chemins de fer",
+          "Centres commerciaux",
+          "Entrepôts et centres de distribution",
+          "Hôpitaux et CHSLD",
+          "Hôtels et restaurants",
+          "Écoles et universités",
+          "Cimetières",
+          "Golfs et terrains sportifs",
+          "Carrières et sites d'extraction",
+          "Gestionnaires d'immeubles",
+          "Fermes et milieux agricoles",
+          "Chantiers de construction",
+          "Événements et festivals",
+        ],
+      },
+      {
+        titre: "Votre secteur n'est pas dans la liste ?",
+        texte: [
+          "Elle n'est pas exhaustive. Si un animal cause un problème dans votre milieu de travail, ou si vous ne savez pas à qui vous adresser, appelez la ligne de signalement ou écrivez à la direction générale. Nous vous dirons franchement si la situation relève de nous ou d'un autre service.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+      { href: "/services/patrouille", libelle: "Voir nos services" },
+    ],
+  },
+
   "services/patrouille": {
     surtitre: "Le premier niveau d'intervention",
     titre: "Patrouille",

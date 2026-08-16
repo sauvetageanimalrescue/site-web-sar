@@ -85,15 +85,15 @@
       "formations": {
         "titre": "Formations"
       },
-      "stages": {
-        "titre": "Stages d'observation"
-      },
       "ateliers": {
         "titre": "Ateliers scolaires"
       },
       "services": {
         "titre": "Nos services",
         "texte": "Secours technique, soutien aux municipalités, ateliers dans les écoles."
+      },
+      "secteurs": {
+        "titre": "Secteurs d'activité"
       }
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",
@@ -244,10 +244,22 @@
     "montantLibre": "Autre montant",
     "impactTitre": "Ce que votre don paie",
     "impact": [
-      { "montant": "25 $", "texte": "Le carburant d'une intervention en banlieue." },
-      { "montant": "50 $", "texte": "Une cage-trappe pour capturer un animal réactif sans le blesser." },
-      { "montant": "100 $", "texte": "L'équipement de protection d'un sauveteur pour la saison." },
-      { "montant": "250 $", "texte": "Une corde de sauvetage certifiée, remplacée selon le registre des cordes." }
+      {
+        "montant": "25 $",
+        "texte": "Le carburant d'une intervention en banlieue."
+      },
+      {
+        "montant": "50 $",
+        "texte": "Une cage-trappe pour capturer un animal réactif sans le blesser."
+      },
+      {
+        "montant": "100 $",
+        "texte": "L'équipement de protection d'un sauveteur pour la saison."
+      },
+      {
+        "montant": "250 $",
+        "texte": "Une corde de sauvetage certifiée, remplacée selon le registre des cordes."
+      }
     ],
     "champs": {
       "montant": "Montant",
@@ -366,13 +378,34 @@
     "horsTitre": "Ce n'est pas notre mandat",
     "horsTexte": "Nous sommes une équipe de secours technique. Certaines situations relèvent d'un autre service, et appeler le bon numéro fait gagner un temps précieux à l'animal.",
     "hors": [
-      { "cas": "Maltraitance ou négligence animale", "vers": "Ligne signalement du MAPAQ, 1 844 ANIMAUX" },
-      { "cas": "Animal sur une autoroute ou en bordure de route", "vers": "511, ministère des Transports. Ses patrouilleurs sont dépêchés et font appel à nous s'ils ont besoin d'assistance." },
-      { "cas": "Animal mort sur la chaussée", "vers": "Travaux publics de votre municipalité" },
-      { "cas": "Chien errant ou capture en ville", "vers": "Service animalier de votre municipalité" },
-      { "cas": "Danger pour des personnes", "vers": "911" },
-      { "cas": "Grande faune blessée (cerf, orignal, ours)", "vers": "SOS Braconnage, 1 800 463-2191" },
-      { "cas": "Adoption, hébergement, stérilisation", "vers": "Refuge ou SPCA de votre secteur" }
+      {
+        "cas": "Maltraitance ou négligence animale",
+        "vers": "Ligne signalement du MAPAQ, 1 844 ANIMAUX"
+      },
+      {
+        "cas": "Animal sur une autoroute ou en bordure de route",
+        "vers": "511, ministère des Transports. Ses patrouilleurs sont dépêchés et font appel à nous s'ils ont besoin d'assistance."
+      },
+      {
+        "cas": "Animal mort sur la chaussée",
+        "vers": "Travaux publics de votre municipalité"
+      },
+      {
+        "cas": "Chien errant ou capture en ville",
+        "vers": "Service animalier de votre municipalité"
+      },
+      {
+        "cas": "Danger pour des personnes",
+        "vers": "911"
+      },
+      {
+        "cas": "Grande faune blessée (cerf, orignal, ours)",
+        "vers": "SOS Braconnage, 1 800 463-2191"
+      },
+      {
+        "cas": "Adoption, hébergement, stérilisation",
+        "vers": "Refuge ou SPCA de votre secteur"
+      }
     ],
     "champs": {
       "nom": "Votre nom",

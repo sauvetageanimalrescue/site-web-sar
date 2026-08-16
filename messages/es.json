@@ -85,15 +85,15 @@
       "formations": {
         "titre": "Formaciones"
       },
-      "stages": {
-        "titre": "Jornadas de observación"
-      },
       "ateliers": {
         "titre": "Talleres escolares"
       },
       "services": {
         "titre": "Nuestros servicios",
         "texte": "Rescate técnico, apoyo a los municipios, talleres en las escuelas."
+      },
+      "secteurs": {
+        "titre": "Sectores de actividad"
       }
     },
     "territoireTitre": "82 municipios,\nun solo equipo",
@@ -244,10 +244,22 @@
     "montantLibre": "Otro importe",
     "impactTitre": "Lo que paga su donación",
     "impact": [
-      { "montant": "25 $", "texte": "El combustible de una intervención en las afueras." },
-      { "montant": "50 $", "texte": "Una jaula trampa para capturar a un animal reactivo sin herirlo." },
-      { "montant": "100 $", "texte": "El equipo de protección de un rescatista para la temporada." },
-      { "montant": "250 $", "texte": "Una cuerda de rescate certificada, sustituida según el registro de cuerdas." }
+      {
+        "montant": "25 $",
+        "texte": "El combustible de una intervención en las afueras."
+      },
+      {
+        "montant": "50 $",
+        "texte": "Una jaula trampa para capturar a un animal reactivo sin herirlo."
+      },
+      {
+        "montant": "100 $",
+        "texte": "El equipo de protección de un rescatista para la temporada."
+      },
+      {
+        "montant": "250 $",
+        "texte": "Una cuerda de rescate certificada, sustituida según el registro de cuerdas."
+      }
     ],
     "champs": {
       "montant": "Importe",
@@ -366,13 +378,34 @@
     "horsTitre": "Esto no es nuestro mandato",
     "horsTexte": "Somos un equipo de rescate técnico. Algunas situaciones corresponden a otro servicio, y llamar al número correcto le ahorra un tiempo precioso al animal.",
     "hors": [
-      { "cas": "Maltrato o negligencia animal", "vers": "Línea del MAPAQ, 1 844 ANIMAUX" },
-      { "cas": "Animal en una autopista o al borde de la carretera", "vers": "511, ministerio de Transportes. Envía a sus patrulleros, que nos llaman si necesitan asistencia." },
-      { "cas": "Animal muerto en la calzada", "vers": "Obras públicas de su municipio" },
-      { "cas": "Perro callejero o captura urbana", "vers": "Servicio animal de su municipio" },
-      { "cas": "Peligro para las personas", "vers": "911" },
-      { "cas": "Fauna mayor herida (ciervo, alce, oso)", "vers": "SOS Braconnage, 1 800 463-2191" },
-      { "cas": "Adopción, acogida, esterilización", "vers": "Refugio o SPCA de su sector" }
+      {
+        "cas": "Maltrato o negligencia animal",
+        "vers": "Línea del MAPAQ, 1 844 ANIMAUX"
+      },
+      {
+        "cas": "Animal en una autopista o al borde de la carretera",
+        "vers": "511, ministerio de Transportes. Envía a sus patrulleros, que nos llaman si necesitan asistencia."
+      },
+      {
+        "cas": "Animal muerto en la calzada",
+        "vers": "Obras públicas de su municipio"
+      },
+      {
+        "cas": "Perro callejero o captura urbana",
+        "vers": "Servicio animal de su municipio"
+      },
+      {
+        "cas": "Peligro para las personas",
+        "vers": "911"
+      },
+      {
+        "cas": "Fauna mayor herida (ciervo, alce, oso)",
+        "vers": "SOS Braconnage, 1 800 463-2191"
+      },
+      {
+        "cas": "Adopción, acogida, esterilización",
+        "vers": "Refugio o SPCA de su sector"
+      }
     ],
     "champs": {
       "nom": "Su nombre",

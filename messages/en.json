@@ -85,15 +85,15 @@
       "formations": {
         "titre": "Training"
       },
-      "stages": {
-        "titre": "Observation days"
-      },
       "ateliers": {
         "titre": "School workshops"
       },
       "services": {
         "titre": "Our services",
         "texte": "Technical rescue, support for municipalities, workshops in schools."
+      },
+      "secteurs": {
+        "titre": "Industries served"
       }
     },
     "territoireTitre": "82 municipalities,\none team",
@@ -244,10 +244,22 @@
     "montantLibre": "Other amount",
     "impactTitre": "What your gift pays for",
     "impact": [
-      { "montant": "$25", "texte": "The fuel for one suburban call-out." },
-      { "montant": "$50", "texte": "A live trap to catch a reactive animal without hurting it." },
-      { "montant": "$100", "texte": "One rescuer's protective gear for the season." },
-      { "montant": "$250", "texte": "A certified rescue rope, replaced on schedule per the rope registry." }
+      {
+        "montant": "$25",
+        "texte": "The fuel for one suburban call-out."
+      },
+      {
+        "montant": "$50",
+        "texte": "A live trap to catch a reactive animal without hurting it."
+      },
+      {
+        "montant": "$100",
+        "texte": "One rescuer's protective gear for the season."
+      },
+      {
+        "montant": "$250",
+        "texte": "A certified rescue rope, replaced on schedule per the rope registry."
+      }
     ],
     "champs": {
       "montant": "Amount",
@@ -366,13 +378,34 @@
     "horsTitre": "This is not our mandate",
     "horsTexte": "We are a technical rescue team. Some situations belong to another service, and calling the right number saves the animal precious time.",
     "hors": [
-      { "cas": "Animal cruelty or neglect", "vers": "MAPAQ reporting line, 1 844 ANIMAUX" },
-      { "cas": "Animal on a highway or roadside", "vers": "511, Ministère des Transports. Their patrollers are dispatched and call us in if they need assistance." },
-      { "cas": "Dead animal on the roadway", "vers": "Your municipality's public works" },
-      { "cas": "Stray dog or urban capture", "vers": "Your municipal animal services" },
-      { "cas": "Danger to people", "vers": "911" },
-      { "cas": "Injured large wildlife (deer, moose, bear)", "vers": "SOS Braconnage, 1 800 463-2191" },
-      { "cas": "Adoption, fostering, spay and neuter", "vers": "Your local shelter or SPCA" }
+      {
+        "cas": "Animal cruelty or neglect",
+        "vers": "MAPAQ reporting line, 1 844 ANIMAUX"
+      },
+      {
+        "cas": "Animal on a highway or roadside",
+        "vers": "511, Ministère des Transports. Their patrollers are dispatched and call us in if they need assistance."
+      },
+      {
+        "cas": "Dead animal on the roadway",
+        "vers": "Your municipality's public works"
+      },
+      {
+        "cas": "Stray dog or urban capture",
+        "vers": "Your municipal animal services"
+      },
+      {
+        "cas": "Danger to people",
+        "vers": "911"
+      },
+      {
+        "cas": "Injured large wildlife (deer, moose, bear)",
+        "vers": "SOS Braconnage, 1 800 463-2191"
+      },
+      {
+        "cas": "Adoption, fostering, spay and neuter",
+        "vers": "Your local shelter or SPCA"
+      }
     ],
     "champs": {
       "nom": "Your name",

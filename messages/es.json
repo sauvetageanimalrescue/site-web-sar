@@ -485,5 +485,46 @@
     "dedicace": "Una organización son personas. Esta página está dedicada a quienes llevaron adelante Sauvetage Animal Rescue y ya no están entre nosotros. Su trabajo continúa en cada misión.",
     "aucun": "Los homenajes se añaden a esta página con el acuerdo de los allegados.",
     "contact": "Para proponer un homenaje, escriba a la dirección general a e.dussault@sar.quebec."
+  },
+  "serie": {
+    "surtitre": "Sauvetage animal, en TVA",
+    "titre": "Serie de televisión",
+    "intro": "Un equipo de rodaje siguió a nuestros intervinientes durante sus misiones. El resultado es una serie documental emitida en TVA, que muestra el trabajo tal como ocurre.",
+    "serieTitre": "La serie",
+    "seriePara1": "Sauvetage animal es una serie documental y de telerrealidad quebequense. La primera temporada se estrenó en enero de 2021 en TVA. Está producida por Urbania, en colaboración con Québecor Contenu.",
+    "seriePara2": "La serie sigue a la escuadra Sauvetage Animal Rescue, la única escuadra de rescate técnico animal certificada en Canadá. Aparecen los fundadores, Eric Dussault e Isabelle Vachon-Girard, y el equipo de voluntarios.",
+    "ficheTitre": "Ficha técnica",
+    "fiche": {
+      "titre": {
+        "label": "Título",
+        "valeur": "Sauvetage animal"
+      },
+      "genre": {
+        "label": "Género",
+        "valeur": "Serie documental, telerrealidad"
+      },
+      "diffuseur": {
+        "label": "Emisora",
+        "valeur": "TVA y la plataforma TVA+"
+      },
+      "production": {
+        "label": "Producción",
+        "valeur": "Urbania, en colaboración con Québecor Contenu"
+      },
+      "saison": {
+        "label": "Primera temporada",
+        "valeur": "Enero de 2021, doce episodios"
+      }
+    },
+    "contenuTitre": "Lo que se ve",
+    "contenuPara1": "Intervenciones reales, filmadas tal como suceden: el trabajo en altura, los espacios cerrados, las situaciones en que el animal está fuera de alcance y cada minuto cuenta.",
+    "contenuPara2": "La cámara muestra también lo que rara vez se ve: la espera, la preparación del material, las decisiones tomadas sobre el terreno y los momentos en que la intervención no termina como se hubiera querido.",
+    "episodesTitre": "Los episodios",
+    "episodesIntro": "Los doce episodios de la primera temporada, en orden de emisión. Cada miniatura abre el episodio en nuestro canal de YouTube.",
+    "episode": "Episodio {numero}",
+    "voirTitre": "Dónde verla",
+    "voirTexte": "Los episodios se emiten en TVA y están disponibles en la plataforma TVA+. Nuestro canal de YouTube reúne también la temporada completa.",
+    "voirYoutube": "La temporada completa en YouTube",
+    "voirUrbania": "La serie en Urbania"
   }
 }

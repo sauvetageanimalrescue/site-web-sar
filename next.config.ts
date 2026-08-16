@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "*.supabase.co" },
       // Le temps de la migration, les photos vivent encore sur le CDN Shopify.
       { protocol: "https", hostname: "sar.quebec" },
+      // Vignettes des épisodes de la série, servies par YouTube.
+      { protocol: "https", hostname: "i.ytimg.com" },
     ],
   },
 };

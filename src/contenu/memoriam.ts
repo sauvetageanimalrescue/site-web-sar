@@ -18,6 +18,7 @@ export const HOMMAGES: Hommage[] = [
     cle: "roxane-martel",
     nom: "Roxanne Martel",
     fonction: "Membre de l'équipe",
+    annees: "29 mai 2023",
     image: "/images/memoriam-roxanne-martel.jpg",
     texte: [
       "Roxanne s'est éteinte à trente et un ans, des suites des complications d'un accident de la route. Elle avait toute la vie devant elle.",

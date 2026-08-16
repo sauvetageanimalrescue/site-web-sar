@@ -309,6 +309,154 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  "services/inspection": {
+    surtitre: "Avant que le problème s'installe",
+    titre: "Inspection",
+    intro:
+      "Une inspection sert à comprendre ce qui attire les animaux chez vous et par où ils entrent. C'est presque toujours moins coûteux que de gérer la même situation trois fois par année.",
+    image: "/images/carte-secteurs.jpg",
+    blocs: [
+      {
+        titre: "Ce que nous vérifions",
+        liste: [
+          "Points d'entrée : soffites, ventilations, conduits, vides sanitaires",
+          "Sources de nourriture et d'eau accessibles",
+          "Abris potentiels : entretoits, remises, empilements, machinerie",
+          "Traces de présence : excréments, poils, sentiers, dommages",
+          "Risques pour les occupants et pour les animaux eux-mêmes",
+        ],
+      },
+      {
+        titre: "Ce que vous recevez",
+        texte: [
+          "Un rapport écrit décrivant ce qui a été constaté, l'espèce en cause quand elle est identifiable, et les correctifs à apporter par ordre de priorité. Nous distinguons clairement ce qui relève de nous de ce qui relève d'un entrepreneur, d'un exterminateur ou de votre équipe d'entretien.",
+          "Nous ne vendons pas de produits et nous ne facturons pas au nombre d'animaux capturés. Un rapport qui conclut qu'il n'y a rien à faire est un rapport utile.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/secteurs", libelle: "Voir les secteurs desservis", principal: true },
+    ],
+  },
+
+  "services/capture": {
+    surtitre: "Sans blesser l'animal",
+    titre: "Capture",
+    intro:
+      "Capturer un animal qui ne veut pas être capturé demande du matériel, de la patience et une bonne lecture du comportement animal. Mal fait, on blesse la bête, on se fait mordre, ou on la pousse vers un danger pire.",
+    image: "/images/carte-signalement.jpg",
+    blocs: [
+      {
+        titre: "Nos moyens",
+        liste: [
+          "Perches de capture, de plusieurs longueurs",
+          "Cages-trappes adaptées à l'espèce et surveillées",
+          "Filets, épuisettes et sacs de capture",
+          "Équipement de protection contre les morsures et les griffures",
+          "Cages de transport ventilées et couvertes",
+        ],
+      },
+      {
+        titre: "Nos règles",
+        texte: [
+          "Une cage-trappe n'est jamais laissée sans surveillance prolongée : un animal piégé au soleil ou au froid souffre, et un piège oublié devient une cruauté. Nous privilégions toujours la méthode la moins invasive qui fonctionne, et nous acceptons de repartir bredouilles plutôt que de forcer une capture qui mettrait l'animal en danger.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+    ],
+  },
+
+  "services/reglementation": {
+    surtitre: "Patrouilleurs assermentés",
+    titre: "Règlementation",
+    intro:
+      "Certains de nos patrouilleurs sont assermentés et peuvent appliquer la règlementation animalière sur le territoire des municipalités qui leur en confient le mandat.",
+    image: "/images/carte-services.jpg",
+    blocs: [
+      {
+        titre: "Ce que ça permet",
+        liste: [
+          "Application des règlements municipaux sur les animaux",
+          "Vérification des licences et de l'identification",
+          "Constats d'infraction et suivi des dossiers",
+          "Réponse aux plaintes de nuisance ou de divagation",
+          "Accompagnement des services municipaux sur le terrain",
+        ],
+      },
+      {
+        titre: "Une posture, pas seulement un pouvoir",
+        texte: [
+          "Être assermenté ne change pas la mission. Notre premier réflexe reste l'explication et l'accompagnement du citoyen, parce qu'un propriétaire qui comprend le règlement s'y conforme durablement, alors qu'un constat mal expliqué ne règle rien. Le constat existe pour les cas où le dialogue a échoué ou lorsque la sécurité l'exige.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/secteurs", libelle: "Voir les secteurs desservis", principal: true },
+    ],
+  },
+
+  "services/denombrement": {
+    surtitre: "Compter avant de décider",
+    titre: "Dénombrement",
+    intro:
+      "Avant d'intervenir sur une population animale, il faut savoir combien il y en a, où et depuis quand. Un dénombrement remplace les impressions par des chiffres, et évite des décisions coûteuses fondées sur une plainte isolée.",
+    image: "/images/territoire.jpg",
+    blocs: [
+      {
+        titre: "Ce que nous dénombrons",
+        liste: [
+          "Colonies de chats sans propriétaire",
+          "Populations de faune urbaine dans un secteur donné",
+          "Cerfs et grande faune en milieu périurbain",
+          "Colonies d'oiseaux sur un bâtiment ou un site industriel",
+          "Suivi d'une population dans le temps, avant et après intervention",
+        ],
+      },
+      {
+        titre: "Comment nous procédons",
+        texte: [
+          "Observation sur le terrain à heures fixes, relevés photographiques, identification des individus quand c'est possible, et cartographie des points de présence. Les données sont consignées et vous sont remises sous forme de rapport, avec les limites de la méthode clairement indiquées.",
+          "Un dénombrement honnête donne parfois un résultat qui dérange : une population moins nombreuse qu'on le croyait, ou un problème qui vient d'ailleurs. C'est précisément ce qui le rend utile pour justifier une décision devant un conseil municipal ou une direction.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/secteurs", libelle: "Voir les secteurs desservis", principal: true },
+    ],
+  },
+
+  "services/sinistres": {
+    surtitre: "Incendies, inondations, évacuations",
+    titre: "Sinistres",
+    intro:
+      "Quand une famille est évacuée en pleine nuit, personne n'a prévu quoi faire du chat, du perroquet ou des poissons. C'est un angle mort des plans d'urgence, et c'est là que nous intervenons.",
+    image: "/images/hero-accueil.jpg",
+    blocs: [
+      {
+        titre: "Ce que nous faisons sur un sinistre",
+        liste: [
+          "Récupération des animaux restés dans un bâtiment évacué",
+          "Prise en charge et transport vers un lieu sûr",
+          "Soutien aux sinistrés qui ne peuvent pas garder leur animal",
+          "Liaison avec les refuges et les cliniques vétérinaires",
+          "Assistance aux services d'incendie sur les lieux",
+        ],
+      },
+      {
+        titre: "Pourquoi ça compte",
+        texte: [
+          "Des gens refusent d'évacuer, ou retournent dans un immeuble en feu, pour un animal. Ce n'est pas de l'imprudence, c'est un attachement que les plans d'urgence sous-estiment encore. Savoir qu'une équipe s'occupe de l'animal permet au sinistré de sortir, et aux pompiers de faire leur travail.",
+          "Pour organiser une entente préalable avec votre municipalité ou votre service d'incendie, écrivez à e.dussault@sar.quebec.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/services/municipalites", libelle: "Services aux municipalités", principal: true },
+    ],
+  },
+
   "services/patrouille": {
     surtitre: "Le premier niveau d'intervention",
     titre: "Patrouille",

@@ -13,7 +13,6 @@
     "signalement": "Reportar un animal",
     "signaler": "Reportar",
     "services": "Servicios",
-    "patrouille": "Patrulla",
     "secoursAnimalier": "Socorro Animal",
     "sauvetageTechnique": "Rescate Técnico",
     "municipalites": "Municipios",
@@ -45,7 +44,12 @@
     "connexion": "Iniciar sesión",
     "menu": "Menú",
     "fermer": "Cerrar",
-    "langue": "Idioma"
+    "langue": "Idioma",
+    "capture": "Captura",
+    "inspection": "Inspección",
+    "reglementation": "Reglamentación",
+    "denombrement": "Conteo de población",
+    "sinistres": "Siniestros"
   },
   "compteur": {
     "titre": "Animales rescatados",

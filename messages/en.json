@@ -13,7 +13,6 @@
     "signalement": "Report an animal",
     "signaler": "Report",
     "services": "Services",
-    "patrouille": "Patrol",
     "secoursAnimalier": "Animal Rescue",
     "sauvetageTechnique": "Technical Rescue",
     "municipalites": "Municipalities",
@@ -45,7 +44,12 @@
     "connexion": "Sign in",
     "menu": "Menu",
     "fermer": "Close",
-    "langue": "Language"
+    "langue": "Language",
+    "capture": "Capture",
+    "inspection": "Inspection",
+    "reglementation": "By-law enforcement",
+    "denombrement": "Population counts",
+    "sinistres": "Disasters"
   },
   "compteur": {
     "titre": "Animals rescued",

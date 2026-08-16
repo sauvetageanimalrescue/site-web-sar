@@ -13,7 +13,6 @@
     "signalement": "Signaler un animal",
     "signaler": "Signaler",
     "services": "Services",
-    "patrouille": "Patrouille",
     "secoursAnimalier": "Secours Animalier",
     "sauvetageTechnique": "Sauvetage Technique",
     "municipalites": "Municipalités",
@@ -45,7 +44,12 @@
     "connexion": "Connexion",
     "menu": "Menu",
     "fermer": "Fermer",
-    "langue": "Langue"
+    "langue": "Langue",
+    "capture": "Capture",
+    "inspection": "Inspection",
+    "reglementation": "Règlementation",
+    "denombrement": "Dénombrement",
+    "sinistres": "Sinistres"
   },
   "compteur": {
     "titre": "Animaux sauvés",

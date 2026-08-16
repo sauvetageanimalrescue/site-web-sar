@@ -20,10 +20,13 @@ export const MENU: SectionMenu[] = [
   {
     cle: "services",
     liens: [
-      { cle: "patrouille", href: "/services/patrouille" },
       { cle: "secoursAnimalier", href: "/services/secours-animalier" },
       { cle: "sauvetageTechnique", href: "/services/sauvetage-technique" },
-      { cle: "municipalites", href: "/services/municipalites" },
+      { cle: "capture", href: "/services/capture" },
+      { cle: "inspection", href: "/services/inspection" },
+      { cle: "reglementation", href: "/services/reglementation" },
+      { cle: "denombrement", href: "/services/denombrement" },
+      { cle: "sinistres", href: "/services/sinistres" },
     ],
   },
   {

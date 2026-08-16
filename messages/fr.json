@@ -487,43 +487,10 @@
     "contact": "Pour proposer un hommage, écrivez à la direction générale à e.dussault@sar.quebec."
   },
   "serie": {
-    "surtitre": "Sauvetage animal, à TVA",
+    "surtitre": "Sauvetage animal",
     "titre": "Série télévisée",
     "intro": "Une équipe de tournage a suivi nos intervenants pendant leurs missions. Le résultat est une série documentaire diffusée à TVA, qui montre le travail tel qu'il se fait.",
-    "serieTitre": "La série",
-    "seriePara1": "Sauvetage animal est une série documentaire et un docu-réalité québécois. La première saison a été lancée en janvier 2021 sur les ondes de TVA. Elle est produite par Urbania, en collaboration avec Québecor Contenu.",
-    "seriePara2": "La série suit l'escouade Sauvetage Animal Rescue, la seule escouade de sauvetage technique animalier certifiée au Canada. On y retrouve les fondateurs, Eric Dussault et Isabelle Vachon-Girard, ainsi que l'équipe de bénévoles qui les accompagne.",
-    "ficheTitre": "Fiche technique",
-    "fiche": {
-      "titre": {
-        "label": "Titre",
-        "valeur": "Sauvetage animal"
-      },
-      "genre": {
-        "label": "Genre",
-        "valeur": "Série documentaire, docu-réalité"
-      },
-      "diffuseur": {
-        "label": "Diffuseur",
-        "valeur": "TVA et la plateforme TVA+"
-      },
-      "production": {
-        "label": "Production",
-        "valeur": "Urbania, en collaboration avec Québecor Contenu"
-      },
-      "saison": {
-        "label": "Première saison",
-        "valeur": "Janvier 2021, douze épisodes"
-      }
-    },
-    "contenuTitre": "Ce qu'on y voit",
-    "contenuPara1": "Des interventions réelles, filmées telles qu'elles se déroulent : le travail en hauteur, les espaces clos, les situations où l'animal est hors de portée et où chaque minute compte.",
-    "contenuPara2": "La caméra montre aussi ce qu'on voit rarement, l'attente, la préparation du matériel, les décisions prises sur place, et les moments où l'intervention ne se termine pas comme on l'aurait voulu.",
-    "episodesTitre": "Les épisodes",
-    "episodesIntro": "Les douze épisodes de la première saison, dans l'ordre de diffusion. Chaque vignette ouvre l'épisode sur notre chaîne YouTube.",
     "episode": "Épisode {numero}",
-    "voirTitre": "Où la voir",
-    "voirTexte": "Les épisodes sont diffusés sur TVA et offerts sur la plateforme TVA+. Notre chaîne YouTube rassemble également la saison complète.",
     "voirYoutube": "La saison complète sur YouTube",
     "voirUrbania": "La série chez Urbania"
   }

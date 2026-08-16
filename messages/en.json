@@ -487,43 +487,10 @@
     "contact": "To propose a tribute, write to the Executive Director at e.dussault@sar.quebec."
   },
   "serie": {
-    "surtitre": "Sauvetage animal, on TVA",
+    "surtitre": "Sauvetage animal",
     "titre": "Television series",
     "intro": "A film crew followed our responders on their missions. The result is a documentary series broadcast on TVA, showing the work exactly as it happens.",
-    "serieTitre": "The series",
-    "seriePara1": "Sauvetage animal is a Québec documentary and reality series. The first season launched in January 2021 on TVA. It is produced by Urbania, in collaboration with Québecor Contenu.",
-    "seriePara2": "The series follows the Sauvetage Animal Rescue squad, the only certified technical animal rescue squad in Canada. It features the founders, Eric Dussault and Isabelle Vachon-Girard, along with the volunteer team.",
-    "ficheTitre": "Details",
-    "fiche": {
-      "titre": {
-        "label": "Title",
-        "valeur": "Sauvetage animal"
-      },
-      "genre": {
-        "label": "Genre",
-        "valeur": "Documentary and reality series"
-      },
-      "diffuseur": {
-        "label": "Broadcaster",
-        "valeur": "TVA and the TVA+ platform"
-      },
-      "production": {
-        "label": "Production",
-        "valeur": "Urbania, in collaboration with Québecor Contenu"
-      },
-      "saison": {
-        "label": "First season",
-        "valeur": "January 2021, twelve episodes"
-      }
-    },
-    "contenuTitre": "What you see",
-    "contenuPara1": "Real operations, filmed as they unfold: work at height, confined spaces, situations where the animal is out of reach and every minute counts.",
-    "contenuPara2": "The camera also shows what is rarely seen: the waiting, the gear being prepared, the decisions made on site, and the times an operation does not end the way we hoped.",
-    "episodesTitre": "Episodes",
-    "episodesIntro": "The twelve episodes of the first season, in broadcast order. Each thumbnail opens the episode on our YouTube channel.",
     "episode": "Episode {numero}",
-    "voirTitre": "Where to watch",
-    "voirTexte": "Episodes air on TVA and are available on the TVA+ platform. Our YouTube channel also hosts the full season.",
     "voirYoutube": "Full season on YouTube",
     "voirUrbania": "The series at Urbania"
   }

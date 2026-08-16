@@ -9,14 +9,6 @@ import {
   lienEpisode,
 } from "@/contenu/episodes";
 
-const FICHE = [
-  "titre",
-  "genre",
-  "diffuseur",
-  "production",
-  "saison",
-] as const;
-
 export default async function PageSerie({
   params,
 }: PageProps<"/[locale]/serie-televisee">) {
@@ -33,44 +25,13 @@ export default async function PageSerie({
         image="/images/carte-services.jpg"
       />
 
-      <Section titre={t("serieTitre")}>
-        <div className="grid gap-8 lg:grid-cols-[1fr_20rem]">
-          <div className="space-y-4 leading-relaxed text-muted">
-            <p>{t("seriePara1")}</p>
-            <p>{t("seriePara2")}</p>
-          </div>
-          <div className="h-fit rounded-xl border border-border bg-surface-2 p-5">
-            <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-marine">
-              {t("ficheTitre")}
-            </p>
-            <dl className="mt-4 space-y-3 text-sm">
-              {FICHE.map((champ) => (
-                <div key={champ}>
-                  <dt className="text-xs uppercase tracking-wide text-ciel">
-                    {t(`fiche.${champ}.label`)}
-                  </dt>
-                  <dd className="text-foreground">
-                    {t(`fiche.${champ}.valeur`)}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-      </Section>
-
-      <Section titre={t("contenuTitre")} fond>
-        <div className="max-w-3xl space-y-4 leading-relaxed text-muted">
-          <p>{t("contenuPara1")}</p>
-          <p>{t("contenuPara2")}</p>
-        </div>
-      </Section>
-
-      {/* Les épisodes ouvrent la liste de lecture sur YouTube plutôt qu'un
-          lecteur intégré : la vidéo se poursuit d'un épisode à l'autre et le
-          site ne charge aucun script de suivi. */}
-      <Section titre={t("episodesTitre")}>
-        <p className="mb-8 max-w-3xl text-muted">{t("episodesIntro")}</p>
+      {/* Les cartes du site, appliquées aux épisodes : la vignette occupe
+          toute la carte, le titre est posé dessus. Format seize neuf plutôt
+          que carré, parce que les vignettes de YouTube le sont : un carré y
+          ajouterait des bandes noires. Les épisodes ouvrent la liste de
+          lecture sur YouTube, ce qui enchaîne le suivant et évite de charger
+          les scripts de Google sur nos pages. */}
+      <Section>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {EPISODES.map((episode) => (
             <a
@@ -78,53 +39,45 @@ export default async function PageSerie({
               href={lienEpisode(episode.video)}
               target="_blank"
               rel="noreferrer"
-              className="group overflow-hidden rounded-xl border border-border bg-surface transition hover:border-ciel"
+              className="group relative isolate flex aspect-video flex-col justify-end overflow-hidden rounded-xl bg-marine transition"
             >
-              <div className="relative aspect-video overflow-hidden bg-marine">
-                <Image
-                  src={vignette(episode.video)}
-                  alt=""
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-marine/20 opacity-0 transition group-hover:opacity-100">
-                  <span className="flex size-14 items-center justify-center rounded-full bg-lime text-marine">
-                    <IconPlayerPlayFilled className="size-6" aria-hidden />
-                  </span>
-                </div>
-              </div>
-              <div className="p-4">
-                <p className="font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              <Image
+                src={vignette(episode.video)}
+                alt=""
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="-z-10 object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine from-8% via-marine/55 via-22% to-transparent to-50%" />
+              <div className="flex items-center justify-between gap-3 p-5">
+                <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase leading-tight tracking-wide text-white">
                   {t("episode", { numero: episode.numero })}
-                </p>
+                </h2>
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-lime text-marine transition group-hover:scale-110">
+                  <IconPlayerPlayFilled className="size-5" aria-hidden />
+                </span>
               </div>
             </a>
           ))}
         </div>
-      </Section>
 
-      <Section titre={t("voirTitre")} fond>
-        <div className="max-w-3xl">
-          <p className="leading-relaxed text-muted">{t("voirTexte")}</p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a
-              href={`https://www.youtube.com/playlist?list=${PLAYLISTE}`}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
-            >
-              {t("voirYoutube")}
-            </a>
-            <a
-              href="https://urbania.media/fr/productions/sauvetage-animal"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
-            >
-              {t("voirUrbania")}
-            </a>
-          </div>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <a
+            href={`https://www.youtube.com/playlist?list=${PLAYLISTE}`}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
+          >
+            {t("voirYoutube")}
+          </a>
+          <a
+            href="https://urbania.media/fr/productions/sauvetage-animal"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
+          >
+            {t("voirUrbania")}
+          </a>
         </div>
       </Section>
     </>

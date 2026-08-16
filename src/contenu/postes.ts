@@ -4,17 +4,16 @@ import type { Locale } from "@/i18n/routing";
 // plutôt que dans messages/*.json, qui reste réservé à l'interface.
 
 export type Poste = {
-  cle: "repartiteur" | "messager" | "eclaireur" | "patrouilleur" | "sauveteur";
+  cle: "repartiteur" | "messager" | "eclaireur" | "secouriste" | "sauveteur";
   niveau: string | null;
   image: string;
 };
 
 export const POSTES: Poste[] = [
-  { cle: "repartiteur", niveau: "EGS", image: "/images/services-urgence.png" },
-  { cle: "messager", niveau: null, image: "/images/territoire.jpg" },
-  { cle: "eclaireur", niveau: "1", image: "/images/recrutement.jpg" },
-  { cle: "patrouilleur", niveau: "2", image: "/images/hero-accueil.jpg" },
-  { cle: "sauveteur", niveau: "3", image: "/images/stages.jpg" },
+  { cle: "repartiteur", niveau: "EGS", image: "/images/carte-services.jpg" },
+  { cle: "messager", niveau: null, image: "/images/carte-secteurs.jpg" },
+  { cle: "secouriste", niveau: null, image: "/images/carte-signalement.jpg" },
+  { cle: "sauveteur", niveau: null, image: "/images/carte-stages.jpg" },
 ];
 
 type Fiche = {
@@ -30,7 +29,7 @@ type Textes = Record<Poste["cle"], Fiche>;
 
 const FR: Textes = {
   repartiteur: {
-    titre: "Répartiteur ou répartitrice",
+    titre: "Répartiteur·trice",
     resume: "La première voix qu'entend un citoyen. Entièrement à distance.",
     description:
       "Chaque jour, des citoyens contactent Sauvetage Animal Rescue pour signaler un animal en détresse. Avant qu'une équipe intervienne sur le terrain, quelqu'un doit recueillir l'information, comprendre la situation et la transmettre rapidement aux bonnes personnes. C'est le rôle de l'Équipe de gestion des signalements. Ce poste se fait entièrement à distance, ce qui permet de contribuer aux sauvetages sans être sur le terrain. Aucune expérience préalable n'est requise : une formation est offerte pour maîtriser les outils et les procédures internes.",
@@ -63,7 +62,7 @@ const FR: Textes = {
     ],
   },
   messager: {
-    titre: "Messager ou messagère",
+    titre: "Messager·ère",
     resume: "Le transport des animaux vers les refuges partenaires.",
     description:
       "Le transport des animaux vers les refuges partenaires libère les équipes de patrouille et de sauvetage, qui peuvent répondre plus vite à un autre appel. Comme plusieurs refuges sont en périphérie de Montréal, cette contribution logistique améliore directement notre efficacité sur le terrain. Chaque mission de transport est une étape clé de la chaîne de sauvetage : pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs. Ce rôle convient à celles et ceux qui veulent s'impliquer de façon flexible et ponctuelle.",
@@ -109,8 +108,8 @@ const FR: Textes = {
       "Capacité à suivre les consignes",
     ],
   },
-  patrouilleur: {
-    titre: "Patrouilleur ou patrouilleuse",
+  secouriste: {
+    titre: "Secouriste",
     resume: "Au coeur des opérations de terrain, tous les jours.",
     description:
       "Le patrouilleur répond aux signalements venant des citoyens, des services animaliers, de nos partenaires ou des services d'urgence. Son rôle est d'intervenir dans les situations où l'animal peut être récupéré sans équipe de sauvetage technique. Les patrouilles couvrent une grande variété d'interventions, de la simple cueillette au sol jusqu'à la récupération sécuritaire d'un animal réactif à l'aide d'équipement spécialisé. Un poste pour celles et ceux qui veulent s'impliquer activement, dans une structure bien organisée.",
@@ -135,7 +134,7 @@ const FR: Textes = {
     ],
   },
   sauveteur: {
-    titre: "Sauveteur ou sauveteuse",
+    titre: "Sauveteur·euse",
     resume: "Le secours technique : hauteur, glace, espace clos.",
     description:
       "Le sauveteur intervient là où une patrouille ne peut pas aller : un chat à quinze mètres dans un arbre, un raton laveur au fond d'une cheminée, un chien sur une glace instable, une bernache prise dans un pilier de pont. Ces interventions demandent des techniques de travail en hauteur, du matériel de cordage certifié et une discipline de sécurité stricte. C'est le poste le plus exigeant de l'organisation, accessible après un parcours de formation interne et une progression depuis la patrouille.",
@@ -243,8 +242,8 @@ const EN: Textes = {
       "Able to follow instructions",
     ],
   },
-  patrouilleur: {
-    titre: "Patroller",
+  secouriste: {
+    titre: "First responder",
     resume: "At the heart of daily field operations.",
     description:
       "Patrollers answer reports from citizens, municipal animal services, our partners and emergency services. Their role is to handle situations where the animal can be recovered without a technical rescue team. Patrols cover a wide range of calls, from a simple ground pickup to safely capturing a reactive animal with specialized equipment. A role for those who want to be actively involved, within a well-organized structure.",
@@ -298,7 +297,7 @@ const EN: Textes = {
 
 const ES: Textes = {
   repartiteur: {
-    titre: "Despachador o despachadora",
+    titre: "Despachador·a",
     resume: "La primera voz que oye un ciudadano. Totalmente a distancia.",
     description:
       "Cada día, ciudadanos contactan a Sauvetage Animal Rescue para avisar de un animal en peligro. Antes de que un equipo salga al terreno, alguien debe recoger la información, entender la situación y transmitirla rápidamente a las personas adecuadas. Ese es el papel del equipo de gestión de avisos. El puesto es totalmente a distancia, lo que permite contribuir a los rescates sin estar en el terreno. No se requiere experiencia previa: se ofrece formación sobre las herramientas y los procedimientos internos.",
@@ -331,7 +330,7 @@ const ES: Textes = {
     ],
   },
   messager: {
-    titre: "Mensajero o mensajera",
+    titre: "Mensajero·a",
     resume: "El transporte de animales a los refugios asociados.",
     description:
       "Llevar a los animales a los refugios asociados libera a los equipos de patrulla y rescate, que pueden atender antes otra llamada. Como varios refugios están en la periferia de Montreal, esta aportación logística mejora directamente nuestra eficacia sobre el terreno. Cada traslado es un eslabón clave de la cadena de rescate: mientras se lleva a un animal a lugar seguro, se puede salvar otra vida en otro sitio. Un papel para quien quiera implicarse de forma flexible y puntual.",
@@ -377,8 +376,8 @@ const ES: Textes = {
       "Capacidad de seguir instrucciones",
     ],
   },
-  patrouilleur: {
-    titre: "Patrullero o patrullera",
+  secouriste: {
+    titre: "Socorrista",
     resume: "En el corazón de las operaciones de campo, cada día.",
     description:
       "El patrullero atiende los avisos de ciudadanos, servicios animales municipales, socios y servicios de emergencia. Su papel es intervenir en las situaciones en las que el animal puede recuperarse sin equipo de rescate técnico. Las patrullas cubren intervenciones muy variadas, desde una simple recogida en el suelo hasta la captura segura de un animal reactivo con equipo especializado. Un puesto para quien quiera implicarse activamente dentro de una estructura bien organizada.",

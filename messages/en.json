@@ -232,7 +232,16 @@
       "facultatif": "optional",
       "choisir": "Select",
       "envoyer": "Send my application",
-      "envoi": "Sending"
+      "envoi": "Sending",
+      "adresseRue": "Address",
+      "province": "Province",
+      "occupation": "Current occupation",
+      "disponibilitesTexte": "What does your availability look like?",
+      "experienceAnimaux": "Experience with animals",
+      "experienceConnexe": "Related experience or activities",
+      "experienceConnexeTexte": "Describe your related experience or activities",
+      "confirmeSelection": "I understand that submitting this form does not mean my application is accepted.",
+      "confirmeMajeur": "I confirm that I am eighteen or older."
     },
     "jours": {
       "semaineJour": "Weekdays, daytime",

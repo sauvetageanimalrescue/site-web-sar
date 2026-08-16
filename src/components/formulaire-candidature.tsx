@@ -8,6 +8,12 @@ import {
 } from "@tabler/icons-react";
 import type { Locale } from "@/i18n/routing";
 import { POSTES, fichePoste } from "@/contenu/postes";
+import {
+  OCCUPATIONS,
+  EXPERIENCES_ANIMAUX,
+  EXPERIENCES_CONNEXES,
+  libelle,
+} from "@/contenu/experiences";
 import { ORGANISATION } from "@/lib/constantes";
 import {
   envoyerCandidature,
@@ -22,6 +28,45 @@ const DISPONIBILITES = [
   "nuit",
   "surAppel",
 ] as const;
+
+// Les longues listes du formulaire sont rendues en cases à cocher plutôt
+// qu'en menu déroulant : on voit tout d'un coup d'oeil et on peut cocher
+// plusieurs réponses, ce qu'un menu ne permet pas.
+function ListeCases({
+  legende,
+  nom,
+  choix,
+  locale,
+}: {
+  legende: string;
+  nom: string;
+  choix: { cle: string; fr: string; en: string; es: string }[];
+  locale: Locale;
+}) {
+  return (
+    <fieldset>
+      <legend className="mb-2 text-sm font-medium text-foreground">
+        {legende}
+      </legend>
+      <div className="grid gap-2 sm:grid-cols-2">
+        {choix.map((c) => (
+          <label
+            key={c.cle}
+            className="flex cursor-pointer items-center gap-2 rounded-md border border-border px-3 py-2 text-sm"
+          >
+            <input
+              type="checkbox"
+              name={nom}
+              value={c.cle}
+              className="size-4 shrink-0 accent-[var(--marine)]"
+            />
+            {libelle(c, locale)}
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
 
 const CLASSE_CHAMP =
   "w-full rounded-md border border-border bg-surface px-3 py-2.5 text-foreground outline-none transition focus:border-ciel focus:ring-2 focus:ring-ciel/30";
@@ -107,10 +152,24 @@ export function FormulaireCandidature({
         </label>
       </div>
 
+      <label className="block">
+        <span className="mb-1 block text-sm font-medium">{c("adresseRue")}</span>
+        <input name="adresseRue" required className={CLASSE_CHAMP} />
+      </label>
+
       <div className="grid gap-5 sm:grid-cols-3">
         <label className="block">
           <span className="mb-1 block text-sm font-medium">{c("ville")}</span>
           <input name="ville" required className={CLASSE_CHAMP} />
+        </label>
+        <label className="block">
+          <span className="mb-1 block text-sm font-medium">{c("province")}</span>
+          <input
+            name="province"
+            defaultValue="Québec"
+            required
+            className={CLASSE_CHAMP}
+          />
         </label>
         <label className="block">
           <span className="mb-1 block text-sm font-medium">
@@ -127,6 +186,18 @@ export function FormulaireCandidature({
           <input type="date" name="dateNaissance" className={CLASSE_CHAMP} />
         </label>
       </div>
+
+      <label className="block">
+        <span className="mb-1 block text-sm font-medium">{c("occupation")}</span>
+        <select name="occupation" required className={CLASSE_CHAMP}>
+          <option value="">{c("choisir")}</option>
+          {OCCUPATIONS.map((o) => (
+            <option key={o.cle} value={o.cle}>
+              {libelle(o, locale)}
+            </option>
+          ))}
+        </select>
+      </label>
 
       <fieldset>
         <legend className="mb-2 text-sm font-medium text-foreground">
@@ -171,6 +242,25 @@ export function FormulaireCandidature({
 
       <label className="block">
         <span className="mb-1 block text-sm font-medium">
+          {c("disponibilitesTexte")}
+        </span>
+        <textarea
+          name="disponibilitesTexte"
+          rows={2}
+          required
+          className={CLASSE_CHAMP}
+        />
+      </label>
+
+      <ListeCases
+        legende={c("experienceAnimaux")}
+        nom="experienceAnimaux"
+        choix={EXPERIENCES_ANIMAUX}
+        locale={locale}
+      />
+
+      <label className="block">
+        <span className="mb-1 block text-sm font-medium">
           {c("experience")}{" "}
           <span className="font-normal text-muted">({c("facultatif")})</span>
         </span>
@@ -178,6 +268,25 @@ export function FormulaireCandidature({
           name="experience"
           rows={3}
           placeholder={c("experienceAide")}
+          className={CLASSE_CHAMP}
+        />
+      </label>
+
+      <ListeCases
+        legende={c("experienceConnexe")}
+        nom="experienceConnexe"
+        choix={EXPERIENCES_CONNEXES}
+        locale={locale}
+      />
+
+      <label className="block">
+        <span className="mb-1 block text-sm font-medium">
+          {c("experienceConnexeTexte")}{" "}
+          <span className="font-normal text-muted">({c("facultatif")})</span>
+        </span>
+        <textarea
+          name="experienceConnexeTexte"
+          rows={3}
           className={CLASSE_CHAMP}
         />
       </label>
@@ -194,6 +303,30 @@ export function FormulaireCandidature({
         </span>
         <input name="reference" className={CLASSE_CHAMP} />
       </label>
+
+      {/* Les deux confirmations du formulaire actuel. Elles protègent autant
+          la personne que l'organisation : personne ne repart en croyant être
+          retenu, et l'âge minimal est établi avant l'entrevue. */}
+      <div className="space-y-2 rounded-md border border-border bg-surface-2 p-4">
+        <label className="flex cursor-pointer items-start gap-3 text-sm">
+          <input
+            type="checkbox"
+            name="confirmeSelection"
+            required
+            className="mt-0.5 size-4 shrink-0 accent-[var(--marine)]"
+          />
+          {c("confirmeSelection")}
+        </label>
+        <label className="flex cursor-pointer items-start gap-3 text-sm">
+          <input
+            type="checkbox"
+            name="confirmeMajeur"
+            required
+            className="mt-0.5 size-4 shrink-0 accent-[var(--marine)]"
+          />
+          {c("confirmeMajeur")}
+        </label>
+      </div>
 
       <button
         type="submit"

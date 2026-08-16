@@ -14,9 +14,11 @@ export type EtatCandidature =
 const POSTES_VALIDES = [
   "repartiteur",
   "messager",
+  "secouriste",
+  "sauveteur",
+  // Anciennes appellations, encore acceptées.
   "eclaireur",
   "patrouilleur",
-  "sauveteur",
 ];
 
 function texte(donnees: FormData, cle: string) {
@@ -47,9 +49,9 @@ export async function envoyerCandidature(
   }
 
   const langue = (await getLocale()) as Locale;
-  const disponibilites = donnees
-    .getAll("disponibilites")
-    .filter((v): v is string => typeof v === "string");
+  const cases = (cle: string) =>
+    donnees.getAll(cle).filter((v): v is string => typeof v === "string");
+  const disponibilites = cases("disponibilites");
 
   const { error } = await creerClientAdmin().from("candidatures").insert({
     poste,
@@ -58,12 +60,22 @@ export async function envoyerCandidature(
     courriel,
     telephone,
     ville,
+    adresse_rue: texte(donnees, "adresseRue") || null,
+    province: texte(donnees, "province") || null,
     code_postal: texte(donnees, "codePostal") || null,
     date_naissance: texte(donnees, "dateNaissance") || null,
     langue,
     a_vehicule: donnees.get("vehicule") === "on",
     a_permis: donnees.get("permis") === "on",
     disponibilites,
+    occupation: texte(donnees, "occupation") || null,
+    disponibilites_texte: texte(donnees, "disponibilitesTexte") || null,
+    experience_animaux: cases("experienceAnimaux"),
+    experience_connexe: cases("experienceConnexe"),
+    experience_connexe_texte:
+      texte(donnees, "experienceConnexeTexte") || null,
+    confirme_selection: donnees.get("confirmeSelection") === "on",
+    confirme_majeur: donnees.get("confirmeMajeur") === "on",
     experience: texte(donnees, "experience") || null,
     motivation: texte(donnees, "motivation") || null,
     reference: texte(donnees, "reference") || null,

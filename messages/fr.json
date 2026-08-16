@@ -232,7 +232,16 @@
       "facultatif": "facultatif",
       "choisir": "Choisir",
       "envoyer": "Envoyer ma candidature",
-      "envoi": "Envoi en cours"
+      "envoi": "Envoi en cours",
+      "adresseRue": "Adresse",
+      "province": "Province",
+      "occupation": "Occupation actuelle",
+      "disponibilitesTexte": "À quoi ressemblent vos disponibilités ?",
+      "experienceAnimaux": "Expérience avec les animaux",
+      "experienceConnexe": "Expérience ou activités connexes",
+      "experienceConnexeTexte": "Décrivez votre expérience ou vos activités connexes",
+      "confirmeSelection": "Je comprends que remplir ce formulaire ne signifie pas que ma candidature est retenue.",
+      "confirmeMajeur": "Je confirme avoir dix-huit ans ou plus."
     },
     "jours": {
       "semaineJour": "Semaine, le jour",

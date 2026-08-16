@@ -232,7 +232,16 @@
       "facultatif": "opcional",
       "choisir": "Elegir",
       "envoyer": "Enviar mi candidatura",
-      "envoi": "Enviando"
+      "envoi": "Enviando",
+      "adresseRue": "Dirección",
+      "province": "Provincia",
+      "occupation": "Ocupación actual",
+      "disponibilitesTexte": "¿Cómo es su disponibilidad?",
+      "experienceAnimaux": "Experiencia con animales",
+      "experienceConnexe": "Experiencia o actividades afines",
+      "experienceConnexeTexte": "Describa su experiencia o actividades afines",
+      "confirmeSelection": "Entiendo que completar este formulario no significa que mi candidatura sea aceptada.",
+      "confirmeMajeur": "Confirmo que tengo dieciocho años o más."
     },
     "jours": {
       "semaineJour": "Entre semana, de día",

@@ -115,7 +115,7 @@ function Cartes() {
   );
 }
 
-// Déclaration centrée, sans image. Aucune photo ne peut rivaliser avec cette
+// Déclaration seule, sans image. Aucune photo ne peut rivaliser avec cette
 // phrase, et la carte de membre posée à côté la faisait passer pour une
 // publicité alors que c'est l'argument de fond de l'organisation.
 function Sections() {
@@ -123,14 +123,14 @@ function Sections() {
 
   return (
     <section className="bg-surface-2 py-20">
-      <div className="mx-auto max-w-3xl px-4 text-center">
-        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-5xl">
+      <div className="mx-auto max-w-7xl px-4">
+        <h2 className="max-w-3xl whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-5xl">
           {t("soutienTitre")}
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
           {t("soutienTexte")}
         </p>
-        <div className="mt-9 flex flex-wrap justify-center gap-3">
+        <div className="mt-9 flex flex-wrap gap-3">
           <Link
             href="/membre"
             className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"

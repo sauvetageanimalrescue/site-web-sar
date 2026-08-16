@@ -297,14 +297,14 @@ export function AppelAction({
 }) {
   return (
     <section className="bg-marine py-14">
-      <div className="mx-auto max-w-4xl px-4 text-center">
-        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
+      <div className="mx-auto max-w-7xl px-4">
+        <h2 className="max-w-3xl whitespace-pre-line font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
           {titre}
         </h2>
         {texte && (
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/75">{texte}</p>
+          <p className="mt-4 max-w-2xl text-lg text-white/75">{texte}</p>
         )}
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           {actions.map((a) => (
             <LienAction
               key={a.href}

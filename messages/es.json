@@ -55,7 +55,8 @@
     "connexionPartenaire": "Socios",
     "missionsInternationales": "Misiones internacionales",
     "missionsNationales": "Misiones nacionales",
-    "distinctions": "Distinciones"
+    "distinctions": "Distinciones",
+    "memoriam": "In memoriam"
   },
   "compteur": {
     "titre": "Animales rescatados",
@@ -476,5 +477,12 @@
     "portTitre": "El porte de las distinciones",
     "portTexte": "Las barras se llevan en el uniforme, sobre el escudo del pecho, ordenadas de la más alta a la más baja desde la derecha del portador. Las distinciones por actos preceden a las de servicio, que preceden a las barras de despliegue.",
     "attributionTexte": "Una distinción no se solicita. La propone un oficial, se documenta a partir del registro de misiones y la aprueba la dirección general. Se entrega ante el equipo y se inscribe en el expediente del interviniente."
+  },
+  "memoriam": {
+    "surtitre": "Recordamos",
+    "titre": "In memoriam",
+    "dedicace": "Una organización son personas. Esta página está dedicada a quienes llevaron adelante Sauvetage Animal Rescue y ya no están entre nosotros. Su trabajo continúa en cada misión.",
+    "aucun": "Los homenajes se añaden a esta página con el acuerdo de los allegados.",
+    "contact": "Para proponer un homenaje, escriba a la dirección general a e.dussault@sar.quebec."
   }
 }

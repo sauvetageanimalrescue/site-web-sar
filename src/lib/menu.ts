@@ -17,6 +17,7 @@ export const MENU: SectionMenu[] = [
       { cle: "missionsInternationales", href: "/missions-internationales" },
       { cle: "missionsNationales", href: "/missions-nationales" },
       { cle: "distinctions", href: "/distinctions" },
+      { cle: "memoriam", href: "/in-memoriam" },
       { cle: "medias", href: "/medias" },
     ],
   },

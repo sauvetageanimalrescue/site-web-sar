@@ -157,7 +157,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Missions nationales",
     intro:
       "Lors d'un sinistre majeur, les animaux sont les derniers à être évacués et les premiers à être oubliés. Quand les autorités nous appellent en renfort, nous quittons notre territoire habituel pour aller les chercher.",
-    image: "/images/carte-signalement.jpg",
+    image: "/images/sainte-marthe-2019.jpg",
     blocs: [
       {
         titre: "Sainte-Marthe-sur-le-Lac, 2019",

@@ -55,7 +55,8 @@
     "connexionPartenaire": "Partenaires",
     "missionsInternationales": "Missions internationales",
     "missionsNationales": "Missions nationales",
-    "distinctions": "Distinctions"
+    "distinctions": "Distinctions",
+    "memoriam": "In memoriam"
   },
   "compteur": {
     "titre": "Animaux sauvés",
@@ -476,5 +477,12 @@
     "portTitre": "Le port des distinctions",
     "portTexte": "Les barrettes se portent sur l'uniforme, au-dessus de l'écusson de poitrine, alignées de la plus haute à la plus basse en partant de la droite du porteur. Les distinctions pour actes précèdent celles de service, qui précèdent les barrettes de déploiement.",
     "attributionTexte": "Une distinction ne se demande pas. Elle est proposée par un officier, documentée à partir du registre des missions, puis approuvée par la direction générale. Elle est remise devant l'équipe et inscrite au dossier de l'intervenant."
+  },
+  "memoriam": {
+    "surtitre": "Nous nous souvenons",
+    "titre": "In memoriam",
+    "dedicace": "Une organisation, ce sont des personnes. Cette page est dédiée à celles qui ont porté Sauvetage Animal Rescue et qui ne sont plus parmi nous. Leur travail continue à travers chaque mission.",
+    "aucun": "Les hommages sont ajoutés à cette page avec l'accord des proches.",
+    "contact": "Pour proposer un hommage, écrivez à la direction générale à e.dussault@sar.quebec."
   }
 }

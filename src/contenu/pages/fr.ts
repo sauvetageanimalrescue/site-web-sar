@@ -111,37 +111,86 @@ export const PAGES_FR: CataloguePages = {
   },
 
   "missions-internationales": {
-    surtitre: "Au-delà du Québec",
+    surtitre: "Au-delà du territoire",
     titre: "Missions internationales",
     intro:
-      "Le secours technique d'animaux est une discipline rare. Là où elle n'existe pas, les animaux en détresse n'ont personne. Transmettre ce savoir hors du Québec fait partie de la mission que s'est donnée l'organisation.",
+      "Notre travail quotidien s'arrête aux limites de la Communauté Métropolitaine de Montréal. Certains sinistres, eux, ne s'arrêtent nulle part. Quand des animaux se comptent par milliers et que personne sur place n'a la formation pour aller les chercher, nous partons.",
     image: "/images/carte-stages.jpg",
     blocs: [
       {
-        titre: "Pourquoi sortir du territoire",
+        titre: "Australie, février 2020",
         texte: [
-          "Notre travail quotidien s'arrête aux limites de la Communauté Métropolitaine de Montréal. Mais les techniques que nous avons développées, le travail en hauteur, la capture sécuritaire, la structure d'intervention, ne sont limitées par aucune frontière.",
-          "Former une équipe ailleurs, c'est démultiplier l'effet de ce que nous savons faire. Une équipe formée continue de sauver des animaux longtemps après notre départ, dans une région où personne ne le faisait auparavant.",
+          "Les feux de forêt qui ont ravagé l'Australie ont tué et blessé des animaux sauvages en nombre inconcevable. Notre équipe s'est rendue sur place pour prêter main-forte au secours des animaux dans les zones brûlées.",
+          "Intervenir dans une forêt calcinée n'a rien de commun avec une intervention urbaine. Arbres instables, sol brûlant, faune inconnue, blessures d'un type que nous ne voyons pas ici. C'est la mission la plus exigeante que l'organisation ait menée.",
+        ],
+      },
+      {
+        titre: "Pourquoi nous partons",
+        texte: [
+          "Le secours technique d'animaux est une discipline rare. Les techniques que nous avons développées, le travail en hauteur, la capture sécuritaire, la structure d'intervention, ne sont limitées par aucune frontière.",
+          "Chaque déploiement nous rapporte aussi quelque chose. Ce que l'on apprend dans une zone sinistrée revient directement dans nos interventions quotidiennes, et dans ce que nous enseignons ici.",
         ],
       },
       {
         titre: "Ce que nous pouvons apporter",
         liste: [
+          "Appui direct lors de sinistres majeurs touchant des animaux",
           "Formation d'équipes locales au secours et au sauvetage technique",
           "Transfert de nos procédures d'intervention et de sécurité",
           "Accompagnement dans la mise en place d'une structure de répartition",
-          "Appui lors de sinistres majeurs touchant des animaux",
         ],
       },
       {
         titre: "Nous joindre",
         texte: [
-          "Pour toute demande de collaboration internationale, écrivez directement à la direction générale à e.dussault@sar.quebec.",
+          "Pour toute demande de déploiement ou de collaboration, écrivez directement à la direction générale à e.dussault@sar.quebec.",
         ],
       },
     ],
     actions: [
       { href: "/direction", libelle: "Le mot du directeur général", principal: true },
+    ],
+  },
+
+  "missions-nationales": {
+    surtitre: "Hors territoire",
+    titre: "Missions nationales",
+    intro:
+      "Lors d'un sinistre majeur, les animaux sont les derniers à être évacués et les premiers à être oubliés. Quand les autorités nous appellent en renfort, nous quittons notre territoire habituel pour aller les chercher.",
+    image: "/images/carte-signalement.jpg",
+    blocs: [
+      {
+        titre: "Sainte-Marthe-sur-le-Lac, 2019",
+        texte: [
+          "La rupture de la digue a forcé l'évacuation de milliers de résidents en quelques heures. Beaucoup ont dû partir sans leurs animaux, restés seuls dans des maisons cernées par l'eau.",
+          "Notre équipe a mené 125 opérations dans les secteurs inondés et en a ramené 171 animaux. Chacune de ces opérations, c'est une famille qui a retrouvé le sien.",
+        ],
+        encadre: {
+          titre: "Le bilan de l'opération",
+          lignes: [
+            "171 animaux secourus",
+            "125 opérations dans les secteurs évacués",
+            "Municipalité : Sainte-Marthe-sur-le-Lac",
+          ],
+        },
+      },
+      {
+        titre: "Abitibi-Témiscamingue",
+        texte: [
+          "Déploiement plus récent, en appui aux communautés touchées. Le contexte régional impose ses propres contraintes : distances considérables, ressources locales limitées, autonomie complète de l'équipe sur le terrain.",
+        ],
+      },
+      {
+        titre: "Pourquoi nous répondons",
+        texte: [
+          "Un plan de sécurité civile prévoit l'évacuation des personnes. Presque aucun ne prévoit celle des animaux, et beaucoup de gens refusent de partir sans les leurs. Une équipe capable d'aller les chercher retire donc un obstacle à l'évacuation elle-même.",
+          "C'est ce que nous apportons lors d'un sinistre : une capacité que les services d'urgence n'ont pas à développer, et qu'ils peuvent appeler.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/services/sinistres", libelle: "Nos services en sinistre", principal: true },
+      { href: "/missions-internationales", libelle: "Missions internationales" },
     ],
   },
 

@@ -110,6 +110,41 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  "missions-internationales": {
+    surtitre: "Au-delà du Québec",
+    titre: "Missions internationales",
+    intro:
+      "Le secours technique d'animaux est une discipline rare. Là où elle n'existe pas, les animaux en détresse n'ont personne. Transmettre ce savoir hors du Québec fait partie de la mission que s'est donnée l'organisation.",
+    image: "/images/carte-stages.jpg",
+    blocs: [
+      {
+        titre: "Pourquoi sortir du territoire",
+        texte: [
+          "Notre travail quotidien s'arrête aux limites de la Communauté Métropolitaine de Montréal. Mais les techniques que nous avons développées, le travail en hauteur, la capture sécuritaire, la structure d'intervention, ne sont limitées par aucune frontière.",
+          "Former une équipe ailleurs, c'est démultiplier l'effet de ce que nous savons faire. Une équipe formée continue de sauver des animaux longtemps après notre départ, dans une région où personne ne le faisait auparavant.",
+        ],
+      },
+      {
+        titre: "Ce que nous pouvons apporter",
+        liste: [
+          "Formation d'équipes locales au secours et au sauvetage technique",
+          "Transfert de nos procédures d'intervention et de sécurité",
+          "Accompagnement dans la mise en place d'une structure de répartition",
+          "Appui lors de sinistres majeurs touchant des animaux",
+        ],
+      },
+      {
+        titre: "Nous joindre",
+        texte: [
+          "Pour toute demande de collaboration internationale, écrivez directement à la direction générale à e.dussault@sar.quebec.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/direction", libelle: "Le mot du directeur général", principal: true },
+    ],
+  },
+
   partenaires: {
     surtitre: "Ensemble",
     titre: "Nos partenaires",

@@ -50,9 +50,9 @@
     "reglementation": "By-law enforcement",
     "denombrement": "Population counts",
     "sinistres": "Disasters",
-    "connexionMembre": "Member",
-    "connexionIntervenant": "Staff",
-    "connexionPartenaire": "Partner"
+    "connexionMembre": "Members",
+    "connexionIntervenant": "Intranet",
+    "connexionPartenaire": "Partners"
   },
   "compteur": {
     "titre": "Animals rescued",

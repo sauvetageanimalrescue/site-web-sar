@@ -50,9 +50,9 @@
     "reglementation": "Reglamentación",
     "denombrement": "Conteo de población",
     "sinistres": "Siniestros",
-    "connexionMembre": "Miembro",
-    "connexionIntervenant": "Personal",
-    "connexionPartenaire": "Socio"
+    "connexionMembre": "Miembros",
+    "connexionIntervenant": "Intranet",
+    "connexionPartenaire": "Socios"
   },
   "compteur": {
     "titre": "Animales rescatados",

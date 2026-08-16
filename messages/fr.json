@@ -50,9 +50,9 @@
     "reglementation": "Règlementation",
     "denombrement": "Dénombrement",
     "sinistres": "Sinistres",
-    "connexionMembre": "Membre",
-    "connexionIntervenant": "Intervenant",
-    "connexionPartenaire": "Partenaire"
+    "connexionMembre": "Membres",
+    "connexionIntervenant": "Intranet",
+    "connexionPartenaire": "Partenaires"
   },
   "compteur": {
     "titre": "Animaux sauvés",

@@ -66,7 +66,7 @@ export const MENU_CONNEXION: SectionMenu = {
   cle: "connexion",
   liens: [
     { cle: "connexionMembre", href: "/espace-membre" },
-    { cle: "connexionIntervenant", href: "https://sar-intranet.com" },
     { cle: "connexionPartenaire", href: "/espace-partenaire" },
+    { cle: "connexionIntervenant", href: "https://sar-intranet.com" },
   ],
 };

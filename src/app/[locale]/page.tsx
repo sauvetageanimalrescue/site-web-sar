@@ -87,7 +87,7 @@ function Cartes() {
           <Link
             key={carte.cle}
             href={carte.href}
-            className="group relative isolate flex aspect-square flex-col justify-end overflow-hidden rounded-xl bg-marine ring-1 ring-marine/20 transition hover:ring-2 hover:ring-marine"
+            className="group relative isolate flex aspect-square flex-col justify-end overflow-hidden rounded-xl bg-marine transition"
           >
             <Image
               src={carte.image}

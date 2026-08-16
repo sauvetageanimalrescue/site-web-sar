@@ -16,10 +16,11 @@ export type Hommage = {
 export const HOMMAGES: Hommage[] = [
   {
     cle: "roxane-martel",
-    nom: "Roxane Martel",
+    nom: "Roxanne Martel",
     fonction: "Membre de l'équipe",
+    image: "/images/memoriam-roxanne-martel.jpg",
     texte: [
-      "Roxane s'est éteinte à trente et un ans, des suites des complications d'un accident de la route. Elle avait toute la vie devant elle.",
+      "Roxanne s'est éteinte à trente et un ans, des suites des complications d'un accident de la route. Elle avait toute la vie devant elle.",
       "La cause animale, elle la portait profondément. C'est ce qui l'avait menée jusqu'à nous, et c'est ce que l'équipe garde d'elle.",
       "Elle nous manque.",
     ],

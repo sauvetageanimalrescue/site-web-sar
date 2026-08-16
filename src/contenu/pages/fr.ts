@@ -194,6 +194,31 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  // Squelette en attente des informations : titre de la série, diffuseur,
+  // année, nombre d'épisodes et plateforme. Aucun fait n'est avancé ici tant
+  // qu'il n'est pas confirmé.
+  "serie-televisee": {
+    surtitre: "À l'écran",
+    titre: "Série télévisée",
+    intro:
+      "Une série télévisée a suivi le travail de Sauvetage Animal Rescue. Cette page en rassemble les informations.",
+    image: "/images/carte-services.jpg",
+    blocs: [
+      {
+        titre: "La série",
+        texte: [
+          "Titre, diffuseur, année de diffusion et nombre d'épisodes : à confirmer.",
+        ],
+      },
+      {
+        titre: "Où la voir",
+        texte: [
+          "Plateforme ou lien de visionnement : à confirmer.",
+        ],
+      },
+    ],
+  },
+
   partenaires: {
     surtitre: "Ensemble",
     titre: "Nos partenaires",

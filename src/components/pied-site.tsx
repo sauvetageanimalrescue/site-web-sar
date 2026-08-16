@@ -46,11 +46,8 @@ export function PiedSite() {
                 Rescue
               </span>
             </div>
-            <p className="mt-4 text-sm leading-relaxed">
-              {adresse.rue}
-              <br />
-              {adresse.ville} ({adresse.province}) {adresse.codePostal}
-            </p>
+            {/* L'adresse postale a rejoint la colonne « Nous joindre » : elle
+                appartient aux coordonnées, pas à la signature. */}
             <div className="mt-5 flex gap-2">
               {RESEAUX.map(({ href, Icone, nom }) => (
                 <a
@@ -123,6 +120,16 @@ export function PiedSite() {
                 >
                   {telephones.officier}
                 </a>
+              </li>
+              <li>
+                <span className="block text-xs uppercase tracking-wide text-white/50">
+                  {p("adresse")}
+                </span>
+                <span className="block leading-relaxed">
+                  {adresse.rue}
+                  <br />
+                  {adresse.ville} ({adresse.province}) {adresse.codePostal}
+                </span>
               </li>
               <li>
                 <a

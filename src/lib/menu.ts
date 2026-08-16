@@ -20,10 +20,10 @@ export const MENU: SectionMenu[] = [
   {
     cle: "services",
     liens: [
-      { cle: "interventions", href: "/services/interventions" },
+      { cle: "patrouille", href: "/services/patrouille" },
+      { cle: "secoursAnimalier", href: "/services/secours-animalier" },
+      { cle: "sauvetageTechnique", href: "/services/sauvetage-technique" },
       { cle: "municipalites", href: "/services/municipalites" },
-      { cle: "atelierPrimaire", href: "/ateliers/primaire" },
-      { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
     ],
   },
   {
@@ -44,6 +44,8 @@ export const MENU: SectionMenu[] = [
       { cle: "isa", href: "/formations/initiation-secours-animal" },
       { cle: "psa", href: "/formations/premiers-secours-animal" },
       { cle: "servicesUrgence", href: "/formations/services-urgence" },
+      { cle: "atelierPrimaire", href: "/ateliers/primaire" },
+      { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
     ],
   },
 ];

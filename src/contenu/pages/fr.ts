@@ -266,6 +266,97 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  "services/patrouille": {
+    surtitre: "Le premier niveau d'intervention",
+    titre: "Patrouille",
+    intro:
+      "La majorité des appels ne demandent ni corde ni harnais. Un animal errant, blessé au sol, coincé derrière une clôture ou dans un garage : la patrouille s'en occupe, tous les jours, sur l'ensemble du territoire.",
+    image: "/images/carte-services.jpg",
+    blocs: [
+      {
+        titre: "Ce que fait une patrouille",
+        liste: [
+          "Répondre aux signalements des citoyens et des services municipaux",
+          "Cueillette au sol d'un animal blessé ou affaibli",
+          "Capture d'un animal réactif à l'aide d'équipement spécialisé",
+          "Sécurisation d'un animal en attendant une équipe technique",
+          "Transport vers un refuge ou une clinique partenaire",
+          "Documentation de la mission au registre",
+        ],
+      },
+      {
+        titre: "Le maillon le plus sollicité",
+        texte: [
+          "C'est le niveau qui traite le plus grand volume. Une patrouille arrive avec un véhicule identifié, des cages, des perches de capture et une radio reliée à la centrale. Si la situation dépasse ses moyens, elle sécurise les lieux et demande le renfort d'une équipe de sauvetage technique.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+    ],
+  },
+
+  "services/secours-animalier": {
+    surtitre: "Porter secours",
+    titre: "Secours Animalier",
+    intro:
+      "Le secours, c'est venir en aide à un animal qui souffre ou qui est en danger, sans que la situation exige des techniques de travail en hauteur. C'est le coeur du métier, et c'est ce qui occupe la majorité de nos heures.",
+    image: "/images/carte-signalement.jpg",
+    blocs: [
+      {
+        titre: "Les situations couvertes",
+        liste: [
+          "Animal blessé, malade ou affaibli",
+          "Animal orphelin ou juvénile isolé",
+          "Animal pris dans une clôture, un grillage, un filet",
+          "Animal enfermé dans un bâtiment, un véhicule, un conteneur",
+          "Faune urbaine en détresse : raton laveur, mouffette, écureuil",
+          "Oiseaux blessés ou pris dans une ligne à pêche",
+        ],
+      },
+      {
+        titre: "Une chaîne, pas un geste isolé",
+        texte: [
+          "Un secours réussi ne s'arrête pas au moment où l'animal est entre nos mains. Il faut ensuite le transporter, le confier à un refuge ou à une clinique, et documenter l'intervention. C'est pour cette raison que l'organisation compte des messagers dont le seul rôle est le transport : pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+      { href: "/equipe", libelle: "Voir les fonctions de l'équipe" },
+    ],
+  },
+
+  "services/sauvetage-technique": {
+    surtitre: "Là où personne d'autre ne va",
+    titre: "Sauvetage Technique",
+    intro:
+      "Le sauvetage technique est une discipline en soi. Il commence là où le secours ordinaire s'arrête : quand atteindre l'animal exige des cordes, un harnais, une formation en travail en hauteur et une discipline de sécurité stricte.",
+    image: "/images/stages.jpg",
+    blocs: [
+      {
+        titre: "Les milieux d'intervention",
+        liste: [
+          "Travail en hauteur : arbres, toits, pylônes, structures, ponts",
+          "Espaces clos : égouts, puisards, cheminées, murs, conduits",
+          "Milieux instables : glace, berges, cours d'eau",
+          "Sites industriels et emprises ferroviaires",
+        ],
+      },
+      {
+        titre: "Ce que ça exige",
+        texte: [
+          "Du matériel de cordage certifié, vérifié et consigné dans un registre des cordes de sauvetage. Des sauveteurs formés, qui ont progressé depuis la patrouille avant d'accéder à ce niveau. Et une règle non négociable : aucune intervention ne commence si la sécurité des intervenants n'est pas assurée, parce qu'un sauveteur blessé ne sauve plus personne.",
+          "C'est le service qui distingue l'organisation. Au Québec, très peu d'équipes sont capables de descendre en rappel pour aller chercher un chat à quinze mètres ou une bernache prise dans un pilier de pont.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+      { href: "/recrutement", libelle: "Devenir sauveteur" },
+    ],
+  },
+
   "services/interventions": {
     surtitre: "Notre service principal",
     titre: "Secours et sauvetage",

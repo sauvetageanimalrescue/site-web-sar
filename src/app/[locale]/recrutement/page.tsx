@@ -2,7 +2,6 @@ import { setRequestLocale, getTranslations, getLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { EnTetePage, Section, Chevron } from "@/components/ui";
-import { FormulaireCandidature } from "@/components/formulaire-candidature";
 import { POSTES, fichePoste } from "@/contenu/postes";
 import type { Locale } from "@/i18n/routing";
 
@@ -56,17 +55,9 @@ export default async function PageRecrutement({
         </div>
       </Section>
 
-      <Section fond>
-        <div className="mx-auto max-w-3xl rounded-xl border border-border bg-surface p-6 sm:p-8">
-          <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-            {t("formulaireTitre")}
-          </h2>
-          <p className="mt-2 text-muted">{t("formulaireTexte")}</p>
-          <div className="mt-6">
-            <FormulaireCandidature />
-          </div>
-        </div>
-      </Section>
+      {/* Pas de formulaire ici : on postule à une fonction précise, après
+          avoir lu sa description. Le formulaire vit au bas de chaque fiche,
+          avec la fonction déjà sélectionnée. */}
     </>
   );
 }

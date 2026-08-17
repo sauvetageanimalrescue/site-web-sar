@@ -8,8 +8,9 @@ import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { lireStatistiques } from "@/lib/statistiques";
 import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 
-// Deux rangées de quatre. La première regroupe les gestes que le visiteur
-// peut poser tout de suite, la seconde ce que l'organisation offre.
+// Deux rangées de quatre, séparées par une déclaration. La première regroupe
+// les gestes que le visiteur peut poser tout de suite, la seconde ce que
+// l'organisation offre.
 const CARTES = [
   { cle: "signalement", href: "/signalement", image: "/images/carte-signalement.jpg" },
   { cle: "membre", href: "/membre", image: "/images/carte-membre-2026.jpg" },
@@ -19,10 +20,6 @@ const CARTES = [
   { cle: "secteurs", href: "/secteurs", image: "/images/carte-secteurs.jpg" },
   { cle: "formations", href: "/formations", image: "/images/carte-formations.jpg" },
   { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
-  { cle: "serie", href: "/serie-televisee", image: "/images/serie-sauvetage-animal.jpg" },
-  { cle: "missionsInternationales", href: "/missions-internationales", image: "/images/australie-2020.jpg" },
-  { cle: "missionsNationales", href: "/missions-nationales", image: "/images/sainte-marthe-2019.jpg" },
-  { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
 ] as const;
 
 function Hero() {
@@ -176,7 +173,6 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
       <Declaration prefixe="soutien" lienA="/membre" lienB="/dons" />
       <Cartes debut={4} fin={8} />
       <Declaration prefixe="benevoles" lienA="/recrutement" lienB="/distinctions" />
-      <Cartes debut={8} fin={12} />
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais
           uniquement sur la page des statistiques. */}

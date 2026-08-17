@@ -172,7 +172,7 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
       <Cartes debut={0} fin={4} />
       <Declaration prefixe="soutien" lienA="/membre" lienB="/dons" />
       <Cartes debut={4} fin={8} />
-      <Declaration prefixe="benevoles" lienA="/recrutement" lienB="/distinctions" />
+      <Declaration prefixe="benevoles" lienA="/equipe" lienB="/recrutement" />
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais
           uniquement sur la page des statistiques. */}

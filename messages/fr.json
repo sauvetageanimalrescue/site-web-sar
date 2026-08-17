@@ -106,6 +106,18 @@
       },
       "secteurs": {
         "titre": "Secteurs d'activité"
+      },
+      "serie": {
+        "titre": "Série télévisée"
+      },
+      "missionsInternationales": {
+        "titre": "Missions internationales"
+      },
+      "missionsNationales": {
+        "titre": "Missions nationales"
+      },
+      "equipe": {
+        "titre": "Notre équipe"
       }
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",
@@ -141,7 +153,11 @@
     "soutienTitre": "Aucune subvention.\nAucun financement public.",
     "soutienTexte": "Tout repose sur nos membres et nos donateurs. Une cotisation annuelle finance directement les déplacements et l'équipement.",
     "soutienMembre": "Prendre ma carte de membre",
-    "soutienDon": "Faire un don"
+    "soutienDon": "Faire un don",
+    "benevolesTitre": "Des bénévoles,\npas des employés.",
+    "benevolesTexte": "Personne ici ne reçoit de salaire. Chaque intervention est menée par des gens qui ont pris congé, quitté un souper ou coupé leur nuit pour aller chercher un animal que personne d'autre n'irait chercher.",
+    "benevolesA": "Nous rejoindre",
+    "benevolesB": "Nos distinctions"
   },
   "pied": {
     "organisation": "L'organisation",

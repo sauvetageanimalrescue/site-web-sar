@@ -106,6 +106,18 @@
       },
       "secteurs": {
         "titre": "Industries served"
+      },
+      "serie": {
+        "titre": "Television series"
+      },
+      "missionsInternationales": {
+        "titre": "International missions"
+      },
+      "missionsNationales": {
+        "titre": "National missions"
+      },
+      "equipe": {
+        "titre": "Our team"
       }
     },
     "territoireTitre": "82 municipalities,\none team",
@@ -141,7 +153,11 @@
     "soutienTitre": "No grants.\nNo public funding.",
     "soutienTexte": "Everything rests on our members and donors. An annual membership pays directly for travel and equipment.",
     "soutienMembre": "Get my membership card",
-    "soutienDon": "Make a donation"
+    "soutienDon": "Make a donation",
+    "benevolesTitre": "Volunteers,\nnot employees.",
+    "benevolesTexte": "No one here draws a salary. Every operation is carried out by people who took time off, left a dinner or cut their night short to go get an animal no one else would go get.",
+    "benevolesA": "Join us",
+    "benevolesB": "Our honours"
   },
   "pied": {
     "organisation": "The organization",

@@ -106,6 +106,18 @@
       },
       "secteurs": {
         "titre": "Sectores de actividad"
+      },
+      "serie": {
+        "titre": "Serie de televisión"
+      },
+      "missionsInternationales": {
+        "titre": "Misiones internacionales"
+      },
+      "missionsNationales": {
+        "titre": "Misiones nacionales"
+      },
+      "equipe": {
+        "titre": "Nuestro equipo"
       }
     },
     "territoireTitre": "82 municipios,\nun solo equipo",
@@ -141,7 +153,11 @@
     "soutienTitre": "Sin subvenciones.\nSin financiación pública.",
     "soutienTexte": "Todo depende de nuestros miembros y donantes. Una cuota anual financia directamente los desplazamientos y el equipo.",
     "soutienMembre": "Obtener mi tarjeta de miembro",
-    "soutienDon": "Hacer una donación"
+    "soutienDon": "Hacer una donación",
+    "benevolesTitre": "Voluntarios,\nno empleados.",
+    "benevolesTexte": "Aquí nadie recibe un salario. Cada intervención la realizan personas que pidieron permiso, dejaron una cena o acortaron su noche para ir a buscar a un animal que nadie más iría a buscar.",
+    "benevolesA": "Únase a nosotros",
+    "benevolesB": "Nuestras distinciones"
   },
   "pied": {
     "organisation": "La organización",

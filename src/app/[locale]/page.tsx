@@ -19,6 +19,10 @@ const CARTES = [
   { cle: "secteurs", href: "/secteurs", image: "/images/carte-secteurs.jpg" },
   { cle: "formations", href: "/formations", image: "/images/carte-formations.jpg" },
   { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
+  { cle: "serie", href: "/serie-televisee", image: "/images/serie-sauvetage-animal.jpg" },
+  { cle: "missionsInternationales", href: "/missions-internationales", image: "/images/australie-2020.jpg" },
+  { cle: "missionsNationales", href: "/missions-nationales", image: "/images/sainte-marthe-2019.jpg" },
+  { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
 ] as const;
 
 function Hero() {
@@ -118,30 +122,38 @@ function Cartes({ debut, fin }: { debut: number; fin: number }) {
 // Déclaration seule, sans image. Aucune photo ne peut rivaliser avec cette
 // phrase, et la carte de membre posée à côté la faisait passer pour une
 // publicité alors que c'est l'argument de fond de l'organisation.
-function Sections() {
+function Declaration({
+  prefixe,
+  lienA,
+  lienB,
+}: {
+  prefixe: string;
+  lienA: string;
+  lienB: string;
+}) {
   const t = useTranslations("accueil");
 
   return (
     <section className="bg-surface-2 py-20">
       <div className="mx-auto max-w-7xl px-4">
         <h2 className="max-w-3xl whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-5xl">
-          {t("soutienTitre")}
+          {t(`${prefixe}Titre`)}
         </h2>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-          {t("soutienTexte")}
+          {t(`${prefixe}Texte`)}
         </p>
         <div className="mt-9 flex flex-wrap gap-3">
           <Link
-            href="/membre"
+            href={lienA}
             className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
           >
-            {t("soutienMembre")}
+            {t(`${prefixe}A`)}
           </Link>
           <Link
-            href="/dons"
+            href={lienB}
             className="rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
           >
-            {t("soutienDon")}
+            {t(`${prefixe}B`)}
           </Link>
         </div>
       </div>
@@ -161,8 +173,10 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
       {/* La déclaration coupe la grille en deux : sur un téléphone, huit
           cartes à la suite se traversent sans jamais rencontrer de texte. */}
       <Cartes debut={0} fin={4} />
-      <Sections />
+      <Declaration prefixe="soutien" lienA="/membre" lienB="/dons" />
       <Cartes debut={4} fin={8} />
+      <Declaration prefixe="benevoles" lienA="/recrutement" lienB="/distinctions" />
+      <Cartes debut={8} fin={12} />
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais
           uniquement sur la page des statistiques. */}

@@ -23,7 +23,7 @@ const CARTES = [
   { cle: "mission", href: "/mission", image: "/images/carte-mission.jpg" },
   { cle: "direction", href: "/direction", image: "/images/carte-direction.jpg" },
   { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
-  { cle: "territoire", href: "/territoire", image: "/images/territoire.jpg" },
+  { cle: "territoire", href: "/territoire", image: "/images/carte-territoire.jpg" },
 ] as const;
 
 function Hero() {

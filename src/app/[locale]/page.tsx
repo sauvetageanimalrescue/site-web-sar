@@ -21,7 +21,7 @@ const CARTES = [
   { cle: "formations", href: "/formations", image: "/images/carte-formations.jpg" },
   { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
   { cle: "mission", href: "/mission", image: "/images/hero-accueil.jpg" },
-  { cle: "direction", href: "/direction", image: "/images/direction.png" },
+  { cle: "direction", href: "/direction", image: "/images/carte-direction.jpg" },
   { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
   { cle: "territoire", href: "/territoire", image: "/images/territoire.jpg" },
 ] as const;

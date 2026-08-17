@@ -106,6 +106,18 @@
       },
       "secteurs": {
         "titre": "Industries served"
+      },
+      "mission": {
+        "titre": "Our mission"
+      },
+      "direction": {
+        "titre": "Executive management"
+      },
+      "equipe": {
+        "titre": "The team"
+      },
+      "territoire": {
+        "titre": "Our territory"
       }
     },
     "territoireTitre": "82 municipalities,\none team",

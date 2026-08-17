@@ -106,6 +106,18 @@
       },
       "secteurs": {
         "titre": "Sectores de actividad"
+      },
+      "mission": {
+        "titre": "Nuestra misión"
+      },
+      "direction": {
+        "titre": "Dirección general"
+      },
+      "equipe": {
+        "titre": "El equipo"
+      },
+      "territoire": {
+        "titre": "Nuestro territorio"
       }
     },
     "territoireTitre": "82 municipios,\nun solo equipo",

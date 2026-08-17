@@ -20,6 +20,10 @@ const CARTES = [
   { cle: "secteurs", href: "/secteurs", image: "/images/carte-secteurs.jpg" },
   { cle: "formations", href: "/formations", image: "/images/carte-formations.jpg" },
   { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
+  { cle: "mission", href: "/mission", image: "/images/hero-accueil.jpg" },
+  { cle: "direction", href: "/direction", image: "/images/direction.png" },
+  { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
+  { cle: "territoire", href: "/territoire", image: "/images/territoire.jpg" },
 ] as const;
 
 function Hero() {
@@ -173,6 +177,7 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
       <Declaration prefixe="soutien" lienA="/membre" lienB="/dons" />
       <Cartes debut={4} fin={8} />
       <Declaration prefixe="benevoles" lienA="/equipe" lienB="/recrutement" />
+      <Cartes debut={8} fin={12} />
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais
           uniquement sur la page des statistiques. */}

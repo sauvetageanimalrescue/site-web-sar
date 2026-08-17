@@ -106,6 +106,18 @@
       },
       "secteurs": {
         "titre": "Secteurs d'activité"
+      },
+      "mission": {
+        "titre": "Notre mission"
+      },
+      "direction": {
+        "titre": "Direction générale"
+      },
+      "equipe": {
+        "titre": "L'équipe"
+      },
+      "territoire": {
+        "titre": "Notre territoire"
       }
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",

@@ -140,12 +140,12 @@
     "interventionsVide": "Aucune intervention récente à afficher.",
     "soutienTitre": "Aucune subvention.\nAucun financement public.",
     "soutienTexte": "Tout repose sur nos membres et nos donateurs. Une cotisation annuelle finance directement les déplacements et l'équipement.",
-    "soutienMembre": "Prendre ma carte de membre",
-    "soutienDon": "Faire un don",
     "benevolesTitre": "Il faut quelqu'un\nqui accepte d'y aller.",
     "benevolesTexte": "Un animal coincé à quinze mètres, au fond d'un égout ou sur une glace qui cède, ce n'est le mandat de personne. Notre équipe est formée, équipée et joignable à toute heure, parce que quelqu'un doit y aller.",
     "benevolesA": "L'équipe",
-    "benevolesB": "Recrutement"
+    "benevolesB": "Recrutement",
+    "soutienA": "Prendre ma carte de membre",
+    "soutienB": "Faire un don"
   },
   "pied": {
     "organisation": "L'organisation",

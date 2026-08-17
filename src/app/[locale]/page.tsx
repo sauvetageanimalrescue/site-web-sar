@@ -73,13 +73,13 @@ function Hero() {
 
 // Aucun titre au-dessus des cartes : elles se lisent d'elles-mêmes et une
 // phrase d'introduction ne faisait que retarder le clic.
-function Cartes() {
+function Cartes({ debut, fin }: { debut: number; fin: number }) {
   const t = useTranslations("accueil");
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {CARTES.map((carte) => (
+        {CARTES.slice(debut, fin).map((carte) => (
           // Le texte vit sur l'image, pas en dessous : la carte devient une
           // seule pièce plutôt qu'une vignette posée sur un bloc de texte.
           // Le dégradé part du marine opaque en bas pour garantir la lisibilité
@@ -158,8 +158,11 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <Hero />
-      <Cartes />
+      {/* La déclaration coupe la grille en deux : sur un téléphone, huit
+          cartes à la suite se traversent sans jamais rencontrer de texte. */}
+      <Cartes debut={0} fin={4} />
       <Sections />
+      <Cartes debut={4} fin={8} />
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais
           uniquement sur la page des statistiques. */}

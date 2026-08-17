@@ -22,7 +22,7 @@ const CARTES = [
   { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
   { cle: "mission", href: "/mission", image: "/images/carte-mission.jpg" },
   { cle: "direction", href: "/direction", image: "/images/carte-direction.jpg" },
-  { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
+  { cle: "equipe", href: "/equipe", image: "/images/carte-equipe.jpg" },
   { cle: "territoire", href: "/territoire", image: "/images/carte-territoire.jpg" },
 ] as const;
 

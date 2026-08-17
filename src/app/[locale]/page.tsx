@@ -20,7 +20,7 @@ const CARTES = [
   { cle: "secteurs", href: "/secteurs", image: "/images/carte-secteurs.jpg" },
   { cle: "formations", href: "/formations", image: "/images/carte-formations.jpg" },
   { cle: "ateliers", href: "/ateliers/primaire", image: "/images/carte-ateliers.jpg" },
-  { cle: "mission", href: "/mission", image: "/images/hero-accueil.jpg" },
+  { cle: "mission", href: "/mission", image: "/images/carte-mission.jpg" },
   { cle: "direction", href: "/direction", image: "/images/carte-direction.jpg" },
   { cle: "equipe", href: "/equipe", image: "/images/poste-sauveteur.jpg" },
   { cle: "territoire", href: "/territoire", image: "/images/territoire.jpg" },

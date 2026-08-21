@@ -1,12 +1,15 @@
 import type { MetadataRoute } from "next";
-
-const RACINE = (
-  process.env.NEXT_PUBLIC_SITE_URL?.startsWith("https://")
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : "https://sar.quebec"
-).replace(/\/$/, "");
+import { adressePublique, estSiteDefinitif } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
+  // Tant que le site vit sur une adresse temporaire, on interdit toute
+  // indexation. Deux versions du même contenu indexées en parallèle se
+  // cannibalisent dans les résultats de recherche, et c'est la plus ancienne
+  // qui gagne. L'ouverture se fait en changeant NEXT_PUBLIC_SITE_URL.
+  if (!estSiteDefinitif()) {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
+
   return {
     rules: {
       userAgent: "*",
@@ -15,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
       // n'ont aucune valeur en recherche et ne doivent pas être indexées.
       disallow: ["/api/", "/*/verification/"],
     },
-    sitemap: `${RACINE}/sitemap.xml`,
+    sitemap: `${adressePublique()}/sitemap.xml`,
   };
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { adressePublique, estSiteDefinitif } from "@/lib/site";
 import { Inter, Barlow_Condensed } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -29,7 +30,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
-    metadataBase: new URL("https://sar.quebec"),
+    metadataBase: new URL(adressePublique()),
+    // Sur une adresse temporaire, on interdit explicitement l'indexation en
+    // plus du fichier robots : la balise est respectée même quand le fichier
+    // robots ne l'est pas.
+    robots: estSiteDefinitif() ? undefined : { index: false, follow: false },
     title: { default: t("titre"), template: `%s • Sauvetage Animal Rescue` },
     description: t("description"),
     openGraph: {

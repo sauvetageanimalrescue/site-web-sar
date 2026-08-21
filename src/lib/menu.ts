@@ -70,8 +70,8 @@ export const LIENS_DIRECTS: LienMenu[] = [
 export const MENU_CONNEXION: SectionMenu = {
   cle: "connexion",
   liens: [
-    { cle: "connexionMembre", href: "/espace-membre" },
-    { cle: "connexionPartenaire", href: "/espace-partenaire" },
+    // Les espaces membre et partenaire viendront quand leur authentification
+    // sera en place ; inutile d'annoncer une porte qui ne s'ouvre pas.
     { cle: "connexionIntervenant", href: "https://sar-intranet.com" },
   ],
 };

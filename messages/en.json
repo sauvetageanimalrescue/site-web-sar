@@ -391,7 +391,8 @@
     "missionsAnnee": "Successful missions this year",
     "methodeTitre": "How we count",
     "methodeTexte": "A mission counts when it is closed with one of six favourable outcomes: animal captured and secured, returned to its owner, released on site, relocated and released, transferred to animal services, or transferred to a shelter. Animals that did not survive are subtracted from the total. Calls where no service was required, false alarms and animals that became unreachable are never counted as rescues.",
-    "vide": "Statistics are unavailable at the moment."
+    "vide": "Statistics are unavailable at the moment.",
+    "note": "The yearly total includes 493 animals rescued between 1 January and 1 July 2026, recorded outside the registry. The charts below cover only operations entered in the registry, which came into service recently: they will therefore stay below the yearly total until everything goes through it."
   },
   "signalement": {
     "titre": "Report an animal in distress",

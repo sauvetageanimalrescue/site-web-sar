@@ -41,6 +41,11 @@ export default async function PageStatistiques({
               </span>{" "}
               {t("missionsAnnee")}
             </p>
+            {/* Sans cette note, l'écart entre le total de l'année et la somme
+                des mois passerait pour une erreur de calcul. */}
+            <p className="mb-8 max-w-3xl rounded-md border border-border bg-surface-2 p-4 text-sm leading-relaxed text-muted">
+              {t("note")}
+            </p>
             <div className="space-y-6">
               <GraphiqueMensuel stats={stats} />
               <GraphiqueFamilles stats={stats} />

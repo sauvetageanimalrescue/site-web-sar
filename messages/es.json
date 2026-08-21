@@ -391,7 +391,8 @@
     "missionsAnnee": "Misiones exitosas este año",
     "methodeTitre": "Cómo contamos",
     "methodeTexte": "Una misión cuenta cuando se cierra con uno de los seis desenlaces favorables: animal capturado y asegurado, devuelto a su propietario, liberado en el lugar, reubicado y liberado, entregado al servicio animal o entregado a un refugio. Los animales que no sobrevivieron se restan del total. Las llamadas sin intervención necesaria, las falsas alarmas y los animales que quedaron inalcanzables nunca cuentan como rescates.",
-    "vide": "Las estadísticas no están disponibles por el momento."
+    "vide": "Las estadísticas no están disponibles por el momento.",
+    "note": "El total del año incluye 493 animales rescatados entre el 1 de enero y el 1 de julio de 2026, registrados fuera del registro. Los gráficos siguientes solo cubren las intervenciones ingresadas en el registro, en servicio desde hace poco: por lo tanto se mantendrán por debajo del total anual hasta que todo pase por él."
   },
   "signalement": {
     "titre": "Reportar un animal en peligro",

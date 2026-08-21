@@ -12,7 +12,9 @@
 //
 // La valeur vient de la direction générale et représente des interventions
 // réelles. Elle se met à jour ici, à la main, jusqu'au premier octobre.
-export const REPORT_ANNEE = 0;
+export const REPORT_ANNEE = 493;
 
-// Date à laquelle le report a été arrêté, pour mémoire.
-export const REPORT_ARRETE_LE = "2026-08-21";
+// Date d'arrêté du report : 493 animaux secourus du premier janvier au
+// premier juillet 2026, chiffre fourni par la direction générale. Les trois
+// missions déjà au registre datent d'août, il n'y a donc aucun double compte.
+export const REPORT_ARRETE_LE = "2026-07-01";

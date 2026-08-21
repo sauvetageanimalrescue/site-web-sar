@@ -33,6 +33,17 @@ export async function proxy(request: NextRequest) {
     await supabase.auth.getUser();
   }
 
+  // 3. Toute adresse autre que le domaine officiel est marquée « ne pas
+  // indexer » : l'adresse vercel.app, les déploiements de prévisualisation et
+  // les domaines de rechange servent le même contenu, et Google pénalise le
+  // contenu dupliqué. Le contrôle se fait ici parce qu'il dépend de l'hôte
+  // demandé, ce que le fichier robots, calculé une seule fois à la
+  // compilation, ne peut pas savoir.
+  const hote = request.headers.get("host") ?? "";
+  if (!/^(www.)?sar.quebec$/i.test(hote)) {
+    response.headers.set("x-robots-tag", "noindex, nofollow");
+  }
+
   return response;
 }
 

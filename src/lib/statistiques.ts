@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { REPORT_ANNEE } from "@/contenu/compteur";
 
 // Les compteurs viennent du registre des missions, qui est une base Supabase
 // distincte de celle du site public. On n'y accède qu'à travers deux fonctions
@@ -45,7 +46,15 @@ export async function lireStatistiques(): Promise<Statistiques | null> {
 
   const { data, error } = await supabase.rpc("statistiques_publiques");
   if (error || !data) return null;
-  return data as Statistiques;
+
+  // Le report couvre les interventions accomplies avant que l'intranet ne
+  // consigne tout. Il ne touche ni le jour, ni la semaine, ni le mois.
+  const stats = data as Statistiques;
+  return {
+    ...stats,
+    annee: stats.annee + REPORT_ANNEE,
+    total: stats.total + REPORT_ANNEE,
+  };
 }
 
 export async function lireInterventionsRecentes(

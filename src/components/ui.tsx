@@ -291,6 +291,10 @@ export function SectionAlternee({
 }
 
 // Encadré d'appel à l'action en fin de page.
+// LE BAS DE PAGE À DEUX BOUTONS : bandeau marine qui ferme une page, avec un
+// titre, un texte facultatif et ses boutons. Il prend la largeur d'une carte
+// pour s'aligner sur les paragraphes de la page plutôt que sur le bord de
+// l'écran, sans quoi il paraît décroché du contenu qu'il conclut.
 export function AppelAction({
   titre,
   texte,
@@ -302,8 +306,8 @@ export function AppelAction({
 }) {
   return (
     <section className="bg-marine py-14">
-      <div className="mx-auto max-w-7xl px-4">
-        <h2 className="max-w-3xl whitespace-pre-line font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
+      <div className="mx-auto max-w-2xl px-4">
+        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
           {titre}
         </h2>
         {texte && (

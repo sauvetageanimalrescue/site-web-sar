@@ -80,6 +80,12 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/direction-portrait.jpg",
+          alt: "Eric Dussault en uniforme, adossé à un mur",
+        },
+      },
+      {
         titre: "Bâtir sans suivre le modèle établi",
         texte: [
           "Entrepreneur idéaliste et profondément anticonformiste, Eric Dussault n'a jamais cherché à bâtir Sauvetage Animal Rescue selon un modèle conventionnel. Son leadership repose moins sur le titre que sur l'exemple, l'expérience du terrain et la crédibilité acquise au fil des interventions et des formations. Il demeure d'abord et avant tout un sauveteur, avec la conviction qu'un dirigeant doit comprendre intimement la réalité de ceux qu'il appelle à intervenir. Cette façon de diriger influence encore aujourd'hui la culture de l'organisation: apprendre, expérimenter, remettre les méthodes en question et constamment chercher à faire mieux.",

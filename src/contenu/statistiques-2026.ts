@@ -220,7 +220,7 @@ export const PAR_MUNICIPALITE = [
 
 export const PAR_LIEU = [
   {
-    "libelle": "Déjà capturé",
+    "libelle": "Sécurisé",
     "valeur": 38
   },
   {

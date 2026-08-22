@@ -3,7 +3,6 @@ import { EnTetePage, Section } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { Chiffre } from "@/components/barres";
 import { CarteVues } from "@/components/carte-vues";
-import { FilInterventions } from "@/components/fil-interventions";
 import { lireStatistiques } from "@/lib/statistiques";
 import {
   PERIODE,
@@ -115,8 +114,6 @@ export default async function PageStatistiques({
           {t("uniteBarres")}
         </p>
       </Section>
-
-      {stats && <FilInterventions limite={12} />}
 
       <Section fond etroite>
         <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">

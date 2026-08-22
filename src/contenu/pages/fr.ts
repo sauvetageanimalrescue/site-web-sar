@@ -52,14 +52,14 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Portrait du fondateur",
     titre: "Direction générale",
     intro:
-      "Eric Dussault a fondé Sauvetage Animal Rescue et la dirige depuis. Voici d'où vient l'organisation, et où il veut la mener.",
+      "Eric Dussault a fondé Sauvetage Animal Rescue en deux mille dix. L'histoire commence huit ans plus tôt, avec un chat qui s'échappe.",
     image: "/images/direction-terrain.jpg",
     blocs: [
       {
-        titre: "Tout commence par une idée",
+        titre: "Capucine",
         texte: [
-          "Quand une personne est en détresse, tout un système se met en marche : une centrale reçoit l'appel, des véhicules partent, des gens formés arrivent. Eric Dussault a longtemps travaillé dans ce système, en secours et sauvetage, en sécurité publique, en transport de valeurs et en protection rapprochée. Il en connaissait les réflexes, les procédures et les limites.",
-          "Il a aussi constaté ce que personne ne nommait : pour un animal en détresse, ce système n'existait pas. En deux mille dix, il fonde Sauvetage Animal Rescue et entreprend d'appliquer au monde animal les principes du secours d'urgence.",
+          "En deux mille deux, le chat de la famille Dussault sort de la maison et disparaît. Sa mère cherche de l'aide et découvre qu'il n'y en a pas : ni la SPCA ni la police ne peuvent se déplacer pour ça. Personne ne viendra.",
+          "Le constat reste planté quelque part. Il faudra sept ans pour qu'il devienne un projet.",
         ],
       },
       {
@@ -69,24 +69,25 @@ export const PAGES_FR: CataloguePages = {
         },
       },
       {
-        titre: "Le défi de l'indépendance",
+        titre: "Un modèle trouvé à Los Angeles",
         texte: [
-          "Depuis la fondation, le plus grand défi n'a jamais été technique. Il est financier. L'organisation ne reçoit aucune aide gouvernementale : tout repose sur la générosité des citoyens et sur ses membres.",
-          "C'est une contrainte lourde à porter. C'est aussi ce qui fait que personne d'autre ne décide où et quand l'équipe intervient.",
+          "Eric Dussault a passé sa vie autour des services d'urgence : sécurité publique, services médicaux, sauvetage, transport de valeurs, protection rapprochée. Il connaît les centrales, les procédures, les niveaux de priorité. Ce qu'il cherche, en deux mille neuf, c'est un modèle qui applique tout ça aux animaux.",
+          "Il le trouve à Los Angeles, où le service animalier municipal opère une unité tactique de sauvetage des petits animaux. L'équivalent n'existe nulle part au Québec. Il fonde le sien l'année suivante.",
+          "Les débuts sont modestes : faute d'appels, l'organisation cherche surtout des animaux perdus. Les demandes de sauvetage viendront ensuite, et ne s'arrêteront plus.",
         ],
       },
       {
-        titre: "Une équipe qui s'est agrandie",
+        titre: "L'hiver où il a failli arrêter",
         texte: [
-          "Autour du fondateur s'est formée une équipe de bénévoles venus des services d'urgence, du monde animalier et du grand public. Ensemble, ils accomplissent plusieurs centaines de missions chaque année.",
-          "Ce sont eux qui montent dans les arbres, descendent dans les égouts et répondent la nuit.",
+          "Un hiver, en pleine saison creuse, il décide d'abandonner. Le lendemain, un chien est aperçu à la dérive sur les glaces, près de Sorel-Tracy. Les citoyens se mobilisent, les médias suivent, et c'est son organisation qu'on appelle.",
+          "Le chien ne sera jamais retrouvé. Mais quelque chose est confirmé ce jour-là : le besoin existe, et quelqu'un doit y répondre. Il ne reparlera plus d'arrêter.",
         ],
       },
       {
         titre: "Ce qu'il vise",
         texte: [
-          "Son objectif est que Sauvetage Animal Rescue devienne la référence en matière de sauvetage animal : former d'autres équipes, ici et ailleurs, transmettre le savoir accumulé, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels.",
-          "Parce que la souffrance animale, dit-il, mérite autant d'attention que celle des humains.",
+          "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels.",
+          "Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
         ],
       },
     ],

@@ -704,7 +704,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Qui finance nos interventions",
         texte: [
-          "**Une grande partie de nos opérations auprès d'animaux trouvés dans des lieux publics est rendue possible grâce à la [contribution de nos membres](/membre).** Leur soutien permet notamment de financer des interventions lorsqu'aucun citoyen, propriétaire ou organisme ne peut raisonnablement en assumer les frais. Les municipalités, entreprises, institutions et autres organisations peuvent également conclure une entente de services avec Sauvetage Animal Rescue. Ces ententes prévoient les modalités d'intervention et de facturation, tout en donnant accès à une ligne directe disponible 24 heures sur 24. Elles permettent surtout d'établir à l'avance un cadre clair, rapide et efficace lorsqu'une situation exige notre intervention.",
+          "Une grande partie de nos opérations auprès d'animaux trouvés dans des lieux publics est rendue possible grâce à la **[contribution de nos membres](/membre)**. Leur soutien permet notamment de financer des interventions lorsqu'aucun citoyen, propriétaire ou organisme ne peut raisonnablement en assumer les frais. Les municipalités, entreprises, institutions et autres organisations peuvent également conclure une entente de services avec Sauvetage Animal Rescue. Ces ententes prévoient les modalités d'intervention et de facturation, tout en donnant accès à une ligne directe disponible 24 heures sur 24. Elles permettent surtout d'établir à l'avance un cadre clair, rapide et efficace lorsqu'une situation exige notre intervention.",
         ],
       },
       {
@@ -766,7 +766,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Qui finance nos interventions",
         texte: [
-          "**Nos membres jouent un rôle essentiel dans le financement des opérations de sauvetage technique** réalisées lorsqu'aucun propriétaire ou organisme ne peut raisonnablement en assumer les coûts, notamment lorsqu'un animal se retrouve en détresse dans un lieu public. Ces interventions nécessitent souvent des équipements spécialisés, des véhicules et plusieurs intervenants. Les municipalités, entreprises, institutions et autres organisations peuvent également conclure une entente de services avec Sauvetage Animal Rescue. Ces ententes permettent de déterminer à l'avance les modalités d'intervention et de facturation, tout en donnant accès à une ligne directe disponible 24 heures sur 24 lorsqu'une situation nécessite notre expertise.",
+          "**[Nos membres](/membre)** jouent un rôle essentiel dans le financement des opérations de sauvetage technique réalisées lorsqu'aucun propriétaire ou organisme ne peut raisonnablement en assumer les coûts, notamment lorsqu'un animal se retrouve en détresse dans un lieu public. Ces interventions nécessitent souvent des équipements spécialisés, des véhicules et plusieurs intervenants. Les municipalités, entreprises, institutions et autres organisations peuvent également conclure une entente de services avec Sauvetage Animal Rescue. Ces ententes permettent de déterminer à l'avance les modalités d'intervention et de facturation, tout en donnant accès à une ligne directe disponible 24 heures sur 24 lorsqu'une situation nécessite notre expertise.",
         ],
       },
     ],

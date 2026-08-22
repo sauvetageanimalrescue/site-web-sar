@@ -41,21 +41,23 @@ export function EnTetePage({
   image?: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-marine">
+    <section className="relative isolate flex min-h-[23rem] items-center overflow-hidden bg-marine sm:min-h-[27rem]">
       {image && (
         <>
+          {/* La photo se voit vraiment : le dégradé la couvre à gauche, là où
+              se lit le texte, et la laisse respirer à droite. */}
           <Image
             src={image}
             alt=""
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-25"
+            className="object-cover opacity-45"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/85 to-marine/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/80 to-marine/35" />
         </>
       )}
-      <div className="relative mx-auto max-w-7xl px-4 py-14 sm:py-20">
+      <div className="relative mx-auto w-full max-w-7xl px-4 py-14 sm:py-20">
         {surtitre && (
           <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">
             {surtitre}

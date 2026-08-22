@@ -30,7 +30,7 @@ Toute nouvelle page se compose de ces blocs. Ne pas en inventer d'autres sans ra
 
 ## Les blocs
 
-- **`EnTetePage`** : la bannière. Surtitre lime, titre blanc en majuscules, intro, photo en filigrane sur fond marine. **Toujours alignée à gauche, sur toute la largeur.** Ne pas y toucher.
+- **`EnTetePage`** : la bannière. Surtitre lime, titre blanc en majuscules, intro, photo sur fond marine. **Toujours alignée à gauche, sur toute la largeur, et de hauteur fixe** pour que le site ne tressaute pas d'une page à l'autre ; le contenu se centre verticalement dans cette hauteur.
 - **`Section`** : le conteneur de base. `titre`, `fond` pour le gris, `largeur`. **Les sections d'une même page alternent `fond` une fois sur deux**, ce qui donne son rythme à la page.
 - **`CarteImage` + `GrilleCartes`** (`components/cartes.tsx`) : le canevas unique de toutes les cartes. Photo pleine, dégradé marine montant du bas, titre en majuscules posé dessus, pastille d'action à droite. Jamais plus de quatre cartes d'affilée sans un bloc de texte entre les rangées.
 - **`Declaration`** : affirmation courte centrée sur fond gris, suivie de deux boutons. Sert de respiration entre deux rangées de cartes.

@@ -52,11 +52,11 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Portrait du fondateur",
     titre: "Direction générale",
     intro:
-      "Eric Dussault a fondé Sauvetage Animal Rescue en deux mille dix. L'histoire commence huit ans plus tôt, avec un chat qui s'échappe.",
+      "Eric Dussault a fondé Sauvetage Animal Rescue et la dirige depuis. Voici d'où vient l'organisation, et où il veut la mener.",
     image: "/images/direction-terrain.jpg",
     blocs: [
       {
-        titre: "Capucine",
+        titre: "Tout part d'un constat",
         texte: [
           "Au début des années deux mille, Eric Dussault fait un constat qui marquera la suite de son parcours. Lorsqu'un animal se retrouve en situation d'urgence, les propriétaires disposent de très peu de ressources capables d'intervenir directement sur le terrain. Une expérience vécue au sein de sa propre famille, alors qu'elle cherchait désespérément de l'aide pour retrouver son chat Capucine, met cette réalité en lumière. Malgré les nombreux appels à des organismes et des services d'urgence, rien n'existe vraiment pour intervenir auprès d'un animal en détresse. Cette absence de réponse soulève une question qui ne le quittera plus. Pourquoi existe-t-il des services spécialisés pour pratiquement toutes les situations d'urgence, mais aucun véritable service d'intervention dédié aux animaux ? Ce constat devient le point de départ d'une réflexion qui, quelques années plus tard, donnera naissance à une vision entièrement nouvelle du sauvetage animalier au Québec.",
         ],
@@ -68,24 +68,21 @@ export const PAGES_FR: CataloguePages = {
         },
       },
       {
-        titre: "Un modèle trouvé à Los Angeles",
+        titre: "Ailleurs dans le monde",
         texte: [
-          "Eric a passé sa vie autour des services d'urgence : sécurité publique, services médicaux, sauvetage, transport de valeurs, protection rapprochée. Il connaît les centrales, les procédures, les niveaux de priorité. Ce qu'il cherche, à l'époque, c'est un modèle qui applique tout ça aux animaux.",
-          "Il le trouve à Los Angeles, où le service animalier municipal opère une unité tactique de sauvetage animalier. L'équivalent n'existe pas au Canada. Il fonde donc l'organisation l'année suivante.",
-          "Faute d'appels, l'organisation cherche d'abord surtout des animaux perdus. Les demandes de sauvetage viendront ensuite, et ne s'arrêteront plus.",
+          "Ses recherches l'amènent à découvrir, aux États-Unis, des équipes ayant développé une tout autre approche du sauvetage animalier. À Los Angeles, notamment, l'équipe SMART, spécialisée dans les interventions de sauvetage animalier, lui révèle jusqu'où peut aller un service lorsqu'on lui donne les moyens, la formation et l'expertise nécessaires. Équipements spécialisés, véhicules adaptés, techniques de sauvetage et culture opérationnelle : pour Dussault, cette découverte agit comme une démonstration. Ce qu'il imaginait était possible. Mais rien de comparable n'existait alors au Canada. Plutôt que d'accepter cette absence comme une fatalité, il décide de s'en inspirer pour bâtir ici une approche adaptée à la réalité québécoise. L'objectif ne sera jamais de simplement reproduire un modèle américain, mais d'en retenir une conviction fondamentale : un animal en détresse mérite lui aussi une réponse organisée, compétente et capable de se déplacer jusqu'à lui.",
         ],
       },
       {
         titre: "L'hiver qui a tout changé",
         texte: [
-          "Un hiver, en pleine saison creuse, la tentation d'abandonner se fait forte. Le lendemain matin, un chien est aperçu à la dérive sur les glaces, près de Sorel-Tracy. Les citoyens se mobilisent, les médias couvrent l'événement, et la Garde côtière ne se déplace pas : il ne s'agit pas d'un humain. C'est Sauvetage Animal Rescue qu'on appelle.",
-          "Le chien ne sera jamais retrouvé. La démonstration, elle, est faite : le besoin existe, et c'est cette organisation-là qu'on appelle quand il n'y a personne d'autre. Eric Dussault n'a jamais oublié cette journée.",
+          "Le parcours est toutefois loin d'être linéaire. Au cours d'un hiver particulièrement calme, alors que les interventions se font rares et que la jeune organisation traverse une véritable saison morte, le doute s'installe. Dussault envisage sérieusement de tourner la page. Puis survient un événement qui changera sa perception de la mission. Un chien est signalé à la dérive sur les glaces dans le secteur de Sorel-Tracy. Devant une situation qui ne relève véritablement d'aucun service traditionnel, les citoyens cherchent désespérément quelqu'un capable d'intervenir et finissent par se tourner vers Sauvetage Animal Rescue. L'équipe répond présente et se rend sur place. L'issue ne sera malheureusement pas celle espérée, mais l'intervention apporte une réponse définitive au doute qui s'était installé : ce service avait une raison d'exister. Pour Dussault, il devient alors impossible d'imaginer abandonner en sachant qu'un autre animal pourrait, un jour, avoir besoin d'une équipe comme la sienne. À partir de ce moment, Sauvetage Animal Rescue n'est plus simplement une idée à essayer. C'est une mission à construire.",
         ],
       },
       {
         titre: "Le but visé",
         texte: [
-          "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels. Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
+          "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels. Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
         ],
       },
     ],

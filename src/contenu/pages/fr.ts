@@ -199,23 +199,20 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Hors territoire",
     titre: "Missions nationales",
     intro:
-      "Lors d'un sinistre majeur, les animaux sont les derniers à être évacués et les premiers à être oubliés. Quand les autorités nous appellent en renfort, nous quittons notre territoire habituel pour aller les chercher.",
+      "Lorsqu'un sinistre majeur touche une communauté et que des animaux ont besoin d'assistance, Sauvetage Animal Rescue peut être déployé partout au pays afin de soutenir les autorités et les équipes locales directement sur le terrain.",
     image: "/images/sainte-marthe-2019.jpg",
     blocs: [
       {
+        titre: "Renforcer les équipes sur le terrain",
+        texte: [
+          "Lors d'une intervention d'envergure, les ressources locales peuvent rapidement être mises à rude épreuve. Sauvetage Animal Rescue peut alors être appelé en renfort afin d'ajouter une capacité opérationnelle spécialisée aux équipes déjà mobilisées. Nous déployons des intervenants formés, expérimentés et autonomes, accompagnés de l'équipement nécessaire pour participer directement aux opérations de secours. Notre rôle est de nous intégrer à la structure en place, de travailler en collaboration avec les autorités et les organisations locales, puis d'apporter notre expertise là où elle peut faire une différence concrète pour les animaux touchés.",
+        ],
+      },
+      {
         titre: "Sainte-Marthe-sur-le-Lac, 2019",
         texte: [
-          "La rupture de la digue a forcé l'évacuation de milliers de résidents en quelques heures. Beaucoup ont dû partir sans leurs animaux, restés seuls dans des maisons cernées par l'eau.",
-          "Notre équipe a mené 125 opérations dans les secteurs inondés et en a ramené 171 animaux. Chacune de ces opérations, c'est une famille qui a retrouvé le sien.",
+          "La rupture de la digue a forcé l'évacuation de milliers de résidents en quelques heures. Beaucoup ont dû partir sans leurs animaux, restés seuls dans des maisons cernées par l'eau. Notre équipe a mené 125 opérations dans les secteurs inondés et en a ramené 171 animaux. Chacune de ces opérations, c'est une famille qui a retrouvé le sien.",
         ],
-        encadre: {
-          titre: "Le bilan de l'opération",
-          lignes: [
-            "171 animaux secourus",
-            "125 opérations dans les secteurs évacués",
-            "Municipalité: Sainte-Marthe-sur-le-Lac",
-          ],
-        },
       },
       {
         titre: "Abitibi-Témiscamingue",

@@ -539,6 +539,12 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/capture-telesedation.jpg",
+          alt: "Intervention de capture avec équipement spécialisé",
+        },
+      },
+      {
         titre: "Capture chimique et télésédation",
         texte: [
           "Dans certaines situations exceptionnelles, les méthodes conventionnelles ne permettent pas de sécuriser l'animal sans augmenter les risques pour celui-ci ou pour les intervenants. La capture chimique, aussi appelée télésédation, peut alors être envisagée. Elle consiste à administrer à distance un médicament sédatif au moyen d'une fléchette projetée par un équipement spécialisé. Chez Sauvetage Animal Rescue, ce type d'intervention est réalisé en présence et sous la responsabilité d'un vétérinaire. La télésédation demeure une solution de dernier recours, utilisée lorsque les méthodes dynamiques ou mécaniques ne permettent pas d'effectuer la capture de façon suffisamment sécuritaire.",

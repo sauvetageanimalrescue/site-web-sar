@@ -722,31 +722,57 @@ export const PAGES_FR: CataloguePages = {
 
   "services/sauvetage-technique": {
     surtitre: "Là où personne d'autre ne va",
-    titre: "Sauvetage Technique",
+    titre: "Sauvetage technique",
     intro:
-      "Le sauvetage technique est une discipline en soi. Il commence là où le secours ordinaire s'arrête: quand atteindre l'animal exige des cordes, un harnais, une formation en travail en hauteur et une discipline de sécurité stricte.",
-    image: "/images/stages.jpg",
+      "Lorsque des animaux se retrouvent dans des environnements périlleux ou difficiles d'accès, nos sauveteurs déploient des techniques spécialisées et de l'équipement homologué afin de les atteindre, les sécuriser et les ramener en sécurité.",
+    image: "/images/sauvetage-technique.jpg",
     blocs: [
       {
-        titre: "Les milieux d'intervention",
-        liste: [
-          "Travail en hauteur: arbres, toits, pylônes, structures, ponts",
-          "Espaces clos: égouts, puisards, cheminées, murs, conduits",
-          "Milieux instables: glace, berges, cours d'eau",
-          "Sites industriels et emprises ferroviaires",
+        titre: "Aller là où l'animal se trouve",
+        texte: [
+          "Les animaux ont parfois le don de se retrouver dans des endroits où personne ne devrait avoir à aller les chercher. En hauteur, sous terre, sur l'eau, sur la glace, dans un espace restreint ou au coeur d'une structure complexe, ces interventions exigent des compétences qui dépassent largement le secours animalier conventionnel. Sauvetage Animal Rescue a développé une expertise spécifiquement adaptée à ces environnements périlleux et constitue la seule équipe de sauvetage technique de ce genre au Canada. Notre rôle est simple à définir, mais exigeant à accomplir: rejoindre l'animal là où il se trouve, le sécuriser et l'évacuer sans compromettre la sécurité de nos intervenants.",
         ],
       },
       {
-        titre: "Ce que ça exige",
+        image: {
+          fichier: "/images/sauvetage-technique.jpg",
+          alt: "Deux sauveteurs en harnais, cordes à la ceinture, au pied d'une structure",
+        },
+      },
+      {
+        titre: "Exemples d'interventions",
+        liste: [
+          "Chat coincé dans un arbre",
+          "Moufette tombée dans un puits",
+          "Renard blessé dans un ponceau",
+          "Chevreuil coincé sur la glace",
+          "Chien à la dérive",
+          "Chien coincé sur une paroi rocheuse",
+          "Castor coincé dans une écluse",
+          "Pigeon suspendu à un panneau publicitaire",
+          "Goéland accroché à une corniche",
+          "Oiseau coincé dans une tour de télécommunications",
+          "Marmotte blessée sous un cabanon",
+          "Canetons coincés dans un égout",
+          "Raton laveur coincé dans un manège",
+        ],
+      },
+      {
+        titre: "Une discipline qui ne s'improvise pas",
         texte: [
-          "Du matériel de cordage certifié, vérifié et consigné dans un registre des cordes de sauvetage. Des sauveteurs formés, qui ont progressé depuis la patrouille avant d'accéder à ce niveau. Et une règle non négociable: aucune intervention ne commence si la sécurité des intervenants n'est pas assurée, parce qu'un sauveteur blessé ne sauve plus personne.",
-          "C'est le service qui distingue l'organisation. Au Québec, très peu d'équipes sont capables de descendre en rappel pour aller chercher un chat à quinze mètres ou une bernache prise dans un pilier de pont.",
+          "Le sauvetage technique impose des exigences élevées en matière de formation, d'équipement et de santé-sécurité. Cordes, harnais, systèmes d'ancrage, dispositifs antichute et autres équipements spécialisés doivent être adaptés à leur utilisation, inspectés et entretenus avec rigueur. Nos cordes et nos équipements critiques font notamment l'objet d'un suivi permettant d'en documenter l'utilisation et l'état. Chaque intervention exige également une évaluation des risques, une méthode de travail adaptée et des sauveteurs formés aux techniques utilisées. Dans un environnement périlleux, la sécurité n'est jamais un détail: elle fait partie intégrante de l'opération, du premier accès jusqu'au retour de l'équipe au sol.",
+        ],
+      },
+      {
+        titre: "Qui finance nos interventions",
+        texte: [
+          "**Nos membres jouent un rôle essentiel dans le financement des opérations de sauvetage technique** réalisées lorsqu'aucun propriétaire ou organisme ne peut raisonnablement en assumer les coûts, notamment lorsqu'un animal se retrouve en détresse dans un lieu public. Ces interventions nécessitent souvent des équipements spécialisés, des véhicules et plusieurs intervenants. Les municipalités, entreprises, institutions et autres organisations peuvent également conclure une entente de services avec Sauvetage Animal Rescue. Ces ententes permettent de déterminer à l'avance les modalités d'intervention et de facturation, tout en donnant accès à une ligne directe disponible 24 heures sur 24 lorsqu'une situation nécessite notre expertise.",
         ],
       },
     ],
     actions: [
-      { href: "/signalement", libelle: "Signaler un animal", principal: true },
-      { href: "/recrutement", libelle: "Devenir sauveteur" },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/services/secours-animalier", libelle: "Secours animalier" },
     ],
   },
 

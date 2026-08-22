@@ -11,8 +11,12 @@ export type Mesure = { libelle: string; valeur: number };
 
 export const PERIODE = "1er janvier au 21 août 2026";
 export const TOTAL_MISSIONS = 424;
-// Calculé sur le fichier consolidé avec la définition du compteur du site :
-// missions closes par un code 10-70 à 10-75, moins les décès.
+// Méthode de l'organisation : somme des adultes et juvéniles, un animal
+// minimum quand le dénombrement n'a pas été saisi. Ce nombre compte tous les
+// animaux pour qui l'équipe s'est déplacée, secourus ou non.
+export const ANIMAUX_PRIS_EN_CHARGE = 577;
+// Méthode stricte : seules les missions closes par un code de sauvetage,
+// moins les décès. C'est la définition du compteur de l'intranet.
 export const ANIMAUX_SECOURUS = 370;
 export const MISSIONS_REUSSIES = 246;
 // Le taux exclut les missions dont le code de fin est inconnu ou en cours.

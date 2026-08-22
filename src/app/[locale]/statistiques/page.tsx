@@ -7,6 +7,7 @@ import { lireStatistiques } from "@/lib/statistiques";
 import {
   PERIODE,
   TOTAL_MISSIONS,
+  ANIMAUX_PRIS_EN_CHARGE,
   ANIMAUX_SECOURUS,
   MISSIONS_REUSSIES,
   MISSIONS_AVEC_ISSUE_CONNUE,
@@ -60,9 +61,9 @@ export default async function PageStatistiques({
             precision={t("chiffreMissionsPrecision", { territoire: SUR_TERRITOIRE })}
           />
           <Chiffre
-            valeur={ANIMAUX_SECOURUS.toString()}
+            valeur={ANIMAUX_PRIS_EN_CHARGE.toString()}
             legende={t("chiffreAnimaux")}
-            precision={t("chiffreAnimauxPrecision")}
+            precision={t("chiffreAnimauxPrecision", { secourus: ANIMAUX_SECOURUS })}
           />
           <Chiffre
             valeur={`${TAUX} %`}

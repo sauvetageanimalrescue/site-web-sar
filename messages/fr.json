@@ -225,8 +225,6 @@
     "quiTexte": "Pompiers, paramédics, policiers, techniciennes en santé animale, grimpeurs, plongeurs, comptables, camionneurs. L'équipe ne recrute pas un profil, elle recrute des compétences et une disponibilité. Ce qui réunit ces gens n'est pas leur métier, c'est leur décision de répondre quand le téléphone sonne.",
     "engagementTitre": "Ce que ça demande",
     "engagementTexte": "Une formation continue, des procédures à respecter à la lettre, et la capacité de garder son sang-froid devant un animal blessé, un propriétaire en détresse ou une structure instable. Personne ne monte dans un arbre le premier jour. On apprend, on accompagne, on évalue, puis on assigne.",
-    "membresTitre": "Les membres de l'équipe",
-    "membresTexte": "Chaque personne a sa page: depuis quand elle est là, ce qu'elle fait, et l'intervention qui l'a marquée.",
     "ficheFonction": "Fonction",
     "ficheDepuis": "Dans l'équipe depuis",
     "ficheService": "Années de service",
@@ -235,12 +233,27 @@
     "parcoursTitre": "Son parcours",
     "marquantTitre": "L'intervention qui l'a marquée",
     "entrevueTitre": "En entrevue",
-    "rejoindreTitre": "L'équipe recrute",
-    "rejoindreTexte": "Quatre fonctions, quatre façons de contribuer. Aucune expérience animalière n'est exigée au départ.",
-    "rejoindreBouton": "Voir les fonctions",
-    "distinctionsBouton": "Nos distinctions",
+    "rejoindreBouton": "Recrutement",
     "retourBouton": "Retour à l'équipe",
-    "membreBouton": "Devenir membre"
+    "membreBouton": "Devenir membre",
+    "categories": {
+      "secouristes": {
+        "titre": "Secouristes",
+        "sousTitre": "Sur le terrain, au quotidien"
+      },
+      "sauveteurs": {
+        "titre": "Sauveteurs",
+        "sousTitre": "Hauteur, glace, espace clos"
+      },
+      "soutien": {
+        "titre": "Soutien",
+        "sousTitre": "Signalements, transport, logistique"
+      },
+      "direction": {
+        "titre": "Direction",
+        "sousTitre": "Opérations et administration"
+      }
+    }
   },
   "recrutement": {
     "titre": "Devenir bénévole",

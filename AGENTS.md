@@ -38,7 +38,7 @@ Toute nouvelle page se compose de ces blocs. Ne pas en inventer d'autres sans ra
 - **`CarteVues`** : plusieurs graphiques dans une seule carte que l'on feuillette avec deux chevrons. Les vues sont empilées dans la même case de grille pour que la hauteur ne saute pas.
 - **`Chiffre`** : un nombre et sa légende, rien d'autre. Aucune précision en gris sous la carte.
 - **Le bloc image** : dans une page éditoriale, `image: { fichier, alt }` insère une photo centrée à la largeur d'une carte, en seize neuf, coins arrondis. Une légende facultative se place dessous, en petits caractères : elle sert à situer la photo, surtout quand elle vient des archives, sans quoi le lecteur croit voir une scène d'aujourd'hui. On ne met jamais une image à gauche et du texte à droite.
-- **`AppelAction`**, le bas de page à deux boutons : bandeau marine qui ferme une page, à la largeur d'une carte pour s'aligner sur les paragraphes qui le précèdent.
+- **`AppelAction`**, le bas de page à deux boutons : bandeau marine qui ferme une page, à la largeur d'une carte pour s'aligner sur les paragraphes qui le précèdent. **Il porte le titre de la page et deux boutons, jamais de texte**, et le premier bouton est toujours « Devenir membre ». Il est identique sur toutes les pages.
 
 ## Le texte
 

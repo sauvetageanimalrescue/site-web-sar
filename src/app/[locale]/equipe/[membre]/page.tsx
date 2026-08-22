@@ -91,8 +91,7 @@ export default async function PageMembre({
       )}
 
       <AppelAction
-        titre={t("rejoindreTitre")}
-        texte={t("rejoindreTexte")}
+        titre={`${m.prenom} ${m.nom}`}
         actions={[
           { href: "/membre", libelle: t("membreBouton"), principal: true },
           { href: "/equipe", libelle: t("retourBouton") },

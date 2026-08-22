@@ -225,8 +225,6 @@
     "quiTexte": "Firefighters, paramedics, police officers, animal health technicians, climbers, divers, accountants, truck drivers. The team does not recruit a profile, it recruits skills and availability. What brings these people together is not their trade, it is their decision to answer when the phone rings.",
     "engagementTitre": "What it takes",
     "engagementTexte": "Continuous training, procedures followed to the letter, and the ability to stay composed in front of an injured animal, a distressed owner or an unstable structure. Nobody climbs a tree on day one. You learn, you shadow, you are assessed, then you are assigned.",
-    "membresTitre": "Team members",
-    "membresTexte": "Each person has their own page: how long they have been here, what they do, and the operation that marked them.",
     "ficheFonction": "Role",
     "ficheDepuis": "On the team since",
     "ficheService": "Years of service",
@@ -235,12 +233,27 @@
     "parcoursTitre": "Their path",
     "marquantTitre": "The operation that marked them",
     "entrevueTitre": "In conversation",
-    "rejoindreTitre": "The team is recruiting",
-    "rejoindreTexte": "Four roles, four ways to contribute. No prior animal experience is required.",
-    "rejoindreBouton": "See the roles",
-    "distinctionsBouton": "Our honours",
+    "rejoindreBouton": "Recruitment",
     "retourBouton": "Back to the team",
-    "membreBouton": "Become a member"
+    "membreBouton": "Become a member",
+    "categories": {
+      "secouristes": {
+        "titre": "First responders",
+        "sousTitre": "In the field, every day"
+      },
+      "sauveteurs": {
+        "titre": "Rescuers",
+        "sousTitre": "Height, ice, confined spaces"
+      },
+      "soutien": {
+        "titre": "Support",
+        "sousTitre": "Dispatch, transport, logistics"
+      },
+      "direction": {
+        "titre": "Management",
+        "sousTitre": "Operations and administration"
+      }
+    }
   },
   "recrutement": {
     "titre": "Volunteer with us",

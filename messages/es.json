@@ -225,8 +225,6 @@
     "quiTexte": "Bomberos, paramédicos, policías, técnicas en salud animal, escaladores, buzos, contadores, camioneros. El equipo no recluta un perfil, recluta competencias y disponibilidad. Lo que reúne a estas personas no es su oficio, es su decisión de responder cuando suena el teléfono.",
     "engagementTitre": "Lo que exige",
     "engagementTexte": "Formación continua, procedimientos que se respetan al pie de la letra y la capacidad de mantener la sangre fría ante un animal herido, un propietario angustiado o una estructura inestable. Nadie sube a un árbol el primer día. Se aprende, se acompaña, se evalúa y luego se asigna.",
-    "membresTitre": "Los miembros del equipo",
-    "membresTexte": "Cada persona tiene su página: desde cuándo está, qué hace y la intervención que la marcó.",
     "ficheFonction": "Función",
     "ficheDepuis": "En el equipo desde",
     "ficheService": "Años de servicio",
@@ -235,12 +233,27 @@
     "parcoursTitre": "Su trayectoria",
     "marquantTitre": "La intervención que la marcó",
     "entrevueTitre": "En entrevista",
-    "rejoindreTitre": "El equipo recluta",
-    "rejoindreTexte": "Cuatro funciones, cuatro formas de contribuir. No se exige experiencia previa con animales.",
-    "rejoindreBouton": "Ver las funciones",
-    "distinctionsBouton": "Nuestras distinciones",
+    "rejoindreBouton": "Reclutamiento",
     "retourBouton": "Volver al equipo",
-    "membreBouton": "Hacerse miembro"
+    "membreBouton": "Hacerse miembro",
+    "categories": {
+      "secouristes": {
+        "titre": "Socorristas",
+        "sousTitre": "En el terreno, cada día"
+      },
+      "sauveteurs": {
+        "titre": "Rescatistas",
+        "sousTitre": "Altura, hielo, espacios cerrados"
+      },
+      "soutien": {
+        "titre": "Apoyo",
+        "sousTitre": "Avisos, transporte, logística"
+      },
+      "direction": {
+        "titre": "Dirección",
+        "sousTitre": "Operaciones y administración"
+      }
+    }
   },
   "recrutement": {
     "titre": "Ser voluntario",

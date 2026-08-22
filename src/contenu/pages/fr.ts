@@ -527,10 +527,22 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/capture-dynamique.jpg",
+          alt: "Capture à l'aide d'outils manuels spécialisés",
+        },
+      },
+      {
         titre: "Capture dynamique",
         texte: [
           "La capture dynamique implique une intervention directe du sauveteur à l'aide d'outils manuels spécialisés. Filets, perches de capture, pinces adaptées et autres dispositifs permettent de contrôler et de sécuriser l'animal tout en maintenant une distance entre celui-ci et l'intervenant. Cette approche réduit notamment les risques de morsure, de griffure ou de transmission de maladies. Elle demande une bonne lecture du comportement animal, de la coordination et la capacité d'adapter rapidement la technique utilisée aux réactions de l'animal.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/capture-mecanique.jpg",
+          alt: "Cage de capture refermée sur des ratons laveurs",
+        },
       },
       {
         titre: "Capture mécanique",

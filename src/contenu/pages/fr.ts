@@ -209,9 +209,9 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Sainte-Marthe-sur-le-Lac, printemps 2019",
+        titre: "Sainte-Marthe-sur-le-Lac, avril 2019",
         texte: [
-          "Au printemps 2019, la rupture d'une digue à Sainte-Marthe-sur-le-Lac a provoqué d'importantes inondations et forcé l'évacuation de milliers de résidents. Pendant trois jours, une équipe de 15 intervenants de Sauvetage Animal Rescue a été déployée dans la zone sinistrée afin d'aller chercher les animaux demeurés dans les résidences évacuées. Au total, notre équipe est intervenue dans 125 domiciles inondés et a évacué 171 animaux. Un poste de commandement ainsi qu'un refuge temporaire ont été mis en place pour soutenir les opérations et accueillir les animaux secourus. La mission s'est déroulée en collaboration avec la Sûreté du Québec, les services policiers municipaux et les services incendie présents sur le terrain.",
+          "En avril 2019, la rupture d'une digue à Sainte-Marthe-sur-le-Lac a provoqué d'importantes inondations et forcé l'évacuation de milliers de résidents. Pendant trois jours, une équipe de 15 intervenants de Sauvetage Animal Rescue a été déployée dans la zone sinistrée afin d'aller chercher les animaux demeurés dans les résidences évacuées. Au total, notre équipe est intervenue dans 125 domiciles inondés et a évacué 171 animaux. Un poste de commandement ainsi qu'un refuge temporaire ont été mis en place pour soutenir les opérations et accueillir les animaux secourus. La mission s'est déroulée en collaboration avec la Sûreté du Québec, les services policiers municipaux et les services incendie présents sur le terrain.",
         ],
       },
       {

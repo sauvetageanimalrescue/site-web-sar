@@ -42,4 +42,5 @@ Toute nouvelle page se compose de ces blocs. Ne pas en inventer d'autres sans ra
 ## Le texte
 
 - Les paragraphes portent la classe **`paragraphe`** : justifiés, césure automatique. Ne pas justifier un texte court et centré.
+- **Un paragraphe qui se suffit vaut mieux que deux.** Ne pas écrire par paires par réflexe : un second paragraphe de vingt mots affaiblit le premier. On en met deux ou trois quand le propos l'exige, pas autrement.
 - Les listes courtes restent en une seule colonne, à puces, **sans boîte**. Au-delà de vingt entrées, elles se replient en colonnes sur toute la largeur.

@@ -58,8 +58,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Capucine",
         texte: [
-          "En deux mille deux, le chat de la famille Dussault sort de la maison et disparaît. Sa mère cherche de l'aide et découvre qu'il n'y en a pas : ni la SPCA ni la police ne peuvent se déplacer pour ça. Personne ne viendra.",
-          "Le constat reste planté quelque part. Il faudra sept ans pour qu'il devienne un projet.",
+          "En deux mille deux, Capucine, le chat de la famille Dussault, sort de la maison et ne revient pas. Sa mère cherche de l'aide et se heurte à un mur poli : la SPCA ne se déplace pas pour chercher un animal perdu, la police non plus, et personne d'autre ne s'en occupe. Ce n'est le dossier d'aucun service. Il n'y a pas de numéro à composer qui mène à quelqu'un qui viendra, pas d'équipe à envoyer, pas de procédure. La famille cherche seule, comme tout le monde cherche seul. C'est ce vide, bien plus que la disparition elle-même, qui restera planté dans la tête d'Eric Dussault pendant les sept années suivantes.",
         ],
       },
       {

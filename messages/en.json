@@ -60,7 +60,7 @@
     "serie": "Television series"
   },
   "compteur": {
-    "titre": "Animals attended to",
+    "titre": "Animals we have\nintervened for",
     "sousTitre": "Live statistics",
     "jour": "Today",
     "semaine": "This week",
@@ -383,15 +383,13 @@
     "methodeTitre": "How we count",
     "methodeTexte": "A mission counts when it is closed with one of six favourable outcomes: animal captured and secured, returned to its owner, released on site, relocated and released, transferred to animal services, or transferred to a shelter. Animals that did not survive are subtracted from the total. Calls where no service was required, false alarms and animals that became unreachable are never counted as rescues.",
     "vide": "Statistics are unavailable at the moment.",
-    "note": "Data from January to 2 August comes from the mission registry. Data from 3 to 21 August is reconstructed from the dispatch thread, and a few outcome codes remain unknown. Animal counts are not filled in for every operation, so totals are minimums. The counters at the top of the page are live. Two ways of counting coexist here: animals attended to includes every animal the team travelled for, including those found dead or gone before we arrived; animals rescued counts only operations closed with a rescue.",
+    "note": "Data from January to 2 August comes from the mission registry. Data from 3 to 21 August is reconstructed from the dispatch thread, and a few outcome codes remain unknown. The animal figure adds up recorded adults and juveniles, counting one animal per operation when no count was entered. The counters at the top of the page are live.",
     "anneeTitre": "2026 in numbers",
     "anneeIntro": "From {periode}. Every number on this page comes from operations actually carried out, recorded one by one.",
     "chiffreMissions": "operations",
     "chiffreMissionsPrecision": "{territoire} of them within our territory",
-    "chiffreAnimaux": "animals attended to",
-    "chiffreAnimauxPrecision": "every animal the team travelled for, {secourus} of them rescued in the strict sense",
-    "chiffreTaux": "of operations succeeded",
-    "chiffreTauxPrecision": "{reussies} operations closed with a rescue",
+    "chiffreAnimaux": "animals",
+    "chiffreAnimauxPrecision": "from {especes} different species, that we intervened for",
     "chiffreEspece": "call-outs for a {espece}",
     "chiffreEspecePrecision": "the species most often in distress",
     "rythmeTitre": "The rhythm of our work",
@@ -410,7 +408,9 @@
     "parMunicipalite": "Most served municipalities",
     "appelsTitre": "Who calls, and from where",
     "parDemandeur": "Who reports",
-    "parLieu": "Type of location"
+    "parLieu": "Type of location",
+    "chiffreMunicipalites": "municipalities served",
+    "chiffreMunicipalitesPrecision": "from Montréal to the north and south shores"
   },
   "signalement": {
     "titre": "Report an animal in distress",

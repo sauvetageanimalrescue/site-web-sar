@@ -60,7 +60,7 @@
     "serie": "Serie de televisión"
   },
   "compteur": {
-    "titre": "Animales atendidos",
+    "titre": "Animales por los que\nhemos intervenido",
     "sousTitre": "Estadísticas en directo",
     "jour": "Hoy",
     "semaine": "Esta semana",
@@ -383,15 +383,13 @@
     "methodeTitre": "Cómo contamos",
     "methodeTexte": "Una misión cuenta cuando se cierra con uno de los seis desenlaces favorables: animal capturado y asegurado, devuelto a su propietario, liberado en el lugar, reubicado y liberado, entregado al servicio animal o entregado a un refugio. Los animales que no sobrevivieron se restan del total. Las llamadas sin intervención necesaria, las falsas alarmas y los animales que quedaron inalcanzables nunca cuentan como rescates.",
     "vide": "Las estadísticas no están disponibles por el momento.",
-    "note": "Los datos de enero al 2 de agosto provienen del registro de misiones. Los del 3 al 21 de agosto se reconstruyeron a partir del hilo de despacho y algunos códigos de cierre siguen siendo desconocidos. Los recuentos de animales no están completados en todas las intervenciones: los totales son mínimos. Los contadores de la parte superior sí están en vivo. Aquí conviven dos formas de contar: los animales atendidos incluyen a todos aquellos por los que el equipo se desplazó, incluidos los hallados sin vida o huidos antes de nuestra llegada; los animales rescatados solo cuentan las intervenciones cerradas con un rescate.",
+    "note": "Los datos de enero al 2 de agosto provienen del registro de misiones. Los del 3 al 21 de agosto se reconstruyeron a partir del hilo de despacho y algunos códigos de cierre siguen siendo desconocidos. La cifra de animales suma los adultos y juveniles registrados, contando un animal por intervención cuando no se ingresó el recuento. Los contadores de la parte superior están en vivo.",
     "anneeTitre": "El año 2026 en cifras",
     "anneeIntro": "Del {periode}. Cada número de esta página proviene de intervenciones realmente realizadas, registradas una por una.",
     "chiffreMissions": "intervenciones",
     "chiffreMissionsPrecision": "de las cuales {territoire} en nuestro territorio",
-    "chiffreAnimaux": "animales atendidos",
-    "chiffreAnimauxPrecision": "todos aquellos por los que el equipo se desplazó, {secourus} de ellos rescatados en sentido estricto",
-    "chiffreTaux": "de intervenciones logradas",
-    "chiffreTauxPrecision": "{reussies} intervenciones cerradas con un rescate",
+    "chiffreAnimaux": "animales",
+    "chiffreAnimauxPrecision": "de {especes} especies diferentes, por los que intervinimos",
     "chiffreEspece": "intervenciones por un {espece}",
     "chiffreEspecePrecision": "la especie más a menudo en peligro",
     "rythmeTitre": "El ritmo de las intervenciones",
@@ -410,7 +408,9 @@
     "parMunicipalite": "Los municipios más atendidos",
     "appelsTitre": "Quién llama, y desde dónde",
     "parDemandeur": "Quién avisa",
-    "parLieu": "Tipo de lugar"
+    "parLieu": "Tipo de lugar",
+    "chiffreMunicipalites": "municipios atendidos",
+    "chiffreMunicipalitesPrecision": "de Montreal a las coronas norte y sur"
   },
   "signalement": {
     "titre": "Reportar un animal en peligro",

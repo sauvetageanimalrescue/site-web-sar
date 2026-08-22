@@ -7,10 +7,9 @@ import { lireStatistiques } from "@/lib/statistiques";
 import {
   PERIODE,
   TOTAL_MISSIONS,
-  ANIMAUX_PRIS_EN_CHARGE,
-  ANIMAUX_SECOURUS,
-  MISSIONS_REUSSIES,
-  MISSIONS_AVEC_ISSUE_CONNUE,
+  ANIMAUX,
+  MUNICIPALITES_DESSERVIES,
+  ESPECES_DIFFERENTES,
   SUR_TERRITOIRE,
   MISSIONS_PAR_MOIS,
   PAR_FAMILLE,
@@ -27,8 +26,6 @@ import {
 
 // Les compteurs du haut bougent en continu ; le reste de la page est figé.
 export const revalidate = 60;
-
-const TAUX = Math.round((MISSIONS_REUSSIES / MISSIONS_AVEC_ISSUE_CONNUE) * 100);
 
 export default async function PageStatistiques({
   params,
@@ -61,14 +58,14 @@ export default async function PageStatistiques({
             precision={t("chiffreMissionsPrecision", { territoire: SUR_TERRITOIRE })}
           />
           <Chiffre
-            valeur={ANIMAUX_PRIS_EN_CHARGE.toString()}
+            valeur={ANIMAUX.toString()}
             legende={t("chiffreAnimaux")}
-            precision={t("chiffreAnimauxPrecision", { secourus: ANIMAUX_SECOURUS })}
+            precision={t("chiffreAnimauxPrecision", { especes: ESPECES_DIFFERENTES })}
           />
           <Chiffre
-            valeur={`${TAUX} %`}
-            legende={t("chiffreTaux")}
-            precision={t("chiffreTauxPrecision", { reussies: MISSIONS_REUSSIES })}
+            valeur={MUNICIPALITES_DESSERVIES.toString()}
+            legende={t("chiffreMunicipalites")}
+            precision={t("chiffreMunicipalitesPrecision")}
           />
           <Chiffre
             valeur={PAR_ESPECE[0].valeur.toString()}

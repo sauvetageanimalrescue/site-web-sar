@@ -11,16 +11,13 @@ export type Mesure = { libelle: string; valeur: number };
 
 export const PERIODE = "1er janvier au 21 août 2026";
 export const TOTAL_MISSIONS = 424;
-// Méthode de l'organisation : somme des adultes et juvéniles, un animal
-// minimum quand le dénombrement n'a pas été saisi. Ce nombre compte tous les
-// animaux pour qui l'équipe s'est déplacée, secourus ou non.
-export const ANIMAUX_PRIS_EN_CHARGE = 577;
-// Méthode stricte : seules les missions closes par un code de sauvetage,
-// moins les décès. C'est la définition du compteur de l'intranet.
-export const ANIMAUX_SECOURUS = 370;
-export const MISSIONS_REUSSIES = 246;
-// Le taux exclut les missions dont le code de fin est inconnu ou en cours.
-export const MISSIONS_AVEC_ISSUE_CONNUE = 413;
+// Somme des adultes et juvéniles, un animal minimum quand le dénombrement
+// n'a pas été saisi. C'est la méthode des récapitulatifs mensuels de la
+// direction générale. Un transport vers un refuge compte autant qu'une
+// capture en hauteur : dans les deux cas l'équipe s'est déplacée.
+export const ANIMAUX = 577;
+export const MUNICIPALITES_DESSERVIES = 58;
+export const ESPECES_DIFFERENTES = 33;
 export const SUR_TERRITOIRE = 405;
 
 export const MISSIONS_PAR_MOIS = [

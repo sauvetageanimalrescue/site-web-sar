@@ -1,4 +1,4 @@
-// Report des animaux pris en charge avant que l'intranet ne consigne tout.
+// Report des animaux, avant que l'intranet ne consigne tout.
 //
 // L'intranet, qui contient le registre des missions, entre en service le
 // premier octobre 2026. En attendant, le compteur en direct ne voit que les

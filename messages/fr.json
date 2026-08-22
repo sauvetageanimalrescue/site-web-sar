@@ -60,7 +60,7 @@
     "serie": "Série télévisée"
   },
   "compteur": {
-    "titre": "Animaux auprès desquels\nnous sommes intervenus",
+    "titre": "Animaux secourus",
     "sousTitre": "Statistiques en direct",
     "jour": "Aujourd'hui",
     "semaine": "Cette semaine",
@@ -388,8 +388,8 @@
     "anneeIntro": "Du {periode}. Chaque nombre de cette page vient des missions réellement accomplies, consignées une par une.",
     "chiffreMissions": "missions",
     "chiffreMissionsPrecision": "dont {territoire} sur notre territoire",
-    "chiffreAnimaux": "animaux",
-    "chiffreAnimauxPrecision": "de {especes} espèces différentes, auprès desquels nous sommes intervenus",
+    "chiffreAnimaux": "animaux secourus",
+    "chiffreAnimauxPrecision": "de {especes} espèces différentes",
     "chiffreEspece": "interventions pour un {espece}",
     "chiffreEspecePrecision": "l'espèce la plus souvent en détresse",
     "rythmeTitre": "Le rythme des interventions",

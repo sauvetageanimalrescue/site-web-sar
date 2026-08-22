@@ -60,7 +60,7 @@
     "serie": "Television series"
   },
   "compteur": {
-    "titre": "Animals we have\nintervened for",
+    "titre": "Animals assisted",
     "sousTitre": "Live statistics",
     "jour": "Today",
     "semaine": "This week",
@@ -388,8 +388,8 @@
     "anneeIntro": "From {periode}. Every number on this page comes from operations actually carried out, recorded one by one.",
     "chiffreMissions": "operations",
     "chiffreMissionsPrecision": "{territoire} of them within our territory",
-    "chiffreAnimaux": "animals",
-    "chiffreAnimauxPrecision": "from {especes} different species, that we intervened for",
+    "chiffreAnimaux": "animals assisted",
+    "chiffreAnimauxPrecision": "from {especes} different species",
     "chiffreEspece": "call-outs for a {espece}",
     "chiffreEspecePrecision": "the species most often in distress",
     "rythmeTitre": "The rhythm of our work",

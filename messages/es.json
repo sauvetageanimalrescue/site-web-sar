@@ -60,7 +60,7 @@
     "serie": "Serie de televisión"
   },
   "compteur": {
-    "titre": "Animales por los que\nhemos intervenido",
+    "titre": "Animales socorridos",
     "sousTitre": "Estadísticas en directo",
     "jour": "Hoy",
     "semaine": "Esta semana",
@@ -388,8 +388,8 @@
     "anneeIntro": "Del {periode}. Cada número de esta página proviene de intervenciones realmente realizadas, registradas una por una.",
     "chiffreMissions": "intervenciones",
     "chiffreMissionsPrecision": "de las cuales {territoire} en nuestro territorio",
-    "chiffreAnimaux": "animales",
-    "chiffreAnimauxPrecision": "de {especes} especies diferentes, por los que intervinimos",
+    "chiffreAnimaux": "animales socorridos",
+    "chiffreAnimauxPrecision": "de {especes} especies diferentes",
     "chiffreEspece": "intervenciones por un {espece}",
     "chiffreEspecePrecision": "la especie más a menudo en peligro",
     "rythmeTitre": "El ritmo de las intervenciones",

@@ -20,8 +20,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Un vide dans la chaîne de secours",
         texte: [
-          "Quand un humain est en détresse, tout un système se met en marche. Pour un animal, il n'existait rien de comparable au Québec. Les pompiers et les services animaliers faisaient ce qu'ils pouvaient, mais personne n'était formé spécifiquement pour aller chercher un chat à quinze mètres dans un arbre ou un raton laveur au fond d'une cheminée.",
-          "Sauvetage Animal Rescue est né de ce constat. L'organisation applique au monde animal les principes du secours d'urgence: une centrale qui reçoit les appels, des niveaux d'intervention, des procédures de sécurité, un registre où chaque mission est documentée du premier appel jusqu'à sa fermeture.",
+          "Lorsqu'un être humain est en détresse, tout un mécanisme se déploie. Mais pour un animal, rien de tel n'existait ici. Les pompiers et les services animaliers faisaient de leur mieux, mais aucune structure n'était conçue spécifiquement pour le sauvetage animalier complexe. C'est ce vide que Sauvetage Animal Rescue est venu combler. En reprenant les principes du secours d'urgence et en les appliquant au monde animal, l'organisation a bâti une chaîne d'intervention structurée, de la prise d'appel jusqu'à la fin de la mission, avec des formations, des procédures, et une rigueur digne des services d'urgence.",
         ],
       },
       {

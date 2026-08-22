@@ -63,7 +63,7 @@ export default async function PageStatistiques({
         </p>
       </Section>
 
-      <Section titre={t("rythmeTitre")} fond>
+      <Section titre={t("rythmeTitre")} fond largeur="carte">
         <CarteVues
           vues={[
             { titre: t("parMois"), donnees: MISSIONS_PAR_MOIS },
@@ -76,7 +76,7 @@ export default async function PageStatistiques({
         </p>
       </Section>
 
-      <Section titre={t("animauxTitre")}>
+      <Section titre={t("animauxTitre")} largeur="carte">
         <CarteVues
           vues={[
             { titre: t("parEspece"), donnees: PAR_ESPECE },
@@ -86,7 +86,7 @@ export default async function PageStatistiques({
         />
       </Section>
 
-      <Section titre={t("geoTitre")} fond>
+      <Section titre={t("geoTitre")} fond largeur="carte">
         <CarteVues
           vues={[
             { titre: t("parRegion"), donnees: PAR_REGION },
@@ -95,7 +95,7 @@ export default async function PageStatistiques({
         />
       </Section>
 
-      <Section titre={t("appelsTitre")}>
+      <Section titre={t("appelsTitre")} largeur="carte">
         <CarteVues
           vues={[
             { titre: t("parDemandeur"), donnees: PAR_DEMANDEUR },

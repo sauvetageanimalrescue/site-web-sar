@@ -79,17 +79,22 @@ export function Section({
   children,
   fond = false,
   etroite = false,
+  largeur,
 }: {
   titre?: string;
   children: ReactNode;
   fond?: boolean;
   etroite?: boolean;
+  // « pleine » occupe la largeur du site, « texte » une largeur de lecture,
+  // « carte » la largeur d'une carte centrée.
+  largeur?: "pleine" | "texte" | "carte";
 }) {
+  const choix = largeur ?? (etroite ? "texte" : "pleine");
+  const cadre =
+    choix === "carte" ? "max-w-2xl" : choix === "texte" ? "max-w-3xl" : "max-w-7xl";
   return (
     <section className={fond ? "bg-surface-2 py-14" : "py-14"}>
-      <div
-        className={`mx-auto px-4 ${etroite ? "max-w-3xl" : "max-w-7xl"}`}
-      >
+      <div className={`mx-auto px-4 ${cadre}`}>
         {titre && (
           <h2 className="mb-6 font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine">
             {titre}

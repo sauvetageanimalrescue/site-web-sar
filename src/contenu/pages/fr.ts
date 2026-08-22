@@ -83,10 +83,9 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Ce qu'il vise",
+        titre: "Le but visé",
         texte: [
-          "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels.",
-          "Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
+          "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels. Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
         ],
       },
     ],

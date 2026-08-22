@@ -71,8 +71,8 @@ export const PAGES_FR: CataloguePages = {
         titre: "Un modèle trouvé à Los Angeles",
         texte: [
           "Eric a passé sa vie autour des services d'urgence : sécurité publique, services médicaux, sauvetage, transport de valeurs, protection rapprochée. Il connaît les centrales, les procédures, les niveaux de priorité. Ce qu'il cherche, à l'époque, c'est un modèle qui applique tout ça aux animaux.",
-          "Il le trouve à Los Angeles, où le service animalier municipal opère une unité tactique de sauvetage des petits animaux. L'équivalent n'existe nulle part au Québec. Il fonde le sien dans la foulée.",
-          "Les débuts sont modestes : faute d'appels, l'organisation cherche surtout des animaux perdus. Les demandes de sauvetage viendront ensuite, et ne s'arrêteront plus.",
+          "Il le trouve à Los Angeles, où le service animalier municipal opère une unité tactique de sauvetage animalier. L'équivalent n'existe pas au Canada. Il fonde donc l'organisation l'année suivante.",
+          "Faute d'appels, l'organisation cherche d'abord surtout des animaux perdus. Les demandes de sauvetage viendront ensuite, et ne s'arrêteront plus.",
         ],
       },
       {

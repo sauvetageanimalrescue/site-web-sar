@@ -675,6 +675,12 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/secours-rue.jpg",
+          alt: "Deux intervenants dans la rue, l'un avec un filet, l'autre portant un oiseau",
+        },
+      },
+      {
         titre: "Exemples de situations",
         liste: [
           "Écureuil orphelin tombé du nid",

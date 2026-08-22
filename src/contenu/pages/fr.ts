@@ -313,6 +313,10 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        titre: "Revue de presse",
+        composant: "presse",
+      },
+      {
         titre: "Demandes des médias",
         texte: [
           "Pour une demande d'entrevue, une validation d'information ou une couverture sur le terrain, communiquez directement avec la direction générale à e.dussault@sar.quebec",

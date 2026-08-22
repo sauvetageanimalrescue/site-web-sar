@@ -11,7 +11,7 @@ export type BlocPage = {
   image?: { fichier: string; alt?: string; legende?: string };
   // Composant interactif inséré dans une page éditoriale. Un seul pour
   // l'instant : la vérification du territoire desservi.
-  composant?: "territoire";
+  composant?: "territoire" | "presse";
 };
 
 export type PageEditoriale = {

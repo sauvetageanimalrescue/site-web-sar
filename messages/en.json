@@ -566,5 +566,15 @@
     "verifNonTexte": "Our operations stop at the boundaries of the Montréal Metropolitan Community. For an animal in distress elsewhere in Québec, contact your municipal animal services or your regional police service.",
     "listeOuvrir": "See the {total} municipalities served",
     "listeFermer": "Hide the list"
+  },
+  "medias": {
+    "supports": {
+      "tous": "All",
+      "article": "Articles",
+      "radio": "Radio",
+      "television": "Television",
+      "balado": "Podcasts"
+    },
+    "presseNote": "This review is partial and grows over time. Each link leads to the original outlet."
   }
 }

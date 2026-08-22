@@ -566,5 +566,15 @@
     "verifNonTexte": "Nuestras intervenciones se detienen en los límites de la Comunidad Metropolitana de Montreal. Para un animal en peligro en otra parte de Quebec, comuníquese con su servicio animal municipal o con su servicio de policía regional.",
     "listeOuvrir": "Ver los {total} municipios atendidos",
     "listeFermer": "Ocultar la lista"
+  },
+  "medias": {
+    "supports": {
+      "tous": "Todo",
+      "article": "Artículos",
+      "radio": "Radio",
+      "television": "Televisión",
+      "balado": "Pódcast"
+    },
+    "presseNote": "Esta reseña es parcial y crece con el tiempo. Cada enlace lleva al medio de origen."
   }
 }

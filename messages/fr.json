@@ -566,5 +566,15 @@
     "verifNonTexte": "Nos interventions s'arrêtent aux limites de la Communauté Métropolitaine de Montréal. Pour un animal en détresse ailleurs au Québec, communiquez avec votre service animalier municipal ou avec votre service de police régional.",
     "listeOuvrir": "Voir les {total} municipalités desservies",
     "listeFermer": "Masquer la liste"
+  },
+  "medias": {
+    "supports": {
+      "tous": "Tout",
+      "article": "Articles",
+      "radio": "Radio",
+      "television": "Télévision",
+      "balado": "Balados"
+    },
+    "presseNote": "Cette revue est partielle et s'enrichit au fil du temps. Chaque lien mène au média d'origine."
   }
 }

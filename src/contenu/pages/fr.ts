@@ -484,32 +484,34 @@ export const PAGES_FR: CataloguePages = {
   },
 
   "services/inspection": {
-    surtitre: "Avant que le problème s'installe",
-    titre: "Inspection",
+    surtitre: "À la demande des autorités",
+    titre: "Inspection et évaluation",
     intro:
-      "Une inspection sert à comprendre ce qui attire les animaux chez vous et par où ils entrent. C'est presque toujours moins coûteux que de gérer la même situation trois fois par année.",
-    image: "/images/carte-secteurs.jpg",
+      "À la demande des autorités, Sauvetage Animal Rescue peut procéder à l'inspection d'un milieu de vie ou coordonner l'évaluation d'un animal jugé potentiellement dangereux, selon un processus structuré, documenté et sécuritaire.",
+    image: "/images/inspection-milieu.jpg",
     blocs: [
       {
-        titre: "Ce que nous vérifions",
-        liste: [
-          "Points d'entrée: soffites, ventilations, conduits, vides sanitaires",
-          "Sources de nourriture et d'eau accessibles",
-          "Abris potentiels: entretoits, remises, empilements, machinerie",
-          "Traces de présence: excréments, poils, sentiers, dommages",
-          "Risques pour les occupants et pour les animaux eux-mêmes",
+        titre: "Inspection du milieu de vie",
+        texte: [
+          "À la demande d'une municipalité ou d'une autre autorité compétente, nos intervenants peuvent se rendre sur place afin d'évaluer les conditions dans lesquelles un animal est gardé. L'inspection vise notamment à vérifier si le milieu de vie respecte les exigences applicables en matière de garde et de bien-être animal. L'accès à l'eau et à la nourriture, l'état général des installations, la propreté des lieux, la sécurité des aménagements ainsi que les conditions de garde à l'intérieur et à l'extérieur peuvent faire partie des éléments observés. Les constatations sont documentées afin de fournir aux autorités l'information nécessaire pour assurer un suivi approprié du dossier.",
         ],
       },
       {
-        titre: "Ce que vous recevez",
+        image: {
+          fichier: "/images/inspection-evaluation.jpg",
+          alt: "Intervenants en inspection sur le terrain",
+        },
+      },
+      {
+        titre: "Évaluation des animaux dangereux",
         texte: [
-          "Un rapport écrit décrivant ce qui a été constaté, l'espèce en cause quand elle est identifiable, et les correctifs à apporter par ordre de priorité. Nous distinguons clairement ce qui relève de nous de ce qui relève d'un entrepreneur, d'un exterminateur ou de votre équipe d'entretien.",
-          "Nous ne vendons pas de produits et nous ne facturons pas au nombre d'animaux capturés. Un rapport qui conclut qu'il n'y a rien à faire est un rapport utile.",
+          "Lorsqu'un animal présente un comportement préoccupant ou fait l'objet d'un dossier de dangerosité, Sauvetage Animal Rescue peut coordonner les différentes étapes nécessaires à son évaluation. Notre équipe peut assurer la sécurisation de l'animal, sa prise en charge et son transport vers les ressources spécialisées appropriées. L'évaluation comportementale est réalisée avec la collaboration de professionnels qualifiés, notamment des vétérinaires et des spécialistes du comportement animal, afin de documenter le niveau de risque et les circonstances entourant le comportement observé. Notre rôle consiste à encadrer l'intervention de façon sécuritaire et structurée, depuis la prise en charge initiale jusqu'à la remise du rapport aux autorités concernées.",
         ],
       },
     ],
     actions: [
-      { href: "/secteurs", libelle: "Voir les secteurs desservis", principal: true },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/services/reglementation", libelle: "Règlementation" },
     ],
   },
 

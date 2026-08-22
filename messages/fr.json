@@ -559,7 +559,7 @@
     "verifPlaceholder": "Montréal, Laval, Longueuil...",
     "verifOui": "Oui, nous desservons ce secteur.",
     "verifNon": "Cette municipalité n'est pas sur notre territoire.",
-    "verifNonTexte": "Nos interventions s'arrêtent aux limites de la Communauté Métropolitaine de Montréal. Pour un animal en détresse ailleurs au Québec, communiquez avec votre service animalier municipal ou, pour la faune, avec le ministère au 1-800-463-2191.",
+    "verifNonTexte": "Nos interventions s'arrêtent aux limites de la Communauté Métropolitaine de Montréal. Pour un animal en détresse ailleurs au Québec, communiquez avec votre service animalier municipal ou avec la SPCA de votre région.",
     "listeOuvrir": "Voir les {total} municipalités desservies",
     "listeFermer": "Masquer la liste"
   }

@@ -404,7 +404,10 @@
     "appelsTitre": "Qui nous appelle, et d'où",
     "parDemandeur": "Qui signale",
     "parLieu": "Le type de lieu",
-    "chiffreMunicipalites": "municipalités desservies"
+    "chiffreMunicipalites": "municipalités desservies",
+    "precedent": "Vue précédente",
+    "suivant": "Vue suivante",
+    "uniteBarres": "Tous les graphiques de cette page comptent des déplacements, jamais des animaux. Une mission auprès de trois canetons compte pour un déplacement."
   },
   "signalement": {
     "titre": "Signaler un animal en détresse",

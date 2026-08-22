@@ -404,7 +404,10 @@
     "appelsTitre": "Quién llama, y desde dónde",
     "parDemandeur": "Quién avisa",
     "parLieu": "Tipo de lugar",
-    "chiffreMunicipalites": "municipios atendidos"
+    "chiffreMunicipalites": "municipios atendidos",
+    "precedent": "Vista anterior",
+    "suivant": "Vista siguiente",
+    "uniteBarres": "Todos los gráficos de esta página cuentan desplazamientos, nunca animales. Una intervención por tres patitos cuenta como un desplazamiento."
   },
   "signalement": {
     "titre": "Reportar un animal en peligro",

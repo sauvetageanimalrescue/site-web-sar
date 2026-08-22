@@ -1,7 +1,8 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { EnTetePage, Section } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
-import { Barres, Chiffre } from "@/components/barres";
+import { Chiffre } from "@/components/barres";
+import { CarteVues } from "@/components/carte-vues";
 import { FilInterventions } from "@/components/fil-interventions";
 import { lireStatistiques } from "@/lib/statistiques";
 import {
@@ -69,90 +70,50 @@ export default async function PageStatistiques({
       </Section>
 
       <Section titre={t("rythmeTitre")} fond>
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-              {t("parMois")}
-            </h3>
-            <Barres donnees={MISSIONS_PAR_MOIS} />
-          </div>
-          <div className="space-y-8">
-            <div>
-              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-                {t("parJour")}
-              </h3>
-              <Barres donnees={PAR_JOUR} couleur="var(--vert)" />
-            </div>
-            <div>
-              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-                {t("parHeure")}
-              </h3>
-              <Barres donnees={PAR_HEURE} couleur="var(--vert)" />
-            </div>
-          </div>
-        </div>
-        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
+        <CarteVues
+          vues={[
+            { titre: t("parMois"), donnees: MISSIONS_PAR_MOIS },
+            { titre: t("parJour"), donnees: PAR_JOUR },
+            { titre: t("parHeure"), donnees: PAR_HEURE },
+          ]}
+        />
+        <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted">
           {t("rythmeTexte")}
         </p>
       </Section>
 
       <Section titre={t("animauxTitre")}>
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-              {t("parEspece")}
-            </h3>
-            <Barres donnees={PAR_ESPECE} />
-          </div>
-          <div className="space-y-8">
-            <div>
-              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-                {t("parFamille")}
-              </h3>
-              <Barres donnees={PAR_FAMILLE} couleur="var(--vert)" />
-            </div>
-            <div>
-              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-                {t("parEtat")}
-              </h3>
-              <Barres donnees={PAR_ETAT} couleur="var(--urgence)" />
-            </div>
-          </div>
-        </div>
+        <CarteVues
+          vues={[
+            { titre: t("parEspece"), donnees: PAR_ESPECE },
+            { titre: t("parFamille"), donnees: PAR_FAMILLE, couleur: "var(--vert)" },
+            { titre: t("parEtat"), donnees: PAR_ETAT, couleur: "var(--urgence)" },
+          ]}
+        />
       </Section>
 
       <Section titre={t("geoTitre")} fond>
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-              {t("parRegion")}
-            </h3>
-            <Barres donnees={PAR_REGION} />
-          </div>
-          <div>
-            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-              {t("parMunicipalite")}
-            </h3>
-            <Barres donnees={PAR_MUNICIPALITE} couleur="var(--vert)" />
-          </div>
-        </div>
+        <CarteVues
+          vues={[
+            { titre: t("parRegion"), donnees: PAR_REGION },
+            { titre: t("parMunicipalite"), donnees: PAR_MUNICIPALITE, couleur: "var(--vert)" },
+          ]}
+        />
       </Section>
 
       <Section titre={t("appelsTitre")}>
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-              {t("parDemandeur")}
-            </h3>
-            <Barres donnees={PAR_DEMANDEUR} />
-          </div>
-          <div>
-            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
-              {t("parLieu")}
-            </h3>
-            <Barres donnees={PAR_LIEU} couleur="var(--vert)" />
-          </div>
-        </div>
+        <CarteVues
+          vues={[
+            { titre: t("parDemandeur"), donnees: PAR_DEMANDEUR },
+            { titre: t("parLieu"), donnees: PAR_LIEU, couleur: "var(--vert)" },
+          ]}
+        />
+        {/* L'unité de toutes ces barres est le déplacement, jamais l'animal :
+            sans cette ligne, la section des espèces se lirait comme un nombre
+            d'animaux. */}
+        <p className="mx-auto mt-8 max-w-2xl text-xs leading-relaxed text-muted">
+          {t("uniteBarres")}
+        </p>
       </Section>
 
       {stats && <FilInterventions limite={12} />}

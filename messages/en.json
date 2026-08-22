@@ -404,7 +404,10 @@
     "appelsTitre": "Who calls, and from where",
     "parDemandeur": "Who reports",
     "parLieu": "Type of location",
-    "chiffreMunicipalites": "municipalities served"
+    "chiffreMunicipalites": "municipalities served",
+    "precedent": "Previous view",
+    "suivant": "Next view",
+    "uniteBarres": "Every chart on this page counts call-outs, never animals. One operation for three ducklings counts as one call-out."
   },
   "signalement": {
     "titre": "Report an animal in distress",

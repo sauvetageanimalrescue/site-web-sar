@@ -133,37 +133,6 @@ export const PAR_ESPECE = [
   }
 ];
 
-export const PAR_ISSUE = [
-  {
-    "libelle": "Animal secouru (capturé, remis, libéré, relocalisé, vétérinaire)",
-    "valeur": 247
-  },
-  {
-    "libelle": "Animal non trouvé / enfui / inatteignable / libéré seul",
-    "valeur": 74
-  },
-  {
-    "libelle": "Animal décédé ou euthanasié",
-    "valeur": 44
-  },
-  {
-    "libelle": "Pas en détresse / fausse alerte",
-    "valeur": 25
-  },
-  {
-    "libelle": "Mission annulée / impossible",
-    "valeur": 14
-  },
-  {
-    "libelle": "Code inconnu ou en cours",
-    "valeur": 11
-  },
-  {
-    "libelle": "Citoyens ou autre service ont procédé",
-    "valeur": 9
-  }
-];
-
 export const PAR_ETAT = [
   {
     "libelle": "Pris",

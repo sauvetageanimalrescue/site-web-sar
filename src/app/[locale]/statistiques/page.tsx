@@ -14,7 +14,6 @@ import {
   MISSIONS_PAR_MOIS,
   PAR_FAMILLE,
   PAR_ESPECE,
-  PAR_ISSUE,
   PAR_ETAT,
   PAR_REGION,
   PAR_MUNICIPALITE,
@@ -128,14 +127,7 @@ export default async function PageStatistiques({
         </div>
       </Section>
 
-      <Section titre={t("issuesTitre")} fond>
-        <p className="mb-8 max-w-3xl text-muted">{t("issuesTexte")}</p>
-        <div className="max-w-3xl">
-          <Barres donnees={PAR_ISSUE} />
-        </div>
-      </Section>
-
-      <Section titre={t("geoTitre")}>
+      <Section titre={t("geoTitre")} fond>
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
@@ -152,7 +144,7 @@ export default async function PageStatistiques({
         </div>
       </Section>
 
-      <Section titre={t("appelsTitre")} fond>
+      <Section titre={t("appelsTitre")}>
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">

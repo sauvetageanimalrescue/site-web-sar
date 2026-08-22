@@ -9,7 +9,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Notre mission",
     intro:
       "Sauvetage Animal Rescue vient en aide aux animaux en détresse. Nous déployons des ressources humaines et matérielles pour mener des missions de secours et de sauvetage, auprès des citoyens, des entreprises et des municipalités.",
-    image: "/images/hero-accueil.jpg",
+    image: "/images/australie-2020.jpg",
     blocs: [
       {
         titre: "Un vide dans la chaîne de secours",

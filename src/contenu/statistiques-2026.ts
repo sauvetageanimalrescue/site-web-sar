@@ -131,7 +131,7 @@ export const PAR_ETAT = [
     "valeur": 111
   },
   {
-    "libelle": "Questionable",
+    "libelle": "État incertain",
     "valeur": 49
   },
   {
@@ -147,8 +147,8 @@ export const PAR_ETAT = [
     "valeur": 17
   },
   {
-    "libelle": "Confiné à l'intérieur",
-    "valeur": 6
+    "libelle": "Confiné",
+    "valeur": 10
   },
   {
     "libelle": "Décédé",

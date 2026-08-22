@@ -57,7 +57,8 @@
     "missionsNationales": "National missions",
     "distinctions": "Honours",
     "memoriam": "In memoriam",
-    "serie": "Television series"
+    "serie": "Television series",
+    "solutions": "Solutions"
   },
   "compteur": {
     "titre": "Animals assisted",
@@ -104,9 +105,6 @@
         "titre": "Our services",
         "texte": "Technical rescue, support for municipalities, workshops in schools."
       },
-      "secteurs": {
-        "titre": "Industries served"
-      },
       "mission": {
         "titre": "Our mission"
       },
@@ -118,6 +116,9 @@
       },
       "territoire": {
         "titre": "Our territory"
+      },
+      "solutions": {
+        "titre": "Solutions"
       }
     },
     "territoireTitre": "82 municipalities,\none team",

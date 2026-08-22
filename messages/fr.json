@@ -57,7 +57,8 @@
     "missionsNationales": "Missions nationales",
     "distinctions": "Distinctions",
     "memoriam": "In memoriam",
-    "serie": "Série télévisée"
+    "serie": "Série télévisée",
+    "solutions": "Solutions"
   },
   "compteur": {
     "titre": "Animaux secourus",
@@ -104,9 +105,6 @@
         "titre": "Nos services",
         "texte": "Secours technique, soutien aux municipalités, ateliers dans les écoles."
       },
-      "secteurs": {
-        "titre": "Secteurs d'activité"
-      },
       "mission": {
         "titre": "Notre mission"
       },
@@ -118,6 +116,9 @@
       },
       "territoire": {
         "titre": "Notre territoire"
+      },
+      "solutions": {
+        "titre": "Solutions"
       }
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",

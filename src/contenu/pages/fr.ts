@@ -443,9 +443,9 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
-  secteurs: {
+  solutions: {
     surtitre: "Pour qui nous intervenons",
-    titre: "Secteurs d'activité",
+    titre: "Solutions",
     intro:
       "Un raton laveur dans un cimetière, des goélands sur un entrepôt, un chevreuil sur une piste d'aéroport: le problème n'est jamais tout à fait le même selon le milieu. Voici les secteurs où nous intervenons et ce que nous y faisons.",
     image: "/images/carte-services.jpg",
@@ -456,6 +456,11 @@ export const PAGES_FR: CataloguePages = {
           "Municipalités",
           "Services animaliers",
           "Services de police et d'incendie",
+          "Centrales d'urgence 911 et 311",
+          "Entreprises de télécommunications",
+          "Travaux publics",
+          "Réseaux de transport en commun",
+          "Sociétés d'énergie et d'hydroélectricité",
           "Aéroports",
           "Ports et marinas",
           "Chemins de fer",

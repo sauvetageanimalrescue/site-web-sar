@@ -64,7 +64,18 @@ export function EnteteSite() {
           className="ml-auto hidden items-center gap-1 lg:flex"
           aria-label={t("menu")}
         >
-          {MENU.map((section) => (
+          {MENU.map((section) =>
+            section.href ? (
+              <Link
+                key={section.cle}
+                href={section.href}
+                className={`rounded-md px-3 py-2 text-sm font-medium transition hover:bg-surface-2 ${
+                  actif(section.href) ? "text-marine" : "text-foreground"
+                }`}
+              >
+                {t(section.cle)}
+              </Link>
+            ) : (
             <div
               key={section.cle}
               className="relative"
@@ -102,7 +113,8 @@ export function EnteteSite() {
                 </div>
               )}
             </div>
-          ))}
+            ),
+          )}
 
           {LIENS_DIRECTS.map((lien) => (
             <Link
@@ -176,7 +188,7 @@ export function EnteteSite() {
           aria-label={t("menu")}
         >
           <div className="mx-auto max-w-7xl px-4 py-3">
-            {SECTIONS_DEROULANTES.map((section) => (
+            {SECTIONS_DEROULANTES.filter((s) => s.liens.length > 0).map((section) => (
               <div key={section.cle} className="border-t border-border py-2">
                 <p className="px-1 py-1 font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-ciel">
                   {t(section.cle)}
@@ -193,7 +205,7 @@ export function EnteteSite() {
               </div>
             ))}
             <div className="border-t border-border py-2">
-              {LIENS_DIRECTS.map((lien) => (
+              {[...MENU.filter((s) => s.href).map((s) => ({ cle: s.cle, href: s.href as string })), ...LIENS_DIRECTS].map((lien) => (
                 <Link
                   key={lien.href}
                   href={lien.href}

@@ -89,6 +89,9 @@ export const REDIRECTIONS: Record<string, string> = {
   "/equipe/secouriste": "/recrutement/secouriste",
   "/equipe/sauveteur": "/recrutement/sauveteur",
 
+  // « Secteurs d'activité » est devenu « Solutions ».
+  "/secteurs": "/solutions",
+
   // Blogues
   "/blogs/news": "/medias",
   "/blogs/conseils": "/informations",

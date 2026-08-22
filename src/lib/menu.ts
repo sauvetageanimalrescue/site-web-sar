@@ -3,7 +3,9 @@
 // jamais diverger.
 
 export type LienMenu = { cle: string; href: string };
-export type SectionMenu = { cle: string; liens: LienMenu[] };
+// Une section porte soit une liste de liens, qui devient un menu déroulant,
+// soit une adresse, et elle est alors un lien direct dans la barre.
+export type SectionMenu = { cle: string; liens: LienMenu[]; href?: string };
 
 export const MENU: SectionMenu[] = [
   {
@@ -34,6 +36,7 @@ export const MENU: SectionMenu[] = [
       { cle: "sinistres", href: "/services/sinistres" },
     ],
   },
+  { cle: "solutions", href: "/solutions", liens: [] },
   {
     cle: "contribuer",
     liens: [

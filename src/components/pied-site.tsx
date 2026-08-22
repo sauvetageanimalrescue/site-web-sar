@@ -65,7 +65,7 @@ export function PiedSite() {
           </div>
 
           <div className="grid grid-cols-2 gap-8 lg:col-span-2">
-            {MENU.map((section) => (
+            {MENU.filter((s) => s.liens.length > 0).map((section) => (
               <div key={section.cle}>
                 <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime">
                   {t(section.cle)}

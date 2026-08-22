@@ -323,9 +323,9 @@ export const PAGES_FR: CataloguePages = {
         composant: "presse",
       },
       {
-        titre: "Demandes des médias",
+        titre: "Demandes médias et entrevues",
         texte: [
-          "Pour une demande d'entrevue, une validation d'information ou une couverture sur le terrain, communiquez directement avec la direction générale à e.dussault@sar.quebec",
+          "Les journalistes et représentants des médias qui souhaitent réaliser une entrevue, valider une information, obtenir un commentaire ou mieux comprendre nos opérations peuvent communiquer directement avec Sauvetage Animal Rescue. Il est également possible, selon la nature de la demande et les contraintes opérationnelles, d'organiser une présence ou une période d'observation sur le terrain afin de documenter notre travail de façon plus immersive. Pour toute demande médiatique, communiquez directement avec la direction générale à e.dussault@sar.quebec",
         ],
       },
     ],

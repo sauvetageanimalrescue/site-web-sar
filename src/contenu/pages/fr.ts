@@ -81,8 +81,8 @@ export const PAGES_FR: CataloguePages = {
       },
       {
         image: {
-          fichier: "/images/direction-australie.jpg",
-          alt: "Eric Dussault en intervention, sac de secours à l'épaule",
+          fichier: "/images/direction-2010.jpg",
+          alt: "Eric Dussault tenant un chat dans la neige, à l'époque de la fondation",
         },
       },
       {
@@ -99,8 +99,8 @@ export const PAGES_FR: CataloguePages = {
       },
       {
         image: {
-          fichier: "/images/direction-portrait.jpg",
-          alt: "Eric Dussault en uniforme, adossé à un mur",
+          fichier: "/images/direction-chaton.jpg",
+          alt: "Eric Dussault remettant un chaton noir à un citoyen",
         },
       },
       {

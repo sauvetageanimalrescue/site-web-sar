@@ -49,35 +49,50 @@ export const PAGES_FR: CataloguePages = {
   },
 
   direction: {
-    surtitre: "Mot du fondateur",
+    surtitre: "Portrait du fondateur",
     titre: "Direction générale",
     intro:
-      "Eric Dussault, fondateur et directeur général de Sauvetage Animal Rescue.",
-    image: "/images/direction.png",
+      "Eric Dussault a fondé Sauvetage Animal Rescue et la dirige depuis. Voici d'où vient l'organisation, et où il veut la mener.",
+    image: "/images/direction-terrain.jpg",
     blocs: [
       {
+        titre: "Tout commence par une idée",
         texte: [
-          "Je consacre ma vie à défendre ceux qui n'ont pas de voix : les animaux en détresse. En 2010, j'ai fondé Sauvetage Animal Rescue, une organisation unique au Québec, spécialisée dans le secours technique d'animaux. Nous intervenons là où personne d'autre ne le fait : dans les arbres, sur les toits, dans les égouts, sur les glaces, en milieu urbain comme en milieu rural. Chats, ratons laveurs, bernaches, renards, chiens, pigeons : chaque intervention est différente, mais la mission reste la même, protéger la vie.",
-          "L'idée m'est venue d'un constat simple. Dans notre société, quand un humain est en détresse, il y a tout un système de secours prêt à agir. Pour les animaux, il y avait un grand vide. J'ai décidé d'adapter les principes du secours d'urgence, appris au fil de mes années dans le secours et sauvetage, la sécurité publique, le transport de valeurs et la protection rapprochée, à une cause qui me touche profondément.",
-          "Mon plus grand défi depuis la création de l'organisation, c'est la stabilité financière. Nous ne recevons aucune aide gouvernementale. Tout repose sur la générosité des citoyens et sur notre communauté. Ce sont ces membres, ces alliés de coeur, qui rendent chaque intervention possible.",
-          "Je suis entouré d'une équipe de bénévoles formidables, venus des services d'urgence, du monde animalier et du grand public, qui donnent temps, énergie et coeur pour secourir des vies. Ensemble, nous accomplissons plusieurs centaines de missions chaque année.",
-          "Ce que je souhaite pour l'avenir, c'est que Sauvetage Animal Rescue devienne la référence en matière de sauvetage animal. Former d'autres équipes, ici et ailleurs. Transmettre notre savoir. Et faire reconnaître un jour notre rôle dans la chaîne d'urgence, à l'égal des services traditionnels. Parce que la souffrance animale mérite autant d'attention que celle des humains.",
-          "Et ce rêve, je ne peux le réaliser qu'avec vous.",
+          "Quand une personne est en détresse, tout un système se met en marche : une centrale reçoit l'appel, des véhicules partent, des gens formés arrivent. Eric Dussault a longtemps travaillé dans ce système, en secours et sauvetage, en sécurité publique, en transport de valeurs et en protection rapprochée. Il en connaissait les réflexes, les procédures et les limites.",
+          "Il a aussi constaté ce que personne ne nommait : pour un animal en détresse, ce système n'existait pas. En deux mille dix, il fonde Sauvetage Animal Rescue et entreprend d'appliquer au monde animal les principes du secours d'urgence.",
         ],
       },
       {
-        encadre: {
-          titre: "Nous joindre",
-          lignes: [
-            "Eric Dussault, directeur général",
-            "e.dussault@sar.quebec",
-            "2180, rue Sainte-Catherine Ouest, Montréal (Québec) H3H 1M7",
-            "Ligne de signalement : 514-773-3911",
-            "Sans frais : 833-773-3911",
-            "Officier de garde : 514-270-3636",
-          ],
+        image: {
+          fichier: "/images/direction-terrain.jpg",
+          alt: "Eric Dussault en intervention, sac de secours à l'épaule",
         },
       },
+      {
+        titre: "Le défi de l'indépendance",
+        texte: [
+          "Depuis la fondation, le plus grand défi n'a jamais été technique. Il est financier. L'organisation ne reçoit aucune aide gouvernementale : tout repose sur la générosité des citoyens et sur ses membres.",
+          "C'est une contrainte lourde à porter. C'est aussi ce qui fait que personne d'autre ne décide où et quand l'équipe intervient.",
+        ],
+      },
+      {
+        titre: "Une équipe qui s'est agrandie",
+        texte: [
+          "Autour du fondateur s'est formée une équipe de bénévoles venus des services d'urgence, du monde animalier et du grand public. Ensemble, ils accomplissent plusieurs centaines de missions chaque année.",
+          "Ce sont eux qui montent dans les arbres, descendent dans les égouts et répondent la nuit.",
+        ],
+      },
+      {
+        titre: "Ce qu'il vise",
+        texte: [
+          "Son objectif est que Sauvetage Animal Rescue devienne la référence en matière de sauvetage animal : former d'autres équipes, ici et ailleurs, transmettre le savoir accumulé, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels.",
+          "Parce que la souffrance animale, dit-il, mérite autant d'attention que celle des humains.",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/equipe", libelle: "L'équipe" },
     ],
   },
 

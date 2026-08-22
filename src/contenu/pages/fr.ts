@@ -8,7 +8,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Depuis 2010",
     titre: "Notre mission",
     intro:
-      "Sauvetage Animal Rescue vient en aide aux animaux en détresse. Nous déployons des ressources humaines et matérielles pour mener des missions de secours et de sauvetage, auprès des citoyens, des entreprises et des municipalités.",
+      "Sauvetage Animal Rescue a pour mission de protéger et de sauver les animaux. Nous déployons des ressources humaines et matérielles pour mener à bien nos missions de secours et de sauvetage.",
     image: "/images/australie-2020.jpg",
     blocs: [
       {
@@ -17,6 +17,12 @@ export const PAGES_FR: CataloguePages = {
           "Quand un humain est en détresse, tout un système se met en marche. Pour un animal, il n'existait rien de comparable au Québec. Les pompiers et les services animaliers faisaient ce qu'ils pouvaient, mais personne n'était formé spécifiquement pour aller chercher un chat à quinze mètres dans un arbre ou un raton laveur au fond d'une cheminée.",
           "Sauvetage Animal Rescue est né de ce constat. L'organisation applique au monde animal les principes du secours d'urgence: une centrale qui reçoit les appels, des niveaux d'intervention, des procédures de sécurité, un registre où chaque mission est documentée du premier appel jusqu'à sa fermeture.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/mission-terrain.jpg",
+          alt: "Trois intervenants au bord de l'eau avec deux oiseaux secourus",
+        },
       },
       {
         titre: "Ce que nous faisons",

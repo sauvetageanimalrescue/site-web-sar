@@ -254,6 +254,12 @@ export const PAGES_FR: CataloguePages = {
           "C'est ce que nous apportons lors d'un sinistre: une capacité que les services d'urgence n'ont pas à développer, et qu'ils peuvent appeler.",
         ],
       },
+      {
+        titre: "Planification et sécurité civile",
+        texte: [
+          "Les municipalités, services d'urgence et organisations qui souhaitent intégrer la prise en charge des animaux à leur plan de sécurité civile peuvent prévoir à l'avance la participation de Sauvetage Animal Rescue lors d'un sinistre ou d'une intervention majeure. Pour discuter d'une entente, d'un protocole de collaboration ou des modalités de déploiement, communiquez directement avec la direction générale à e.dussault@sar.quebec",
+        ],
+      },
     ],
     actions: [
       { href: "/membre", libelle: "Devenir membre", principal: true },

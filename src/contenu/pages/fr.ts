@@ -80,9 +80,15 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Le but visé",
+        titre: "Bâtir sans suivre le modèle établi",
         texte: [
-          "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels. Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
+          "Entrepreneur idéaliste et profondément anticonformiste, Eric Dussault n'a jamais cherché à bâtir Sauvetage Animal Rescue selon un modèle conventionnel. Son leadership repose moins sur le titre que sur l'exemple, l'expérience du terrain et la crédibilité acquise au fil des interventions et des formations. Il demeure d'abord et avant tout un sauveteur, avec la conviction qu'un dirigeant doit comprendre intimement la réalité de ceux qu'il appelle à intervenir. Cette façon de diriger influence encore aujourd'hui la culture de l'organisation : apprendre, expérimenter, remettre les méthodes en question et constamment chercher à faire mieux.",
+        ],
+      },
+      {
+        titre: "Un modèle mondial",
+        texte: [
+          "Et l'ambition dépasse largement les frontières du Québec. La vision est de faire de Sauvetage Animal Rescue une ressource essentielle en protection et en sauvetage animalier, capable de contribuer un jour à une véritable réponse d'urgence à l'échelle du pays. Plus encore, Dussault assume une ambition rarement formulée aussi ouvertement dans le milieu : bâtir l'un des plus importants services de sauvetage animalier au monde et faire du Québec une référence internationale dans ce domaine. Une ambition immense, certes, mais fidèle à l'idée qui se trouve à l'origine de toute l'histoire : lorsqu'une ressource essentielle n'existe pas encore, quelqu'un doit décider de la créer.",
         ],
       },
     ],

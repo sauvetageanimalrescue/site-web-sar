@@ -170,6 +170,13 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/australie-2020.jpg",
+          alt: "Deux intervenantes de dos dans une forêt calcinée",
+          legende: "2020 - Deux intervenantes de Sauvetage Animal Rescue en Australie",
+        },
+      },
+      {
         titre: "Australie, février 2020",
         texte: [
           "En février 2020, Sauvetage Animal Rescue s'est rendu en Australie afin de prêter main-forte dans les régions durement touchées par les feux de forêt. Dans un environnement profondément transformé par les incendies, notre équipe a dû composer avec des forêts calcinées, des arbres fragilisés, des conditions de terrain difficiles et une faune très différente de celle avec laquelle nous intervenons habituellement. Kangourous, wallabies, wombats, échidnés, koalas et oiseaux comptaient parmi les nombreuses espèces affectées par cette catastrophe. Cette mission a exigé une grande capacité d'adaptation, une vigilance constante et la mise en pratique de notre expertise dans un contexte d'intervention complètement nouveau.",

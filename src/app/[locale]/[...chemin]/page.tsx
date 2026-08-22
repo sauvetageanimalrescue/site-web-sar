@@ -21,13 +21,16 @@ export function generateStaticParams() {
   );
 }
 
+// Le contenu d'un bloc. Le titre et le cadre de la section sont posés par
+// la page, qui alterne les fonds : un bloc clair, un bloc gris, un bloc
+// clair. C'est le rythme de la page des statistiques, appliqué partout.
 function Bloc({ bloc }: { bloc: BlocPage }) {
   if (bloc.encadre) {
     return (
-      <div className="rounded-xl border border-border bg-surface-2 p-6">
-        <h2 className="font-[family-name:var(--font-titre)] text-xl font-bold uppercase tracking-wide text-marine">
+      <div className="rounded-xl border border-border bg-surface p-6">
+        <p className="font-[family-name:var(--font-titre)] text-xl font-bold uppercase tracking-wide text-marine">
           {bloc.encadre.titre}
-        </h2>
+        </p>
         <ul className="mt-4 space-y-1.5 text-foreground/90">
           {bloc.encadre.lignes.map((ligne) => (
             <li key={ligne}>{ligne}</li>
@@ -38,16 +41,11 @@ function Bloc({ bloc }: { bloc: BlocPage }) {
   }
 
   return (
-    <div>
-      {bloc.titre && (
-        <h2 className="mb-4 font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-          {bloc.titre}
-        </h2>
-      )}
+    <>
       {bloc.texte?.map((paragraphe) => (
         <p
           key={paragraphe.slice(0, 40)}
-          className="mb-4 max-w-3xl text-lg leading-relaxed text-foreground/90"
+          className="paragraphe mb-4 text-lg leading-relaxed text-foreground/90"
         >
           {paragraphe}
         </p>
@@ -55,7 +53,7 @@ function Bloc({ bloc }: { bloc: BlocPage }) {
       {bloc.liste &&
         // Une énumération très longue de noms propres (les 82 municipalités)
         // n'est pas un texte qu'on lit ligne à ligne : elle se replie en
-        // colonnes. Toute autre liste reste en une seule colonne.
+        // colonnes. Toute autre liste reste en une seule colonne, sans boîte.
         (bloc.liste.length > 20 ? (
           <ul className="mt-2 columns-2 gap-8 text-foreground/90 sm:columns-3 lg:columns-4">
             {bloc.liste.map((item) => (
@@ -65,7 +63,7 @@ function Bloc({ bloc }: { bloc: BlocPage }) {
             ))}
           </ul>
         ) : (
-          <ul className="mt-2 max-w-3xl space-y-2.5">
+          <ul className="mt-2 space-y-2.5">
             {bloc.liste.map((item) => (
               <li key={item} className="flex gap-3 text-foreground/90">
                 <span
@@ -77,7 +75,7 @@ function Bloc({ bloc }: { bloc: BlocPage }) {
             ))}
           </ul>
         ))}
-    </div>
+    </>
   );
 }
 
@@ -99,13 +97,18 @@ export default async function PageEditorialeVue({
         image={page.image}
       />
 
-      <Section>
-        <div className="space-y-12">
-          {page.blocs.map((bloc, index) => (
-            <Bloc key={bloc.titre ?? bloc.encadre?.titre ?? index} bloc={bloc} />
-          ))}
-        </div>
-      </Section>
+      {page.blocs.map((bloc, index) => (
+        <Section
+          key={bloc.titre ?? bloc.encadre?.titre ?? index}
+          titre={bloc.titre}
+          fond={index % 2 === 1}
+          // Une longue énumération a besoin de toute la largeur ; tout le
+          // reste s'aligne sur la largeur d'une carte, comme ailleurs.
+          largeur={bloc.liste && bloc.liste.length > 20 ? "pleine" : "carte"}
+        >
+          <Bloc bloc={bloc} />
+        </Section>
+      ))}
 
       {page.actions && page.actions.length > 0 && (
         <AppelAction titre={page.titre} actions={page.actions} />

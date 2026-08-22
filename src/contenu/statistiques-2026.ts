@@ -215,14 +215,6 @@ export const PAR_MUNICIPALITE = [
   {
     "libelle": "Mirabel",
     "valeur": 6
-  },
-  {
-    "libelle": "Dorval",
-    "valeur": 6
-  },
-  {
-    "libelle": "Blainville",
-    "valeur": 6
   }
 ];
 
@@ -275,11 +267,11 @@ export const PAR_DEMANDEUR = [
     "valeur": 17
   },
   {
-    "libelle": "Port de Montréal mgt",
+    "libelle": "Installation portuaire",
     "valeur": 9
   },
   {
-    "libelle": "Travaux public ou parc",
+    "libelle": "Travaux publics ou parc",
     "valeur": 4
   },
   {

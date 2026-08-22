@@ -164,37 +164,27 @@ export const PAGES_FR: CataloguePages = {
     image: "/images/australie-2020.jpg",
     blocs: [
       {
+        titre: "Des ressources humaines sur le terrain",
+        texte: [
+          "Lors d'une catastrophe majeure, l'aide peut prendre plusieurs formes. La nôtre est avant tout opérationnelle. Sauvetage Animal Rescue déploie des intervenants formés, expérimentés et autonomes, accompagnés de l'équipement spécialisé nécessaire pour participer directement aux opérations de secours. Notre objectif n'est pas de remplacer les organisations locales, mais de renforcer leur capacité d'intervention lorsque leurs ressources sont fortement sollicitées. Nous pouvons ainsi nous intégrer aux équipes déjà présentes, partager notre expertise et prendre part concrètement aux opérations de recherche, d'accès, de capture, d'évacuation ou de sauvetage des animaux touchés.",
+        ],
+      },
+      {
         titre: "Australie, février 2020",
         texte: [
-          "Les feux de forêt qui ont ravagé l'Australie ont tué et blessé des animaux sauvages en nombre inconcevable. Notre équipe s'est rendue sur place pour prêter main-forte au secours des animaux dans les zones brûlées.",
-          "Intervenir dans une forêt calcinée n'a rien de commun avec une intervention urbaine. Arbres instables, sol brûlant, faune inconnue, blessures d'un type que nous ne voyons pas ici. C'est la mission la plus exigeante que l'organisation ait menée.",
+          "En février 2020, Sauvetage Animal Rescue s'est rendu en Australie afin de prêter main-forte dans les régions durement touchées par les feux de forêt. Dans un environnement profondément transformé par les incendies, notre équipe a dû composer avec des forêts calcinées, des arbres fragilisés, des conditions de terrain difficiles et une faune très différente de celle avec laquelle nous intervenons habituellement. Kangourous, wallabies, wombats, échidnés, koalas et oiseaux comptaient parmi les nombreuses espèces affectées par cette catastrophe. Cette mission a exigé une grande capacité d'adaptation, une vigilance constante et la mise en pratique de notre expertise dans un contexte d'intervention complètement nouveau.",
         ],
       },
       {
-        titre: "Pourquoi nous partons",
+        titre: "Proposer une mission ou une collaboration",
         texte: [
-          "Le secours technique d'animaux est une discipline rare. Les techniques que nous avons développées, le travail en hauteur, la capture sécuritaire, la structure d'intervention, ne sont limitées par aucune frontière.",
-          "Chaque déploiement nous rapporte aussi quelque chose. Ce que l'on apprend dans une zone sinistrée revient directement dans nos interventions quotidiennes, et dans ce que nous enseignons ici.",
-        ],
-      },
-      {
-        titre: "Ce que nous pouvons apporter",
-        liste: [
-          "Appui direct lors de sinistres majeurs touchant des animaux",
-          "Formation d'équipes locales au secours et au sauvetage technique",
-          "Transfert de nos procédures d'intervention et de sécurité",
-          "Accompagnement dans la mise en place d'une structure de répartition",
-        ],
-      },
-      {
-        titre: "Nous joindre",
-        texte: [
-          "Pour toute demande de déploiement ou de collaboration, écrivez directement à la direction générale à e.dussault@sar.quebec.",
+          "Les organisations qui souhaitent soumettre une demande de déploiement international, discuter d'une collaboration ou évaluer la possibilité d'un soutien opérationnel peuvent communiquer directement avec la direction générale de Sauvetage Animal Rescue à e.dussault@sar.quebec",
         ],
       },
     ],
     actions: [
-      { href: "/direction", libelle: "Le mot du directeur général", principal: true },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/missions-nationales", libelle: "Missions nationales" },
     ],
   },
 

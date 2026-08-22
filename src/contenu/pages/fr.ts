@@ -735,8 +735,8 @@ export const PAGES_FR: CataloguePages = {
       },
       {
         image: {
-          fichier: "/images/sauvetage-technique.jpg",
-          alt: "Deux sauveteurs en harnais, cordes à la ceinture, au pied d'une structure",
+          fichier: "/images/technique-019.jpg",
+          alt: "Sauveteurs en intervention technique",
         },
       },
       {
@@ -762,6 +762,12 @@ export const PAGES_FR: CataloguePages = {
         texte: [
           "Le sauvetage technique impose des exigences élevées en matière de formation, d'équipement et de santé-sécurité. Cordes, harnais, systèmes d'ancrage, dispositifs antichute et autres équipements spécialisés doivent être adaptés à leur utilisation, inspectés et entretenus avec rigueur. Nos cordes et nos équipements critiques font notamment l'objet d'un suivi permettant d'en documenter l'utilisation et l'état. Chaque intervention exige également une évaluation des risques, une méthode de travail adaptée et des sauveteurs formés aux techniques utilisées. Dans un environnement périlleux, la sécurité n'est jamais un détail: elle fait partie intégrante de l'opération, du premier accès jusqu'au retour de l'équipe au sol.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/technique-020.jpg",
+          alt: "Intervention de sauvetage technique en hauteur",
+        },
       },
       {
         titre: "Qui finance nos interventions",

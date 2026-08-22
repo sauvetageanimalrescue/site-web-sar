@@ -19,33 +19,32 @@ export default async function PageMemoriam({
         image="/images/memoriam-ruban.jpg"
       />
 
-      {/* Un hommage n'est pas une carte cliquable dans une grille. Le
-          portrait est centré, seul, et le texte se lit dessous. */}
+      {/* Même gabarit que partout ailleurs: une image en seize neuf, coins
+          arrondis, à la largeur d'une carte, puis le texte en dessous. */}
       {HOMMAGES.map((h) => (
         <Section key={h.cle} largeur="carte">
-          <figure className="text-center">
-            {h.image && (
+          {h.image && (
+            <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
               <Image
                 src={h.image}
                 alt=""
-                width={288}
-                height={360}
-                className="mx-auto h-auto w-64 rounded-xl object-cover grayscale sm:w-72"
+                fill
+                sizes="(max-width: 768px) 100vw, 42rem"
+                className="object-cover object-top grayscale"
               />
-            )}
-            <figcaption className="mt-6">
-              <h2 className="font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine">
-                {h.nom}
-              </h2>
-              {(h.fonction || h.annees) && (
-                <p className="mt-1 text-sm uppercase tracking-wider text-ciel">
-                  {[h.fonction, h.annees].filter(Boolean).join(" · ")}
-                </p>
-              )}
-            </figcaption>
-          </figure>
+            </div>
+          )}
 
-          <div className="mt-8">
+          <h2 className="mt-6 font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine">
+            {h.nom}
+          </h2>
+          {(h.fonction || h.annees) && (
+            <p className="mt-1 text-sm uppercase tracking-wider text-ciel">
+              {[h.fonction, h.annees].filter(Boolean).join(" · ")}
+            </p>
+          )}
+
+          <div className="mt-6">
             {h.texte?.map((paragraphe) => (
               <p
                 key={paragraphe.slice(0, 40)}

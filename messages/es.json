@@ -554,7 +554,9 @@
     "intro": "Un equipo de rodaje siguió a nuestros intervinientes durante sus misiones. El resultado es una serie documental que muestra el trabajo tal como ocurre.",
     "episode": "Episodio {numero}",
     "voirYoutube": "La temporada completa en YouTube",
-    "voirUrbania": "La serie en Urbania"
+    "voirUrbania": "La serie en Urbania",
+    "membreBouton": "Hacerse miembro",
+    "mediasBouton": "Medios"
   },
   "territoire": {
     "verifTitre": "Su municipio",

@@ -1,6 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { IconPlayerPlayFilled } from "@tabler/icons-react";
-import { EnTetePage, Section } from "@/components/ui";
+import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import { CarteImage, GrilleCartes } from "@/components/cartes";
 import {
   EPISODES,
@@ -70,6 +70,14 @@ export default async function PageSerie({
           </a>
         </div>
       </Section>
+
+      <AppelAction
+        titre={t("titre")}
+        actions={[
+          { href: "/membre", libelle: t("membreBouton"), principal: true },
+          { href: "/medias", libelle: t("mediasBouton") },
+        ]}
+      />
     </>
   );
 }

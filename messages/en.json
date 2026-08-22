@@ -554,7 +554,9 @@
     "intro": "A film crew followed our responders on their missions. The result is a documentary series showing the work exactly as it happens.",
     "episode": "Episode {numero}",
     "voirYoutube": "Full season on YouTube",
-    "voirUrbania": "The series at Urbania"
+    "voirUrbania": "The series at Urbania",
+    "membreBouton": "Become a member",
+    "mediasBouton": "Media"
   },
   "territoire": {
     "verifTitre": "Your municipality",

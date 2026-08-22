@@ -81,7 +81,7 @@ export const PAGES_FR: CataloguePages = {
       },
       {
         image: {
-          fichier: "/images/direction-terrain.jpg",
+          fichier: "/images/direction-australie.jpg",
           alt: "Eric Dussault en intervention, sac de secours à l'épaule",
         },
       },

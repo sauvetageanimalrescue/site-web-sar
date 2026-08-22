@@ -57,28 +57,16 @@ export const MISSIONS_PAR_MOIS = [
 
 export const PAR_FAMILLE = [
   {
-    "libelle": "Mammifère sauvage",
+    "libelle": "Mammifère de la faune",
     "valeur": 207
   },
   {
-    "libelle": "Oiseau sauvage",
+    "libelle": "Oiseau de la faune",
     "valeur": 146
   },
   {
     "libelle": "Animal domestique",
     "valeur": 67
-  },
-  {
-    "libelle": "Non codé",
-    "valeur": 2
-  },
-  {
-    "libelle": "Autre / déclaration",
-    "valeur": 1
-  },
-  {
-    "libelle": "Reptile/amphibien sauvage",
-    "valeur": 1
   }
 ];
 

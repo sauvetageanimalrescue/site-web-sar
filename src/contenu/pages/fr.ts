@@ -76,10 +76,10 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "L'hiver où il a failli arrêter",
+        titre: "L'hiver qui a tout changé",
         texte: [
-          "Un hiver, en pleine saison creuse, il décide d'abandonner. Le lendemain, un chien est aperçu à la dérive sur les glaces, près de Sorel-Tracy. Les citoyens se mobilisent, les médias suivent, et c'est son organisation qu'on appelle.",
-          "Le chien ne sera jamais retrouvé. Mais quelque chose est confirmé ce jour-là : le besoin existe, et quelqu'un doit y répondre. Il ne reparlera plus d'arrêter.",
+          "Un hiver, en pleine saison creuse, la tentation d'abandonner se fait forte. Le lendemain matin, un chien est aperçu à la dérive sur les glaces, près de Sorel-Tracy. Les citoyens se mobilisent, les médias couvrent l'événement, et la Garde côtière ne se déplace pas : il ne s'agit pas d'un humain. C'est Sauvetage Animal Rescue qu'on appelle.",
+          "Le chien ne sera jamais retrouvé. La démonstration, elle, est faite : le besoin existe, et c'est cette organisation-là qu'on appelle quand il n'y a personne d'autre. Eric Dussault n'a jamais oublié cette journée.",
         ],
       },
       {

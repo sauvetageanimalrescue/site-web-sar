@@ -63,9 +63,9 @@ body {
 }
 
 /* Paragraphe justifié : les deux marges sont droites, la dernière ligne
-   reste alignée à gauche. La césure automatique évite les rivières de blanc
-   que la justification creuse dans un texte français. */
+   reste alignée à gauche. Aucune césure : un mot coupé en fin de ligne est
+   plus dérangeant que l'espacement un peu large qu'il évite. */
 .paragraphe {
   text-align: justify;
-  hyphens: auto;
+  hyphens: none;
 }

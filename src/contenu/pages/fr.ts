@@ -303,15 +303,25 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Couverture médiatique",
     titre: "Dans les médias",
     intro:
-      "Reportages télévisés, articles de presse et entrevues radio consacrés au travail de Sauvetage Animal Rescue. Chaque couverture est une occasion de faire connaître la cause animale au-delà de notre communauté.",
+      "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
     image: "/images/services-urgence.png",
     blocs: [
       {
+        titre: "Une expertise qui fait l'actualité",
         texte: [
-          "Nos interventions ont été couvertes par La Presse, TVA Nouvelles, le Courrier du Sud, 107.7 Estrie, 103.3, Info Petite Nation et Le Soleil de Châteauguay, entre autres. Les sujets vont du sauvetage d'un chien en eaux vives à Plaisance jusqu'aux prises de position de l'organisation sur l'abattage de cerfs en milieu urbain.",
-          "Pour toute demande d'entrevue ou d'information journalistique, écrivez à la direction générale à e.dussault@sar.quebec.",
+          "Les interventions de Sauvetage Animal Rescue se retrouvent régulièrement dans l'actualité en raison de leur caractère souvent inhabituel, spectaculaire ou hautement spécialisé. Télévision, radio, presse écrite et médias numériques font appel à notre organisation pour documenter certaines opérations sur le terrain, mais également pour expliquer les réalités entourant le sauvetage et la protection des animaux. Notre équipe est aussi appelée à commenter différents enjeux qui touchent le monde animalier et à mettre son expertise à la disposition des journalistes. Cette visibilité contribue à mieux faire connaître notre travail, mais surtout à sensibiliser le public aux réalités du secours animalier.",
         ],
       },
+      {
+        titre: "Demandes des médias",
+        texte: [
+          "Pour une demande d'entrevue, une validation d'information ou une couverture sur le terrain, communiquez directement avec la direction générale à e.dussault@sar.quebec",
+        ],
+      },
+    ],
+    actions: [
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/serie-televisee", libelle: "Série télévisée" },
     ],
   },
 

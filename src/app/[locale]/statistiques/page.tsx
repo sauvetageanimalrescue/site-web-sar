@@ -5,7 +5,6 @@ import { Chiffre } from "@/components/barres";
 import { CarteVues } from "@/components/carte-vues";
 import { lireStatistiques } from "@/lib/statistiques";
 import {
-  PERIODE,
   TOTAL_MISSIONS,
   ANIMAUX,
   MUNICIPALITES_DESSERVIES,
@@ -59,7 +58,7 @@ export default async function PageStatistiques({
         </div>
         {/* La provenance des chiffres se lit après eux, discrètement. */}
         <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted">
-          {t("anneeIntro", { periode: PERIODE })}
+          {t("anneeIntro")}
         </p>
       </Section>
 

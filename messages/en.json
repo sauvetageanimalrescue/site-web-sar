@@ -559,7 +559,7 @@
     "verifPlaceholder": "Montréal, Laval, Longueuil...",
     "verifOui": "Yes, we serve this area.",
     "verifNon": "This municipality is outside our territory.",
-    "verifNonTexte": "Our operations stop at the boundaries of the Montréal Metropolitan Community. For an animal in distress elsewhere in Québec, contact your municipal animal services or the SPCA in your region.",
+    "verifNonTexte": "Our operations stop at the boundaries of the Montréal Metropolitan Community. For an animal in distress elsewhere in Québec, contact your municipal animal services or your regional police service.",
     "listeOuvrir": "See the {total} municipalities served",
     "listeFermer": "Hide the list"
   }

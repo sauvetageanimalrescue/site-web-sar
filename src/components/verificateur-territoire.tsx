@@ -5,13 +5,18 @@ import { useTranslations } from "next-intl";
 import { IconCircleCheckFilled, IconAlertTriangleFilled } from "@tabler/icons-react";
 import { MUNICIPALITES } from "@/contenu/municipalites";
 
-// Retire les accents et la ponctuation pour que « Sainte-Anne » trouve
-// « Sainte-Anne-de-Bellevue », et que « montreal » trouve « Montréal ».
+// Ramène un nom à une forme comparable: sans accent, sans ponctuation, et
+// avec « saint » et « sainte » réduits à « st » et « ste ». Quelqu'un qui
+// tape « st-eustache » cherche bien Saint-Eustache, et l'inverse est vrai
+// aussi. La réduction s'applique des deux côtés, donc les deux graphies se
+// rejoignent.
 function normaliser(s: string) {
   return s
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
     .toLowerCase()
+    .replace(/sainte/g, "ste")
+    .replace(/saint/g, "st")
     .replace(/[^a-z0-9]/g, "");
 }
 

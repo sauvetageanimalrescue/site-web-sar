@@ -9,6 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Rédaction** : éviter les tirets cadratins (—) dans la copie publique ; préférer la virgule ou le deux-points.
 - **Dates** : toujours jour / mois / année.
 - **Sécurité** : dire « niveau de sécurité », jamais « niveau d'accès ».
+- **Ne jamais employer « SPCA » comme nom générique.** La SPCA est une organisation précise, pas une catégorie : ailleurs au Québec, il s'agit d'un service animalier, d'un refuge ou d'une fourrière selon les cas. On écrit « votre service animalier municipal ». Le sigle ne s'emploie que lorsqu'on parle nommément de la SPCA elle-même.
 - **Supabase** : caster un résultat de jointure via `as unknown as X[]`, jamais `as X[]` directement.
 - **Migrations** : le CLI Supabase n'est pas utilisé. Chaque migration dans `supabase/migrations/` doit être **idempotente** (`if not exists`, `create or replace`, `drop policy if exists`) car elle est collée à la main dans l'éditeur SQL.
 - **Avant de pousser** : lancer un vrai `npm run build`. Le mode dev ne détecte pas toutes les erreurs TypeScript qui cassent le build Vercel. Node est à `C:\Program Files\nodejs` (absent du PATH).

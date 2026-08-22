@@ -5,7 +5,7 @@ import { MUNICIPALITES } from "@/contenu/municipalites";
 // de l'ancien site Shopify, archivé dans contenu-source/texte.
 export const PAGES_FR: CataloguePages = {
   mission: {
-    surtitre: "Depuis 2010",
+    surtitre: "Depuis deux mille dix",
     titre: "Notre mission",
     intro:
       "Sauvetage Animal Rescue a pour mission de protéger et de sauver les animaux. Nous déployons des ressources humaines et matérielles pour mener à bien nos missions de secours et de sauvetage.",
@@ -31,20 +31,21 @@ export const PAGES_FR: CataloguePages = {
         },
       },
       {
-        titre: "Ce que nous faisons",
-        liste: [
-          "Secours technique en hauteur, sur glace, en égout et en espace clos",
-          "Capture sécuritaire d'animaux errants, réactifs ou blessés",
-          "Transport vers les refuges et les cliniques partenaires",
-          "Assistance aux services d'urgence et aux municipalités",
-          "Formation du public et des intervenants",
-          "Sensibilisation dans les écoles primaires",
+        titre: "Notre vision",
+        texte: [
+          "La vision de Sauvetage Animal Rescue est de devenir une ressource essentielle en matière de protection et de sauvetage animalier à l'échelle nationale, tout en établissant un standard d'excellence reconnu bien au-delà de nos frontières. Par le développement de notre expertise, de nos méthodes d'intervention et de notre capacité opérationnelle, nous aspirons à devenir un modèle pour les organismes animaliers à travers le monde, et à contribuer à faire évoluer les pratiques de sauvetage animalier.",
         ],
       },
       {
-        titre: "Qui nous appelle",
+        titre: "Nos valeurs",
         texte: [
-          "Nos appels viennent des citoyens, des services animaliers municipaux, des services de police et d'incendie, des refuges, des entreprises et parfois d'autres organismes de sauvetage. Le point commun de toutes ces demandes: un animal se trouve dans une situation dont il ne peut pas sortir seul, et personne sur place n'a l'équipement ou la formation pour intervenir sans danger.",
+          "Les valeurs de Sauvetage Animal Rescue définissent autant notre façon d'intervenir que notre manière de travailler ensemble. L'altruisme nous pousse à agir dans l'intérêt des animaux et des personnes que nous servons, sans distinction et sans recherche de bénéfice personnel. La bravoure nous permet d'affronter avec courage et sang-froid des situations parfois complexes ou dangereuses. La collaboration nous rappelle que les meilleures interventions reposent sur le travail d'équipe et la coopération avec les citoyens, les organisations et les services d'urgence. La discipline assure la rigueur de nos méthodes, de notre formation et de nos pratiques afin de protéger autant nos équipes que les animaux secourus. Enfin, l'excellence nous pousse à maintenir les plus hauts standards, à apprendre constamment et à toujours chercher à nous améliorer.",
+        ],
+      },
+      {
+        titre: "« Ensemble au service des animaux »",
+        texte: [
+          "Notre devise résume à elle seule notre façon de concevoir le sauvetage animalier. Ensemble, c'est d'abord notre équipe, unie autour d'une même mission. C'est aussi l'ensemble des organisations, refuges, services animaliers et services d'urgence avec lesquels nous collaborons. Enfin, c'est notre communauté de membres et de donateurs, dont le soutien rend nos interventions possibles. Trois forces complémentaires, réunies autour d'un seul objectif: être au service des animaux.",
         ],
       },
       {

@@ -239,7 +239,8 @@
     "rejoindreTexte": "Quatre fonctions, quatre façons de contribuer. Aucune expérience animalière n'est exigée au départ.",
     "rejoindreBouton": "Voir les fonctions",
     "distinctionsBouton": "Nos distinctions",
-    "retourBouton": "Retour à l'équipe"
+    "retourBouton": "Retour à l'équipe",
+    "membreBouton": "Devenir membre"
   },
   "recrutement": {
     "titre": "Devenir bénévole",
@@ -552,5 +553,14 @@
     "episode": "Épisode {numero}",
     "voirYoutube": "La saison complète sur YouTube",
     "voirUrbania": "La série chez Urbania"
+  },
+  "territoire": {
+    "verifTitre": "Votre municipalité",
+    "verifPlaceholder": "Montréal, Laval, Longueuil...",
+    "verifOui": "Oui, nous desservons ce secteur.",
+    "verifNon": "Cette municipalité n'est pas sur notre territoire.",
+    "verifNonTexte": "Nos interventions s'arrêtent aux limites de la Communauté Métropolitaine de Montréal. Pour un animal en détresse ailleurs au Québec, communiquez avec votre service animalier municipal ou, pour la faune, avec le ministère au 1-800-463-2191.",
+    "listeOuvrir": "Voir les {total} municipalités desservies",
+    "listeFermer": "Masquer la liste"
   }
 }

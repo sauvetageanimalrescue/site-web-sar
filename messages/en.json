@@ -239,7 +239,8 @@
     "rejoindreTexte": "Four roles, four ways to contribute. No prior animal experience is required.",
     "rejoindreBouton": "See the roles",
     "distinctionsBouton": "Our honours",
-    "retourBouton": "Back to the team"
+    "retourBouton": "Back to the team",
+    "membreBouton": "Become a member"
   },
   "recrutement": {
     "titre": "Volunteer with us",
@@ -552,5 +553,14 @@
     "episode": "Episode {numero}",
     "voirYoutube": "Full season on YouTube",
     "voirUrbania": "The series at Urbania"
+  },
+  "territoire": {
+    "verifTitre": "Your municipality",
+    "verifPlaceholder": "Montréal, Laval, Longueuil...",
+    "verifOui": "Yes, we serve this area.",
+    "verifNon": "This municipality is outside our territory.",
+    "verifNonTexte": "Our operations stop at the boundaries of the Montréal Metropolitan Community. For an animal in distress elsewhere in Québec, contact your municipal animal services or, for wildlife, the ministry at 1-800-463-2191.",
+    "listeOuvrir": "See the {total} municipalities served",
+    "listeFermer": "Hide the list"
   }
 }

@@ -1,5 +1,6 @@
 ﻿import Image from "next/image";
 import { notFound } from "next/navigation";
+import { VerificateurTerritoire } from "@/components/verificateur-territoire";
 import { setRequestLocale } from "next-intl/server";
 import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import {
@@ -26,6 +27,8 @@ export function generateStaticParams() {
 // la page, qui alterne les fonds : un bloc clair, un bloc gris, un bloc
 // clair. C'est le rythme de la page des statistiques, appliqué partout.
 function Bloc({ bloc }: { bloc: BlocPage }) {
+  if (bloc.composant === "territoire") return <VerificateurTerritoire />;
+
   if (bloc.image) {
     return (
       <figure>

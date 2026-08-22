@@ -1,5 +1,4 @@
 import type { CataloguePages } from "./types";
-import { MUNICIPALITES } from "@/contenu/municipalites";
 
 // La clé est le chemin, sans la locale. Le contenu reprend et resserre celui
 // de l'ancien site Shopify, archivé dans contenu-source/texte.
@@ -144,8 +143,11 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Les 82 municipalités desservies",
-        liste: MUNICIPALITES,
+        titre: "Êtes-vous sur notre territoire ?",
+        texte: [
+          "Entrez le nom de votre municipalité. Si elle fait partie de la Communauté Métropolitaine de Montréal, nous nous y déplaçons.",
+        ],
+        composant: "territoire",
       },
     ],
     actions: [

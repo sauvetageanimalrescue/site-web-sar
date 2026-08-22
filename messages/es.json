@@ -239,7 +239,8 @@
     "rejoindreTexte": "Cuatro funciones, cuatro formas de contribuir. No se exige experiencia previa con animales.",
     "rejoindreBouton": "Ver las funciones",
     "distinctionsBouton": "Nuestras distinciones",
-    "retourBouton": "Volver al equipo"
+    "retourBouton": "Volver al equipo",
+    "membreBouton": "Hacerse miembro"
   },
   "recrutement": {
     "titre": "Ser voluntario",
@@ -552,5 +553,14 @@
     "episode": "Episodio {numero}",
     "voirYoutube": "La temporada completa en YouTube",
     "voirUrbania": "La serie en Urbania"
+  },
+  "territoire": {
+    "verifTitre": "Su municipio",
+    "verifPlaceholder": "Montréal, Laval, Longueuil...",
+    "verifOui": "Sí, atendemos este sector.",
+    "verifNon": "Este municipio está fuera de nuestro territorio.",
+    "verifNonTexte": "Nuestras intervenciones se detienen en los límites de la Comunidad Metropolitana de Montreal. Para un animal en peligro en otra parte de Quebec, comuníquese con su servicio animal municipal o, para la fauna, con el ministerio al 1-800-463-2191.",
+    "listeOuvrir": "Ver los {total} municipios atendidos",
+    "listeFermer": "Ocultar la lista"
   }
 }

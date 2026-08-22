@@ -59,8 +59,8 @@ export default async function PageEquipe({
         titre={t("rejoindreTitre")}
         texte={t("rejoindreTexte")}
         actions={[
-          { href: "/recrutement", libelle: t("rejoindreBouton"), principal: true },
-          { href: "/distinctions", libelle: t("distinctionsBouton") },
+          { href: "/membre", libelle: t("membreBouton"), principal: true },
+          { href: "/recrutement", libelle: t("rejoindreBouton") },
         ]}
       />
     </>

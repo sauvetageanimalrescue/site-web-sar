@@ -94,8 +94,8 @@ export default async function PageMembre({
         titre={t("rejoindreTitre")}
         texte={t("rejoindreTexte")}
         actions={[
-          { href: "/equipe", libelle: t("retourBouton"), principal: true },
-          { href: "/recrutement", libelle: t("rejoindreBouton") },
+          { href: "/membre", libelle: t("membreBouton"), principal: true },
+          { href: "/equipe", libelle: t("retourBouton") },
         ]}
       />
     </>

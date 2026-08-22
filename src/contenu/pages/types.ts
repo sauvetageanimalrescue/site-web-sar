@@ -9,6 +9,9 @@ export type BlocPage = {
   // Une image centrée à la largeur d'une carte, coins arrondis. Elle se
   // suffit à elle-même: ni légende, ni texte à côté.
   image?: { fichier: string; alt?: string; legende?: string };
+  // Composant interactif inséré dans une page éditoriale. Un seul pour
+  // l'instant : la vérification du territoire desservi.
+  composant?: "territoire";
 };
 
 export type PageEditoriale = {

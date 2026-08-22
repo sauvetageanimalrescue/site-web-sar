@@ -104,7 +104,7 @@ export const PAR_ESPECE = [
     "valeur": 27
   },
   {
-    "libelle": "Oiseaux sauvage",
+    "libelle": "Oiseau sauvage non précisé",
     "valeur": 26
   },
   {

@@ -43,7 +43,7 @@ Toute nouvelle page se compose de ces blocs. Ne pas en inventer d'autres sans ra
 
 - Les paragraphes portent la classe **`paragraphe`** : justifiés, **sans césure**. Un mot coupé en fin de ligne dérange plus que l'espacement un peu large qu'il évite. Ne pas justifier un texte court et centré.
 - **Ponctuation** : jamais d'espace entre la dernière lettre d'un mot et la ponctuation qui suit, y compris les deux points, le point-virgule, le point d'interrogation et le point d'exclamation. Seuls les guillemets français gardent leurs espaces intérieures.
-- **Les légendes de photo s'écrivent en chiffres** : « 2010. » plutôt que « Deux mille dix ». Une légende date une image, elle ne se lit pas comme une phrase.
+- **Les légendes de photo** suivent toujours la forme `AAAA - qui ou quoi`, année en chiffres, trait d'union simple, aucun point final. Elles nomment, elles ne racontent pas : « 2012 - Eric Dussault accompagné de Milo, le chat, et son propriétaire ».
 - **Éviter les millésimes dans la prose** : « à l'époque », « l'année suivante », « dans la foulée » plutôt qu'une date, sauf quand l'année elle-même est l'information.
 - **Un paragraphe qui se suffit vaut mieux que deux.** Ne pas écrire par paires par réflexe : un second paragraphe de vingt mots affaiblit le premier. On en met deux ou trois quand le propos l'exige, pas autrement.
 - Les listes courtes restent en une seule colonne, à puces, **sans boîte**. Au-delà de vingt entrées, elles se replient en colonnes sur toute la largeur.

@@ -83,7 +83,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/direction-2010.jpg",
           alt: "Eric Dussault tenant un chat dans la neige, à l'époque de la fondation",
-          legende: "2010. Eric Dussault et Tommy, son chat, compagnon des premières années de l'organisation.",
+          legende: "2010 - Eric Dussault et son chat Tommy",
         },
       },
       {
@@ -102,7 +102,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/direction-chaton.jpg",
           alt: "Eric Dussault remettant un chaton noir à un citoyen",
-          legende: "2012. Milo, descendu de son arbre et rendu à sa famille. Les débuts du sauvetage technique.",
+          legende: "2012 - Eric Dussault accompagné de Milo, le chat, et son propriétaire",
         },
       },
       {

@@ -160,7 +160,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Au-delà du territoire",
     titre: "Missions internationales",
     intro:
-      "Notre travail quotidien s'arrête aux limites de la Communauté Métropolitaine de Montréal. Certains sinistres, eux, ne s'arrêtent nulle part. Quand des animaux se comptent par milliers et que personne sur place n'a la formation pour aller les chercher, nous partons.",
+      "Notre travail quotidien se concentre dans la Communauté métropolitaine de Montréal. Mais lorsque des animaux, ailleurs dans le monde, ont besoin de notre expertise, nous pouvons déployer une équipe spécialisée pour prêter main-forte sur le terrain.",
     image: "/images/australie-2020.jpg",
     blocs: [
       {

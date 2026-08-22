@@ -215,9 +215,9 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Abitibi-Témiscamingue",
+        titre: "Abitibi-Témiscamingue, juin 2023",
         texte: [
-          "Déploiement plus récent, en appui aux communautés touchées. Le contexte régional impose ses propres contraintes: distances considérables, ressources locales limitées, autonomie complète de l'équipe sur le terrain.",
+          "En juin 2023, alors que d'importants feux de forêt frappaient l'Abitibi-Témiscamingue, Sauvetage Animal Rescue a déployé une équipe afin de soutenir les animaux, les communautés et les organisations touchés par la situation. Notre intervention nous a conduits dans plusieurs secteurs de la région, notamment à Amos, Rouyn-Noranda, Val-d'Or, Senneterre, La Sarre, Normétal ainsi qu'à Kitcisakik. Sur le terrain, notre équipe a notamment participé à l'évacuation de chiens vers des refuges et prêté assistance aux organismes déjà mobilisés. Nous avons également acheminé d'importantes quantités de nourriture, ainsi que des cages, des transporteurs et du matériel destinés à soutenir les opérations. Cette mission illustre bien la polyvalence d'un déploiement national: intervenir directement lorsque nécessaire, mais aussi renforcer concrètement les capacités des ressources locales.",
         ],
       },
       {

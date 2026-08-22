@@ -52,7 +52,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Portrait du fondateur",
     titre: "Direction générale",
     intro:
-      "Eric Dussault a fondé Sauvetage Animal Rescue et la dirige depuis. Voici d'où vient l'organisation, et où il veut la mener.",
+      "Eric Dussault a fondé Sauvetage Animal Rescue et la dirige depuis. Le parcours d'un homme venu des services d'urgence, qui a constaté qu'il n'existait rien de comparable pour les animaux et a décidé de le bâtir.",
     image: "/images/direction-terrain.jpg",
     blocs: [
       {
@@ -269,7 +269,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Sensibilisation",
     titre: "Ateliers au primaire",
     intro:
-      "Notre équipe se déplace directement en classe pour sensibiliser les jeunes à la protection et au sauvetage des animaux.",
+      "Notre équipe se déplace directement en classe pour parler aux enfants de la protection des animaux, du travail de sauvetage et des gestes simples qui font une différence quand on croise un animal en difficulté.",
     image: "/images/ecoles.jpg",
     blocs: [
       {
@@ -298,7 +298,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Sensibilisation",
     titre: "Ateliers au secondaire",
     intro:
-      "Un atelier conçu pour des adolescents, qui parle de responsabilité, de conséquences et de choix de carrière plutôt que de bons sentiments.",
+      "Un atelier conçu pour des adolescents, qui parle de responsabilité, de conséquences et de choix de carrière plutôt que de bons sentiments. Le métier existe vraiment, et ceux qui le font viennent parfois le raconter.",
     image: "/images/ecoles.jpg",
     blocs: [
       {
@@ -479,7 +479,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Patrouilleurs assermentés",
     titre: "Règlementation",
     intro:
-      "Certains de nos patrouilleurs sont assermentés et peuvent appliquer la règlementation animalière sur le territoire des municipalités qui leur en confient le mandat.",
+      "Certains de nos patrouilleurs sont assermentés et peuvent appliquer la règlementation animalière sur le territoire des municipalités qui leur en confient le mandat. Une compétence rare, exercée avec la même rigueur que le reste de nos interventions.",
     image: "/images/carte-services.jpg",
     blocs: [
       {
@@ -948,7 +948,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Nous joindre",
     titre: "Coordonnées",
     intro:
-      "Pour un animal en détresse, appelez la ligne de signalement. Pour toute autre demande, voici comment nous rejoindre.",
+      "Pour un animal en détresse, appelez la ligne de signalement, jour et nuit. Pour une demande de service, un partenariat, une question des médias ou toute autre raison, voici comment nous rejoindre.",
     blocs: [
       {
         encadre: {
@@ -981,7 +981,7 @@ export const PAGES_FR: CataloguePages = {
   confidentialite: {
     titre: "Politique de confidentialité",
     intro:
-      "Cette politique explique quels renseignements Sauvetage Animal Rescue recueille, pourquoi, et ce que nous en faisons.",
+      "Cette politique explique quels renseignements Sauvetage Animal Rescue recueille lorsque vous utilisez ce site, pourquoi nous les recueillons, combien de temps nous les conservons et à qui ils peuvent être communiqués.",
     sansIndexation: false,
     blocs: [
       {
@@ -1023,7 +1023,7 @@ export const PAGES_FR: CataloguePages = {
   conditions: {
     titre: "Conditions d'utilisation",
     intro:
-      "Conditions applicables à l'utilisation du site sar.quebec et aux transactions qui y sont effectuées.",
+      "Les conditions qui s'appliquent à l'utilisation du site sar.quebec, aux adhésions, aux dons et aux inscriptions qui y sont effectués. En utilisant ce site, vous acceptez les conditions décrites ci-dessous.",
     blocs: [
       {
         titre: "Signalements",

@@ -385,13 +385,10 @@
     "vide": "Les statistiques ne sont pas disponibles pour le moment.",
     "note": "Les données de janvier au 2 août proviennent du registre des missions. Celles du 3 au 21 août sont reconstituées à partir du fil de répartition, quelques codes de fin y restent inconnus. Le nombre d'animaux additionne les adultes et les juvéniles consignés, en comptant un animal par mission lorsque le dénombrement n'a pas été saisi. Les compteurs du haut de la page, eux, sont en direct.",
     "anneeTitre": "L'année 2026 en chiffres",
-    "anneeIntro": "Du {periode}. Chaque nombre de cette page vient des missions réellement accomplies, consignées une par une.",
+    "anneeIntro": "Du {periode}. Chaque nombre vient de missions réellement accomplies, consignées une par une.",
     "chiffreMissions": "missions",
-    "chiffreMissionsPrecision": "dont {territoire} sur notre territoire",
     "chiffreAnimaux": "animaux secourus",
-    "chiffreAnimauxPrecision": "de {especes} espèces différentes",
-    "chiffreEspece": "interventions pour un {espece}",
-    "chiffreEspecePrecision": "l'espèce la plus souvent en détresse",
+    "chiffreEspece": "des missions pour un {espece}",
     "rythmeTitre": "Le rythme des interventions",
     "parMois": "Par mois",
     "parJour": "Par jour de la semaine",
@@ -407,8 +404,7 @@
     "appelsTitre": "Qui nous appelle, et d'où",
     "parDemandeur": "Qui signale",
     "parLieu": "Le type de lieu",
-    "chiffreMunicipalites": "municipalités desservies",
-    "chiffreMunicipalitesPrecision": "de Montréal aux couronnes nord et sud"
+    "chiffreMunicipalites": "municipalités desservies"
   },
   "signalement": {
     "titre": "Signaler un animal en détresse",

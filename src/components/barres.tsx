@@ -36,15 +36,15 @@ export function Barres({
   );
 }
 
-// Un chiffre mis en avant, avec sa légende dessous.
+// Un chiffre mis en avant, avec sa légende dessous. Rien d'autre : une
+// précision en gris sous chaque carte alourdissait la rangée et détournait
+// l'oeil du nombre, qui est le seul point de la carte.
 export function Chiffre({
   valeur,
   legende,
-  precision,
 }: {
   valeur: string;
   legende: string;
-  precision?: string;
 }) {
   return (
     <div className="rounded-xl border border-border bg-surface p-5">
@@ -52,7 +52,6 @@ export function Chiffre({
         {valeur}
       </p>
       <p className="mt-2 font-medium text-foreground">{legende}</p>
-      {precision && <p className="mt-1 text-sm text-muted">{precision}</p>}
     </div>
   );
 }

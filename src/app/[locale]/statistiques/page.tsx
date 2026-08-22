@@ -9,8 +9,6 @@ import {
   TOTAL_MISSIONS,
   ANIMAUX,
   MUNICIPALITES_DESSERVIES,
-  ESPECES_DIFFERENTES,
-  SUR_TERRITOIRE,
   MISSIONS_PAR_MOIS,
   PAR_FAMILLE,
   PAR_ESPECE,
@@ -25,6 +23,11 @@ import {
 
 // Les compteurs du haut bougent en continu ; le reste de la page est figé.
 export const revalidate = 60;
+
+// L'espèce la plus fréquente, en part des missions plutôt qu'en nombre brut :
+// « 19 % des missions » se saisit d'un coup d'oeil, « 80 missions » demande
+// de connaître le total pour signifier quelque chose.
+const PART_ESPECE = Math.round((PAR_ESPECE[0].valeur / TOTAL_MISSIONS) * 100);
 
 export default async function PageStatistiques({
   params,
@@ -47,31 +50,22 @@ export default async function PageStatistiques({
 
       {/* Les quatre chiffres qui résument l'année. */}
       <Section titre={t("anneeTitre")}>
-        <p className="mb-8 max-w-3xl text-muted">
-          {t("anneeIntro", { periode: PERIODE })}
-        </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Chiffre
-            valeur={TOTAL_MISSIONS.toString()}
-            legende={t("chiffreMissions")}
-            precision={t("chiffreMissionsPrecision", { territoire: SUR_TERRITOIRE })}
-          />
-          <Chiffre
-            valeur={ANIMAUX.toString()}
-            legende={t("chiffreAnimaux")}
-            precision={t("chiffreAnimauxPrecision", { especes: ESPECES_DIFFERENTES })}
-          />
+          <Chiffre valeur={TOTAL_MISSIONS.toString()} legende={t("chiffreMissions")} />
+          <Chiffre valeur={ANIMAUX.toString()} legende={t("chiffreAnimaux")} />
           <Chiffre
             valeur={MUNICIPALITES_DESSERVIES.toString()}
             legende={t("chiffreMunicipalites")}
-            precision={t("chiffreMunicipalitesPrecision")}
           />
           <Chiffre
-            valeur={PAR_ESPECE[0].valeur.toString()}
-            legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle })}
-            precision={t("chiffreEspecePrecision")}
+            valeur={`${PART_ESPECE} %`}
+            legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle.toLowerCase() })}
           />
         </div>
+        {/* La provenance des chiffres se lit après eux, discrètement. */}
+        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted">
+          {t("anneeIntro", { periode: PERIODE })}
+        </p>
       </Section>
 
       <Section titre={t("rythmeTitre")} fond>

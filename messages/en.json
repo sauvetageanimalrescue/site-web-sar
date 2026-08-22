@@ -385,13 +385,10 @@
     "vide": "Statistics are unavailable at the moment.",
     "note": "Data from January to 2 August comes from the mission registry. Data from 3 to 21 August is reconstructed from the dispatch thread, and a few outcome codes remain unknown. The animal figure adds up recorded adults and juveniles, counting one animal per operation when no count was entered. The counters at the top of the page are live.",
     "anneeTitre": "2026 in numbers",
-    "anneeIntro": "From {periode}. Every number on this page comes from operations actually carried out, recorded one by one.",
+    "anneeIntro": "From {periode}. Every number comes from operations actually carried out, recorded one by one.",
     "chiffreMissions": "operations",
-    "chiffreMissionsPrecision": "{territoire} of them within our territory",
     "chiffreAnimaux": "animals assisted",
-    "chiffreAnimauxPrecision": "from {especes} different species",
-    "chiffreEspece": "call-outs for a {espece}",
-    "chiffreEspecePrecision": "the species most often in distress",
+    "chiffreEspece": "of operations for a {espece}",
     "rythmeTitre": "The rhythm of our work",
     "parMois": "By month",
     "parJour": "By day of the week",
@@ -407,8 +404,7 @@
     "appelsTitre": "Who calls, and from where",
     "parDemandeur": "Who reports",
     "parLieu": "Type of location",
-    "chiffreMunicipalites": "municipalities served",
-    "chiffreMunicipalitesPrecision": "from Montréal to the north and south shores"
+    "chiffreMunicipalites": "municipalities served"
   },
   "signalement": {
     "titre": "Report an animal in distress",

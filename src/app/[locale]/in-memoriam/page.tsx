@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { EnTetePage, Section } from "@/components/ui";
-import { CarteImage } from "@/components/cartes";
+import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import { HOMMAGES } from "@/contenu/memoriam";
 
 export default async function PageMemoriam({
@@ -12,46 +12,65 @@ export default async function PageMemoriam({
 
   return (
     <>
-      {/* Même en-tête que partout ailleurs : cette page se distingue par son
-          contenu, pas par une mise en page à part. */}
       <EnTetePage
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("dedicace")}
+        image="/images/memoriam-ruban.jpg"
       />
 
-      <Section>
-        {HOMMAGES.length === 0 ? (
-          <p className="max-w-3xl leading-relaxed text-muted">{t("aucun")}</p>
-        ) : (
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {HOMMAGES.map((h) => (
-              <article key={h.cle}>
-                {/* La carte du site, avec le nom posé sur la photo. Le noir et
-                    blanc distingue ces portraits de toutes les autres images. */}
-                <CarteImage
-                  image={h.image}
-                  titre={h.nom}
-                  sousTitre={[h.fonction, h.annees].filter(Boolean).join(" · ")}
-                  grisaille
-                  statique
-                  taille="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+      {/* Un hommage n'est pas une carte cliquable dans une grille. Le
+          portrait est centré, seul, et le texte se lit dessous. */}
+      {HOMMAGES.map((h) => (
+        <Section key={h.cle} largeur="carte">
+          <figure className="text-center">
+            {h.image && (
+              <Image
+                src={h.image}
+                alt=""
+                width={288}
+                height={360}
+                className="mx-auto h-auto w-64 rounded-xl object-cover grayscale sm:w-72"
+              />
+            )}
+            <figcaption className="mt-6">
+              <h2 className="font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine">
+                {h.nom}
+              </h2>
+              {(h.fonction || h.annees) && (
+                <p className="mt-1 text-sm uppercase tracking-wider text-ciel">
+                  {[h.fonction, h.annees].filter(Boolean).join(" · ")}
+                </p>
+              )}
+            </figcaption>
+          </figure>
 
-                {h.texte?.map((paragraphe, i) => (
-                  <p key={i} className="mt-4 leading-relaxed text-muted">
-                    {paragraphe}
-                  </p>
-                ))}
-              </article>
+          <div className="mt-8">
+            {h.texte?.map((paragraphe) => (
+              <p
+                key={paragraphe.slice(0, 40)}
+                className="paragraphe mb-4 text-lg leading-relaxed text-foreground/90"
+              >
+                {paragraphe}
+              </p>
             ))}
           </div>
-        )}
+        </Section>
+      ))}
 
-        <p className="mt-14 max-w-3xl text-sm leading-relaxed text-muted">
+      <Section fond largeur="carte">
+        <p className="paragraphe text-sm leading-relaxed text-muted">
           {t("contact")}
         </p>
       </Section>
+
+      <AppelAction
+        titre={t("titre")}
+        actions={[
+          { href: "/membre", libelle: t("membreBouton"), principal: true },
+          { href: "/equipe", libelle: t("equipeBouton") },
+        ]}
+      />
     </>
   );
 }

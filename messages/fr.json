@@ -544,7 +544,9 @@
     "titre": "In memoriam",
     "dedicace": "Une organisation, ce sont des personnes. Cette page est dédiée à celles qui ont porté Sauvetage Animal Rescue et qui ne sont plus parmi nous. Leur travail continue à travers chaque mission.",
     "aucun": "Les hommages sont ajoutés à cette page avec l'accord des proches.",
-    "contact": "Pour proposer un hommage, écrivez à la direction générale à e.dussault@sar.quebec."
+    "contact": "Pour proposer un hommage, écrivez à la direction générale à e.dussault@sar.quebec.",
+    "membreBouton": "Devenir membre",
+    "equipeBouton": "L'équipe"
   },
   "serie": {
     "surtitre": "Sauvetage animal",

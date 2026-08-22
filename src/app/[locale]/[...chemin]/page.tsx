@@ -2,6 +2,7 @@
 import { notFound } from "next/navigation";
 import { VerificateurTerritoire } from "@/components/verificateur-territoire";
 import { RevuePresse } from "@/components/revue-presse";
+import { TexteRiche } from "@/components/texte-riche";
 import { setRequestLocale } from "next-intl/server";
 import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import {
@@ -74,7 +75,7 @@ function Bloc({ bloc }: { bloc: BlocPage }) {
           key={paragraphe.slice(0, 40)}
           className="paragraphe mb-4 text-lg leading-relaxed text-foreground/90"
         >
-          {paragraphe}
+          <TexteRiche texte={paragraphe} />
         </p>
       ))}
       {bloc.liste &&

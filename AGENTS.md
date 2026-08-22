@@ -46,5 +46,6 @@ Toute nouvelle page se compose de ces blocs. Ne pas en inventer d'autres sans ra
 - **Ponctuation** : jamais d'espace entre la dernière lettre d'un mot et la ponctuation qui suit, y compris les deux points, le point-virgule, le point d'interrogation et le point d'exclamation. Seuls les guillemets français gardent leurs espaces intérieures.
 - **Les légendes de photo** suivent toujours la forme `AAAA - qui ou quoi`, année en chiffres, trait d'union simple, aucun point final. Elles nomment, elles ne racontent pas : « 2012 - Eric Dussault accompagné de Milo, le chat, et son propriétaire ».
 - **Éviter les millésimes dans la prose** : « à l'époque », « l'année suivante », « dans la foulée » plutôt qu'une date, sauf quand l'année elle-même est l'information.
+- **Balisage des paragraphes éditoriaux** : `**gras**` et `[libellé](/adresse)` sont interprétés, rien d'autre. À employer avec parcimonie: une phrase en gras par page au maximum, sans quoi plus rien ne ressort.
 - **Un paragraphe qui se suffit vaut mieux que deux.** Ne pas écrire par paires par réflexe : un second paragraphe de vingt mots affaiblit le premier. On en met deux ou trois quand le propos l'exige, pas autrement.
 - Les listes courtes restent en une seule colonne, à puces, **sans boîte**. Au-delà de vingt entrées, elles se replient en colonnes sur toute la largeur.

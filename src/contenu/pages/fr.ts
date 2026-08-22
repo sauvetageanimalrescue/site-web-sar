@@ -517,28 +517,37 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Sans blesser l'animal",
     titre: "Capture",
     intro:
-      "Capturer un animal qui ne veut pas être capturé demande du matériel, de la patience et une bonne lecture du comportement animal. Mal fait, on blesse la bête, on se fait mordre, ou on la pousse vers un danger pire.",
+      "Capturer un animal en détresse exige de comprendre son comportement, de choisir la bonne méthode et de protéger autant l'animal que l'intervenant. Nos équipes privilégient toujours une capture sécuritaire, contrôlée et sans contact inutile.",
     image: "/images/capture-bateau.jpg",
     blocs: [
       {
-        titre: "Nos moyens",
-        liste: [
-          "Perches de capture, de plusieurs longueurs",
-          "Cages-trappes adaptées à l'espèce et surveillées",
-          "Filets, épuisettes et sacs de capture",
-          "Équipement de protection contre les morsures et les griffures",
-          "Cages de transport ventilées et couvertes",
+        titre: "Capturer sans blesser",
+        texte: [
+          "Une opération de capture vise d'abord à prendre le contrôle d'un animal de façon sécuritaire, en limitant au maximum le stress, les risques de blessures et les contacts directs avec les intervenants. Le choix de la méthode dépend de l'espèce, de son comportement, de son état physique, de l'environnement et du niveau de risque. Nos équipes disposent de différentes techniques et d'équipements spécialisés permettant d'adapter chaque intervention à la situation. Lorsque possible, nous privilégions toujours la méthode la moins invasive et la plus sécuritaire, autant pour l'animal que pour les personnes présentes.",
         ],
       },
       {
-        titre: "Nos règles",
+        titre: "Capture dynamique",
         texte: [
-          "Une cage-trappe n'est jamais laissée sans surveillance prolongée: un animal piégé au soleil ou au froid souffre, et un piège oublié devient une cruauté. Nous privilégions toujours la méthode la moins invasive qui fonctionne, et nous acceptons de repartir bredouilles plutôt que de forcer une capture qui mettrait l'animal en danger.",
+          "La capture dynamique implique une intervention directe du sauveteur à l'aide d'outils manuels spécialisés. Filets, perches de capture, pinces adaptées et autres dispositifs permettent de contrôler et de sécuriser l'animal tout en maintenant une distance entre celui-ci et l'intervenant. Cette approche réduit notamment les risques de morsure, de griffure ou de transmission de maladies. Elle demande une bonne lecture du comportement animal, de la coordination et la capacité d'adapter rapidement la technique utilisée aux réactions de l'animal.",
+        ],
+      },
+      {
+        titre: "Capture mécanique",
+        texte: [
+          "La capture mécanique repose sur l'utilisation de dispositifs conçus pour contenir l'animal sans qu'un sauveteur ait à intervenir directement au moment de la capture. Il peut s'agir d'une cage de capture à déclenchement automatique, qui se referme lorsque l'animal y entre, ou d'une cage tombante, abaissée autour de l'animal au moment opportun. Selon le dispositif et les circonstances, le déclenchement peut être effectué manuellement à distance ou à l'aide d'un mécanisme électronique. Cette méthode est particulièrement utile lorsqu'une approche directe risquerait de faire fuir l'animal ou d'augmenter son niveau de stress.",
+        ],
+      },
+      {
+        titre: "Capture chimique et télésédation",
+        texte: [
+          "Dans certaines situations exceptionnelles, les méthodes conventionnelles ne permettent pas de sécuriser l'animal sans augmenter les risques pour celui-ci ou pour les intervenants. La capture chimique, aussi appelée télésédation, peut alors être envisagée. Elle consiste à administrer à distance un médicament sédatif au moyen d'une fléchette projetée par un équipement spécialisé. Chez Sauvetage Animal Rescue, ce type d'intervention est réalisé en présence et sous la responsabilité d'un vétérinaire. La télésédation demeure une solution de dernier recours, utilisée lorsque les méthodes dynamiques ou mécaniques ne permettent pas d'effectuer la capture de façon suffisamment sécuritaire.",
         ],
       },
     ],
     actions: [
-      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/services/secours-animalier", libelle: "Secours animalier" },
     ],
   },
 

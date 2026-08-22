@@ -17,3 +17,16 @@ export const REPORT_ANNEE = 574;
 
 // Le report couvre jusqu'à cette date; au-delà, le registre prend le relais.
 export const REPORT_ARRETE_LE = "2026-08-21";
+
+// Report du mois en cours. Le compteur mensuel ne voit que les missions déjà
+// saisies au registre, alors que le mois est bien avancé: il afficherait 3
+// au lieu de 81.
+//
+// Ce report est daté. Il ne s'applique qu'au mois et à l'année indiqués, ce
+// qui évite qu'il continue de gonfler le compteur en septembre. Le premier
+// du mois prochain, il devient sans effet de lui-même.
+//
+// Août 2026: 68 missions et 81 animaux du premier au 21 août selon la
+// méthode de l'organisation, moins les 3 animaux des missions du 7 et du 15
+// août, déjà comptés par le registre.
+export const REPORT_MOIS = { annee: 2026, mois: 8, valeur: 78 };

@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { REPORT_ANNEE } from "@/contenu/compteur";
+import { REPORT_ANNEE, REPORT_MOIS } from "@/contenu/compteur";
 
 // Les compteurs viennent du registre des missions, qui est une base Supabase
 // distincte de celle du site public. On n'y accède qu'à travers deux fonctions
@@ -50,8 +50,13 @@ export async function lireStatistiques(): Promise<Statistiques | null> {
   // Le report couvre les interventions accomplies avant que l'intranet ne
   // consigne tout. Il ne touche ni le jour, ni la semaine, ni le mois.
   const stats = data as Statistiques;
+  const maintenant = new Date();
+  const memeMois =
+    maintenant.getFullYear() === REPORT_MOIS.annee &&
+    maintenant.getMonth() + 1 === REPORT_MOIS.mois;
   return {
     ...stats,
+    mois: stats.mois + (memeMois ? REPORT_MOIS.valeur : 0),
     annee: stats.annee + REPORT_ANNEE,
     total: stats.total + REPORT_ANNEE,
   };

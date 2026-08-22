@@ -1,5 +1,9 @@
 import type { Locale } from "@/i18n/routing";
 
+// PROPOSITION, NON PUBLIÉE. Ces distinctions n'existent pas encore et la
+// page publique n'en affiche aucune. Le fichier est conservé comme point de
+// départ pour le jour où le système sera arrêté.
+//
 // Les reconnaissances de l'organisation. Chaque distinction est représentée
 // par une barrette de ruban, comme dans les services d'urgence: les bandes
 // de couleur sont dessinées en CSS, il n'y a donc aucune image à produire et

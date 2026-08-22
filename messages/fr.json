@@ -533,24 +533,11 @@
   "distinctions": {
     "surtitre": "Reconnaissance",
     "titre": "Distinctions",
-    "intro": "Nos intervenants sont bénévoles. Ils ne reçoivent ni salaire ni prime: ce qui souligne leur engagement, ce sont ces distinctions. Chacune répond à un critère précis, et se porte sur l'uniforme.",
-    "groupes": {
-      "actes": {
-        "titre": "Actes",
-        "intro": "Ces distinctions reconnaissent une intervention précise, sur recommandation d'un officier et après examen du rapport de mission."
-      },
-      "service": {
-        "titre": "Service et contribution",
-        "intro": "Ces distinctions reconnaissent la durée, la constance et le rôle tenu au sein de l'organisation."
-      },
-      "deploiements": {
-        "titre": "Déploiements",
-        "intro": "Ces barrettes marquent la participation à une opération hors du territoire habituel."
-      }
-    },
-    "portTitre": "Le port des distinctions",
-    "portTexte": "Les barrettes se portent sur l'uniforme, au-dessus de l'écusson de poitrine, alignées de la plus haute à la plus basse en partant de la droite du porteur. Les distinctions pour actes précèdent celles de service, qui précèdent les barrettes de déploiement.",
-    "attributionTexte": "Une distinction ne se demande pas. Elle est proposée par un officier, documentée à partir du registre des missions, puis approuvée par la direction générale. Elle est remise devant l'équipe et inscrite au dossier de l'intervenant."
+    "intro": "Nos intervenants ne reçoivent ni salaire ni prime. Ce qui souligne leur engagement, ce sont les reconnaissances que l'organisation leur décerne, portées sur l'uniforme et inscrites à leur dossier.",
+    "aVenirTitre": "En préparation",
+    "aVenirTexte": "Le système de distinctions de Sauvetage Animal Rescue est en cours d'élaboration. Les critères, les appellations et le port sur l'uniforme seront précisés avant que les premières reconnaissances soient décernées. Cette page présentera alors chacune d'elles.",
+    "membreBouton": "Devenir membre",
+    "equipeBouton": "L'équipe"
   },
   "memoriam": {
     "surtitre": "Nous nous souvenons",

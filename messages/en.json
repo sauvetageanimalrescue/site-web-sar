@@ -533,24 +533,11 @@
   "distinctions": {
     "surtitre": "Recognition",
     "titre": "Honours",
-    "intro": "Our responders are volunteers. They receive no salary and no bonus: these honours are what marks their commitment. Each has a precise criterion, and is worn on the uniform.",
-    "groupes": {
-      "actes": {
-        "titre": "Acts",
-        "intro": "These honours recognise a specific operation, on an officer’s recommendation and after review of the mission report."
-      },
-      "service": {
-        "titre": "Service and contribution",
-        "intro": "These honours recognise duration, consistency and the role held within the organisation."
-      },
-      "deploiements": {
-        "titre": "Deployments",
-        "intro": "These bars mark taking part in an operation outside our usual territory."
-      }
-    },
-    "portTitre": "Wearing the honours",
-    "portTexte": "Bars are worn on the uniform, above the chest patch, ordered from highest to lowest starting from the wearer’s right. Honours for acts come before service honours, which come before deployment bars.",
-    "attributionTexte": "An honour is never requested. It is proposed by an officer, documented from the mission registry, then approved by the Executive Director. It is presented before the team and entered in the responder’s file."
+    "intro": "Our responders receive neither salary nor bonus. What marks their commitment are the honours the organisation awards them, worn on the uniform and entered in their file.",
+    "aVenirTitre": "In preparation",
+    "aVenirTexte": "The Sauvetage Animal Rescue honours system is being developed. Criteria, names and how they are worn on the uniform will be settled before the first honours are awarded. This page will then present each of them.",
+    "membreBouton": "Become a member",
+    "equipeBouton": "The team"
   },
   "memoriam": {
     "surtitre": "We remember",

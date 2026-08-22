@@ -533,24 +533,11 @@
   "distinctions": {
     "surtitre": "Reconocimiento",
     "titre": "Distinciones",
-    "intro": "Nuestros intervinientes son voluntarios. No reciben salario ni prima: lo que destaca su compromiso son estas distinciones. Cada una responde a un criterio preciso y se lleva en el uniforme.",
-    "groupes": {
-      "actes": {
-        "titre": "Actos",
-        "intro": "Estas distinciones reconocen una intervención precisa, por recomendación de un oficial y tras el examen del informe de misión."
-      },
-      "service": {
-        "titre": "Servicio y contribución",
-        "intro": "Estas distinciones reconocen la duración, la constancia y el papel desempeñado en la organización."
-      },
-      "deploiements": {
-        "titre": "Despliegues",
-        "intro": "Estas barras marcan la participación en una operación fuera del territorio habitual."
-      }
-    },
-    "portTitre": "El porte de las distinciones",
-    "portTexte": "Las barras se llevan en el uniforme, sobre el escudo del pecho, ordenadas de la más alta a la más baja desde la derecha del portador. Las distinciones por actos preceden a las de servicio, que preceden a las barras de despliegue.",
-    "attributionTexte": "Una distinción no se solicita. La propone un oficial, se documenta a partir del registro de misiones y la aprueba la dirección general. Se entrega ante el equipo y se inscribe en el expediente del interviniente."
+    "intro": "Nuestros intervinientes no reciben salario ni prima. Lo que destaca su compromiso son los reconocimientos que la organización les otorga, llevados en el uniforme e inscritos en su expediente.",
+    "aVenirTitre": "En preparación",
+    "aVenirTexte": "El sistema de distinciones de Sauvetage Animal Rescue está en elaboración. Los criterios, las denominaciones y su porte en el uniforme se precisarán antes de que se otorguen los primeros reconocimientos. Esta página presentará entonces cada uno de ellos.",
+    "membreBouton": "Hacerse miembro",
+    "equipeBouton": "El equipo"
   },
   "memoriam": {
     "surtitre": "Recordamos",

@@ -1,16 +1,33 @@
-import { setRequestLocale, getTranslations, getLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { EnTetePage, Section } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
-import {
-  GraphiqueMensuel,
-  GraphiqueFamilles,
-} from "@/components/graphiques-statistiques";
+import { Barres, Chiffre } from "@/components/barres";
 import { FilInterventions } from "@/components/fil-interventions";
 import { lireStatistiques } from "@/lib/statistiques";
-import type { Locale } from "@/i18n/routing";
+import {
+  PERIODE,
+  TOTAL_MISSIONS,
+  ANIMAUX_SECOURUS,
+  MISSIONS_REUSSIES,
+  MISSIONS_AVEC_ISSUE_CONNUE,
+  SUR_TERRITOIRE,
+  MISSIONS_PAR_MOIS,
+  PAR_FAMILLE,
+  PAR_ESPECE,
+  PAR_ISSUE,
+  PAR_ETAT,
+  PAR_REGION,
+  PAR_MUNICIPALITE,
+  PAR_LIEU,
+  PAR_DEMANDEUR,
+  PAR_JOUR,
+  PAR_HEURE,
+} from "@/contenu/statistiques-2026";
 
-// Les compteurs bougent en continu ; on ne met en cache que 60 secondes.
+// Les compteurs du haut bougent en continu ; le reste de la page est figé.
 export const revalidate = 60;
+
+const TAUX = Math.round((MISSIONS_REUSSIES / MISSIONS_AVEC_ISSUE_CONNUE) * 100);
 
 export default async function PageStatistiques({
   params,
@@ -19,7 +36,6 @@ export default async function PageStatistiques({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "statistiques" });
   const stats = await lireStatistiques();
-  const langue = (await getLocale()) as Locale;
 
   return (
     <>
@@ -32,35 +48,130 @@ export default async function PageStatistiques({
 
       <CompteurSauvetages initiales={stats} />
 
-      {stats ? (
-        <>
-          <Section>
-            <p className="mb-8 text-lg text-muted">
-              <span className="chiffres-tabulaires font-[family-name:var(--font-titre)] text-4xl font-bold text-marine">
-                {stats.missions_annee.toLocaleString(langue)}
-              </span>{" "}
-              {t("missionsAnnee")}
-            </p>
-            {/* Sans cette note, l'écart entre le total de l'année et la somme
-                des mois passerait pour une erreur de calcul. */}
-            <p className="mb-8 max-w-3xl rounded-md border border-border bg-surface-2 p-4 text-sm leading-relaxed text-muted">
-              {t("note")}
-            </p>
-            <div className="space-y-6">
-              <GraphiqueMensuel stats={stats} />
-              <GraphiqueFamilles stats={stats} />
-            </div>
-          </Section>
+      {/* Les quatre chiffres qui résument l'année. */}
+      <Section titre={t("anneeTitre")}>
+        <p className="mb-8 max-w-3xl text-muted">
+          {t("anneeIntro", { periode: PERIODE })}
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Chiffre
+            valeur={TOTAL_MISSIONS.toString()}
+            legende={t("chiffreMissions")}
+            precision={t("chiffreMissionsPrecision", { territoire: SUR_TERRITOIRE })}
+          />
+          <Chiffre
+            valeur={ANIMAUX_SECOURUS.toString()}
+            legende={t("chiffreAnimaux")}
+            precision={t("chiffreAnimauxPrecision")}
+          />
+          <Chiffre
+            valeur={`${TAUX} %`}
+            legende={t("chiffreTaux")}
+            precision={t("chiffreTauxPrecision", { reussies: MISSIONS_REUSSIES })}
+          />
+          <Chiffre
+            valeur={PAR_ESPECE[0].valeur.toString()}
+            legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle })}
+            precision={t("chiffreEspecePrecision")}
+          />
+        </div>
+      </Section>
 
-          <FilInterventions limite={12} />
-        </>
-      ) : (
-        <Section>
-          <p className="rounded-lg border border-dashed border-border p-10 text-center text-muted">
-            {t("vide")}
-          </p>
-        </Section>
-      )}
+      <Section titre={t("rythmeTitre")} fond>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              {t("parMois")}
+            </h3>
+            <Barres donnees={MISSIONS_PAR_MOIS} />
+          </div>
+          <div className="space-y-8">
+            <div>
+              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+                {t("parJour")}
+              </h3>
+              <Barres donnees={PAR_JOUR} couleur="var(--vert)" />
+            </div>
+            <div>
+              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+                {t("parHeure")}
+              </h3>
+              <Barres donnees={PAR_HEURE} couleur="var(--vert)" />
+            </div>
+          </div>
+        </div>
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
+          {t("rythmeTexte")}
+        </p>
+      </Section>
+
+      <Section titre={t("animauxTitre")}>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              {t("parEspece")}
+            </h3>
+            <Barres donnees={PAR_ESPECE} />
+          </div>
+          <div className="space-y-8">
+            <div>
+              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+                {t("parFamille")}
+              </h3>
+              <Barres donnees={PAR_FAMILLE} couleur="var(--vert)" />
+            </div>
+            <div>
+              <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+                {t("parEtat")}
+              </h3>
+              <Barres donnees={PAR_ETAT} couleur="var(--urgence)" />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section titre={t("issuesTitre")} fond>
+        <p className="mb-8 max-w-3xl text-muted">{t("issuesTexte")}</p>
+        <div className="max-w-3xl">
+          <Barres donnees={PAR_ISSUE} />
+        </div>
+      </Section>
+
+      <Section titre={t("geoTitre")}>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              {t("parRegion")}
+            </h3>
+            <Barres donnees={PAR_REGION} />
+          </div>
+          <div>
+            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              {t("parMunicipalite")}
+            </h3>
+            <Barres donnees={PAR_MUNICIPALITE} couleur="var(--vert)" />
+          </div>
+        </div>
+      </Section>
+
+      <Section titre={t("appelsTitre")} fond>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              {t("parDemandeur")}
+            </h3>
+            <Barres donnees={PAR_DEMANDEUR} />
+          </div>
+          <div>
+            <h3 className="mb-4 font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-marine">
+              {t("parLieu")}
+            </h3>
+            <Barres donnees={PAR_LIEU} couleur="var(--vert)" />
+          </div>
+        </div>
+      </Section>
+
+      {stats && <FilInterventions limite={12} />}
 
       <Section fond etroite>
         <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
@@ -69,6 +180,7 @@ export default async function PageStatistiques({
         <p className="mt-4 leading-relaxed text-foreground/90">
           {t("methodeTexte")}
         </p>
+        <p className="mt-4 leading-relaxed text-foreground/90">{t("note")}</p>
       </Section>
     </>
   );

@@ -12,6 +12,12 @@ export const PAGES_FR: CataloguePages = {
     image: "/images/australie-2020.jpg",
     blocs: [
       {
+        titre: "Protéger et sauver",
+        texte: [
+          "La mission de Sauvetage Animal Rescue est avant tout de protéger et de sauver les animaux en situation de détresse. Pour y parvenir, l'organisation mobilise les ressources humaines, matérielles et techniques nécessaires afin de mener à bien des missions de secours et de sauvetage, parfois dans des environnements complexes ou difficiles d'accès. Chaque intervention repose sur un même engagement: mettre notre expertise et nos capacités opérationnelles au service des animaux qui ont besoin d'aide.",
+        ],
+      },
+      {
         titre: "Un vide dans la chaîne de secours",
         texte: [
           "Quand un humain est en détresse, tout un système se met en marche. Pour un animal, il n'existait rien de comparable au Québec. Les pompiers et les services animaliers faisaient ce qu'ils pouvaient, mais personne n'était formé spécifiquement pour aller chercher un chat à quinze mètres dans un arbre ou un raton laveur au fond d'une cheminée.",

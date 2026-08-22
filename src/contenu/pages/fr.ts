@@ -18,9 +18,9 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Un vide dans la chaîne de secours",
+        titre: "Notre vision",
         texte: [
-          "Lorsqu'un être humain est en détresse, tout un mécanisme se déploie. Mais pour un animal, rien de tel n'existait ici. Les pompiers et les services animaliers faisaient de leur mieux, mais aucune structure n'était conçue spécifiquement pour le sauvetage animalier complexe. C'est ce vide que Sauvetage Animal Rescue est venu combler. En reprenant les principes du secours d'urgence et en les appliquant au monde animal, l'organisation a bâti une chaîne d'intervention structurée, de la prise d'appel jusqu'à la fin de la mission, avec des formations, des procédures, et une rigueur digne des services d'urgence.",
+          "La vision de Sauvetage Animal Rescue est de devenir une ressource essentielle en matière de protection et de sauvetage animalier à l'échelle nationale, tout en établissant un standard d'excellence reconnu bien au-delà de nos frontières. Par le développement de notre expertise, de nos méthodes d'intervention et de notre capacité opérationnelle, nous aspirons à devenir un modèle pour les organismes animaliers à travers le monde, et à contribuer à faire évoluer les pratiques de sauvetage animalier.",
         ],
       },
       {
@@ -28,12 +28,6 @@ export const PAGES_FR: CataloguePages = {
           fichier: "/images/mission-terrain.jpg",
           alt: "Trois intervenants au bord de l'eau avec deux oiseaux secourus",
         },
-      },
-      {
-        titre: "Notre vision",
-        texte: [
-          "La vision de Sauvetage Animal Rescue est de devenir une ressource essentielle en matière de protection et de sauvetage animalier à l'échelle nationale, tout en établissant un standard d'excellence reconnu bien au-delà de nos frontières. Par le développement de notre expertise, de nos méthodes d'intervention et de notre capacité opérationnelle, nous aspirons à devenir un modèle pour les organismes animaliers à travers le monde, et à contribuer à faire évoluer les pratiques de sauvetage animalier.",
-        ],
       },
       {
         titre: "Nos valeurs",
@@ -45,6 +39,18 @@ export const PAGES_FR: CataloguePages = {
         titre: "« Ensemble au service des animaux »",
         texte: [
           "Notre devise résume à elle seule notre façon de concevoir le sauvetage animalier. Ensemble, c'est d'abord notre équipe, unie autour d'une même mission. C'est aussi l'ensemble des organisations, refuges, services animaliers et services d'urgence avec lesquels nous collaborons. Enfin, c'est notre communauté de membres et de donateurs, dont le soutien rend nos interventions possibles. Trois forces complémentaires, réunies autour d'un seul objectif: être au service des animaux.",
+        ],
+      },
+      {
+        image: {
+          fichier: "/images/mission-bateau.jpg",
+          alt: "Deux intervenants embarquant un transporteur dans une embarcation",
+        },
+      },
+      {
+        titre: "Un vide dans la chaîne de secours",
+        texte: [
+          "Lorsqu'un être humain est en détresse, tout un mécanisme se déploie. Mais pour un animal, rien de tel n'existait ici. Les pompiers et les services animaliers faisaient de leur mieux, mais aucune structure n'était conçue spécifiquement pour le sauvetage animalier complexe. C'est ce vide que Sauvetage Animal Rescue est venu combler. En reprenant les principes du secours d'urgence et en les appliquant au monde animal, l'organisation a bâti une chaîne d'intervention structurée, de la prise d'appel jusqu'à la fin de la mission, avec des formations, des procédures, et une rigueur digne des services d'urgence.",
         ],
       },
       {

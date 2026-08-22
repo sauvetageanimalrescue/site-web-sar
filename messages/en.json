@@ -381,7 +381,7 @@
     "surtitre": "Operational registry",
     "intro": "These figures are not entered by hand. They are computed straight from our mission registry, from calls closed with a favourable outcome for the animal.",
     "methodeTitre": "How we count",
-    "methodeTexte": "An operation is counted as soon as a team travels to help an animal, whatever the outcome. A technical rescue, a capture, a transport to a shelter or a call-out where the animal had moved on all count as one operation: in every case, time and resources were committed for that animal. The animal figure adds up the adults and juveniles recorded for each operation.",
+    "methodeTexte": "An operation is counted as soon as a team travels to help an animal, whatever the outcome. A rescue, a capture or a transport to a shelter each count as one operation: in every case, time and resources were committed for that animal. The animal figure adds up the adults and juveniles recorded for each operation.",
     "vide": "Statistics are unavailable at the moment.",
     "note": "Data from January to 2 August comes from the mission registry. Data from 3 to 21 August is reconstructed from the dispatch thread. The counters at the top of the page are live.",
     "anneeTitre": "2026 in numbers",

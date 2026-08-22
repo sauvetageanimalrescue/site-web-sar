@@ -381,7 +381,7 @@
     "surtitre": "Registre opérationnel",
     "intro": "Ces chiffres ne sont pas saisis à la main. Ils sont calculés directement à partir du registre des missions, à partir des interventions fermées avec un dénouement favorable pour l'animal.",
     "methodeTitre": "Comment nous comptons",
-    "methodeTexte": "Une mission est comptée dès qu'une équipe se déplace pour porter secours à un animal, quelle que soit l'issue. Un sauvetage technique, une capture, un transport vers un refuge ou un déplacement au terme duquel l'animal s'était éloigné comptent tous pour une mission : dans chaque cas, du temps et des ressources ont été engagés pour cet animal. Le nombre d'animaux additionne les adultes et les juvéniles consignés à chaque mission.",
+    "methodeTexte": "Une mission est comptée dès qu'une équipe se déplace pour porter secours à un animal, quelle que soit l'issue. Un sauvetage, une capture ou un transport vers un refuge comptent chacun pour une mission : dans chaque cas, du temps et des ressources ont été engagés pour cet animal. Le nombre d'animaux additionne les adultes et les juvéniles consignés à chaque mission.",
     "vide": "Les statistiques ne sont pas disponibles pour le moment.",
     "note": "Les données de janvier au 2 août proviennent du registre des missions. Celles du 3 au 21 août sont reconstituées à partir du fil de répartition. Les compteurs du haut de la page, eux, sont en direct.",
     "anneeTitre": "L'année 2026 en chiffres",

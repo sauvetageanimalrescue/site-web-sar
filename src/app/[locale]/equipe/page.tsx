@@ -34,7 +34,6 @@ export default async function PageEquipe({
               key={c.cle}
               image={c.image}
               titre={t(`categories.${c.cle}.titre`)}
-              sousTitre={t(`categories.${c.cle}.sousTitre`)}
             />
           ))}
         </GrilleCartes>

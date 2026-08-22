@@ -151,7 +151,8 @@ export const PAGES_FR: CataloguePages = {
       },
     ],
     actions: [
-      { href: "/signalement", libelle: "Signaler un animal", principal: true },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/mission", libelle: "Notre mission" },
     ],
   },
 

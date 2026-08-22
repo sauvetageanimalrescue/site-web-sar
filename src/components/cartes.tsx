@@ -19,6 +19,7 @@ export function CarteImage({
   icone,
   format = "carre",
   grisaille = false,
+  statique = false,
   taille = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw",
 }: {
   image?: string;
@@ -31,9 +32,12 @@ export function CarteImage({
   format?: "carre" | "video";
   // Le noir et blanc distingue les portraits d'hommage de toute autre image.
   grisaille?: boolean;
+  // Une carte statique perd le chevron et l'animation: réservée aux cartes
+  // qui ne sont pas des invitations à agir, comme les hommages.
+  statique?: boolean;
   taille?: string;
 }) {
-  const classe = `group relative isolate flex ${
+  const classe = `${statique ? "" : "group "}relative isolate flex ${
     format === "carre" ? "aspect-square" : "aspect-video"
   } flex-col justify-end overflow-hidden rounded-xl bg-marine transition`;
 
@@ -46,7 +50,7 @@ export function CarteImage({
           fill
           sizes={taille}
           className={`-z-10 object-cover ${grisaille ? "grayscale" : ""} ${
-            href ? "transition duration-700 group-hover:scale-105" : ""
+            statique ? "" : "transition duration-700 group-hover:scale-105"
           }`}
         />
       )}
@@ -66,14 +70,14 @@ export function CarteImage({
         </div>
         {icone !== undefined ? (
           icone
-        ) : href ? (
+        ) : statique ? null : (
           <Chevron className="size-6 shrink-0 text-lime transition group-hover:translate-x-1" />
-        ) : null}
+        )}
       </div>
     </>
   );
 
-  if (!href) return <div className={classe.replace("group ", "")}>{contenu}</div>;
+  if (!href) return <div className={classe}>{contenu}</div>;
 
   // Une destination hors du site ne passe pas par le Link de next-intl, qui
   // préfixerait la locale à l'URL absolue.

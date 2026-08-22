@@ -34,6 +34,7 @@ export default async function PageMemoriam({
                   titre={h.nom}
                   sousTitre={[h.fonction, h.annees].filter(Boolean).join(" · ")}
                   grisaille
+                  statique
                   taille="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
 

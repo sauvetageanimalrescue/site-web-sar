@@ -83,6 +83,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/direction-2010.jpg",
           alt: "Eric Dussault tenant un chat dans la neige, à l'époque de la fondation",
+          legende: "Février deux mille dix, aux tout débuts de l'organisation.",
         },
       },
       {
@@ -101,6 +102,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/direction-chaton.jpg",
           alt: "Eric Dussault remettant un chaton noir à un citoyen",
+          legende: "Deux mille douze, l'année où le sauvetage technique entre dans l'équation.",
         },
       },
       {

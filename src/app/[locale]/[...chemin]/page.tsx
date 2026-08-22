@@ -28,15 +28,22 @@ export function generateStaticParams() {
 function Bloc({ bloc }: { bloc: BlocPage }) {
   if (bloc.image) {
     return (
-      <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
-        <Image
-          src={bloc.image.fichier}
-          alt={bloc.image.alt ?? ""}
-          fill
-          sizes="(max-width: 768px) 100vw, 42rem"
-          className="object-cover"
-        />
-      </div>
+      <figure>
+        <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
+          <Image
+            src={bloc.image.fichier}
+            alt={bloc.image.alt ?? ""}
+            fill
+            sizes="(max-width: 768px) 100vw, 42rem"
+            className="object-cover"
+          />
+        </div>
+        {bloc.image.legende && (
+          <figcaption className="mt-3 text-sm text-muted">
+            {bloc.image.legende}
+          </figcaption>
+        )}
+      </figure>
     );
   }
 

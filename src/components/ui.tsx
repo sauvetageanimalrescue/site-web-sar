@@ -109,7 +109,7 @@ export function Section({
 // Bloc de texte long : interlignage confortable, largeur de lecture limitée.
 export function Prose({ children }: { children: ReactNode }) {
   return (
-    <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-foreground/90">
+    <div className="paragraphe max-w-3xl space-y-4 text-lg leading-relaxed text-foreground/90">
       {children}
     </div>
   );
@@ -318,6 +318,48 @@ export function AppelAction({
                 a.principal
                   ? "rounded-md bg-lime px-6 py-3.5 font-semibold text-marine transition hover:bg-lime-fonce"
                   : "rounded-md border border-white/30 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
+              }
+            >
+              {a.libelle}
+            </LienAction>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// LA DÉCLARATION : une affirmation courte, centrée, sur fond gris, suivie de
+// deux boutons. Elle sert de respiration entre deux rangées de cartes et
+// porte les arguments de fond de l'organisation. Le titre se compose sur
+// plusieurs lignes avec des retours forcés dans la traduction.
+export function Declaration({
+  titre,
+  texte,
+  actions,
+}: {
+  titre: string;
+  texte: string;
+  actions: { href: string; libelle: string; principal?: boolean }[];
+}) {
+  return (
+    <section className="bg-surface-2 py-20">
+      <div className="mx-auto max-w-3xl px-4 text-center">
+        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-5xl">
+          {titre}
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          {texte}
+        </p>
+        <div className="mt-9 flex flex-wrap justify-center gap-3">
+          {actions.map((a) => (
+            <LienAction
+              key={a.href}
+              href={a.href}
+              className={
+                a.principal
+                  ? "rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
+                  : "rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
               }
             >
               {a.libelle}

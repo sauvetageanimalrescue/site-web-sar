@@ -3,7 +3,8 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { IconPhoneFilled } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
-import { Chevron } from "@/components/ui";
+import { Declaration } from "@/components/ui";
+import { CarteImage, GrilleCartes } from "@/components/cartes";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { lireStatistiques } from "@/lib/statistiques";
 import { ORGANISATION, lienTelephone } from "@/lib/constantes";
@@ -83,81 +84,16 @@ function Cartes({ debut, fin }: { debut: number; fin: number }) {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <GrilleCartes>
         {CARTES.slice(debut, fin).map((carte) => (
-          // Le texte vit sur l'image, pas en dessous : la carte devient une
-          // seule pièce plutôt qu'une vignette posée sur un bloc de texte.
-          // Le dégradé part du marine opaque en bas pour garantir la lisibilité
-          // quelle que soit la photo.
-          <Link
+          <CarteImage
             key={carte.cle}
+            image={carte.image}
+            titre={t(`cartes.${carte.cle}.titre`)}
             href={carte.href}
-            className="group relative isolate flex aspect-square flex-col justify-end overflow-hidden rounded-xl bg-marine transition"
-          >
-            <Image
-              src={carte.image}
-              alt=""
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              className="-z-10 object-cover transition duration-700 group-hover:scale-105"
-            />
-            {/* Dégradé resserré vers le bas : il doit porter le titre, pas
-                assombrir toute la photo. */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-marine from-8% via-marine/55 via-22% to-transparent to-50%" />
-
-            {/* Le titre suffit : la carte entière est cliquable, et une
-                description sous chaque vignette alourdissait la rangée. */}
-            <div className="flex items-center justify-between gap-3 p-5">
-              <h3 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase leading-tight tracking-wide text-white">
-                {t(`cartes.${carte.cle}.titre`)}
-              </h3>
-              <Chevron className="size-6 shrink-0 text-lime transition group-hover:translate-x-1" />
-            </div>
-          </Link>
+          />
         ))}
-      </div>
-    </section>
-  );
-}
-
-// Déclaration seule, sans image. Aucune photo ne peut rivaliser avec cette
-// phrase, et la carte de membre posée à côté la faisait passer pour une
-// publicité alors que c'est l'argument de fond de l'organisation.
-function Declaration({
-  prefixe,
-  lienA,
-  lienB,
-}: {
-  prefixe: string;
-  lienA: string;
-  lienB: string;
-}) {
-  const t = useTranslations("accueil");
-
-  return (
-    <section className="bg-surface-2 py-20">
-      <div className="mx-auto max-w-3xl px-4 text-center">
-        <h2 className="whitespace-pre-line font-[family-name:var(--font-titre)] text-4xl font-bold uppercase leading-tight tracking-wide text-marine sm:text-5xl">
-          {t(`${prefixe}Titre`)}
-        </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-          {t(`${prefixe}Texte`)}
-        </p>
-        <div className="mt-9 flex flex-wrap justify-center gap-3">
-          <Link
-            href={lienA}
-            className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair"
-          >
-            {t(`${prefixe}A`)}
-          </Link>
-          <Link
-            href={lienB}
-            className="rounded-md border border-marine px-6 py-3.5 font-semibold text-marine transition hover:bg-marine hover:text-white"
-          >
-            {t(`${prefixe}B`)}
-          </Link>
-        </div>
-      </div>
+      </GrilleCartes>
     </section>
   );
 }
@@ -166,6 +102,7 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "accueil" });
   const stats = await lireStatistiques();
 
   return (
@@ -174,9 +111,23 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
       {/* La déclaration coupe la grille en deux : sur un téléphone, huit
           cartes à la suite se traversent sans jamais rencontrer de texte. */}
       <Cartes debut={0} fin={4} />
-      <Declaration prefixe="soutien" lienA="/membre" lienB="/dons" />
+      <Declaration
+        titre={t("soutienTitre")}
+        texte={t("soutienTexte")}
+        actions={[
+          { href: "/membre", libelle: t("soutienA"), principal: true },
+          { href: "/dons", libelle: t("soutienB") },
+        ]}
+      />
       <Cartes debut={4} fin={8} />
-      <Declaration prefixe="benevoles" lienA="/equipe" lienB="/recrutement" />
+      <Declaration
+        titre={t("benevolesTitre")}
+        texte={t("benevolesTexte")}
+        actions={[
+          { href: "/equipe", libelle: t("benevolesA"), principal: true },
+          { href: "/recrutement", libelle: t("benevolesB") },
+        ]}
+      />
       <Cartes debut={8} fin={12} />
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais

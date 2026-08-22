@@ -61,3 +61,11 @@ body {
 .chiffres-tabulaires {
   font-variant-numeric: tabular-nums;
 }
+
+/* Paragraphe justifié : les deux marges sont droites, la dernière ligne
+   reste alignée à gauche. La césure automatique évite les rivières de blanc
+   que la justification creuse dans un texte français. */
+.paragraphe {
+  text-align: justify;
+  hyphens: auto;
+}

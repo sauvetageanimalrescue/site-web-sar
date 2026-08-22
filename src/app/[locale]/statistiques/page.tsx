@@ -56,7 +56,7 @@ export default async function PageStatistiques({
           />
         </div>
         {/* La provenance des chiffres se lit après eux, discrètement. */}
-        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted">
+        <p className="paragraphe mt-4 text-xs leading-relaxed text-muted">
           {t("anneeIntro")}
         </p>
       </Section>
@@ -69,7 +69,7 @@ export default async function PageStatistiques({
             { titre: t("parHeure"), donnees: PAR_HEURE },
           ]}
         />
-        <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted">
+        <p className="paragraphe mt-8 text-sm leading-relaxed text-muted">
           {t("rythmeTexte")}
         </p>
       </Section>
@@ -102,19 +102,21 @@ export default async function PageStatistiques({
         {/* L'unité de toutes ces barres est le déplacement, jamais l'animal :
             sans cette ligne, la section des espèces se lirait comme un nombre
             d'animaux. */}
-        <p className="mx-auto mt-8 max-w-2xl text-xs leading-relaxed text-muted">
+        <p className="paragraphe mt-8 text-xs leading-relaxed text-muted">
           {t("uniteBarres")}
         </p>
       </Section>
 
-      <Section fond etroite>
+      <Section fond largeur="carte">
         <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
           {t("methodeTitre")}
         </h2>
-        <p className="mt-4 leading-relaxed text-foreground/90">
+        <p className="paragraphe mt-4 leading-relaxed text-foreground/90">
           {t("methodeTexte")}
         </p>
-        <p className="mt-4 leading-relaxed text-foreground/90">{t("note")}</p>
+        <p className="paragraphe mt-4 leading-relaxed text-foreground/90">
+          {t("note")}
+        </p>
       </Section>
     </>
   );

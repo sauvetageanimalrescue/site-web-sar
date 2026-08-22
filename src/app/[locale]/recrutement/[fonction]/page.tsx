@@ -27,7 +27,7 @@ const TITRES = {
 
 export default async function PageFonction({
   params,
-}: PageProps<"/[locale]/equipe/[fonction]">) {
+}: PageProps<"/[locale]/recrutement/[fonction]">) {
   const { locale, fonction: cle } = await params;
   setRequestLocale(locale);
 
@@ -106,7 +106,7 @@ export default async function PageFonction({
 
 export async function generateMetadata({
   params,
-}: PageProps<"/[locale]/equipe/[fonction]">) {
+}: PageProps<"/[locale]/recrutement/[fonction]">) {
   const { locale, fonction: cle } = await params;
   const poste = trouverFonction(cle);
   if (!poste) return {};

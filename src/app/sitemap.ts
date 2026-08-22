@@ -3,6 +3,7 @@ import { routing } from "@/i18n/routing";
 import { PAGES_FR } from "@/contenu/pages/fr";
 import { FICHES } from "@/contenu/fiches";
 import { POSTES } from "@/contenu/postes";
+import { MEMBRES } from "@/contenu/equipe";
 import { adressePublique } from "@/lib/site";
 
 // Routes dédiées, écrites à la main : les dossiers de l'application ne sont
@@ -28,7 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...ROUTES,
     ...Object.keys(PAGES_FR),
     ...FICHES.map((f) => `informations/${f.slug}`),
-    ...POSTES.map((p) => `equipe/${p.cle}`),
+    ...POSTES.map((p) => `recrutement/${p.cle}`),
+    ...MEMBRES.map((m) => `equipe/${m.cle}`),
   ];
 
   return routing.locales.flatMap((langue) =>

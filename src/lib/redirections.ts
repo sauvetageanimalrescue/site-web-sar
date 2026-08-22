@@ -83,6 +83,12 @@ export const REDIRECTIONS: Record<string, string> = {
   "/collections/programme-de-sterilisation": "/dons",
   "/collections/gardien-de-la-faune": "/membre",
 
+  // Les fiches de fonction ont quitté L'équipe pour le recrutement.
+  "/equipe/repartiteur": "/recrutement/repartiteur",
+  "/equipe/messager": "/recrutement/messager",
+  "/equipe/secouriste": "/recrutement/secouriste",
+  "/equipe/sauveteur": "/recrutement/sauveteur",
+
   // Blogues
   "/blogs/news": "/medias",
   "/blogs/conseils": "/informations",

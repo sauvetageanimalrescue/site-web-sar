@@ -31,7 +31,7 @@ export default async function PageRecrutement({
               key={poste.cle}
               image={poste.image}
               titre={fichePoste(poste.cle, langue).titre}
-              href={`/equipe/${poste.cle}`}
+              href={`/recrutement/${poste.cle}`}
             />
           ))}
         </GrilleCartes>

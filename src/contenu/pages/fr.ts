@@ -209,16 +209,37 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/mission-sainte-marthe.jpg",
+          alt: "Intervention en zone inondée à Sainte-Marthe-sur-le-Lac",
+          legende: "2019 - Sainte-Marthe-sur-le-Lac",
+        },
+      },
+      {
         titre: "Sainte-Marthe-sur-le-Lac, avril 2019",
         texte: [
           "En avril 2019, la rupture d'une digue à Sainte-Marthe-sur-le-Lac a provoqué d'importantes inondations et forcé l'évacuation de milliers de résidents. Pendant trois jours, une équipe de 15 intervenants de Sauvetage Animal Rescue a été déployée dans la zone sinistrée afin d'aller chercher les animaux demeurés dans les résidences évacuées. Au total, notre équipe est intervenue dans 125 domiciles inondés et a évacué 171 animaux. Un poste de commandement ainsi qu'un refuge temporaire ont été mis en place pour soutenir les opérations et accueillir les animaux secourus. La mission s'est déroulée en collaboration avec la Sûreté du Québec, les services policiers municipaux et les services incendie présents sur le terrain.",
         ],
       },
       {
+        image: {
+          fichier: "/images/mission-abitibi.jpg",
+          alt: "Déploiement en Abitibi-Témiscamingue pendant les feux de forêt",
+          legende: "2023 - Abitibi-Témiscamingue",
+        },
+      },
+      {
         titre: "Abitibi-Témiscamingue, juin 2023",
         texte: [
           "En juin 2023, alors que d'importants feux de forêt frappaient l'Abitibi-Témiscamingue, Sauvetage Animal Rescue a déployé une équipe afin de soutenir les animaux, les communautés et les organisations touchés par la situation. Notre intervention nous a conduits dans plusieurs secteurs de la région, notamment à Amos, Rouyn-Noranda, Val-d'Or, Senneterre, La Sarre, Normétal ainsi qu'à Kitcisakik. Sur le terrain, notre équipe a notamment participé à l'évacuation de chiens vers des refuges et prêté assistance aux organismes déjà mobilisés. Nous avons également acheminé d'importantes quantités de nourriture, ainsi que des cages, des transporteurs et du matériel destinés à soutenir les opérations. Cette mission illustre bien la polyvalence d'un déploiement national: intervenir directement lorsque nécessaire, mais aussi renforcer concrètement les capacités des ressources locales.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/mission-stoneham.jpg",
+          alt: "Hélicoptère en ravitaillement à Stoneham",
+          legende: "2025 - Ravitaillement héliporté à Stoneham",
+        },
       },
       {
         titre: "Stoneham, mars 2025",
@@ -235,7 +256,7 @@ export const PAGES_FR: CataloguePages = {
       },
     ],
     actions: [
-      { href: "/services/sinistres", libelle: "Nos services en sinistre", principal: true },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
       { href: "/missions-internationales", libelle: "Missions internationales" },
     ],
   },

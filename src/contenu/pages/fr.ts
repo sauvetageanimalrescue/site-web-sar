@@ -56,7 +56,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Financé par ses membres",
         texte: [
-          "Nous ne recevons aucune subvention gouvernementale et aucun financement public. Tout repose sur les cotisations des membres, les dons, les campagnes de rue et notre communauté. C'est ce qui garantit notre indépendance, et c'est aussi ce qui rend chaque adhésion déterminante.",
+          "Sauvetage Animal Rescue ne reçoit aucun financement public ni subvention gouvernementale. Notre indépendance repose entièrement sur les adhésions annuelles, les dons et nos activités de financement. Cette autonomie est notre force: elle nous permet d'agir selon notre mission, sans compromis. Chaque adhésion compte, car elle contribue directement à rendre chaque intervention possible.",
         ],
       },
     ],

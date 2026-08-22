@@ -304,13 +304,19 @@ export const PAGES_FR: CataloguePages = {
     titre: "Dans les médias",
     intro:
       "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
-    image: "/images/services-urgence.png",
+    image: "/images/medias-entrevue.jpg",
     blocs: [
       {
         titre: "Une expertise qui fait l'actualité",
         texte: [
           "Les interventions de Sauvetage Animal Rescue se retrouvent régulièrement dans l'actualité en raison de leur caractère souvent inhabituel, spectaculaire ou hautement spécialisé. Télévision, radio, presse écrite et médias numériques font appel à notre organisation pour documenter certaines opérations sur le terrain, mais également pour expliquer les réalités entourant le sauvetage et la protection des animaux. Notre équipe est aussi appelée à commenter différents enjeux qui touchent le monde animalier et à mettre son expertise à la disposition des journalistes. Cette visibilité contribue à mieux faire connaître notre travail, mais surtout à sensibiliser le public aux réalités du secours animalier.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/medias-terrain.jpg",
+          alt: "Entrevue accordée à une équipe de télévision sur le terrain",
+        },
       },
       {
         titre: "Revue de presse",

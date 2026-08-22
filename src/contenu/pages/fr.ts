@@ -44,7 +44,7 @@ export const PAGES_FR: CataloguePages = {
     ],
     actions: [
       { href: "/membre", libelle: "Devenir membre", principal: true },
-      { href: "/statistiques", libelle: "Voir nos statistiques" },
+      { href: "/direction", libelle: "Le mot du directeur général" },
     ],
   },
 

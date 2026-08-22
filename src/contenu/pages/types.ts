@@ -6,6 +6,9 @@ export type BlocPage = {
   texte?: string[];
   liste?: string[];
   encadre?: { titre: string; lignes: string[] };
+  // Une image centrée à la largeur d'une carte, coins arrondis. Elle se
+  // suffit à elle-même : ni légende, ni texte à côté.
+  image?: { fichier: string; alt?: string };
 };
 
 export type PageEditoriale = {

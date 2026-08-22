@@ -1,4 +1,5 @@
-﻿import { notFound } from "next/navigation";
+﻿import Image from "next/image";
+import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import {
@@ -25,6 +26,20 @@ export function generateStaticParams() {
 // la page, qui alterne les fonds : un bloc clair, un bloc gris, un bloc
 // clair. C'est le rythme de la page des statistiques, appliqué partout.
 function Bloc({ bloc }: { bloc: BlocPage }) {
+  if (bloc.image) {
+    return (
+      <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
+        <Image
+          src={bloc.image.fichier}
+          alt={bloc.image.alt ?? ""}
+          fill
+          sizes="(max-width: 768px) 100vw, 42rem"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   if (bloc.encadre) {
     return (
       <div className="rounded-xl border border-border bg-surface p-6">

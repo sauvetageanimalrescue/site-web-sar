@@ -9,7 +9,6 @@ import {
   ANIMAUX,
   MUNICIPALITES_DESSERVIES,
   MISSIONS_PAR_MOIS,
-  PAR_FAMILLE,
   PAR_ESPECE,
   PAR_ETAT,
   PAR_REGION,
@@ -79,8 +78,7 @@ export default async function PageStatistiques({
         <CarteVues
           vues={[
             { titre: t("parEspece"), donnees: PAR_ESPECE },
-            { titre: t("parFamille"), donnees: PAR_FAMILLE, couleur: "var(--vert)" },
-            { titre: t("parEtat"), donnees: PAR_ETAT, couleur: "var(--urgence)" },
+            { titre: t("parEtat"), donnees: PAR_ETAT, couleur: "var(--vert)" },
           ]}
         />
       </Section>

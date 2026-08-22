@@ -518,7 +518,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Capture",
     intro:
       "Capturer un animal qui ne veut pas être capturé demande du matériel, de la patience et une bonne lecture du comportement animal. Mal fait, on blesse la bête, on se fait mordre, ou on la pousse vers un danger pire.",
-    image: "/images/carte-signalement.jpg",
+    image: "/images/capture-bateau.jpg",
     blocs: [
       {
         titre: "Nos moyens",

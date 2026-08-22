@@ -678,6 +678,27 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        titre: "Exemples de situations",
+        liste: [
+          "Écureuil orphelin tombé du nid",
+          "Bernache blessée à une aile",
+          "Goéland pris dans du fil à pêche",
+          "Canard avec un hameçon au bec",
+          "Marmotte blessée par une flèche",
+          "Chat heurté par un véhicule",
+          "Chien abandonné et attaché",
+          "Moufette avec troubles neurologiques",
+          "Rat musqué coincé dans une clôture",
+          "Pigeon incapable de voler",
+          "Raton laveur orphelin",
+          "Chat coincé dans un moteur",
+          "Raton laveur pris dans un conteneur",
+          "Lapin à queue blanche orphelin",
+          "Tortue blessée",
+          "Castor agonisant",
+        ],
+      },
+      {
         titre: "Une chaîne, pas un geste isolé",
         texte: [
           "Une intervention ne commence pas lorsque nos sauveteurs arrivent sur place et ne se termine pas lorsque l'animal est entre leurs mains. Elle s'inscrit dans une véritable chaîne de secours qui débute avec le citoyen, le service d'urgence ou l'organisation qui nous signale la situation. Après l'intervention vient ensuite la prise en charge: transport vers une clinique vétérinaire, un refuge, un service animalier ou une ressource spécialisée selon les besoins de l'animal. Nos messagers et messagères jouent un rôle essentiel dans cette chaîne en assurant ces transports, permettant ainsi aux équipes de terrain de demeurer disponibles pour répondre à une nouvelle urgence.",

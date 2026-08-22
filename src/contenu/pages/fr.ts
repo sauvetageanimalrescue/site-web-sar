@@ -15,7 +15,7 @@ export const PAGES_FR: CataloguePages = {
         titre: "Un vide dans la chaîne de secours",
         texte: [
           "Quand un humain est en détresse, tout un système se met en marche. Pour un animal, il n'existait rien de comparable au Québec. Les pompiers et les services animaliers faisaient ce qu'ils pouvaient, mais personne n'était formé spécifiquement pour aller chercher un chat à quinze mètres dans un arbre ou un raton laveur au fond d'une cheminée.",
-          "Sauvetage Animal Rescue est né de ce constat. L'organisation applique au monde animal les principes du secours d'urgence : une centrale qui reçoit les appels, des niveaux d'intervention, des procédures de sécurité, un registre où chaque mission est documentée du premier appel jusqu'à sa fermeture.",
+          "Sauvetage Animal Rescue est né de ce constat. L'organisation applique au monde animal les principes du secours d'urgence : une centrale qui reçoit les appels, des niveaux d'intervention, des procédures de sécurité, un registre où chaque mission est documentée du premier appel jusqu'à sa fermeture.",
         ],
       },
       {
@@ -32,7 +32,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Qui nous appelle",
         texte: [
-          "Nos appels viennent des citoyens, des services animaliers municipaux, des services de police et d'incendie, des refuges, des entreprises et parfois d'autres organismes de sauvetage. Le point commun de toutes ces demandes : un animal se trouve dans une situation dont il ne peut pas sortir seul, et personne sur place n'a l'équipement ou la formation pour intervenir sans danger.",
+          "Nos appels viennent des citoyens, des services animaliers municipaux, des services de police et d'incendie, des refuges, des entreprises et parfois d'autres organismes de sauvetage. Le point commun de toutes ces demandes : un animal se trouve dans une situation dont il ne peut pas sortir seul, et personne sur place n'a l'équipement ou la formation pour intervenir sans danger.",
         ],
       },
       {
@@ -58,7 +58,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Capucine",
         texte: [
-          "En deux mille deux, Capucine, le chat de la famille Dussault, sort de la maison et ne revient pas. Sa mère cherche de l'aide et se heurte à un mur poli : la SPCA ne se déplace pas pour chercher un animal perdu, la police non plus, et personne d'autre ne s'en occupe. Ce n'est le dossier d'aucun service. Il n'y a pas de numéro à composer qui mène à quelqu'un qui viendra, pas d'équipe à envoyer, pas de procédure. La famille cherche seule, comme tout le monde cherche seul. C'est ce vide, bien plus que la disparition elle-même, qui restera planté dans la tête d'Eric Dussault pendant les sept années suivantes.",
+          "En deux mille deux, Capucine, le chat de la famille Dussault, sort de la maison et ne revient pas. Sa mère cherche de l'aide et se heurte à un mur poli : la SPCA ne se déplace pas pour chercher un animal perdu, la police non plus, et personne d'autre ne s'en occupe. Ce n'est le dossier d'aucun service. Il n'y a pas de numéro à composer qui mène à quelqu'un qui viendra, pas d'équipe à envoyer, pas de procédure. La famille cherche seule, comme tout le monde cherche seul. C'est ce vide, bien plus que la disparition elle-même, qui restera planté dans la tête d'Eric Dussault pendant les sept années suivantes.",
         ],
       },
       {
@@ -70,23 +70,23 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Un modèle trouvé à Los Angeles",
         texte: [
-          "Eric Dussault a passé sa vie autour des services d'urgence : sécurité publique, services médicaux, sauvetage, transport de valeurs, protection rapprochée. Il connaît les centrales, les procédures, les niveaux de priorité. Ce qu'il cherche, en deux mille neuf, c'est un modèle qui applique tout ça aux animaux.",
-          "Il le trouve à Los Angeles, où le service animalier municipal opère une unité tactique de sauvetage des petits animaux. L'équivalent n'existe nulle part au Québec. Il fonde le sien l'année suivante.",
-          "Les débuts sont modestes : faute d'appels, l'organisation cherche surtout des animaux perdus. Les demandes de sauvetage viendront ensuite, et ne s'arrêteront plus.",
+          "Eric a passé sa vie autour des services d'urgence : sécurité publique, services médicaux, sauvetage, transport de valeurs, protection rapprochée. Il connaît les centrales, les procédures, les niveaux de priorité. Ce qu'il cherche, à l'époque, c'est un modèle qui applique tout ça aux animaux.",
+          "Il le trouve à Los Angeles, où le service animalier municipal opère une unité tactique de sauvetage des petits animaux. L'équivalent n'existe nulle part au Québec. Il fonde le sien dans la foulée.",
+          "Les débuts sont modestes : faute d'appels, l'organisation cherche surtout des animaux perdus. Les demandes de sauvetage viendront ensuite, et ne s'arrêteront plus.",
         ],
       },
       {
         titre: "L'hiver où il a failli arrêter",
         texte: [
           "Un hiver, en pleine saison creuse, il décide d'abandonner. Le lendemain, un chien est aperçu à la dérive sur les glaces, près de Sorel-Tracy. Les citoyens se mobilisent, les médias suivent, et c'est son organisation qu'on appelle.",
-          "Le chien ne sera jamais retrouvé. Mais quelque chose est confirmé ce jour-là : le besoin existe, et quelqu'un doit y répondre. Il ne reparlera plus d'arrêter.",
+          "Le chien ne sera jamais retrouvé. Mais quelque chose est confirmé ce jour-là : le besoin existe, et quelqu'un doit y répondre. Il ne reparlera plus d'arrêter.",
         ],
       },
       {
         titre: "Ce qu'il vise",
         texte: [
           "Faire de Sauvetage Animal Rescue une ressource essentielle en protection animale à l'échelle du pays, et un modèle pour les organisations d'ailleurs. Former d'autres équipes, transmettre ce qui a été appris, et faire reconnaître un jour ce rôle dans la chaîne d'urgence, à l'égal des services traditionnels.",
-          "Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
+          "Son ambition personnelle, il l'énonce sans détour : bâtir le plus grand service d'urgence pour animaux au monde.",
         ],
       },
     ],
@@ -100,7 +100,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Communauté Métropolitaine de Montréal",
     titre: "Notre territoire",
     intro:
-      "Sauvetage Animal Rescue intervient sur l'ensemble du territoire de la Communauté Métropolitaine de Montréal : 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière.",
+      "Sauvetage Animal Rescue intervient sur l'ensemble du territoire de la Communauté Métropolitaine de Montréal : 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière.",
     image: "/images/territoire.jpg",
     blocs: [
       {
@@ -185,21 +185,21 @@ export const PAGES_FR: CataloguePages = {
           lignes: [
             "171 animaux secourus",
             "125 opérations dans les secteurs évacués",
-            "Municipalité : Sainte-Marthe-sur-le-Lac",
+            "Municipalité : Sainte-Marthe-sur-le-Lac",
           ],
         },
       },
       {
         titre: "Abitibi-Témiscamingue",
         texte: [
-          "Déploiement plus récent, en appui aux communautés touchées. Le contexte régional impose ses propres contraintes : distances considérables, ressources locales limitées, autonomie complète de l'équipe sur le terrain.",
+          "Déploiement plus récent, en appui aux communautés touchées. Le contexte régional impose ses propres contraintes : distances considérables, ressources locales limitées, autonomie complète de l'équipe sur le terrain.",
         ],
       },
       {
         titre: "Pourquoi nous répondons",
         texte: [
           "Un plan de sécurité civile prévoit l'évacuation des personnes. Presque aucun ne prévoit celle des animaux, et beaucoup de gens refusent de partir sans les leurs. Une équipe capable d'aller les chercher retire donc un obstacle à l'évacuation elle-même.",
-          "C'est ce que nous apportons lors d'un sinistre : une capacité que les services d'urgence n'ont pas à développer, et qu'ils peuvent appeler.",
+          "C'est ce que nous apportons lors d'un sinistre : une capacité que les services d'urgence n'ont pas à développer, et qu'ils peuvent appeler.",
         ],
       },
     ],
@@ -219,7 +219,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Le certificat de partenaire",
         texte: [
-          "Le certificat de partenariat mesure 11 x 17 pouces. Son design s'inspire des billets de banque et des bons du trésor : éléments de sécurité, couleurs riches, format registre. Le nom de votre organisation y figure en évidence, entouré d'un message de remerciement bilingue. Il est renouvelé chaque année et seulement vingt exemplaires sont émis.",
+          "Le certificat de partenariat mesure 11 x 17 pouces. Son design s'inspire des billets de banque et des bons du trésor : éléments de sécurité, couleurs riches, format registre. Le nom de votre organisation y figure en évidence, entouré d'un message de remerciement bilingue. Il est renouvelé chaque année et seulement vingt exemplaires sont émis.",
         ],
       },
       {
@@ -296,7 +296,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Un ton différent du primaire",
         texte: [
-          "Au secondaire, les élèves n'ont plus besoin qu'on leur explique qu'il faut aimer les animaux. Ils ont besoin de comprendre ce qui se passe réellement : pourquoi une portée de chatons finit dans une ruelle, ce que devient un animal abandonné en août, comment un geste banal comme relâcher un poisson rouge dans un ruisseau déséquilibre un milieu entier.",
+          "Au secondaire, les élèves n'ont plus besoin qu'on leur explique qu'il faut aimer les animaux. Ils ont besoin de comprendre ce qui se passe réellement : pourquoi une portée de chatons finit dans une ruelle, ce que devient un animal abandonné en août, comment un geste banal comme relâcher un poisson rouge dans un ruisseau déséquilibre un milieu entier.",
           "L'atelier s'appuie sur des interventions réelles, avec photos et vidéos, et laisse une large place aux questions. Les adolescents en posent beaucoup, et souvent des difficiles.",
         ],
       },
@@ -305,7 +305,7 @@ export const PAGES_FR: CataloguePages = {
         liste: [
           "Les lois québécoises sur les animaux et ce qu'elles impliquent vraiment",
           "La surpopulation animale et le rôle de la stérilisation",
-          "Le secours technique : cordage, capture, sécurité",
+          "Le secours technique : cordage, capture, sécurité",
           "Reconnaître une situation dangereuse et savoir ne pas intervenir",
           "Les métiers du milieu animalier et les parcours pour y arriver",
           "Le bénévolat dès 18 ans et les stages d'observation dès 14 ans",
@@ -325,7 +325,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Ce que nous offrons",
     titre: "Nos services",
     intro:
-      "Sauvetage Animal Rescue n'est pas un refuge. Nous sommes une équipe de secours technique : nous allons chercher l'animal là où il est coincé, nous le sécurisons, et nous le remettons entre de bonnes mains.",
+      "Sauvetage Animal Rescue n'est pas un refuge. Nous sommes une équipe de secours technique : nous allons chercher l'animal là où il est coincé, nous le sécurisons, et nous le remettons entre de bonnes mains.",
     image: "/images/services-urgence.png",
     blocs: [
       {
@@ -349,7 +349,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Assistance aux services d'urgence",
         texte: [
-          "Un animal sur une scène d'intervention change la donne : il peut blesser un intervenant, fuir vers la circulation ou bloquer l'accès à une victime. Nous intervenons en appui des services de police et d'incendie, et nous formons leur personnel.",
+          "Un animal sur une scène d'intervention change la donne : il peut blesser un intervenant, fuir vers la circulation ou bloquer l'accès à une victime. Nous intervenons en appui des services de police et d'incendie, et nous formons leur personnel.",
         ],
       },
     ],
@@ -369,7 +369,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Pour qui nous intervenons",
     titre: "Secteurs d'activité",
     intro:
-      "Un raton laveur dans un cimetière, des goélands sur un entrepôt, un chevreuil sur une piste d'aéroport : le problème n'est jamais tout à fait le même selon le milieu. Voici les secteurs où nous intervenons et ce que nous y faisons.",
+      "Un raton laveur dans un cimetière, des goélands sur un entrepôt, un chevreuil sur une piste d'aéroport : le problème n'est jamais tout à fait le même selon le milieu. Voici les secteurs où nous intervenons et ce que nous y faisons.",
     image: "/images/carte-services.jpg",
     blocs: [
       {
@@ -418,10 +418,10 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Ce que nous vérifions",
         liste: [
-          "Points d'entrée : soffites, ventilations, conduits, vides sanitaires",
+          "Points d'entrée : soffites, ventilations, conduits, vides sanitaires",
           "Sources de nourriture et d'eau accessibles",
-          "Abris potentiels : entretoits, remises, empilements, machinerie",
-          "Traces de présence : excréments, poils, sentiers, dommages",
+          "Abris potentiels : entretoits, remises, empilements, machinerie",
+          "Traces de présence : excréments, poils, sentiers, dommages",
           "Risques pour les occupants et pour les animaux eux-mêmes",
         ],
       },
@@ -458,7 +458,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Nos règles",
         texte: [
-          "Une cage-trappe n'est jamais laissée sans surveillance prolongée : un animal piégé au soleil ou au froid souffre, et un piège oublié devient une cruauté. Nous privilégions toujours la méthode la moins invasive qui fonctionne, et nous acceptons de repartir bredouilles plutôt que de forcer une capture qui mettrait l'animal en danger.",
+          "Une cage-trappe n'est jamais laissée sans surveillance prolongée : un animal piégé au soleil ou au froid souffre, et un piège oublié devient une cruauté. Nous privilégions toujours la méthode la moins invasive qui fonctionne, et nous acceptons de repartir bredouilles plutôt que de forcer une capture qui mettrait l'animal en danger.",
         ],
       },
     ],
@@ -517,7 +517,7 @@ export const PAGES_FR: CataloguePages = {
         titre: "Comment nous procédons",
         texte: [
           "Observation sur le terrain à heures fixes, relevés photographiques, identification des individus quand c'est possible, et cartographie des points de présence. Les données sont consignées et vous sont remises sous forme de rapport, avec les limites de la méthode clairement indiquées.",
-          "Un dénombrement honnête donne parfois un résultat qui dérange : une population moins nombreuse qu'on le croyait, ou un problème qui vient d'ailleurs. C'est précisément ce qui le rend utile pour justifier une décision devant un conseil municipal ou une direction.",
+          "Un dénombrement honnête donne parfois un résultat qui dérange : une population moins nombreuse qu'on le croyait, ou un problème qui vient d'ailleurs. C'est précisément ce qui le rend utile pour justifier une décision devant un conseil municipal ou une direction.",
         ],
       },
     ],
@@ -560,7 +560,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Le premier niveau d'intervention",
     titre: "Patrouille",
     intro:
-      "La majorité des appels ne demandent ni corde ni harnais. Un animal errant, blessé au sol, coincé derrière une clôture ou dans un garage : la patrouille s'en occupe, tous les jours, sur l'ensemble du territoire.",
+      "La majorité des appels ne demandent ni corde ni harnais. Un animal errant, blessé au sol, coincé derrière une clôture ou dans un garage : la patrouille s'en occupe, tous les jours, sur l'ensemble du territoire.",
     image: "/images/carte-services.jpg",
     blocs: [
       {
@@ -600,14 +600,14 @@ export const PAGES_FR: CataloguePages = {
           "Animal orphelin ou juvénile isolé",
           "Animal pris dans une clôture, un grillage, un filet",
           "Animal enfermé dans un bâtiment, un véhicule, un conteneur",
-          "Faune urbaine en détresse : raton laveur, mouffette, écureuil",
+          "Faune urbaine en détresse : raton laveur, mouffette, écureuil",
           "Oiseaux blessés ou pris dans une ligne à pêche",
         ],
       },
       {
         titre: "Une chaîne, pas un geste isolé",
         texte: [
-          "Un secours réussi ne s'arrête pas au moment où l'animal est entre nos mains. Il faut ensuite le transporter, le confier à un refuge ou à une clinique, et documenter l'intervention. C'est pour cette raison que l'organisation compte des messagers dont le seul rôle est le transport : pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs.",
+          "Un secours réussi ne s'arrête pas au moment où l'animal est entre nos mains. Il faut ensuite le transporter, le confier à un refuge ou à une clinique, et documenter l'intervention. C'est pour cette raison que l'organisation compte des messagers dont le seul rôle est le transport : pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs.",
         ],
       },
     ],
@@ -621,22 +621,22 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Là où personne d'autre ne va",
     titre: "Sauvetage Technique",
     intro:
-      "Le sauvetage technique est une discipline en soi. Il commence là où le secours ordinaire s'arrête : quand atteindre l'animal exige des cordes, un harnais, une formation en travail en hauteur et une discipline de sécurité stricte.",
+      "Le sauvetage technique est une discipline en soi. Il commence là où le secours ordinaire s'arrête : quand atteindre l'animal exige des cordes, un harnais, une formation en travail en hauteur et une discipline de sécurité stricte.",
     image: "/images/stages.jpg",
     blocs: [
       {
         titre: "Les milieux d'intervention",
         liste: [
-          "Travail en hauteur : arbres, toits, pylônes, structures, ponts",
-          "Espaces clos : égouts, puisards, cheminées, murs, conduits",
-          "Milieux instables : glace, berges, cours d'eau",
+          "Travail en hauteur : arbres, toits, pylônes, structures, ponts",
+          "Espaces clos : égouts, puisards, cheminées, murs, conduits",
+          "Milieux instables : glace, berges, cours d'eau",
           "Sites industriels et emprises ferroviaires",
         ],
       },
       {
         titre: "Ce que ça exige",
         texte: [
-          "Du matériel de cordage certifié, vérifié et consigné dans un registre des cordes de sauvetage. Des sauveteurs formés, qui ont progressé depuis la patrouille avant d'accéder à ce niveau. Et une règle non négociable : aucune intervention ne commence si la sécurité des intervenants n'est pas assurée, parce qu'un sauveteur blessé ne sauve plus personne.",
+          "Du matériel de cordage certifié, vérifié et consigné dans un registre des cordes de sauvetage. Des sauveteurs formés, qui ont progressé depuis la patrouille avant d'accéder à ce niveau. Et une règle non négociable : aucune intervention ne commence si la sécurité des intervenants n'est pas assurée, parce qu'un sauveteur blessé ne sauve plus personne.",
           "C'est le service qui distingue l'organisation. Au Québec, très peu d'équipes sont capables de descendre en rappel pour aller chercher un chat à quinze mètres ou une bernache prise dans un pilier de pont.",
         ],
       },
@@ -657,9 +657,9 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Les interventions que nous faisons",
         liste: [
-          "Travail en hauteur : arbres, toits, pylônes, structures",
-          "Espaces clos : égouts, puisards, cheminées, murs, conduits",
-          "Milieux instables : glace, berges, cours d'eau",
+          "Travail en hauteur : arbres, toits, pylônes, structures",
+          "Espaces clos : égouts, puisards, cheminées, murs, conduits",
+          "Milieux instables : glace, berges, cours d'eau",
           "Bords d'autoroute et voies rapides",
           "Capture d'animaux réactifs à l'aide d'équipement spécialisé",
           "Transport vers les refuges et cliniques partenaires",
@@ -695,7 +695,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Le problème que ça règle",
         texte: [
-          "Un chat perché à quinze mètres, un raton laveur dans un conduit municipal, un cerf blessé dans un parc, une famille de canards dans un puisard : ce sont des appels que reçoivent les services animaliers, les travaux publics et parfois le 911. Ils demandent du matériel de cordage certifié, une formation en espace clos et une connaissance du comportement animal.",
+          "Un chat perché à quinze mètres, un raton laveur dans un conduit municipal, un cerf blessé dans un parc, une famille de canards dans un puisard : ce sont des appels que reçoivent les services animaliers, les travaux publics et parfois le 911. Ils demandent du matériel de cordage certifié, une formation en espace clos et une connaissance du comportement animal.",
           "Plutôt que d'équiper et de former chaque municipalité pour des situations qui surviennent quelques fois par année, nous offrons cette capacité en soutien.",
         ],
       },
@@ -726,7 +726,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Soutien mensuel",
     titre: "Devenir Patreon",
     intro:
-      "Patreon permet un soutien financier régulier plutôt qu'un don unique. Pour une organisation qui ne reçoit aucune subvention, cette stabilité change tout : elle permet de planifier l'équipement, l'entretien des véhicules et le remplacement du matériel de sauvetage.",
+      "Patreon permet un soutien financier régulier plutôt qu'un don unique. Pour une organisation qui ne reçoit aucune subvention, cette stabilité change tout : elle permet de planifier l'équipement, l'entretien des véhicules et le remplacement du matériel de sauvetage.",
     image: "/images/patreon.png",
     blocs: [
       {
@@ -795,14 +795,14 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Pour le public et les intervenants",
     titre: "Formations",
     intro:
-      "Sauvetage Animal Rescue offre des formations aux propriétaires d'animaux ainsi qu'à toute personne appelée à interagir avec des animaux dans le cadre de son travail : milieu animalier, services de police et d'incendie, entreprises.",
+      "Sauvetage Animal Rescue offre des formations aux propriétaires d'animaux ainsi qu'à toute personne appelée à interagir avec des animaux dans le cadre de son travail : milieu animalier, services de police et d'incendie, entreprises.",
     image: "/images/formations.jpg",
     blocs: [
       {
         titre: "Trois parcours",
         liste: [
-          "Initiation Secours Animal : 25 modules, 8 heures, une journée",
-          "Premiers Secours Animal : 50 modules, 16 heures",
+          "Initiation Secours Animal : 25 modules, 8 heures, une journée",
+          "Premiers Secours Animal : 50 modules, 16 heures",
           "Formations sur mesure pour les services d'urgence",
         ],
       },
@@ -830,7 +830,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "25 modules • 8 heures",
     titre: "Initiation Secours Animal",
     intro:
-      "Une journée pour être mieux outillé face à une situation d'urgence impliquant votre animal : reconnaître les signes de détresse, poser les gestes appropriés et assurer un transport rapide vers un établissement vétérinaire.",
+      "Une journée pour être mieux outillé face à une situation d'urgence impliquant votre animal : reconnaître les signes de détresse, poser les gestes appropriés et assurer un transport rapide vers un établissement vétérinaire.",
     image: "/images/formations.jpg",
     blocs: [
       {
@@ -918,7 +918,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Pourquoi",
         texte: [
-          "Un animal présent sur une scène d'intervention change la donne : il peut blesser un intervenant, s'enfuir vers la circulation, empêcher l'accès à une victime ou compliquer une évacuation. Nos formations visent à réduire ces risques pour les citoyens, pour les intervenants et pour les animaux eux-mêmes.",
+          "Un animal présent sur une scène d'intervention change la donne : il peut blesser un intervenant, s'enfuir vers la circulation, empêcher l'accès à une victime ou compliquer une évacuation. Nos formations visent à réduire ces risques pour les citoyens, pour les intervenants et pour les animaux eux-mêmes.",
         ],
       },
       {
@@ -946,10 +946,10 @@ export const PAGES_FR: CataloguePages = {
         encadre: {
           titre: "Téléphone",
           lignes: [
-            "Ligne de signalement : 514-773-3911",
-            "Sans frais : 833-773-3911",
-            "Officier de garde : 514-270-3636",
-            "Télécopieur : 438-238-4481",
+            "Ligne de signalement : 514-773-3911",
+            "Sans frais : 833-773-3911",
+            "Officier de garde : 514-270-3636",
+            "Télécopieur : 438-238-4481",
           ],
         },
       },
@@ -957,8 +957,8 @@ export const PAGES_FR: CataloguePages = {
         encadre: {
           titre: "Courriel et adresse",
           lignes: [
-            "Renseignements généraux : info@sar.quebec",
-            "Direction générale : e.dussault@sar.quebec",
+            "Renseignements généraux : info@sar.quebec",
+            "Direction générale : e.dussault@sar.quebec",
             "2180, rue Sainte-Catherine Ouest",
             "Montréal (Québec) H3H 1M7, Canada",
           ],
@@ -979,9 +979,9 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Ce que nous recueillons",
         liste: [
-          "Signalements : nom, téléphone, courriel, adresse où se trouve l'animal et description de la situation.",
-          "Adhésions : nom, courriel, téléphone, ville, code postal et renseignements de facturation traités par Stripe.",
-          "Candidatures : coordonnées, disponibilités, expérience et motivation.",
+          "Signalements : nom, téléphone, courriel, adresse où se trouve l'animal et description de la situation.",
+          "Adhésions : nom, courriel, téléphone, ville, code postal et renseignements de facturation traités par Stripe.",
+          "Candidatures : coordonnées, disponibilités, expérience et motivation.",
           "Statistiques de navigation agrégées, sans identification personnelle.",
         ],
       },
@@ -1020,7 +1020,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Signalements",
         texte: [
-          "Le formulaire de signalement en ligne ne remplace pas un appel téléphonique. Pour une urgence, appelez la ligne de signalement. Nous ne garantissons aucun délai d'intervention : les missions sont priorisées selon la gravité et les ressources disponibles.",
+          "Le formulaire de signalement en ligne ne remplace pas un appel téléphonique. Pour une urgence, appelez la ligne de signalement. Nous ne garantissons aucun délai d'intervention : les missions sont priorisées selon la gravité et les ressources disponibles.",
         ],
       },
       {

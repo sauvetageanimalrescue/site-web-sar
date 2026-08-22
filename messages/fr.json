@@ -1,7 +1,7 @@
 {
   "meta": {
     "titre": "Sauvetage Animal Rescue • Secours technique d'animaux en détresse",
-    "description": "Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté Métropolitaine de Montréal : arbres, toits, égouts, glaces. Secours et sauvetage technique. Ligne de signalement ouverte en tout temps."
+    "description": "Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté Métropolitaine de Montréal : arbres, toits, égouts, glaces. Secours et sauvetage technique. Ligne de signalement ouverte en tout temps."
   },
   "urgence": {
     "etiquette": "Animal en détresse",
@@ -122,7 +122,7 @@
     },
     "territoireTitre": "82 municipalités,\nune seule équipe",
     "territoireSurtitre": "Notre territoire",
-    "territoireTexte": "Sauvetage Animal Rescue couvre l'ensemble de la Communauté Métropolitaine de Montréal : Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Quatre mille kilomètres carrés où se croisent quartiers denses, banlieues, zones agricoles et milieux naturels protégés.",
+    "territoireTexte": "Sauvetage Animal Rescue couvre l'ensemble de la Communauté Métropolitaine de Montréal : Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Quatre mille kilomètres carrés où se croisent quartiers denses, banlieues, zones agricoles et milieux naturels protégés.",
     "territoirePoints": [
       "4,2 millions de résidents, près de la moitié de la population québécoise",
       "Des interventions en hauteur, sur glace, en égout et en espace clos",
@@ -131,10 +131,10 @@
     "territoireAction": "Voir le territoire desservi",
     "formationsTitre": "Savoir quoi faire\nen cas d'urgence",
     "formationsSurtitre": "Formations",
-    "formationsTexte": "Nos formations s'adressent aux propriétaires d'animaux comme aux intervenants qui rencontrent des animaux dans leur travail : services de police, services d'incendie, entreprises et milieu animalier. Reconnaître une urgence, approcher sans se faire mordre, réagir correctement en attendant le vétérinaire.",
+    "formationsTexte": "Nos formations s'adressent aux propriétaires d'animaux comme aux intervenants qui rencontrent des animaux dans leur travail : services de police, services d'incendie, entreprises et milieu animalier. Reconnaître une urgence, approcher sans se faire mordre, réagir correctement en attendant le vétérinaire.",
     "formationsPoints": [
-      "Initiation Secours Animal : 25 modules, 8 heures",
-      "Premiers Secours Animal : 50 modules, 16 heures",
+      "Initiation Secours Animal : 25 modules, 8 heures",
+      "Premiers Secours Animal : 50 modules, 16 heures",
       "Formations sur mesure pour les services d'urgence"
     ],
     "formationsAction": "Voir les formations",
@@ -218,14 +218,14 @@
   "equipe": {
     "titre": "L'équipe",
     "surtitre": "Cinq fonctions",
-    "intro": "Une intervention réussie, c'est une chaîne : quelqu'un prend l'appel, quelqu'un se rend voir, quelqu'un intervient, quelqu'un transporte. Voici les cinq fonctions qui composent cette chaîne et ce que chacune demande.",
+    "intro": "Une intervention réussie, c'est une chaîne : quelqu'un prend l'appel, quelqu'un se rend voir, quelqu'un intervient, quelqu'un transporte. Voici les cinq fonctions qui composent cette chaîne et ce que chacune demande.",
     "chaineTitre": "La chaîne d'intervention",
     "chaineTexte": "Du premier appel jusqu'à la porte du refuge, chaque maillon compte autant que le suivant."
   },
   "recrutement": {
     "titre": "Devenir bénévole",
     "surtitre": "Recrutement ouvert",
-    "intro": "Sauvetage Animal Rescue repose entièrement sur des bénévoles. Répartition à distance, transport, patrouille, sauvetage technique : il y a une place pour ceux qui veulent donner du temps, avec ou sans expérience.",
+    "intro": "Sauvetage Animal Rescue repose entièrement sur des bénévoles. Répartition à distance, transport, patrouille, sauvetage technique : il y a une place pour ceux qui veulent donner du temps, avec ou sans expérience.",
     "postesTitre": "Quelle fonction vous intéresse ?",
     "formulaireTitre": "Formulaire de candidature",
     "formulaireTexte": "Une seule étape. Nous revenons vers vous par courriel ou par téléphone pour la suite.",
@@ -269,7 +269,7 @@
     },
     "succesTitre": "Candidature reçue",
     "succesTexte": "Merci. Votre candidature est entre nos mains et nous revenons vers vous rapidement. Si vous avez des questions entre-temps, écrivez-nous à {courriel}.",
-    "erreurChamps": "Remplissez les champs obligatoires : poste, prénom, nom, courriel, téléphone et ville.",
+    "erreurChamps": "Remplissez les champs obligatoires : poste, prénom, nom, courriel, téléphone et ville.",
     "erreurEnvoi": "L'envoi a échoué. Réessayez ou écrivez-nous à {courriel}."
   },
   "dons": {
@@ -315,15 +315,15 @@
   "stages": {
     "titre": "Stages d'observation",
     "surtitre": "220 $ • une ou deux personnes",
-    "intro": "Accompagne notre équipe pendant huit heures et découvre concrètement notre travail : les appels qui entrent, les décisions qui se prennent, les animaux qui repartent en sécurité.",
+    "intro": "Accompagne notre équipe pendant huit heures et découvre concrètement notre travail : les appels qui entrent, les décisions qui se prennent, les animaux qui repartent en sécurité.",
     "infosTitre": "Comment ça se passe",
     "infos": [
       "Le stage a lieu la fin de semaine, le samedi ou le dimanche, de 10 h à 18 h.",
       "Le point de rencontre est au 5400, rue Jean-Talon Ouest, à Montréal.",
       "Vous pouvez laisser votre véhicule sur place. En transport en commun, la station Namur est à cinq minutes à pied.",
-      "Le tarif est le même pour une ou deux personnes : venez avec un ami ou un membre de la famille.",
+      "Le tarif est le même pour une ou deux personnes : venez avec un ami ou un membre de la famille.",
       "Le stage se déroule beau temps mauvais temps. Portez des vêtements adaptés et des souliers fermés.",
-      "Âge minimum : 14 ans. Une décharge de responsabilité est signée sur place.",
+      "Âge minimum : 14 ans. Une décharge de responsabilité est signée sur place.",
       "Aucun remboursement. Vous pouvez céder votre place à une autre personne."
     ],
     "datesTitre": "Dates disponibles",
@@ -349,7 +349,7 @@
     "erreurComplet": "Cette date vient d'afficher complet. Choisissez-en une autre.",
     "erreurPaiement": "Impossible d'ouvrir le paiement. Réessayez dans un moment.",
     "merciTitre": "Place réservée",
-    "merciTexte": "Votre confirmation s'en vient par courriel, avec la date, l'heure et le point de rencontre. Notez-les : c'est votre responsabilité de vous présenter au bon moment."
+    "merciTexte": "Votre confirmation s'en vient par courriel, avec la date, l'heure et le point de rencontre. Notez-les : c'est votre responsabilité de vous présenter au bon moment."
   },
   "fiches": {
     "titre": "Fiches informatives",
@@ -381,7 +381,7 @@
     "surtitre": "Registre opérationnel",
     "intro": "Ces chiffres ne sont pas saisis à la main. Ils sont calculés directement à partir du registre des missions, à partir des interventions fermées avec un dénouement favorable pour l'animal.",
     "methodeTitre": "Comment nous comptons",
-    "methodeTexte": "Une mission est comptée dès qu'une équipe se déplace pour porter secours à un animal, quelle que soit l'issue. Un sauvetage, une capture ou un transport vers un refuge comptent chacun pour une mission : dans chaque cas, du temps et des ressources ont été engagés pour cet animal. Le nombre d'animaux additionne les adultes et les juvéniles consignés à chaque mission.",
+    "methodeTexte": "Une mission est comptée dès qu'une équipe se déplace pour porter secours à un animal, quelle que soit l'issue. Un sauvetage, une capture ou un transport vers un refuge comptent chacun pour une mission : dans chaque cas, du temps et des ressources ont été engagés pour cet animal. Le nombre d'animaux additionne les adultes et les juvéniles consignés à chaque mission.",
     "vide": "Les statistiques ne sont pas disponibles pour le moment.",
     "note": "Les données du premier janvier au deux août proviennent du registre des missions. Celles du trois au vingt et un août sont reconstituées à partir du fil de répartition. Les compteurs du haut de la page, eux, sont en direct.",
     "anneeTitre": "L'année 2026 en chiffres",
@@ -412,16 +412,16 @@
     "titre": "Signaler un animal en détresse",
     "surtitre": "Ligne ouverte en tout temps",
     "intro": "Un animal coincé, blessé, orphelin ou en danger sur le territoire de la Communauté Métropolitaine de Montréal ? Voici comment nous joindre et ce qu'il faut nous dire.",
-    "urgenceTitre": "C'est urgent : appelez",
-    "urgenceTexte": "L'animal est en danger immédiat, blessé, dans l'eau ou coincé depuis plusieurs heures. Le téléphone reste le moyen le plus rapide : un répartiteur prend l'appel et mobilise une équipe.",
+    "urgenceTitre": "C'est urgent : appelez",
+    "urgenceTexte": "L'animal est en danger immédiat, blessé, dans l'eau ou coincé depuis plusieurs heures. Le téléphone reste le moyen le plus rapide : un répartiteur prend l'appel et mobilise une équipe.",
     "urgenceLigne": "Ligne de signalement",
     "urgenceSansFrais": "Sans frais",
     "formulaireTitre": "Ce n'est pas une urgence immédiate",
-    "formulaireTexte": "Remplissez le formulaire : votre signalement arrive directement dans la file de notre équipe de répartition, avec un numéro de suivi.",
+    "formulaireTexte": "Remplissez le formulaire : votre signalement arrive directement dans la file de notre équipe de répartition, avec un numéro de suivi.",
     "avantTitre": "Avant de nous appeler",
     "avantListe": [
       "Notez l'adresse exacte ou le point de repère le plus proche.",
-      "Restez à distance : un animal effrayé mord, griffe et fuit vers un danger.",
+      "Restez à distance : un animal effrayé mord, griffe et fuit vers un danger.",
       "Ne tentez pas de descendre un chat d'un arbre vous-même.",
       "Ne donnez ni lait ni nourriture à un animal blessé ou déshydraté.",
       "Prenez une photo de loin si c'est sécuritaire de le faire.",
@@ -490,7 +490,7 @@
     "succesTitre": "Signalement reçu",
     "succesTexte": "Votre signalement porte le numéro {numero}. Un répartiteur le traite dès que possible. Si la situation se détériore, appelez le {telephone}.",
     "erreur": "L'envoi a échoué. Appelez-nous au {telephone}, la ligne est ouverte en tout temps.",
-    "erreurChamps": "Remplissez les champs obligatoires : nom, téléphone, adresse, ville et description."
+    "erreurChamps": "Remplissez les champs obligatoires : nom, téléphone, adresse, ville et description."
   },
   "commun": {
     "enSavoirPlus": "En savoir plus",
@@ -500,7 +500,7 @@
   "distinctions": {
     "surtitre": "Reconnaissance",
     "titre": "Distinctions",
-    "intro": "Nos intervenants sont bénévoles. Ils ne reçoivent ni salaire ni prime : ce qui souligne leur engagement, ce sont ces distinctions. Chacune répond à un critère précis, et se porte sur l'uniforme.",
+    "intro": "Nos intervenants sont bénévoles. Ils ne reçoivent ni salaire ni prime : ce qui souligne leur engagement, ce sont ces distinctions. Chacune répond à un critère précis, et se porte sur l'uniforme.",
     "groupes": {
       "actes": {
         "titre": "Actes",

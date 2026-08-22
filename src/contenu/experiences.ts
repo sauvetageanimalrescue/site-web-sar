@@ -1,7 +1,7 @@
 import type { Locale } from "@/i18n/routing";
 
 // Les listes du formulaire de recrutement, reprises telles quelles du
-// formulaire utilisé par l'organisation. L'ordre est celui d'origine : il a
+// formulaire utilisé par l'organisation. L'ordre est celui d'origine : il a
 // été pensé pour que la personne trouve sa situation rapidement.
 
 type Choix = { cle: string; fr: string; en: string; es: string };

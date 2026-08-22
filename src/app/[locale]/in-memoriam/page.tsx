@@ -24,23 +24,30 @@ export default async function PageMemoriam({
       {HOMMAGES.map((h) => (
         <Section key={h.cle} largeur="carte">
           {h.image && (
-            <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
+            <figure>
+              <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
               <Image
-                src={h.image}
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 42rem"
-                className="object-cover object-top grayscale"
-              />
-            </div>
+                  src={h.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 42rem"
+                  className="object-cover object-top grayscale"
+                />
+              </div>
+              {h.annees && (
+                <figcaption className="mt-3 text-sm text-muted">
+                  {h.annees}
+                </figcaption>
+              )}
+            </figure>
           )}
 
           <h2 className="mt-6 font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-marine">
             {h.nom}
           </h2>
-          {(h.fonction || h.annees) && (
+          {h.fonction && (
             <p className="mt-1 text-sm uppercase tracking-wider text-ciel">
-              {[h.fonction, h.annees].filter(Boolean).join(" · ")}
+              {h.fonction}
             </p>
           )}
 

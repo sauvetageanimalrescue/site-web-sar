@@ -41,7 +41,7 @@ export function EnTetePage({
   image?: string;
 }) {
   return (
-    <section className="relative isolate flex min-h-[23rem] items-center overflow-hidden bg-marine sm:min-h-[27rem]">
+    <section className="relative isolate flex min-h-[23rem] items-start overflow-hidden bg-marine sm:min-h-[27rem]">
       {image && (
         <>
           {/* La photo se voit vraiment : le dégradé la couvre à gauche, là où

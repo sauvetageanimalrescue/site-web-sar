@@ -173,7 +173,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/australie-2020.jpg",
           alt: "Deux intervenantes de dos dans une forêt calcinée",
-          legende: "2020 - Gabriel et Lori en Australie",
+          legende: "2020 - Gabrielle et Lori en Australie",
         },
       },
       {

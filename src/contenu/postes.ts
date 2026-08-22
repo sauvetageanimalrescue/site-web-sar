@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/routing";
 
-// Descriptions des cinq postes bénévoles. Contenu éditorial long : il vit ici
+// Descriptions des cinq postes bénévoles. Contenu éditorial long: il vit ici
 // plutôt que dans messages/*.json, qui reste réservé à l'interface.
 
 export type Poste = {
@@ -32,7 +32,7 @@ const FR: Textes = {
     titre: "Répartiteur·trice",
     resume: "La première voix qu'entend un citoyen. Entièrement à distance.",
     description:
-      "Chaque jour, des citoyens contactent Sauvetage Animal Rescue pour signaler un animal en détresse. Avant qu'une équipe intervienne sur le terrain, quelqu'un doit recueillir l'information, comprendre la situation et la transmettre rapidement aux bonnes personnes. C'est le rôle de l'Équipe de gestion des signalements. Ce poste se fait entièrement à distance, ce qui permet de contribuer aux sauvetages sans être sur le terrain. Aucune expérience préalable n'est requise : une formation est offerte pour maîtriser les outils et les procédures internes.",
+      "Chaque jour, des citoyens contactent Sauvetage Animal Rescue pour signaler un animal en détresse. Avant qu'une équipe intervienne sur le terrain, quelqu'un doit recueillir l'information, comprendre la situation et la transmettre rapidement aux bonnes personnes. C'est le rôle de l'Équipe de gestion des signalements. Ce poste se fait entièrement à distance, ce qui permet de contribuer aux sauvetages sans être sur le terrain. Aucune expérience préalable n'est requise: une formation est offerte pour maîtriser les outils et les procédures internes.",
     taches: [
       "Recueillir les signalements",
       "Écouter la messagerie vocale",
@@ -65,7 +65,7 @@ const FR: Textes = {
     titre: "Messager·ère",
     resume: "Le transport des animaux vers les refuges partenaires.",
     description:
-      "Le transport des animaux vers les refuges partenaires libère les équipes de patrouille et de sauvetage, qui peuvent répondre plus vite à un autre appel. Comme plusieurs refuges sont en périphérie de Montréal, cette contribution logistique améliore directement notre efficacité sur le terrain. Chaque mission de transport est une étape clé de la chaîne de sauvetage : pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs. Ce rôle convient à celles et ceux qui veulent s'impliquer de façon flexible et ponctuelle.",
+      "Le transport des animaux vers les refuges partenaires libère les équipes de patrouille et de sauvetage, qui peuvent répondre plus vite à un autre appel. Comme plusieurs refuges sont en périphérie de Montréal, cette contribution logistique améliore directement notre efficacité sur le terrain. Chaque mission de transport est une étape clé de la chaîne de sauvetage: pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs. Ce rôle convient à celles et ceux qui veulent s'impliquer de façon flexible et ponctuelle.",
     taches: [
       "Transporter des animaux vers les refuges partenaires",
       "Rejoindre une équipe sur le terrain pour assurer le relais",
@@ -87,7 +87,7 @@ const FR: Textes = {
     titre: "Éclaireur ou éclaireuse",
     resume: "Les yeux de l'organisation, avant l'intervention.",
     description:
-      "L'éclaireur est le premier maillon du terrain. Il se rend sur les lieux d'un signalement pour valider la situation avant qu'une équipe complète soit mobilisée : l'animal est-il toujours là, dans quel état, à quelle hauteur, quels sont les accès et les dangers ? Cette évaluation évite de déplacer inutilement une équipe de sauvetage technique et permet d'arriver avec le bon équipement du premier coup. C'est un poste d'entrée idéal pour découvrir le terrain sans avoir à manipuler un animal.",
+      "L'éclaireur est le premier maillon du terrain. Il se rend sur les lieux d'un signalement pour valider la situation avant qu'une équipe complète soit mobilisée: l'animal est-il toujours là, dans quel état, à quelle hauteur, quels sont les accès et les dangers? Cette évaluation évite de déplacer inutilement une équipe de sauvetage technique et permet d'arriver avec le bon équipement du premier coup. C'est un poste d'entrée idéal pour découvrir le terrain sans avoir à manipuler un animal.",
     taches: [
       "Se rendre sur les lieux d'un signalement",
       "Confirmer la présence et l'état de l'animal",
@@ -135,9 +135,9 @@ const FR: Textes = {
   },
   sauveteur: {
     titre: "Sauveteur·euse",
-    resume: "Le secours technique : hauteur, glace, espace clos.",
+    resume: "Le secours technique: hauteur, glace, espace clos.",
     description:
-      "Le sauveteur intervient là où une patrouille ne peut pas aller : un chat à quinze mètres dans un arbre, un raton laveur au fond d'une cheminée, un chien sur une glace instable, une bernache prise dans un pilier de pont. Ces interventions demandent des techniques de travail en hauteur, du matériel de cordage certifié et une discipline de sécurité stricte. C'est le poste le plus exigeant de l'organisation, accessible après un parcours de formation interne et une progression depuis la patrouille.",
+      "Le sauveteur intervient là où une patrouille ne peut pas aller: un chat à quinze mètres dans un arbre, un raton laveur au fond d'une cheminée, un chien sur une glace instable, une bernache prise dans un pilier de pont. Ces interventions demandent des techniques de travail en hauteur, du matériel de cordage certifié et une discipline de sécurité stricte. C'est le poste le plus exigeant de l'organisation, accessible après un parcours de formation interne et une progression depuis la patrouille.",
     taches: [
       "Intervenir en hauteur, sur glace ou en espace clos",
       "Monter et vérifier les systèmes de cordage",

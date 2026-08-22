@@ -1,5 +1,5 @@
 // Les 82 municipalités de la Communauté métropolitaine de Montréal.
-// Des noms propres : identiques dans les trois langues du site.
+// Des noms propres: identiques dans les trois langues du site.
 export const MUNICIPALITES = [
   "Baie-d'Urfé",
   "Beaconsfield",

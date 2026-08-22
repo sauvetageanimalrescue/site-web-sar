@@ -1,7 +1,7 @@
 import type { Fiche } from "./types";
 
 // Ordre d'affichage sur la page d'index. Les situations les plus fréquentes
-// en premier : ce sont celles qui remplissent la ligne de signalement.
+// en premier: ce sont celles qui remplissent la ligne de signalement.
 export const FICHES: Fiche[] = [
   {
     slug: "chat-dans-un-arbre",

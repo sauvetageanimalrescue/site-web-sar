@@ -1,8 +1,8 @@
 // Statistiques réelles de l'année 2026, du premier janvier au 21 août.
 //
-// Source : le registre des missions (janvier au 2 août) complété par la
+// Source: le registre des missions (janvier au 2 août) complété par la
 // reconstruction du fil de répartition WhatsApp (3 au 21 août). Aucune valeur
-// n'est inventée : chaque nombre vient des 424 missions du fichier consolidé.
+// n'est inventée: chaque nombre vient des 424 missions du fichier consolidé.
 //
 // Ces chiffres sont figés. Ils seront remplacés par les données de l'intranet
 // lorsque celui-ci entrera en service, le premier octobre 2026.
@@ -14,7 +14,7 @@ export const TOTAL_MISSIONS = 424;
 // Somme des adultes et juvéniles, un animal minimum quand le dénombrement
 // n'a pas été saisi. C'est la méthode des récapitulatifs mensuels de la
 // direction générale. Un transport vers un refuge compte autant qu'une
-// capture en hauteur : dans les deux cas l'équipe s'est déplacée.
+// capture en hauteur: dans les deux cas l'équipe s'est déplacée.
 export const ANIMAUX = 577;
 export const MUNICIPALITES_DESSERVIES = 58;
 export const ESPECES_DIFFERENTES = 33;

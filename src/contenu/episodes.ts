@@ -1,6 +1,6 @@
 // Les douze épisodes de la première saison de Sauvetage animal, dans l'ordre
 // de diffusion. L'ordre de la liste de lecture YouTube ne correspond pas à
-// la numérotation des épisodes : c'est le numéro qui fait foi ici.
+// la numérotation des épisodes: c'est le numéro qui fait foi ici.
 export type Episode = { numero: number; video: string };
 
 export const PLAYLISTE = "PLE_KP_0M-94hOB0jQZCYTHP3b1IOoC1D6";

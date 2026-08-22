@@ -1,4 +1,4 @@
-// Pages éditoriales : contenu long, sans logique. Une seule route attrape-tout
+// Pages éditoriales: contenu long, sans logique. Une seule route attrape-tout
 // les rend toutes, ce qui évite un composant de page quasi vide par contenu.
 
 export type BlocPage = {
@@ -7,7 +7,7 @@ export type BlocPage = {
   liste?: string[];
   encadre?: { titre: string; lignes: string[] };
   // Une image centrée à la largeur d'une carte, coins arrondis. Elle se
-  // suffit à elle-même : ni légende, ni texte à côté.
+  // suffit à elle-même: ni légende, ni texte à côté.
   image?: { fichier: string; alt?: string };
 };
 

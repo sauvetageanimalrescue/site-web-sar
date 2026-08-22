@@ -42,7 +42,7 @@ Toute nouvelle page se compose de ces blocs. Ne pas en inventer d'autres sans ra
 ## Le texte
 
 - Les paragraphes portent la classe **`paragraphe`** : justifiés, **sans césure**. Un mot coupé en fin de ligne dérange plus que l'espacement un peu large qu'il évite. Ne pas justifier un texte court et centré.
-- **Deux points** : toujours précédés d'une **espace insécable** (U+00A0), jamais d'une espace ordinaire. Le signe ne peut alors pas se retrouver seul au début d'une ligne. Même règle pour les guillemets français, le point-virgule et le point d'exclamation.
+- **Ponctuation** : jamais d'espace entre la dernière lettre d'un mot et la ponctuation qui suit, y compris les deux points, le point-virgule, le point d'interrogation et le point d'exclamation. Seuls les guillemets français gardent leurs espaces intérieures.
 - **Éviter les millésimes dans la prose** : « à l'époque », « l'année suivante », « dans la foulée » plutôt qu'une date, sauf quand l'année elle-même est l'information.
 - **Un paragraphe qui se suffit vaut mieux que deux.** Ne pas écrire par paires par réflexe : un second paragraphe de vingt mots affaiblit le premier. On en met deux ou trois quand le propos l'exige, pas autrement.
 - Les listes courtes restent en une seule colonne, à puces, **sans boîte**. Au-delà de vingt entrées, elles se replient en colonnes sur toute la largeur.

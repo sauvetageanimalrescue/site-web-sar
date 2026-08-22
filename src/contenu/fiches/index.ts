@@ -13,11 +13,11 @@ const CATALOGUES: Record<Locale, CatalogueFiches> = {
 export { FICHES, trouverFiche } from "./registre";
 export type { Fiche, TexteFiche, CategorieFiche, Urgence } from "./types";
 
-// Repli sur le français quand une fiche n'est pas encore traduite : mieux vaut
+// Repli sur le français quand une fiche n'est pas encore traduite: mieux vaut
 // une page lisible dans une autre langue qu'une erreur 404, et le repli reste
 // visible dans le code plutôt que caché derrière une traduction automatique.
 export function texteFiche(slug: string, locale: Locale): TexteFiche | null {
-  return CATALOGUES[locale][slug] ?? FICHES_FR[slug] ?? null;
+  return CATALOGUES[locale][slug]?? FICHES_FR[slug]?? null;
 }
 
 export function ficheEstTraduite(slug: string, locale: Locale): boolean {

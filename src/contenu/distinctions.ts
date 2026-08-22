@@ -1,14 +1,14 @@
 import type { Locale } from "@/i18n/routing";
 
 // Les reconnaissances de l'organisation. Chaque distinction est représentée
-// par une barrette de ruban, comme dans les services d'urgence : les bandes
+// par une barrette de ruban, comme dans les services d'urgence: les bandes
 // de couleur sont dessinées en CSS, il n'y a donc aucune image à produire et
 // le rendu reste net à toutes les tailles.
 export type Distinction = {
   cle: string;
   groupe: "actes" | "service" | "deploiements";
   // Bandes de gauche à droite. Une bande étroite se répète peu, une large
-  // occupe plus de place : les largeurs sont proportionnelles au nombre.
+  // occupe plus de place: les largeurs sont proportionnelles au nombre.
   bandes: { couleur: string; poids?: number }[];
   // Un dispositif posé au centre de la barrette, comme une étoile de citation.
   dispositif?: "etoile" | "feuille";
@@ -253,6 +253,6 @@ const TEXTES: Record<Locale, Record<string, Fiche>> = {
 };
 
 export function ficheDistinction(cle: string, langue: Locale): Fiche {
-  // Repli sur le français : une distinction non traduite reste visible.
-  return TEXTES[langue]?.[cle] ?? TEXTES.fr[cle];
+  // Repli sur le français: une distinction non traduite reste visible.
+  return TEXTES[langue]?.[cle]?? TEXTES.fr[cle];
 }

@@ -1,6 +1,6 @@
-// Fiches informatives : le coeur du référencement du site. Chaque fiche
+// Fiches informatives: le coeur du référencement du site. Chaque fiche
 // répond à une situation que les gens tapent réellement dans un moteur de
-// recherche, avec une structure constante : quoi faire, quoi éviter, quand
+// recherche, avec une structure constante: quoi faire, quoi éviter, quand
 // nous appeler.
 
 export type CategorieFiche =
@@ -11,7 +11,7 @@ export type CategorieFiche =
 
 export type Urgence = "urgente" | "moderee" | "faible";
 
-// Partie non traduisible d'une fiche : identifiant, classement, illustration.
+// Partie non traduisible d'une fiche: identifiant, classement, illustration.
 export type Fiche = {
   slug: string;
   categorie: CategorieFiche;

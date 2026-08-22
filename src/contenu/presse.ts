@@ -30,10 +30,10 @@ export const PRESSE: Coupure[] = [
   },
   {
     media: "Goldwater, Dubé",
-    titre: "Éric Dussault, treize ans à aider les animaux en détresse",
-    url: "https://goldwaterdroit.com/en/blog/eric-dussault-13-years-of-helping-animals-in-distress/",
+    titre: "Éric Dussault, treize ans au secours des animaux en détresse",
+    url: "https://goldwaterdroit.com/fr/nouvelles/2022/04/eric-dussault-13-ans-au-secours-des-animaux-en-detresse",
     support: "article",
-    date: "2022",
+    date: "2022-04",
   },
   {
     media: "FM 103,3",
@@ -66,6 +66,53 @@ export const PRESSE: Coupure[] = [
     titre: "Laramée Maintenant, entrevue avec Éric Dussault",
     url: "https://www.tvrs.ca/emissions/laramee-maintenant/a20/episode-125/segment-3",
     support: "television",
+  },
+  {
+    media: "Narcity",
+    titre: "Vidéos exclusives en immersion du sauvetage du renard au Vieux-Port de Montréal",
+    url: "https://www.narcity.com/fr/montreal/videos-exclusives-sauvetage-renard-vieux-port-montreal",
+    support: "article",
+    date: "2022-03",
+  },
+  {
+    media: "La Presse",
+    titre: "Ours en cavale à Dorval: l'intervention des agents de la faune remise en cause",
+    url: "https://www.lapresse.ca/actualites/grand-montreal/2021-07-01/ours-en-cavale-a-dorval/l-intervention-des-agents-de-la-faune-remise-en-cause.php",
+    support: "article",
+    date: "2021-07-01",
+  },
+  {
+    media: "La Presse",
+    titre: "L'ours en cavale à Dorval euthanasié",
+    url: "https://www.lapresse.ca/actualites/grand-montreal/2021-05-24/l-ours-en-cavale-a-dorval-euthanasie.php",
+    support: "article",
+    date: "2021-05-24",
+  },
+  {
+    media: "La Presse",
+    titre: "Un ourson en cavale à Montréal capturé",
+    url: "https://www.lapresse.ca/actualites/grand-montreal/2021-05-23/dorval/un-ourson-en-cavale-a-montreal-capture.php",
+    support: "article",
+    date: "2021-05-23",
+  },
+  {
+    media: "98,5 FM",
+    titre: "Un jeune ours attrapé sur le territoire de l'île de Montréal",
+    url: "https://www.985fm.ca/nouvelles/397656/quartier-residentiel-de-dorval-un-jeune-ours-attrape-sur-le-territoire-de-l-ile-de-montreal",
+    support: "radio",
+    date: "2021-05",
+  },
+  {
+    media: "MétéoMédia",
+    titre: "Que faire si on croise un animal sauvage en ville",
+    url: "https://www.meteomedia.com/fr/nouvelles/nature/biodiversite/que-faire-si-on-croise-un-animal-sauvage-en-ville",
+    support: "article",
+  },
+  {
+    media: "Narcity",
+    titre: "Tous les articles consacrés à Sauvetage Animal Rescue",
+    url: "https://www.narcity.com/tag/sauvetage-animal-rescue",
+    support: "article",
   },
 ];
 

@@ -209,15 +209,21 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Sainte-Marthe-sur-le-Lac, 2019",
+        titre: "Sainte-Marthe-sur-le-Lac, printemps 2019",
         texte: [
-          "La rupture de la digue a forcé l'évacuation de milliers de résidents en quelques heures. Beaucoup ont dû partir sans leurs animaux, restés seuls dans des maisons cernées par l'eau. Notre équipe a mené 125 opérations dans les secteurs inondés et en a ramené 171 animaux. Chacune de ces opérations, c'est une famille qui a retrouvé le sien.",
+          "Au printemps 2019, la rupture d'une digue à Sainte-Marthe-sur-le-Lac a provoqué d'importantes inondations et forcé l'évacuation de milliers de résidents. Pendant trois jours, une équipe de 15 intervenants de Sauvetage Animal Rescue a été déployée dans la zone sinistrée afin d'aller chercher les animaux demeurés dans les résidences évacuées. Au total, notre équipe est intervenue dans 125 domiciles inondés et a évacué 171 animaux. Un poste de commandement ainsi qu'un refuge temporaire ont été mis en place pour soutenir les opérations et accueillir les animaux secourus. La mission s'est déroulée en collaboration avec la Sûreté du Québec, les services policiers municipaux et les services incendie présents sur le terrain.",
         ],
       },
       {
         titre: "Abitibi-Témiscamingue, juin 2023",
         texte: [
           "En juin 2023, alors que d'importants feux de forêt frappaient l'Abitibi-Témiscamingue, Sauvetage Animal Rescue a déployé une équipe afin de soutenir les animaux, les communautés et les organisations touchés par la situation. Notre intervention nous a conduits dans plusieurs secteurs de la région, notamment à Amos, Rouyn-Noranda, Val-d'Or, Senneterre, La Sarre, Normétal ainsi qu'à Kitcisakik. Sur le terrain, notre équipe a notamment participé à l'évacuation de chiens vers des refuges et prêté assistance aux organismes déjà mobilisés. Nous avons également acheminé d'importantes quantités de nourriture, ainsi que des cages, des transporteurs et du matériel destinés à soutenir les opérations. Cette mission illustre bien la polyvalence d'un déploiement national: intervenir directement lorsque nécessaire, mais aussi renforcer concrètement les capacités des ressources locales.",
+        ],
+      },
+      {
+        titre: "Stoneham, mars 2025",
+        texte: [
+          "En mars 2025, le débordement de la rivière Cachée a emporté un pont et complètement isolé près de 90 chiens d'Aventures Nord-Bec, à Stoneham. Privés de tout accès terrestre, les animaux ne pouvaient plus recevoir normalement la nourriture et les soins dont ils avaient besoin. Sauvetage Animal Rescue a alors coordonné une opération de ravitaillement par hélicoptère afin d'acheminer d'importantes quantités de nourriture et de matériel sur le site. L'opération a également permis de transporter du personnel jusqu'aux installations afin qu'une présence humaine puisse être maintenue auprès des chiens. Notre équipe a été déployée sur le terrain pour coordonner la logistique et les opérations héliportées nécessaires au maintien de leur prise en charge.",
         ],
       },
       {

@@ -58,7 +58,7 @@ export const PAGES_FR: CataloguePages = {
       {
         titre: "Capucine",
         texte: [
-          "En deux mille deux, Capucine, le chat de la famille Dussault, sort de la maison et ne revient pas. Sa mère cherche de l'aide et se heurte à un mur poli : la SPCA ne se déplace pas pour chercher un animal perdu, la police non plus, et personne d'autre ne s'en occupe. Ce n'est le dossier d'aucun service. Il n'y a pas de numéro à composer qui mène à quelqu'un qui viendra, pas d'équipe à envoyer, pas de procédure. La famille cherche seule, comme tout le monde cherche seul. C'est ce vide, bien plus que la disparition elle-même, qui restera planté dans la tête d'Eric Dussault pendant les sept années suivantes.",
+          "Au début des années deux mille, Eric Dussault fait un constat qui marquera la suite de son parcours. Lorsqu'un animal se retrouve en situation d'urgence, les propriétaires disposent de très peu de ressources capables d'intervenir directement sur le terrain. Une expérience vécue au sein de sa propre famille, alors qu'elle cherchait désespérément de l'aide pour retrouver son chat Capucine, met cette réalité en lumière. Malgré les nombreux appels à des organismes et des services d'urgence, rien n'existe vraiment pour intervenir auprès d'un animal en détresse. Cette absence de réponse soulève une question qui ne le quittera plus. Pourquoi existe-t-il des services spécialisés pour pratiquement toutes les situations d'urgence, mais aucun véritable service d'intervention dédié aux animaux ? Ce constat devient le point de départ d'une réflexion qui, quelques années plus tard, donnera naissance à une vision entièrement nouvelle du sauvetage animalier au Québec.",
         ],
       },
       {

@@ -27,8 +27,22 @@ export function CarteVues({ vues }: { vues: Vue[] }) {
         <Bouton libelle={t("suivant")} sens="droite" onClick={() => aller(1)} />
       </div>
 
-      <div className="mt-6">
-        <Barres donnees={vue.donnees} couleur={vue.couleur} />
+      {/* Les trois vues sont empilées dans la même case de grille : la carte
+          prend donc la hauteur de la plus longue et ne saute plus quand on
+          passe de douze mois à quatre moments de la journée. Les vues
+          inactives restent en place, simplement invisibles. */}
+      <div className="mt-6 grid">
+        {vues.map((v, n) => (
+          <div
+            key={v.titre}
+            className={`col-start-1 row-start-1 ${
+              n === i ? "" : "invisible pointer-events-none"
+            }`}
+            aria-hidden={n !== i}
+          >
+            <Barres donnees={v.donnees} couleur={v.couleur} />
+          </div>
+        ))}
       </div>
 
       {/* Les pastilles disent combien de vues existent et où l'on se trouve ;

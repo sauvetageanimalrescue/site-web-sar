@@ -24,11 +24,6 @@ import {
 // Les compteurs du haut bougent en continu ; le reste de la page est figé.
 export const revalidate = 60;
 
-// L'espèce la plus fréquente, en part des missions plutôt qu'en nombre brut :
-// « 19 % des missions » se saisit d'un coup d'oeil, « 80 missions » demande
-// de connaître le total pour signifier quelque chose.
-const PART_ESPECE = Math.round((PAR_ESPECE[0].valeur / TOTAL_MISSIONS) * 100);
-
 export default async function PageStatistiques({
   params,
 }: PageProps<"/[locale]/statistiques">) {
@@ -58,7 +53,7 @@ export default async function PageStatistiques({
             legende={t("chiffreMunicipalites")}
           />
           <Chiffre
-            valeur={`${PART_ESPECE} %`}
+            valeur={PAR_ESPECE[0].valeur.toString()}
             legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle.toLowerCase() })}
           />
         </div>

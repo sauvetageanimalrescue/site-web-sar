@@ -666,32 +666,27 @@ export const PAGES_FR: CataloguePages = {
 
   "services/secours-animalier": {
     surtitre: "Porter secours",
-    titre: "Secours Animalier",
+    titre: "Secours animalier",
     intro:
-      "Le secours, c'est venir en aide à un animal qui souffre ou qui est en danger, sans que la situation exige des techniques de travail en hauteur. C'est le coeur du métier, et c'est ce qui occupe la majorité de nos heures.",
+      "Le secours animalier consiste à intervenir lorsqu'un animal est blessé, malade, affaibli, piégé ou autrement en détresse. C'est le coeur de nos opérations quotidiennes et la forme d'intervention que nous réalisons le plus souvent.",
     image: "/images/carte-signalement.jpg",
     blocs: [
       {
-        titre: "Les situations couvertes",
-        liste: [
-          "Animal blessé, malade ou affaibli",
-          "Animal orphelin ou juvénile isolé",
-          "Animal pris dans une clôture, un grillage, un filet",
-          "Animal enfermé dans un bâtiment, un véhicule, un conteneur",
-          "Faune urbaine en détresse: raton laveur, mouffette, écureuil",
-          "Oiseaux blessés ou pris dans une ligne à pêche",
+        titre: "Porter assistance aux animaux en détresse",
+        texte: [
+          "Les situations auxquelles nos équipes répondent sont extrêmement variées. Nous intervenons auprès d'animaux blessés, malades, affaiblis ou agonisants, mais également auprès de jeunes animaux orphelins ou en situation de vulnérabilité. Nos sauveteurs peuvent être appelés lorsqu'un animal est coincé dans une clôture, un grillage ou un filet, enfermé dans un bâtiment, un véhicule ou un conteneur, ou lorsqu'un animal de la faune urbaine se trouve en détresse. Nous portons également assistance aux oiseaux blessés ou empêtrés dans des lignes à pêche. Dans chacun de ces cas, l'objectif demeure le même: sécuriser l'animal et lui donner accès rapidement aux ressources dont il a besoin.",
         ],
       },
       {
         titre: "Une chaîne, pas un geste isolé",
         texte: [
-          "Un secours réussi ne s'arrête pas au moment où l'animal est entre nos mains. Il faut ensuite le transporter, le confier à un refuge ou à une clinique, et documenter l'intervention. C'est pour cette raison que l'organisation compte des messagers dont le seul rôle est le transport: pendant qu'un animal est conduit en sécurité, une autre vie peut être secourue ailleurs.",
+          "Une intervention ne commence pas lorsque nos sauveteurs arrivent sur place et ne se termine pas lorsque l'animal est entre leurs mains. Elle s'inscrit dans une véritable chaîne de secours qui débute avec le citoyen, le service d'urgence ou l'organisation qui nous signale la situation. Après l'intervention vient ensuite la prise en charge: transport vers une clinique vétérinaire, un refuge, un service animalier ou une ressource spécialisée selon les besoins de l'animal. Nos messagers et messagères jouent un rôle essentiel dans cette chaîne en assurant ces transports, permettant ainsi aux équipes de terrain de demeurer disponibles pour répondre à une nouvelle urgence.",
         ],
       },
     ],
     actions: [
-      { href: "/signalement", libelle: "Signaler un animal", principal: true },
-      { href: "/equipe", libelle: "Voir les fonctions de l'équipe" },
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/signalement", libelle: "Signaler un animal" },
     ],
   },
 

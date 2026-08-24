@@ -31,8 +31,6 @@ export const MENU: SectionMenu[] = [
       { cle: "sauvetageTechnique", href: "/services/sauvetage-technique" },
       { cle: "capture", href: "/services/capture" },
       { cle: "inspection", href: "/services/inspection" },
-      { cle: "reglementation", href: "/services/reglementation" },
-      { cle: "denombrement", href: "/services/denombrement" },
       { cle: "sinistres", href: "/services/sinistres" },
     ],
   },

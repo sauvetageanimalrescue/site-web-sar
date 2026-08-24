@@ -17,6 +17,13 @@ export function EnteteSite() {
   const chemin = usePathname();
   const [mobileOuvert, setMobileOuvert] = useState(false);
   const [sectionOuverte, setSectionOuverte] = useState<string | null>(null);
+  // Sur mobile, les sections se replient : sans quoi la coquille dépasse la
+  // hauteur de l'écran, et comme elle vit dans l'en-tête collée en haut, la
+  // page ne peut jamais défiler jusqu'à son bas. Organisation reste ouverte
+  // par défaut, comme première section du menu.
+  const [sectionMobileOuverte, setSectionMobileOuverte] = useState<string | null>(
+    MENU[0]?.cle ?? null,
+  );
 
   const actif = (href: string) =>
     chemin === href || chemin.startsWith(`${href}/`);
@@ -184,26 +191,44 @@ export function EnteteSite() {
 
       {mobileOuvert && (
         <nav
-          className="border-t border-border bg-surface lg:hidden"
+          className="max-h-[calc(100dvh-4.25rem)] overflow-y-auto border-t border-border bg-surface lg:hidden"
           aria-label={t("menu")}
         >
           <div className="mx-auto max-w-7xl px-4 py-3">
-            {SECTIONS_DEROULANTES.filter((s) => s.liens.length > 0).map((section) => (
-              <div key={section.cle} className="border-t border-border py-2">
-                <p className="px-1 py-1 font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-ciel">
-                  {t(section.cle)}
-                </p>
-                {section.liens.map((lien) => (
-                  <LienMenu
-                    key={lien.href}
-                    href={lien.href}
-                    className="block rounded-md px-1 py-2 text-sm text-foreground"
+            {SECTIONS_DEROULANTES.filter((s) => s.liens.length > 0).map((section) => {
+              const ouverte = sectionMobileOuverte === section.cle;
+              return (
+                <div key={section.cle} className="border-t border-border py-2">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setSectionMobileOuverte(ouverte ? null : section.cle)
+                    }
+                    aria-expanded={ouverte}
+                    className="flex w-full items-center justify-between px-1 py-1 text-left font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-ciel"
                   >
-                    {t(lien.cle)}
-                  </LienMenu>
-                ))}
-              </div>
-            ))}
+                    {t(section.cle)}
+                    <IconChevronDown
+                      className={`size-4 shrink-0 transition ${ouverte ? "rotate-180" : ""}`}
+                      aria-hidden
+                    />
+                  </button>
+                  {ouverte && (
+                    <div className="mt-1">
+                      {section.liens.map((lien) => (
+                        <LienMenu
+                          key={lien.href}
+                          href={lien.href}
+                          className="block rounded-md px-1 py-2 text-sm text-foreground"
+                        >
+                          {t(lien.cle)}
+                        </LienMenu>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
             <div className="border-t border-border py-2">
               {[...MENU.filter((s) => s.href).map((s) => ({ cle: s.cle, href: s.href as string })), ...LIENS_DIRECTS].map((lien) => (
                 <Link

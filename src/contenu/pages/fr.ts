@@ -511,7 +511,7 @@ export const PAGES_FR: CataloguePages = {
     ],
     actions: [
       { href: "/membre", libelle: "Devenir membre", principal: true },
-      { href: "/services/reglementation", libelle: "Règlementation" },
+      { href: "/services/secours-animalier", libelle: "Secours animalier" },
     ],
   },
 
@@ -568,65 +568,6 @@ export const PAGES_FR: CataloguePages = {
     actions: [
       { href: "/membre", libelle: "Devenir membre", principal: true },
       { href: "/services/secours-animalier", libelle: "Secours animalier" },
-    ],
-  },
-
-  "services/reglementation": {
-    surtitre: "Patrouilleurs assermentés",
-    titre: "Règlementation",
-    intro:
-      "Certains de nos patrouilleurs sont assermentés et peuvent appliquer la règlementation animalière sur le territoire des municipalités qui leur en confient le mandat. Une compétence rare, exercée avec la même rigueur que le reste de nos interventions.",
-    image: "/images/carte-services.jpg",
-    blocs: [
-      {
-        titre: "Ce que ça permet",
-        liste: [
-          "Application des règlements municipaux sur les animaux",
-          "Vérification des licences et de l'identification",
-          "Constats d'infraction et suivi des dossiers",
-          "Réponse aux plaintes de nuisance ou de divagation",
-          "Accompagnement des services municipaux sur le terrain",
-        ],
-      },
-      {
-        titre: "Une posture, pas seulement un pouvoir",
-        texte: [
-          "Être assermenté ne change pas la mission. Notre premier réflexe reste l'explication et l'accompagnement du citoyen, parce qu'un propriétaire qui comprend le règlement s'y conforme durablement, alors qu'un constat mal expliqué ne règle rien. Le constat existe pour les cas où le dialogue a échoué ou lorsque la sécurité l'exige.",
-        ],
-      },
-    ],
-    actions: [
-      { href: "/secteurs", libelle: "Voir les secteurs desservis", principal: true },
-    ],
-  },
-
-  "services/denombrement": {
-    surtitre: "Compter avant de décider",
-    titre: "Dénombrement",
-    intro:
-      "Avant d'intervenir sur une population animale, il faut savoir combien il y en a, où et depuis quand. Un dénombrement remplace les impressions par des chiffres, et évite des décisions coûteuses fondées sur une plainte isolée.",
-    image: "/images/territoire.jpg",
-    blocs: [
-      {
-        titre: "Ce que nous dénombrons",
-        liste: [
-          "Colonies de chats sans propriétaire",
-          "Populations de faune urbaine dans un secteur donné",
-          "Cerfs et grande faune en milieu périurbain",
-          "Colonies d'oiseaux sur un bâtiment ou un site industriel",
-          "Suivi d'une population dans le temps, avant et après intervention",
-        ],
-      },
-      {
-        titre: "Comment nous procédons",
-        texte: [
-          "Observation sur le terrain à heures fixes, relevés photographiques, identification des individus quand c'est possible, et cartographie des points de présence. Les données sont consignées et vous sont remises sous forme de rapport, avec les limites de la méthode clairement indiquées.",
-          "Un dénombrement honnête donne parfois un résultat qui dérange: une population moins nombreuse qu'on le croyait, ou un problème qui vient d'ailleurs. C'est précisément ce qui le rend utile pour justifier une décision devant un conseil municipal ou une direction.",
-        ],
-      },
-    ],
-    actions: [
-      { href: "/secteurs", libelle: "Voir les secteurs desservis", principal: true },
     ],
   },
 

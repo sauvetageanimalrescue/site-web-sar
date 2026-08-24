@@ -9,14 +9,16 @@ import { MUNICIPALITES } from "@/contenu/municipalites";
 // avec « saint » et « sainte » réduits à « st » et « ste ». Quelqu'un qui
 // tape « st-eustache » cherche bien Saint-Eustache, et l'inverse est vrai
 // aussi. La réduction s'applique des deux côtés, donc les deux graphies se
-// rejoignent.
+// rejoignent. Les accents sont retirés par leur plage Unicode écrite en
+// toutes lettres: un caractère combinant collé dans le code est invisible
+// à la relecture et se perd au premier copier-coller.
 function normaliser(s: string) {
   return s
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
     .toLowerCase()
-    .replace(/sainte/g, "ste")
-    .replace(/saint/g, "st")
+    .replace(/sainte/g, "ste")
+    .replace(/saint/g, "st")
     .replace(/[^a-z0-9]/g, "");
 }
 

@@ -11,14 +11,22 @@ export type Vue = { titre: string; donnees: Mesure[]; couleur?: string };
 // Une seule carte au centre, qu'on feuillette avec deux chevrons, plutôt que
 // deux ou trois graphiques côte à côte. La page reste courte, la mise en page
 // ne se casse pas sur un téléphone, et l'oeil n'a qu'un seul endroit à lire.
-export function CarteVues({ vues }: { vues: Vue[] }) {
+export function CarteVues({
+  vues,
+  className,
+}: {
+  vues: Vue[];
+  className?: string;
+}) {
   const t = useTranslations("statistiques");
   const [i, setI] = useState(0);
   const vue = vues[i];
   const aller = (pas: number) => setI((n) => (n + pas + vues.length) % vues.length);
 
   return (
-    <div className="mx-auto max-w-2xl rounded-xl border border-border bg-surface p-5 sm:p-7">
+    <div
+      className={`mx-auto max-w-2xl rounded-xl border border-border bg-surface p-5 sm:p-7 ${className ?? ""}`}
+    >
       <div className="flex items-center justify-between gap-4">
         <Bouton libelle={t("precedent")} sens="gauche" onClick={() => aller(-1)} />
         <h3 className="text-center font-[family-name:var(--font-titre)] text-lg font-bold uppercase leading-tight tracking-wide text-marine">

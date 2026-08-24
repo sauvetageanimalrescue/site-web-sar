@@ -1,21 +1,30 @@
 import { createClient } from "@supabase/supabase-js";
-import { REPORT_ANNEE, REPORT_MOIS } from "@/contenu/compteur";
+import {
+  REPORT_ANNEE,
+  REPORT_DEPLACEMENTS_ANNEE,
+  REPORT_MOIS,
+} from "@/contenu/compteur";
 
 // Les compteurs viennent du registre des missions, qui est une base Supabase
 // distincte de celle du site public. On n'y accède qu'à travers deux fonctions
 // SECURITY DEFINER accordées au rôle anon : aucune ligne de mission, aucune
 // donnée de demandeur ne traverse jamais la frontière.
-// Voir registre-des-missions/supabase/migrations/0040_statistiques_publiques.sql
+// Voir supabase/migrations/0009_deplacements_et_coupure_par_date.sql
 
-export type Statistiques = {
+export type CompteurPeriodes = {
   jour: number;
   semaine: number;
   mois: number;
   annee: number;
-  // Toujours calculé par le registre, mais pas affiché : avant le registre,
-  // les chiffres de l'organisation n'existent pas de façon fiable.
   total: number;
+};
+
+export type Statistiques = CompteurPeriodes & {
   missions_annee: number;
+  // Même dénombrement, mais en déplacements plutôt qu'en animaux : une
+  // mission compte dès qu'une équipe s'est rendue sur les lieux, prise en
+  // charge de l'animal ou non.
+  deplacements: CompteurPeriodes;
   familles: { famille: string; sauves: number }[];
   mensuel: { mois: string; sauves: number }[];
   genere_a: string;
@@ -48,17 +57,33 @@ export async function lireStatistiques(): Promise<Statistiques | null> {
   if (error || !data) return null;
 
   // Le report couvre les interventions accomplies avant que l'intranet ne
-  // consigne tout. Il ne touche ni le jour, ni la semaine, ni le mois.
+  // consigne tout. Il ne touche ni le jour, ni la semaine.
   const stats = data as Statistiques;
   const maintenant = new Date();
   const memeMois =
     maintenant.getFullYear() === REPORT_MOIS.annee &&
     maintenant.getMonth() + 1 === REPORT_MOIS.mois;
+  // La migration qui ajoute « deplacements » à la fonction SQL se colle à la
+  // main : entre le moment où ce code est déployé et celui où elle est
+  // collée, le registre répond encore avec l'ancienne forme, sans ce champ.
+  const deplacements = stats.deplacements ?? {
+    jour: 0,
+    semaine: 0,
+    mois: 0,
+    annee: 0,
+    total: 0,
+  };
   return {
     ...stats,
-    mois: stats.mois + (memeMois ? REPORT_MOIS.valeur : 0),
+    mois: stats.mois + (memeMois ? REPORT_MOIS.animaux : 0),
     annee: stats.annee + REPORT_ANNEE,
     total: stats.total + REPORT_ANNEE,
+    deplacements: {
+      ...deplacements,
+      mois: deplacements.mois + (memeMois ? REPORT_MOIS.deplacements : 0),
+      annee: deplacements.annee + REPORT_DEPLACEMENTS_ANNEE,
+      total: deplacements.total + REPORT_DEPLACEMENTS_ANNEE,
+    },
   };
 }
 

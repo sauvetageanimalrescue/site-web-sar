@@ -62,7 +62,29 @@ export default async function PageStatistiques({
       </Section>
 
       <Section titre={t("rythmeTitre")} fond largeur="carte">
+        {/* Les deux chiffres du haut sont en direct, à l'inverse des trois
+            graphiques qui suivent : ils viennent du rapport figé 2026. Les
+            deux comptent la même unité, le déplacement, pour que le lecteur
+            passe de l'un à l'autre sans changer de repère. */}
+        {stats && (
+          <>
+            <p className="text-xs font-semibold uppercase tracking-wider text-ciel">
+              {t("deplacementsDirectTitre")}
+            </p>
+            <div className="mt-3 grid gap-4 sm:grid-cols-2">
+              <Chiffre
+                valeur={stats.deplacements.annee.toString()}
+                legende={t("deplacementsAnnee")}
+              />
+              <Chiffre
+                valeur={stats.deplacements.mois.toString()}
+                legende={t("deplacementsMois")}
+              />
+            </div>
+          </>
+        )}
         <CarteVues
+          className={stats ? "mt-8" : undefined}
           vues={[
             { titre: t("parMois"), donnees: MISSIONS_PAR_MOIS },
             { titre: t("parJour"), donnees: PAR_JOUR },

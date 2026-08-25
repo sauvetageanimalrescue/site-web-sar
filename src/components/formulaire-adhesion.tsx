@@ -130,14 +130,14 @@ export function FormulaireAdhesion() {
               libelle={c("province")}
               requis
               facultatif={c("facultatif")}
-              valeurParDefaut="QC"
+              valeurParDefaut="Québec"
             />
             <Champ
               nom="pays"
               libelle={c("pays")}
               requis
               facultatif={c("facultatif")}
-              valeurParDefaut="CA"
+              valeurParDefaut="Canada"
             />
           </div>
         </div>

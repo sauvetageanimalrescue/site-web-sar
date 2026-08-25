@@ -1,13 +1,11 @@
 ﻿import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { IconPhoneFilled } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
 import { Declaration } from "@/components/ui";
 import { CarteImage, GrilleCartes } from "@/components/cartes";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { lireStatistiques } from "@/lib/statistiques";
-import { ORGANISATION, lienTelephone } from "@/lib/constantes";
 
 // Deux rangées de quatre, séparées par une déclaration. La première regroupe
 // les gestes que le visiteur peut poser tout de suite, la seconde ce que
@@ -59,18 +57,23 @@ function Hero() {
         </p>
         <div className="mt-9 flex flex-wrap gap-3">
           <Link
+            href="/membre"
+            className="rounded-md bg-lime px-6 py-3.5 font-semibold text-marine transition hover:bg-lime-fonce"
+          >
+            {t("heroMembre")}
+          </Link>
+          <Link
+            href="/dons"
+            className="rounded-md bg-ciel px-6 py-3.5 font-semibold text-white transition hover:bg-ciel/90"
+          >
+            {t("heroDons")}
+          </Link>
+          <Link
             href="/signalement"
             className="rounded-md bg-urgence px-6 py-3.5 font-semibold text-white transition hover:bg-urgence/90"
           >
             {t("heroSignaler")}
           </Link>
-          <a
-            href={lienTelephone(ORGANISATION.telephones.signalement)}
-            className="flex items-center gap-2 rounded-md border border-white/30 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
-          >
-            <IconPhoneFilled className="size-5" aria-hidden />
-            {ORGANISATION.telephones.signalement}
-          </a>
         </div>
       </div>
     </section>

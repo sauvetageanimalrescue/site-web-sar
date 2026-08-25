@@ -1,11 +1,10 @@
 ﻿import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { IconPhoneFilled, IconArrowNarrowRight } from "@tabler/icons-react";
+import { IconPhoneFilled } from "@tabler/icons-react";
 import { EnTetePage, Section } from "@/components/ui";
 import { FormulaireSignalement } from "@/components/formulaire-signalement";
+import { Accordeon, type ItemAccordeon } from "@/components/accordeon";
 import { ORGANISATION, lienTelephone } from "@/lib/constantes";
-
-type CasHorsMandat = { cas: string; vers: string };
 
 function BlocUrgence() {
   const t = useTranslations("signalement");
@@ -72,37 +71,13 @@ function ListeAvant() {
   );
 }
 
-function ListeHorsMandat() {
-  const t = useTranslations("signalement");
-  const cas = t.raw("hors") as CasHorsMandat[];
-
-  return (
-    <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {cas.map((c) => (
-        <li
-          key={c.cas}
-          className="rounded-xl border border-border bg-surface p-5"
-        >
-          <p className="font-semibold text-marine">{c.cas}</p>
-          <p className="mt-2 flex items-start gap-2 text-sm text-muted">
-            <IconArrowNarrowRight
-              className="mt-0.5 size-4 shrink-0 text-ciel"
-              aria-hidden
-            />
-            {c.vers}
-          </p>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 export default async function PageSignalement({
   params,
 }: PageProps<"/[locale]/signalement">) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "signalement" });
+  const hors = t.raw("hors") as ItemAccordeon[];
 
   return (
     <>
@@ -128,9 +103,11 @@ export default async function PageSignalement({
         </div>
       </Section>
 
-      <Section titre={t("horsTitre")} fond>
-        <p className="max-w-3xl text-muted">{t("horsTexte")}</p>
-        <ListeHorsMandat />
+      <Section titre={t("horsTitre")} fond largeur="carte">
+        <p className="text-muted">{t("horsTexte")}</p>
+        <div className="mt-6">
+          <Accordeon items={hors} />
+        </div>
       </Section>
     </>
   );

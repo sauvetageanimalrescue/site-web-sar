@@ -450,35 +450,31 @@
       "Keep children and other pets away."
     ],
     "horsTitre": "This is not our mandate",
-    "horsTexte": "We are a technical rescue team. Some situations belong to another service, and calling the right number saves the animal precious time.",
+    "horsTexte": "Our team is a technical rescue team for animals. Some situations call for other resources: here is who to contact depending on the case.",
     "hors": [
       {
-        "cas": "Animal cruelty or neglect",
-        "vers": "MAPAQ reporting line, 1 844 ANIMAUX"
+        "question": "Animal cruelty or neglect",
+        "reponse": "MAPAQ reporting line, 1 844 ANIMAUX. The Montreal SPCA also runs a 24 hour animal cruelty reporting line, at 1 855 711-7575."
       },
       {
-        "cas": "Animal on a highway or roadside",
-        "vers": "511, Ministère des Transports. Their patrollers are dispatched and call us in if they need assistance."
+        "question": "An animal on the highway or roadside",
+        "reponse": "Dial 511, the Ministère des Transports line. Their patrollers are dispatched and call us in if needed."
       },
       {
-        "cas": "Dead animal on the roadway",
-        "vers": "Your municipality's public works"
+        "question": "A dead animal on the roadway",
+        "reponse": "On a municipal street, contact your municipality's public works. On a numbered route or highway, dial 511."
       },
       {
-        "cas": "Stray dog or urban capture",
-        "vers": "Your municipal animal services"
+        "question": "A stray animal, a capture, spay/neuter or adoption",
+        "reponse": "Contact the animal services covering your municipality. Check your municipality’s website to find out which one serves your area."
       },
       {
-        "cas": "Danger to people",
-        "vers": "911"
+        "question": "Immediate danger to people",
+        "reponse": "Dial 911."
       },
       {
-        "cas": "Injured large wildlife (deer, moose, bear)",
-        "vers": "SOS Braconnage, 1 800 463-2191"
-      },
-      {
-        "cas": "Adoption, fostering, spay and neuter",
-        "vers": "Your local shelter or SPCA"
+        "question": "An injured or dead wild animal under mandatory reporting rules",
+        "reponse": "Some wildlife species must be reported when found injured or dead. Call the SOS Braconnage wildlife emergency line, at 1 800 463-2191."
       }
     ],
     "champs": {

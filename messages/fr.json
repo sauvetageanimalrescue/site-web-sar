@@ -450,35 +450,31 @@
       "Gardez les enfants et les autres animaux à l'écart."
     ],
     "horsTitre": "Ce n'est pas notre mandat",
-    "horsTexte": "Nous sommes une équipe de secours technique. Certaines situations relèvent d'un autre service, et appeler le bon numéro fait gagner un temps précieux à l'animal.",
+    "horsTexte": "Notre équipe est une équipe de secours et de sauvetage pour animaux. Certaines situations relèvent d'autres ressources: voici où vous adresser selon le cas.",
     "hors": [
       {
-        "cas": "Maltraitance ou négligence animale",
-        "vers": "Ligne signalement du MAPAQ, 1 844 ANIMAUX"
+        "question": "Maltraitance ou négligence animale",
+        "reponse": "Ligne de signalement du MAPAQ, 1 844 ANIMAUX. La SPCA de Montréal tient aussi une ligne de signalement de la cruauté animale ouverte en tout temps, au 1 855 711-7575."
       },
       {
-        "cas": "Animal sur une autoroute ou en bordure de route",
-        "vers": "511, ministère des Transports. Ses patrouilleurs sont dépêchés et font appel à nous s'ils ont besoin d'assistance."
+        "question": "Un animal sur l'autoroute ou en bordure de route",
+        "reponse": "Composez le 511, la ligne du ministère des Transports. Ses patrouilleurs sont dépêchés et font appel à nous au besoin."
       },
       {
-        "cas": "Animal mort sur la chaussée",
-        "vers": "Travaux publics de votre municipalité"
+        "question": "Un animal mort sur la chaussée",
+        "reponse": "Sur une rue municipale, contactez les travaux publics de votre municipalité. Sur une route numérotée ou une autoroute, composez le 511."
       },
       {
-        "cas": "Chien errant ou capture en ville",
-        "vers": "Service animalier de votre municipalité"
+        "question": "Un animal errant, une capture, la stérilisation ou l'adoption",
+        "reponse": "Communiquez avec le service animalier qui dessert votre municipalité. Consultez le site de votre municipalité pour savoir lequel couvre votre secteur."
       },
       {
-        "cas": "Danger pour des personnes",
-        "vers": "911"
+        "question": "Un danger immédiat pour des personnes",
+        "reponse": "Composez le 911."
       },
       {
-        "cas": "Grande faune blessée (cerf, orignal, ours)",
-        "vers": "SOS Braconnage, 1 800 463-2191"
-      },
-      {
-        "cas": "Adoption, hébergement, stérilisation",
-        "vers": "Refuge ou SPCA de votre secteur"
+        "question": "Un animal sauvage à déclaration obligatoire, blessé ou mort",
+        "reponse": "Certaines espèces sauvages doivent obligatoirement être déclarées lorsqu'elles sont trouvées blessées ou mortes. Composez la ligne SOS Braconnage, Urgence Faune sauvage, au 1 800 463-2191."
       }
     ],
     "champs": {

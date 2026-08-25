@@ -450,35 +450,31 @@
       "Mantenga alejados a los niños y a otros animales."
     ],
     "horsTitre": "Esto no es nuestro mandato",
-    "horsTexte": "Somos un equipo de rescate técnico. Algunas situaciones corresponden a otro servicio, y llamar al número correcto le ahorra un tiempo precioso al animal.",
+    "horsTexte": "Nuestro equipo es un equipo de rescate técnico para animales. Algunas situaciones corresponden a otros recursos: aquí le indicamos a quién dirigirse según el caso.",
     "hors": [
       {
-        "cas": "Maltrato o negligencia animal",
-        "vers": "Línea del MAPAQ, 1 844 ANIMAUX"
+        "question": "Maltrato o negligencia animal",
+        "reponse": "Línea de denuncia del MAPAQ, 1 844 ANIMAUX. La SPCA de Montreal también mantiene una línea de denuncia de crueldad animal abierta las 24 horas, al 1 855 711-7575."
       },
       {
-        "cas": "Animal en una autopista o al borde de la carretera",
-        "vers": "511, ministerio de Transportes. Envía a sus patrulleros, que nos llaman si necesitan asistencia."
+        "question": "Un animal en la autopista o al borde de la carretera",
+        "reponse": "Marque el 511, la línea del ministerio de Transportes. Sus patrulleros son despachados y nos llaman si necesitan asistencia."
       },
       {
-        "cas": "Animal muerto en la calzada",
-        "vers": "Obras públicas de su municipio"
+        "question": "Un animal muerto en la calzada",
+        "reponse": "En una calle municipal, contacte con obras públicas de su municipio. En una ruta numerada o autopista, marque el 511."
       },
       {
-        "cas": "Perro callejero o captura urbana",
-        "vers": "Servicio animal de su municipio"
+        "question": "Un animal callejero, una captura, esterilización o adopción",
+        "reponse": "Comuníquese con el servicio animal que cubre su municipio. Consulte el sitio web de su municipio para saber cuál le corresponde."
       },
       {
-        "cas": "Peligro para las personas",
-        "vers": "911"
+        "question": "Peligro inmediato para personas",
+        "reponse": "Marque el 911."
       },
       {
-        "cas": "Fauna mayor herida (ciervo, alce, oso)",
-        "vers": "SOS Braconnage, 1 800 463-2191"
-      },
-      {
-        "cas": "Adopción, acogida, esterilización",
-        "vers": "Refugio o SPCA de su sector"
+        "question": "Un animal salvaje de declaración obligatoria, herido o muerto",
+        "reponse": "Ciertas especies silvestres deben declararse obligatoriamente cuando se encuentran heridas o muertas. Llame a la línea SOS Braconnage, Urgencia Fauna Silvestre, al 1 800 463-2191."
       }
     ],
     "champs": {

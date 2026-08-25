@@ -200,6 +200,8 @@
       "appartement": "Appartement",
       "ville": "Ville",
       "codePostal": "Code postal",
+      "province": "Province",
+      "pays": "Pays",
       "facultatif": "facultatif",
       "payer": "Payer {montant} $ et recevoir ma carte",
       "redirection": "Redirection vers le paiement"

@@ -18,12 +18,14 @@ function Champ({
   requis = false,
   type = "text",
   facultatif,
+  valeurParDefaut,
 }: {
   nom: string;
   libelle: string;
   requis?: boolean;
   type?: string;
   facultatif: string;
+  valeurParDefaut?: string;
 }) {
   return (
     <label className="block">
@@ -33,7 +35,13 @@ function Champ({
           <span className="ml-1 font-normal text-muted">({facultatif})</span>
         )}
       </span>
-      <input type={type} name={nom} required={requis} className={CLASSE_CHAMP} />
+      <input
+        type={type}
+        name={nom}
+        required={requis}
+        defaultValue={valeurParDefaut}
+        className={CLASSE_CHAMP}
+      />
     </label>
   );
 }
@@ -112,6 +120,24 @@ export function FormulaireAdhesion() {
               libelle={c("codePostal")}
               requis
               facultatif={c("facultatif")}
+            />
+          </div>
+          {/* Préremplis pour le Québec, mais modifiables: des membres
+              écrivent de l'étranger. */}
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Champ
+              nom="province"
+              libelle={c("province")}
+              requis
+              facultatif={c("facultatif")}
+              valeurParDefaut="QC"
+            />
+            <Champ
+              nom="pays"
+              libelle={c("pays")}
+              requis
+              facultatif={c("facultatif")}
+              valeurParDefaut="CA"
             />
           </div>
         </div>

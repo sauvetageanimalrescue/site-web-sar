@@ -36,7 +36,9 @@ export async function demarrerAdhesion(
   const adresse = texte(donnees, "adresse");
   const ville = texte(donnees, "ville");
   const codePostal = texte(donnees, "codePostal");
-  if (cartePhysique && (!adresse || !ville || !codePostal)) {
+  const province = texte(donnees, "province");
+  const pays = texte(donnees, "pays");
+  if (cartePhysique && (!adresse || !ville || !codePostal || !province || !pays)) {
     return { etat: "erreur", motif: "champs" };
   }
 
@@ -51,6 +53,8 @@ export async function demarrerAdhesion(
       appartement: texte(donnees, "appartement") || null,
       ville: ville || null,
       codePostal: codePostal || null,
+      province: province || null,
+      pays: pays || null,
       cartePhysique,
       langue: (await getLocale()) as Locale,
       renouvellementAuto: donnees.get("renouvellement") === "on",

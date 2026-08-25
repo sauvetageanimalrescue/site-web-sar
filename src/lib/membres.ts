@@ -14,6 +14,8 @@ export type NouveauMembre = {
   appartement: string | null;
   ville: string | null;
   codePostal: string | null;
+  province: string | null;
+  pays: string | null;
   cartePhysique: boolean;
   langue: Locale;
   annee: number;
@@ -66,6 +68,8 @@ export async function creerMembre(entree: NouveauMembre): Promise<Membre | null>
       appartement: entree.appartement,
       ville: entree.ville,
       code_postal: entree.codePostal,
+      province: entree.province,
+      pays: entree.pays,
       carte_physique: entree.cartePhysique,
       source: "stripe",
       langue: entree.langue,

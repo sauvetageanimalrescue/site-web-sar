@@ -45,6 +45,8 @@ async function traiterAdhesion(session: Stripe.Checkout.Session) {
     appartement: m.appartement || null,
     ville: m.ville || null,
     codePostal: m.code_postal || null,
+    province: m.province || null,
+    pays: m.pays || null,
     cartePhysique: m.carte_physique === "1",
     langue: (m.langue as Locale) ?? "fr",
     annee: Number(m.annee) || new Date().getFullYear(),

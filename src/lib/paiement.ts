@@ -18,6 +18,8 @@ type Adhesion = {
   appartement: string | null;
   ville: string | null;
   codePostal: string | null;
+  province: string | null;
+  pays: string | null;
   cartePhysique: boolean;
   langue: Locale;
   renouvellementAuto: boolean;
@@ -45,6 +47,8 @@ export async function creerPaiementAdhesion(adhesion: Adhesion) {
         appartement: adhesion.appartement,
         ville: adhesion.ville,
         code_postal: adhesion.codePostal,
+        province: adhesion.province,
+        pays: adhesion.pays,
         carte_physique: adhesion.cartePhysique,
         renouvellement_auto: adhesion.renouvellementAuto,
         annee: ANNEE_CARTE,
@@ -89,6 +93,8 @@ export async function creerPaiementAdhesion(adhesion: Adhesion) {
       appartement: adhesion.appartement ?? "",
       ville: adhesion.ville ?? "",
       code_postal: adhesion.codePostal ?? "",
+      province: adhesion.province ?? "",
+      pays: adhesion.pays ?? "",
       carte_physique: adhesion.cartePhysique ? "1" : "",
       langue: adhesion.langue,
       annee: String(ANNEE_CARTE),

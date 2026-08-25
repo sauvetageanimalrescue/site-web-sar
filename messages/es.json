@@ -200,6 +200,8 @@
       "appartement": "Apartamento",
       "ville": "Ciudad",
       "codePostal": "Código postal",
+      "province": "Provincia",
+      "pays": "País",
       "facultatif": "opcional",
       "payer": "Pagar {montant} $ y recibir mi tarjeta",
       "redirection": "Redirigiendo al pago"

@@ -21,43 +21,35 @@ export default async function PageMembre({
         image="/images/carte-membre-2026.jpg"
       />
 
-      <Section>
-        <div className="space-y-12">
-          <div>
-            <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-              {t("avantagesTitre")}
-            </h2>
-            <ul className="mt-5 max-w-3xl space-y-2.5">
-              {avantages.map((a) => (
-                <li key={a} className="flex gap-3 text-foreground/90">
-                  <IconCircleCheckFilled
-                    className="mt-0.5 size-5 shrink-0 text-vert"
-                    aria-hidden
-                  />
-                  {a}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <Section titre={t("avantagesTitre")} largeur="carte">
+        <ul className="space-y-2.5">
+          {avantages.map((a) => (
+            <li key={a} className="flex gap-3 text-foreground/90">
+              <IconCircleCheckFilled
+                className="mt-0.5 size-5 shrink-0 text-vert"
+                aria-hidden
+              />
+              {a}
+            </li>
+          ))}
+        </ul>
+      </Section>
 
-          <div className="relative aspect-[21/9] overflow-hidden rounded-xl border border-border">
-            <Image
-              src="/images/carte-membre-2026.jpg"
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
+      <Section fond largeur="carte">
+        <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
+          <Image
+            src="/images/carte-membre-2026.jpg"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 42rem"
+            className="object-cover"
+          />
+        </div>
+      </Section>
 
-          <div className="rounded-xl border border-border bg-surface p-6 sm:p-8">
-            <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-              {t("formulaireTitre")}
-            </h2>
-            <div className="mt-6 max-w-3xl">
-              <FormulaireAdhesion />
-            </div>
-          </div>
+      <Section titre={t("formulaireTitre")} largeur="carte">
+        <div className="rounded-xl border border-border bg-surface p-5 sm:p-7">
+          <FormulaireAdhesion />
         </div>
       </Section>
     </>

@@ -143,7 +143,7 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
-        titre: "Êtes-vous sur notre territoire ?",
+        titre: "Êtes-vous sur notre territoire?",
         texte: [
           "Entrez le nom de votre municipalité. Si elle fait partie de la Communauté Métropolitaine de Montréal, nous nous y déplaçons.",
         ],

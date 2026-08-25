@@ -7,6 +7,7 @@ import {
   IconBrandYoutube,
   IconBrandPatreon,
   IconMail,
+  IconAlertTriangleFilled,
 } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
 import { MENU } from "@/lib/menu";
@@ -62,6 +63,15 @@ export function PiedSite() {
                 </a>
               ))}
             </div>
+            {/* Signaler reste accessible depuis n'importe quelle page, même
+                une fois le héros de l'accueil loin derrière. */}
+            <Link
+              href="/signalement"
+              className="mt-5 flex w-fit items-center gap-2 rounded-full bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
+            >
+              <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
+              {p("signalerBouton")}
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-8 lg:col-span-2">

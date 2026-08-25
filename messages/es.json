@@ -312,30 +312,11 @@
   },
   "dons": {
     "titre": "Donar",
-    "surtitre": "Cada dólar se queda en el terreno",
+    "surtitre": "Cada dólar cuenta",
     "intro": "Ninguna subvención pública. Son las donaciones y las cuotas las que permiten que un equipo salga de noche por un gato atrapado en un motor o una barnacla enredada en un sedal.",
     "ponctuel": "Donación puntual",
     "mensuel": "Donación mensual",
     "montantLibre": "Otro importe",
-    "impactTitre": "Lo que paga su donación",
-    "impact": [
-      {
-        "montant": "25 $",
-        "texte": "El combustible de una intervención en las afueras."
-      },
-      {
-        "montant": "50 $",
-        "texte": "Una jaula trampa para capturar a un animal reactivo sin herirlo."
-      },
-      {
-        "montant": "100 $",
-        "texte": "El equipo de protección de un rescatista para la temporada."
-      },
-      {
-        "montant": "250 $",
-        "texte": "Una cuerda de rescate certificada, sustituida según el registro de cuerdas."
-      }
-    ],
     "champs": {
       "montant": "Importe",
       "courriel": "Correo electrónico",

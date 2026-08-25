@@ -312,30 +312,11 @@
   },
   "dons": {
     "titre": "Faire un don",
-    "surtitre": "Chaque dollar reste sur le terrain",
-    "intro": "Aucune subvention gouvernementale, aucun financement public. Ce sont les dons et les cotisations qui permettent à une équipe de sortir la nuit pour un chat coincé dans un moteur ou une bernache prise dans une ligne à pêche.",
+    "surtitre": "Chaque dollar compte",
+    "intro": "Chaque don contribue directement à nos opérations de secours et de sauvetage. Qu'il serve à équiper nos équipes, à transporter un animal ou à soutenir une intervention, chaque dollar nous aide à sauver davantage de vies.",
     "ponctuel": "Don ponctuel",
     "mensuel": "Don mensuel",
     "montantLibre": "Autre montant",
-    "impactTitre": "Ce que votre don paie",
-    "impact": [
-      {
-        "montant": "25 $",
-        "texte": "Le carburant d'une intervention en banlieue."
-      },
-      {
-        "montant": "50 $",
-        "texte": "Une cage-trappe pour capturer un animal réactif sans le blesser."
-      },
-      {
-        "montant": "100 $",
-        "texte": "L'équipement de protection d'un sauveteur pour la saison."
-      },
-      {
-        "montant": "250 $",
-        "texte": "Une corde de sauvetage certifiée, remplacée selon le registre des cordes."
-      }
-    ],
     "champs": {
       "montant": "Montant",
       "courriel": "Courriel",

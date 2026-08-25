@@ -312,30 +312,11 @@
   },
   "dons": {
     "titre": "Donate",
-    "surtitre": "Every dollar stays in the field",
+    "surtitre": "Every dollar counts",
     "intro": "No government grants, no public funding. Donations and dues are what let a team go out at night for a cat stuck in an engine bay or a goose tangled in fishing line.",
     "ponctuel": "One-time gift",
     "mensuel": "Monthly gift",
     "montantLibre": "Other amount",
-    "impactTitre": "What your gift pays for",
-    "impact": [
-      {
-        "montant": "$25",
-        "texte": "The fuel for one suburban call-out."
-      },
-      {
-        "montant": "$50",
-        "texte": "A live trap to catch a reactive animal without hurting it."
-      },
-      {
-        "montant": "$100",
-        "texte": "One rescuer's protective gear for the season."
-      },
-      {
-        "montant": "$250",
-        "texte": "A certified rescue rope, replaced on schedule per the rope registry."
-      }
-    ],
     "champs": {
       "montant": "Amount",
       "courriel": "Email",

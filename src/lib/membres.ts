@@ -10,8 +10,11 @@ export type NouveauMembre = {
   nom: string;
   courriel: string;
   telephone: string | null;
+  adresse: string | null;
+  appartement: string | null;
   ville: string | null;
   codePostal: string | null;
+  cartePhysique: boolean;
   langue: Locale;
   annee: number;
   renouvellementAuto: boolean;
@@ -59,8 +62,12 @@ export async function creerMembre(entree: NouveauMembre): Promise<Membre | null>
       nom: entree.nom,
       courriel: entree.courriel,
       telephone: entree.telephone,
+      adresse: entree.adresse,
+      appartement: entree.appartement,
       ville: entree.ville,
       code_postal: entree.codePostal,
+      carte_physique: entree.cartePhysique,
+      source: "stripe",
       langue: entree.langue,
       renouvellement_auto: entree.renouvellementAuto,
       stripe_client_id: entree.stripeClientId,

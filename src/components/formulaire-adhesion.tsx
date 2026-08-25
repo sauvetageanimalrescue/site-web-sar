@@ -1,8 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { useTranslations } from "next-intl";
-import { IconAlertTriangleFilled, IconRepeat } from "@tabler/icons-react";
+import { IconAlertTriangleFilled, IconRepeat, IconMailbox } from "@tabler/icons-react";
 import {
   demarrerAdhesion,
   type EtatPaiement,
@@ -45,6 +45,9 @@ export function FormulaireAdhesion() {
     demarrerAdhesion,
     { etat: "inactif" },
   );
+  // L'adresse ne sert qu'à poster une carte physique: elle ne s'affiche, et
+  // ne devient obligatoire, que si la personne en demande une.
+  const [cartePhysique, setCartePhysique] = useState(false);
 
   return (
     <form action={action} className="space-y-5">
@@ -66,20 +69,53 @@ export function FormulaireAdhesion() {
         requis
         facultatif={c("facultatif")}
       />
-      <div className="grid gap-5 sm:grid-cols-2">
-        <Champ
-          nom="telephone"
-          libelle={c("telephone")}
-          type="tel"
-          facultatif={c("facultatif")}
-        />
-        <Champ nom="ville" libelle={c("ville")} facultatif={c("facultatif")} />
-      </div>
       <Champ
-        nom="codePostal"
-        libelle={c("codePostal")}
+        nom="telephone"
+        libelle={c("telephone")}
+        type="tel"
         facultatif={c("facultatif")}
       />
+
+      <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border bg-surface-2 p-4">
+        <input
+          type="checkbox"
+          name="cartePhysique"
+          checked={cartePhysique}
+          onChange={(e) => setCartePhysique(e.target.checked)}
+          className="mt-1 size-4 accent-[var(--marine)]"
+        />
+        <span>
+          <span className="flex items-center gap-2 font-semibold text-marine">
+            <IconMailbox className="size-4" aria-hidden />
+            {t("cartePhysiqueTitre")}
+          </span>
+          <span className="mt-1 block text-sm text-muted">
+            {t("cartePhysiqueTexte")}
+          </span>
+        </span>
+      </label>
+
+      {cartePhysique && (
+        <div className="space-y-5 rounded-lg border border-border p-4">
+          <div className="grid gap-5 sm:grid-cols-[2fr_1fr]">
+            <Champ nom="adresse" libelle={c("adresse")} requis facultatif={c("facultatif")} />
+            <Champ
+              nom="appartement"
+              libelle={c("appartement")}
+              facultatif={c("facultatif")}
+            />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Champ nom="ville" libelle={c("ville")} requis facultatif={c("facultatif")} />
+            <Champ
+              nom="codePostal"
+              libelle={c("codePostal")}
+              requis
+              facultatif={c("facultatif")}
+            />
+          </div>
+        </div>
+      )}
 
       <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border bg-surface-2 p-4">
         <input

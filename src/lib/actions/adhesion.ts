@@ -30,6 +30,16 @@ export async function demarrerAdhesion(
     return { etat: "erreur", motif: "champs" };
   }
 
+  // L'adresse n'est obligatoire que si une carte physique est demandée: sans
+  // quoi il n'y a rien à poster.
+  const cartePhysique = donnees.get("cartePhysique") === "on";
+  const adresse = texte(donnees, "adresse");
+  const ville = texte(donnees, "ville");
+  const codePostal = texte(donnees, "codePostal");
+  if (cartePhysique && (!adresse || !ville || !codePostal)) {
+    return { etat: "erreur", motif: "champs" };
+  }
+
   let url: string;
   try {
     url = await creerPaiementAdhesion({
@@ -37,8 +47,11 @@ export async function demarrerAdhesion(
       nom,
       courriel,
       telephone: texte(donnees, "telephone") || null,
-      ville: texte(donnees, "ville") || null,
-      codePostal: texte(donnees, "codePostal") || null,
+      adresse: adresse || null,
+      appartement: texte(donnees, "appartement") || null,
+      ville: ville || null,
+      codePostal: codePostal || null,
+      cartePhysique,
       langue: (await getLocale()) as Locale,
       renouvellementAuto: donnees.get("renouvellement") === "on",
     });

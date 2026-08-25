@@ -14,8 +14,11 @@ type Adhesion = {
   nom: string;
   courriel: string;
   telephone: string | null;
+  adresse: string | null;
+  appartement: string | null;
   ville: string | null;
   codePostal: string | null;
+  cartePhysique: boolean;
   langue: Locale;
   renouvellementAuto: boolean;
 };
@@ -38,8 +41,11 @@ export async function creerPaiementAdhesion(adhesion: Adhesion) {
       langue: adhesion.langue,
       metadonnees: {
         telephone: adhesion.telephone,
+        adresse: adhesion.adresse,
+        appartement: adhesion.appartement,
         ville: adhesion.ville,
         code_postal: adhesion.codePostal,
+        carte_physique: adhesion.cartePhysique,
         renouvellement_auto: adhesion.renouvellementAuto,
         annee: ANNEE_CARTE,
       },
@@ -79,8 +85,11 @@ export async function creerPaiementAdhesion(adhesion: Adhesion) {
       prenom: adhesion.prenom,
       nom: adhesion.nom,
       telephone: adhesion.telephone ?? "",
+      adresse: adhesion.adresse ?? "",
+      appartement: adhesion.appartement ?? "",
       ville: adhesion.ville ?? "",
       code_postal: adhesion.codePostal ?? "",
+      carte_physique: adhesion.cartePhysique ? "1" : "",
       langue: adhesion.langue,
       annee: String(ANNEE_CARTE),
     },

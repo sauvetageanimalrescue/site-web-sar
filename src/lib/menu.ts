@@ -40,9 +40,7 @@ export const MENU: SectionMenu[] = [
     liens: [
       { cle: "membre", href: "/membre" },
       { cle: "dons", href: "/dons" },
-      { cle: "patreon", href: "/patreon" },
       { cle: "partenariat", href: "/partenariat" },
-      { cle: "partenaires", href: "/partenaires" },
       { cle: "recrutement", href: "/recrutement" },
       { cle: "stages", href: "/stages" },
     ],

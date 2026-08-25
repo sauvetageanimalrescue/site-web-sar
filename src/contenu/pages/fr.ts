@@ -267,38 +267,6 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
-  partenaires: {
-    surtitre: "Ensemble",
-    titre: "Nos partenaires",
-    intro:
-      "Nos partenaires jouent un rôle déterminant dans la réalisation de notre mission. Leur soutien nous permet de secourir plus d'animaux, de leur offrir les soins nécessaires et de sensibiliser la communauté à la cause animale.",
-    image: "/images/remise-certificat.jpg",
-    blocs: [
-      {
-        titre: "Le certificat de partenaire",
-        texte: [
-          "Le certificat de partenariat mesure 11 x 17 pouces. Son design s'inspire des billets de banque et des bons du trésor: éléments de sécurité, couleurs riches, format registre. Le nom de votre organisation y figure en évidence, entouré d'un message de remerciement bilingue. Il est renouvelé chaque année et seulement vingt exemplaires sont émis.",
-        ],
-      },
-      {
-        titre: "La visibilité qui vient avec",
-        liste: [
-          "Certificat affiché dans votre commerce ou votre bureau",
-          "Publication en direct sur notre page Facebook lors de la remise, convertie en vidéo",
-          "Publication photo de la remise sur Facebook",
-          "Publication photo sur Instagram",
-          "Publication vidéo sur TikTok",
-          "Mention dans la section Partenaires de notre site",
-          "Publication spéciale sur Patreon",
-          "Mention dans l'infolettre",
-        ],
-      },
-    ],
-    actions: [
-      { href: "/partenariat", libelle: "Devenir partenaire", principal: true },
-    ],
-  },
-
   medias: {
     surtitre: "Couverture médiatique",
     titre: "Dans les médias",
@@ -827,47 +795,6 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
-  patreon: {
-    surtitre: "Soutien mensuel",
-    titre: "Devenir Patreon",
-    intro:
-      "Patreon permet un soutien financier régulier plutôt qu'un don unique. Pour une organisation qui ne reçoit aucune subvention, cette stabilité change tout: elle permet de planifier l'équipement, l'entretien des véhicules et le remplacement du matériel de sauvetage.",
-    image: "/images/patreon.png",
-    blocs: [
-      {
-        titre: "Les avantages",
-        liste: [
-          "Carte de membre virtuelle",
-          "Accès à la ligne d'urgence en tout temps",
-          "Accès aux communications radio",
-          "Publications quotidiennes",
-          "Journal de bord du chef",
-          "Capsules informatives",
-          "Entrevues avec les sauveteurs",
-          "Vidéos exclusives",
-          "Messages de boîte vocale",
-          "Concours et tirages",
-          "Produits réservés aux membres",
-          "Sondages et événements privés",
-        ],
-      },
-      {
-        titre: "Ce qu'en disent les membres",
-        texte: [
-          "« J'appuie votre organisation parce que vous sauvez des vies qui comptent beaucoup à mes yeux. Gardez à coeur cette merveilleuse mission. Chaque vie est importante. » Sylvie, Sainte-Anne-des-Plaines",
-          "« Je suis tellement fière d'être membre Patreon, je le suis depuis presque vos débuts. J'ai vraiment le sentiment de contribuer au sauvetage d'animaux en détresse qui, sans vous, seraient laissés à eux-mêmes. » Sylvie, Saint-Jean-sur-Richelieu",
-        ],
-      },
-    ],
-    actions: [
-      {
-        href: "https://www.patreon.com/sauvetageanimalrescue",
-        libelle: "Aller sur Patreon",
-        principal: true,
-      },
-    ],
-  },
-
   partenariat: {
     surtitre: "2 000 $ par année",
     titre: "Devenir partenaire",
@@ -882,8 +809,6 @@ export const PAGES_FR: CataloguePages = {
           "Une remise officielle captée en photo et en vidéo",
           "Une diffusion en direct sur nos réseaux lors de la remise",
           "Des publications dédiées sur Facebook, Instagram et TikTok",
-          "Une mention permanente sur la page Partenaires du site",
-          "Une publication spéciale sur Patreon",
           "Une mention dans l'infolettre",
         ],
       },

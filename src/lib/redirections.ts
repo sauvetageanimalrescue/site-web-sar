@@ -18,10 +18,15 @@ export const REDIRECTIONS: Record<string, string> = {
   "/pages/contribuez": "/membre",
   "/pages/carte2026": "/membre",
   "/pages/campagne": "/dons",
-  "/pages/patreon": "/patreon",
   "/pages/certificats": "/partenariat",
-  "/pages/partenaires": "/partenaires",
+  "/pages/partenaires": "/partenariat",
   "/pages/stages-dobservation": "/stages",
+
+  // Patreon et « Nos partenaires » sont retirés du site : le premier n'a
+  // plus de page dédiée, le don mensuel du formulaire /dons le remplace ; le
+  // second faisait doublon avec /partenariat, qui reste la seule page.
+  "/patreon": "/dons",
+  "/partenaires": "/partenariat",
 
   // Recrutement et fonctions. « Patrouilleur » est devenu « Secouriste » ;
   // « Éclaireur » est un grade et non un poste, il retourne au recrutement.

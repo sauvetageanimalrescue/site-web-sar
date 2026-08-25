@@ -108,38 +108,6 @@ export const PAGES_ES: CataloguePages = {
     ],
   },
 
-  partenaires: {
-    surtitre: "Juntos",
-    titre: "Nuestros socios",
-    intro:
-      "Nuestros socios desempeñan un papel decisivo en el cumplimiento de nuestra misión. Su apoyo nos permite rescatar más animales, ofrecerles los cuidados necesarios y sensibilizar a la comunidad sobre la causa animal.",
-    image: "/images/certificat-partenaire.png",
-    blocs: [
-      {
-        titre: "El certificado de socio",
-        texte: [
-          "El certificado de asociación mide 11 por 17 pulgadas. Su diseño se inspira en los billetes de banco y los bonos del tesoro: elementos de seguridad, colores intensos, formato registro. El nombre de su organización aparece de forma destacada, rodeado de un mensaje de agradecimiento bilingüe. Se renueva cada año y solo se emiten veinte ejemplares.",
-        ],
-      },
-      {
-        titre: "La visibilidad que lo acompaña",
-        liste: [
-          "Certificado expuesto en su comercio u oficina",
-          "Emisión en directo en nuestra página de Facebook durante la entrega, convertida en vídeo",
-          "Publicación con foto de la entrega en Facebook",
-          "Publicación con foto en Instagram",
-          "Publicación en vídeo en TikTok",
-          "Mención permanente en la sección Socios de nuestro sitio",
-          "Publicación especial en Patreon",
-          "Mención en el boletín",
-        ],
-      },
-    ],
-    actions: [
-      { href: "/partenariat", libelle: "Ser socio", principal: true },
-    ],
-  },
-
   medias: {
     surtitre: "Cobertura mediática",
     titre: "En los medios",
@@ -185,47 +153,6 @@ export const PAGES_ES: CataloguePages = {
     ],
   },
 
-  patreon: {
-    surtitre: "Apoyo mensual",
-    titre: "Hacerse Patreon",
-    intro:
-      "Patreon permite un apoyo económico regular en lugar de una donación única. Para una organización que no recibe ninguna subvención, esa estabilidad lo cambia todo: permite planificar el equipamiento, el mantenimiento de los vehículos y la renovación del material de rescate.",
-    image: "/images/patreon.png",
-    blocs: [
-      {
-        titre: "Las ventajas",
-        liste: [
-          "Tarjeta de miembro virtual",
-          "Acceso a la línea de urgencia a toda hora",
-          "Acceso a las comunicaciones por radio",
-          "Publicaciones diarias",
-          "Diario de a bordo del jefe",
-          "Cápsulas informativas",
-          "Entrevistas con los rescatistas",
-          "Vídeos exclusivos",
-          "Mensajes del buzón de voz",
-          "Concursos y sorteos",
-          "Productos reservados a los miembros",
-          "Encuestas y eventos privados",
-        ],
-      },
-      {
-        titre: "Lo que dicen los miembros",
-        texte: [
-          "«Apoyo a su organización porque salvan vidas que significan mucho para mí. Conserven esa maravillosa misión. Cada vida es importante.» Sylvie, Sainte-Anne-des-Plaines",
-          "«Estoy muy orgullosa de ser miembro de Patreon, y lo soy casi desde sus inicios. Siento de verdad que contribuyo al rescate de animales en peligro que, sin ustedes, quedarían abandonados a su suerte.» Sylvie, Saint-Jean-sur-Richelieu",
-        ],
-      },
-    ],
-    actions: [
-      {
-        href: "https://www.patreon.com/sauvetageanimalrescue",
-        libelle: "Ir a Patreon",
-        principal: true,
-      },
-    ],
-  },
-
   partenariat: {
     surtitre: "2000 $ al año",
     titre: "Ser socio",
@@ -240,8 +167,6 @@ export const PAGES_ES: CataloguePages = {
           "Una entrega oficial captada en foto y vídeo",
           "Una emisión en directo en nuestras redes durante la entrega",
           "Publicaciones dedicadas en Facebook, Instagram y TikTok",
-          "Una mención permanente en la página Socios del sitio",
-          "Una publicación especial en Patreon",
           "Una mención en el boletín",
         ],
       },

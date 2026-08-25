@@ -108,38 +108,6 @@ export const PAGES_EN: CataloguePages = {
     ],
   },
 
-  partenaires: {
-    surtitre: "Together",
-    titre: "Our partners",
-    intro:
-      "Our partners play a decisive role in carrying out our mission. Their support lets us rescue more animals, give them the care they need and raise awareness of the animal cause in our community.",
-    image: "/images/certificat-partenaire.png",
-    blocs: [
-      {
-        titre: "The partner certificate",
-        texte: [
-          "The partnership certificate measures 11 by 17 inches. Its design draws on banknotes and treasury bonds: security elements, rich colours, ledger format. Your organization's name appears prominently, framed by a bilingual message of thanks. It is renewed each year and only twenty are issued.",
-        ],
-      },
-      {
-        titre: "The visibility that comes with it",
-        liste: [
-          "Certificate displayed in your business or office",
-          "Live broadcast on our Facebook page during the handover, converted to video",
-          "Photo post of the handover on Facebook",
-          "Photo post on Instagram",
-          "Video post on TikTok",
-          "Permanent mention in the Partners section of our site",
-          "A dedicated post on Patreon",
-          "A mention in the newsletter",
-        ],
-      },
-    ],
-    actions: [
-      { href: "/partenariat", libelle: "Become a partner", principal: true },
-    ],
-  },
-
   medias: {
     surtitre: "Press coverage",
     titre: "In the media",
@@ -185,47 +153,6 @@ export const PAGES_EN: CataloguePages = {
     ],
   },
 
-  patreon: {
-    surtitre: "Monthly support",
-    titre: "Become a Patreon supporter",
-    intro:
-      "Patreon provides steady monthly support rather than a one-off gift. For an organization with no grants, that stability changes everything: it makes it possible to plan equipment, vehicle maintenance and the replacement of rescue gear.",
-    image: "/images/patreon.png",
-    blocs: [
-      {
-        titre: "What you get",
-        liste: [
-          "Virtual membership card",
-          "Access to the emergency line at all hours",
-          "Access to radio communications",
-          "Daily posts",
-          "The chief's logbook",
-          "Informational capsules",
-          "Interviews with rescuers",
-          "Exclusive videos",
-          "Voicemail recordings",
-          "Contests and draws",
-          "Members-only products",
-          "Surveys and private events",
-        ],
-      },
-      {
-        titre: "What members say",
-        texte: [
-          "\"I support your organization because you save lives that matter a great deal to me. Hold on to this wonderful mission. Every life is important.\" Sylvie, Sainte-Anne-des-Plaines",
-          "\"I am so proud to be a Patreon member, and I have been almost since you started. I really feel like I am contributing to rescuing animals who, without you, would be left to fend for themselves.\" Sylvie, Saint-Jean-sur-Richelieu",
-        ],
-      },
-    ],
-    actions: [
-      {
-        href: "https://www.patreon.com/sauvetageanimalrescue",
-        libelle: "Go to Patreon",
-        principal: true,
-      },
-    ],
-  },
-
   partenariat: {
     surtitre: "$2,000 a year",
     titre: "Become a partner",
@@ -240,8 +167,6 @@ export const PAGES_EN: CataloguePages = {
           "An official handover captured in photo and video",
           "A live broadcast on our channels during the handover",
           "Dedicated posts on Facebook, Instagram and TikTok",
-          "A permanent mention on the site's Partners page",
-          "A dedicated post on Patreon",
           "A mention in the newsletter",
         ],
       },

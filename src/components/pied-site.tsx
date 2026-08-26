@@ -67,7 +67,7 @@ export function PiedSite() {
                 une fois le héros de l'accueil loin derrière. */}
             <Link
               href="/signalement"
-              className="mt-5 flex w-fit items-center gap-2 rounded-full bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
+              className="mt-5 flex w-fit items-center gap-2 rounded-md bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
             >
               <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
               {p("signalerBouton")}
@@ -99,7 +99,7 @@ export function PiedSite() {
             </p>
             <ul className="mt-3 space-y-3 text-sm">
               <li>
-                <span className="block text-xs uppercase tracking-wide text-white/50">
+                <span className="block text-xs font-bold uppercase tracking-wide text-white/70">
                   {p("signalement")}
                 </span>
                 <a
@@ -110,7 +110,7 @@ export function PiedSite() {
                 </a>
               </li>
               <li>
-                <span className="block text-xs uppercase tracking-wide text-white/50">
+                <span className="block text-xs font-bold uppercase tracking-wide text-white/70">
                   {p("sansFrais")}
                 </span>
                 <a

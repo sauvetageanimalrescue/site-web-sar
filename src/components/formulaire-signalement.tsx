@@ -11,18 +11,27 @@ import {
   type EtatSignalement,
 } from "@/lib/actions/signalement";
 
-// Les états proposés au public : un sous-ensemble lisible de la liste interne
-// du registre, dont on conserve les valeurs exactes pour que la répartition
-// retrouve ses repères.
+// Les dix-sept états du CRAP 2027 (voir etats-animal.ts, registre des
+// missions) : les valeurs sont recopiées exactement, pour que la répartition
+// retrouve ses repères. Seul le libellé affiché est reformulé pour le public.
 const ETATS = [
-  "Pris",
+  "Agonisant",
   "Blessé",
-  "Errant",
-  "Orphelin",
-  "Malade",
   "Confiné",
-  "Violent",
   "Décédé",
+  "Errant",
+  "Fuite / En cavale",
+  "Gêne physique / Incommodé",
+  "Hauteur",
+  "Incertain / À vérifier",
+  "Malade",
+  "Nuisance",
+  "Orphelin",
+  "Pris / Coincé",
+  "Réactif / Agressif",
+  "Sain",
+  "Trappé",
+  "Vulnérable / À risque",
 ] as const;
 
 const CLASSE_CHAMP =

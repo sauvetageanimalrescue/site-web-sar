@@ -2,7 +2,9 @@
 // l'en-tête et le pied de page lisent tous les deux cette structure pour ne
 // jamais diverger.
 
-export type LienMenu = { cle: string; href: string };
+// href absent : le lien n'existe pas encore (page à venir), il s'affiche
+// dans le menu mais ne mène nulle part.
+export type LienMenu = { cle: string; href?: string };
 // Une section porte soit une liste de liens, qui devient un menu déroulant,
 // soit une adresse, et elle est alors un lien direct dans la barre.
 export type SectionMenu = { cle: string; liens: LienMenu[]; href?: string };
@@ -34,7 +36,29 @@ export const MENU: SectionMenu[] = [
       { cle: "sinistres", href: "/services/sinistres" },
     ],
   },
-  { cle: "solutions", href: "/solutions", liens: [] },
+  {
+    // Les milieux desservis : pas encore de fiche par milieu, donc aucun
+    // href pour l'instant. La section s'affiche déjà pour qu'Eric voie
+    // l'ordre et la liste complète pendant qu'on écrit le reste.
+    cle: "solutions",
+    liens: [
+      { cle: "municipalites" },
+      { cle: "securitePublique" },
+      { cle: "militaires" },
+      { cle: "serviceAnimalier" },
+      { cle: "hopitauxResidences" },
+      { cle: "ecolesUniversites" },
+      { cle: "transportCommun" },
+      { cle: "aeroport" },
+      { cle: "installationPortuaire" },
+      { cle: "entrepriseUsine" },
+      { cle: "centresCommerciaux" },
+      { cle: "parcsAttraction" },
+      { cle: "toursCellulaires" },
+      { cle: "telecommunications" },
+      { cle: "cimetiere" },
+    ],
+  },
   {
     cle: "contribuer",
     liens: [
@@ -60,6 +84,8 @@ export const MENU: SectionMenu[] = [
 // Liens de premier niveau, hors menus déroulants.
 export const LIENS_DIRECTS: LienMenu[] = [
   { cle: "fiches", href: "/informations" },
+  // Pas encore de boutique en ligne : le mot apparaît, sans lien.
+  { cle: "boutique" },
 ];
 
 // Connexion : trois portes distinctes, parce que ce ne sont ni les mêmes

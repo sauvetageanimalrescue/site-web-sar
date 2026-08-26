@@ -55,7 +55,22 @@
     "distinctions": "Distinctions",
     "memoriam": "In memoriam",
     "serie": "Série télévisée",
-    "solutions": "Solutions"
+    "solutions": "Solutions",
+    "securitePublique": "Sécurité publique, centrale 311 et 911",
+    "militaires": "Militaires",
+    "serviceAnimalier": "Service animalier",
+    "hopitauxResidences": "Hôpitaux et résidences",
+    "ecolesUniversites": "Écoles et universités",
+    "transportCommun": "Transport en commun",
+    "aeroport": "Aéroport",
+    "installationPortuaire": "Installation portuaire",
+    "entrepriseUsine": "Entreprise et usine",
+    "centresCommerciaux": "Centres commerciaux",
+    "parcsAttraction": "Parcs d'attraction",
+    "toursCellulaires": "Tours cellulaires",
+    "telecommunications": "Télécommunications",
+    "cimetiere": "Cimetière",
+    "boutique": "Boutique"
   },
   "compteur": {
     "titre": "Animaux secourus",

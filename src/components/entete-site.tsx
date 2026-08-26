@@ -34,17 +34,25 @@ export function EnteteSite() {
     chemin === href || chemin.startsWith(`${href}/`);
 
   // Une destination hors du site ne passe pas par le Link de next-intl, qui
-  // préfixerait la locale à l'URL absolue.
+  // préfixerait la locale à l'URL absolue. Sans href, la page n'existe pas
+  // encore : le libellé s'affiche, en retrait, mais ne mène nulle part.
   const LienMenu = ({
     href,
     className,
     children,
   }: {
-    href: string;
+    href?: string;
     className: string;
     children: React.ReactNode;
-  }) =>
-    /^https?:\/\//.test(href) ? (
+  }) => {
+    if (!href) {
+      return (
+        <span className={`${className} cursor-default text-muted`}>
+          {children}
+        </span>
+      );
+    }
+    return /^https?:\/\//.test(href) ? (
       <a
         href={href}
         target="_blank"
@@ -66,6 +74,7 @@ export function EnteteSite() {
         {children}
       </Link>
     );
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
@@ -112,7 +121,7 @@ export function EnteteSite() {
               <div className="absolute right-0 top-full w-64 rounded-lg border border-border bg-surface p-2 shadow-lg">
                 {MENU_CONNEXION.liens.map((lien) => (
                   <LienMenu
-                    key={lien.href}
+                    key={lien.cle}
                     href={lien.href}
                     className="block rounded-md px-3 py-2 text-sm text-foreground transition hover:bg-surface-2"
                   >
@@ -184,10 +193,10 @@ export function EnteteSite() {
                 <div className="absolute left-0 top-full w-64 rounded-lg border border-border bg-surface p-2 shadow-lg">
                   {section.liens.map((lien) => (
                     <LienMenu
-                      key={lien.href}
+                      key={lien.cle}
                       href={lien.href}
                       className={`block rounded-md px-3 py-2 text-sm transition hover:bg-surface-2 ${
-                        actif(lien.href)
+                        lien.href && actif(lien.href)
                           ? "font-semibold text-marine"
                           : "text-foreground"
                       }`}
@@ -202,15 +211,15 @@ export function EnteteSite() {
           )}
 
           {LIENS_DIRECTS.map((lien) => (
-            <Link
-              key={lien.href}
+            <LienMenu
+              key={lien.cle}
               href={lien.href}
               className={`rounded-md px-3 py-2.5 text-sm font-medium transition hover:bg-surface ${
-                actif(lien.href) ? "text-marine" : "text-foreground"
+                lien.href && actif(lien.href) ? "text-marine" : "text-foreground"
               }`}
             >
               {t(lien.cle)}
-            </Link>
+            </LienMenu>
           ))}
         </div>
       </nav>
@@ -243,7 +252,7 @@ export function EnteteSite() {
                     <div className="mt-1">
                       {section.liens.map((lien) => (
                         <LienMenu
-                          key={lien.href}
+                          key={lien.cle}
                           href={lien.href}
                           className="block rounded-md px-1 py-2 text-sm text-foreground"
                         >
@@ -256,15 +265,14 @@ export function EnteteSite() {
               );
             })}
             <div className="border-t border-border py-2">
-              {[...MENU.filter((s) => s.href).map((s) => ({ cle: s.cle, href: s.href as string })), ...LIENS_DIRECTS].map((lien) => (
-                <Link
-                  key={lien.href}
+              {[...MENU.filter((s) => s.href).map((s) => ({ cle: s.cle, href: s.href })), ...LIENS_DIRECTS].map((lien) => (
+                <LienMenu
+                  key={lien.cle}
                   href={lien.href}
-                  onClick={() => setMobileOuvert(false)}
                   className="block rounded-md px-1 py-2 text-sm font-medium text-foreground"
                 >
                   {t(lien.cle)}
-                </Link>
+                </LienMenu>
               ))}
             </div>
           </div>

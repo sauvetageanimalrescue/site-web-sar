@@ -82,10 +82,14 @@ export function PiedSite() {
                 </p>
                 <ul className="mt-3 space-y-2 text-sm">
                   {section.liens.map((lien) => (
-                    <li key={lien.href}>
-                      <Link href={lien.href} className="transition hover:text-white">
-                        {t(lien.cle)}
-                      </Link>
+                    <li key={lien.cle}>
+                      {lien.href ? (
+                        <Link href={lien.href} className="transition hover:text-white">
+                          {t(lien.cle)}
+                        </Link>
+                      ) : (
+                        <span className="text-white/50">{t(lien.cle)}</span>
+                      )}
                     </li>
                   ))}
                 </ul>

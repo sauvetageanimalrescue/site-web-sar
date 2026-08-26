@@ -55,7 +55,22 @@
     "distinctions": "Distinciones",
     "memoriam": "In memoriam",
     "serie": "Serie de televisión",
-    "solutions": "Soluciones"
+    "solutions": "Soluciones",
+    "securitePublique": "Seguridad pública, central 311 y 911",
+    "militaires": "Militares",
+    "serviceAnimalier": "Servicio animal",
+    "hopitauxResidences": "Hospitales y residencias",
+    "ecolesUniversites": "Escuelas y universidades",
+    "transportCommun": "Transporte público",
+    "aeroport": "Aeropuerto",
+    "installationPortuaire": "Instalaciones portuarias",
+    "entrepriseUsine": "Empresas e industrias",
+    "centresCommerciaux": "Centros comerciales",
+    "parcsAttraction": "Parques de diversiones",
+    "toursCellulaires": "Torres celulares",
+    "telecommunications": "Telecomunicaciones",
+    "cimetiere": "Cementerio",
+    "boutique": "Tienda"
   },
   "compteur": {
     "titre": "Animales socorridos",

@@ -55,7 +55,22 @@
     "distinctions": "Honours",
     "memoriam": "In memoriam",
     "serie": "Television series",
-    "solutions": "Solutions"
+    "solutions": "Solutions",
+    "securitePublique": "Public safety, 311 and 911 dispatch",
+    "militaires": "Military",
+    "serviceAnimalier": "Animal services",
+    "hopitauxResidences": "Hospitals and residences",
+    "ecolesUniversites": "Schools and universities",
+    "transportCommun": "Public transit",
+    "aeroport": "Airport",
+    "installationPortuaire": "Port facilities",
+    "entrepriseUsine": "Business and industry",
+    "centresCommerciaux": "Shopping centres",
+    "parcsAttraction": "Amusement parks",
+    "toursCellulaires": "Cell towers",
+    "telecommunications": "Telecommunications",
+    "cimetiere": "Cemetery",
+    "boutique": "Shop"
   },
   "compteur": {
     "titre": "Animals assisted",

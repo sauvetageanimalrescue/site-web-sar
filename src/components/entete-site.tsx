@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
+import {
+  IconChevronDown,
+  IconMenu2,
+  IconX,
+  IconAlertTriangleFilled,
+} from "@tabler/icons-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "@/components/logo";
 import { SelecteurLangue } from "@/components/selecteur-langue";
@@ -64,80 +69,29 @@ export function EnteteSite() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3">
+      {/* Rangée blanche: logo, signaler, connexion, langue. Toujours là, peu
+          importe la taille d'écran ; c'est la rangée du dessous, le menu, qui
+          change de forme selon la place disponible. */}
+      <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
         <Logo />
 
-        <nav
-          className="ml-auto hidden items-center gap-1 lg:flex"
-          aria-label={t("menu")}
-        >
-          {MENU.map((section) =>
-            section.href ? (
-              <Link
-                key={section.cle}
-                href={section.href}
-                className={`rounded-md px-3 py-2 text-sm font-medium transition hover:bg-surface-2 ${
-                  actif(section.href) ? "text-marine" : "text-foreground"
-                }`}
-              >
-                {t(section.cle)}
-              </Link>
-            ) : (
-            <div
-              key={section.cle}
-              className="relative"
-              onMouseEnter={() => setSectionOuverte(section.cle)}
-              onMouseLeave={() => setSectionOuverte(null)}
-            >
-              <button
-                type="button"
-                aria-expanded={sectionOuverte === section.cle}
-                onClick={() =>
-                  setSectionOuverte(
-                    sectionOuverte === section.cle ? null : section.cle,
-                  )
-                }
-                className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition hover:bg-surface-2"
-              >
-                {t(section.cle)}
-                <IconChevronDown className="size-4 text-muted" aria-hidden />
-              </button>
-              {sectionOuverte === section.cle && (
-                <div className="absolute left-0 top-full w-64 rounded-lg border border-border bg-surface p-2 shadow-lg">
-                  {section.liens.map((lien) => (
-                    <LienMenu
-                      key={lien.href}
-                      href={lien.href}
-                      className={`block rounded-md px-3 py-2 text-sm transition hover:bg-surface-2 ${
-                        actif(lien.href)
-                          ? "font-semibold text-marine"
-                          : "text-foreground"
-                      }`}
-                    >
-                      {t(lien.cle)}
-                    </LienMenu>
-                  ))}
-                </div>
-              )}
-            </div>
-            ),
-          )}
+        <div className="ml-auto flex items-center gap-2">
+          {/* Icône seule sous sm, faute de place à côté du logo et du
+              hamburger ; le texte complet revient dès qu'il y a de la place. */}
+          <Link
+            href="/signalement"
+            aria-label={t("signalerBouton")}
+            className="flex items-center gap-2 rounded-md bg-urgence p-2.5 text-sm font-semibold text-white transition hover:bg-urgence/90 sm:px-4 sm:py-2"
+          >
+            <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
+            <span className="hidden sm:inline">{t("signalerBouton")}</span>
+          </Link>
 
-          {LIENS_DIRECTS.map((lien) => (
-            <Link
-              key={lien.href}
-              href={lien.href}
-              className={`rounded-md px-3 py-2 text-sm font-medium transition hover:bg-surface-2 ${
-                actif(lien.href) ? "text-marine" : "text-foreground"
-              }`}
-            >
-              {t(lien.cle)}
-            </Link>
-          ))}
-
-          {/* Connexion, dernier avant le sélecteur de langue. */}
+          {/* Connexion : à côté du sélecteur de langue plutôt que dans le
+              menu, elle mène ailleurs qu'aux pages du site (registre des
+              missions). */}
           <div
-            className="relative"
+            className="relative hidden lg:block"
             onMouseEnter={() => setSectionOuverte(MENU_CONNEXION.cle)}
             onMouseLeave={() => setSectionOuverte(null)}
           >
@@ -168,11 +122,9 @@ export function EnteteSite() {
               </div>
             )}
           </div>
-        </nav>
 
-        {/* Le sélecteur de langue ferme la barre, collé au bord droit. */}
-        <div className="ml-auto flex items-center gap-2 lg:ml-2">
           <SelecteurLangue />
+
           <button
             type="button"
             onClick={() => setMobileOuvert((v) => !v)}
@@ -188,6 +140,80 @@ export function EnteteSite() {
           </button>
         </div>
       </div>
+
+      {/* Rangée grise: la racine du menu, visible en entier sur un écran
+          assez large. En dessous du seuil, elle disparaît complètement, le
+          hamburger de la rangée du haut prend le relais. */}
+      <nav
+        className="hidden border-t border-border bg-surface-2 lg:block"
+        aria-label={t("menu")}
+      >
+        <div className="mx-auto flex max-w-7xl items-center gap-1 px-4">
+          {MENU.map((section) =>
+            section.href ? (
+              <Link
+                key={section.cle}
+                href={section.href}
+                className={`rounded-md px-3 py-2.5 text-sm font-medium transition hover:bg-surface ${
+                  actif(section.href) ? "text-marine" : "text-foreground"
+                }`}
+              >
+                {t(section.cle)}
+              </Link>
+            ) : (
+            <div
+              key={section.cle}
+              className="relative"
+              onMouseEnter={() => setSectionOuverte(section.cle)}
+              onMouseLeave={() => setSectionOuverte(null)}
+            >
+              <button
+                type="button"
+                aria-expanded={sectionOuverte === section.cle}
+                onClick={() =>
+                  setSectionOuverte(
+                    sectionOuverte === section.cle ? null : section.cle,
+                  )
+                }
+                className="flex items-center gap-1 rounded-md px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-surface"
+              >
+                {t(section.cle)}
+                <IconChevronDown className="size-4 text-muted" aria-hidden />
+              </button>
+              {sectionOuverte === section.cle && (
+                <div className="absolute left-0 top-full w-64 rounded-lg border border-border bg-surface p-2 shadow-lg">
+                  {section.liens.map((lien) => (
+                    <LienMenu
+                      key={lien.href}
+                      href={lien.href}
+                      className={`block rounded-md px-3 py-2 text-sm transition hover:bg-surface-2 ${
+                        actif(lien.href)
+                          ? "font-semibold text-marine"
+                          : "text-foreground"
+                      }`}
+                    >
+                      {t(lien.cle)}
+                    </LienMenu>
+                  ))}
+                </div>
+              )}
+            </div>
+            ),
+          )}
+
+          {LIENS_DIRECTS.map((lien) => (
+            <Link
+              key={lien.href}
+              href={lien.href}
+              className={`rounded-md px-3 py-2.5 text-sm font-medium transition hover:bg-surface ${
+                actif(lien.href) ? "text-marine" : "text-foreground"
+              }`}
+            >
+              {t(lien.cle)}
+            </Link>
+          ))}
+        </div>
+      </nav>
 
       {mobileOuvert && (
         <nav

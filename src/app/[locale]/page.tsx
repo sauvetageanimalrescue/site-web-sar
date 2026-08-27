@@ -50,7 +50,7 @@ function Hero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, rgba(11, 35, 56, 0.2) 78%)",
+            "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, rgba(11, 35, 56, 0.4) 78%)",
         }}
       />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">

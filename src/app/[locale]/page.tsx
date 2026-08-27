@@ -29,23 +29,25 @@ function Hero() {
   const t = useTranslations("accueil");
 
   return (
-    // Bannière sur aplat marine, avec une vraie photo de terrain à droite :
-    // le titre reste parfaitement lisible et l'identité s'impose d'entrée.
+    // Photo pleine largeur, intacte : c'est le dégradé par-dessus qui
+    // garantit la lecture du texte, pas la photo elle-même qui est coupée
+    // ou masquée. Le dégradé bascule plus tard que le centre, pour laisser
+    // le plus de place possible au texte sans pour autant cacher la photo.
     <section className="relative isolate overflow-hidden bg-marine">
-      {/* Fond en image de style plutôt qu'en composant Image : l'optimiseur de
-          Next ré-encode en WebP et un grand aplat marine s'y dégrade en
-          aplats visibles. Ajusté sur la hauteur et ancré à droite, il n'est
-          jamais agrandi au-delà de sa taille réelle. Le fondu masque la
-          photo elle-même sur son bord gauche, pour qu'elle se marie avec le
-          marine de la section au lieu d'y couper net. */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-right bg-no-repeat"
+        className="absolute inset-0 -z-20 bg-cover"
         style={{
           backgroundImage: "url(/images/hero-raton-laveur.jpg)",
-          backgroundSize: "auto 100%",
-          maskImage: "linear-gradient(to right, transparent, black 40%)",
-          WebkitMaskImage: "linear-gradient(to right, transparent, black 40%)",
+          backgroundPosition: "center 35%",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, transparent 78%)",
         }}
       />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">

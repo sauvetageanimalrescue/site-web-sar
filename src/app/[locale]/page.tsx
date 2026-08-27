@@ -33,6 +33,9 @@ function Hero() {
     // garantit la lecture du texte, pas la photo elle-même qui est coupée
     // ou masquée. Le dégradé bascule plus tard que le centre, pour laisser
     // le plus de place possible au texte sans pour autant cacher la photo.
+    // Il ne descend jamais sous 20 % d'opacité, même tout à droite: sur un
+    // téléphone, le texte s'étend sur presque toute la largeur, et une photo
+    // qui redevient complètement nette y nuit à la lecture.
     <section className="relative isolate overflow-hidden bg-marine">
       <div
         aria-hidden
@@ -47,7 +50,7 @@ function Hero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, transparent 78%)",
+            "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, rgba(11, 35, 56, 0.2) 78%)",
         }}
       />
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">

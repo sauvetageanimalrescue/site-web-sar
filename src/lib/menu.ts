@@ -79,11 +79,21 @@ export const MENU: SectionMenu[] = [
       { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
     ],
   },
+  {
+    // Deux familles de contenu, pas quatre : les fiches d'urgence (quoi
+    // faire, quoi éviter, qui appeler) existent déjà sur /informations.
+    // Les fiches informatives (la rage, l'Halloween, la micropuce...) sont
+    // un format plus libre, pas encore construit.
+    cle: "fiches",
+    liens: [
+      { cle: "estCeUneUrgence", href: "/informations" },
+      { cle: "ficheInformative" },
+    ],
+  },
 ];
 
 // Liens de premier niveau, hors menus déroulants.
 export const LIENS_DIRECTS: LienMenu[] = [
-  { cle: "fiches", href: "/informations" },
   // Pas encore de boutique en ligne : le mot apparaît, sans lien.
   { cle: "boutique" },
 ];

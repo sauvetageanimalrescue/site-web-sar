@@ -10,7 +10,7 @@ export const PAGES_FR: CataloguePages = {
       "Sauvetage Animal Rescue a pour mission de protéger et de sauver les animaux. Nous déployons des ressources humaines et matérielles pour mener à bien nos missions de secours et de sauvetage.",
     image: "/images/australie-2020-1400.jpg",
     imageTailleNaturelle: { largeur: 1400, hauteur: 933 },
-    imagePosition: "right -20px",
+    imagePosition: "right -320px",
     blocs: [
       {
         titre: "Protéger et sauver",

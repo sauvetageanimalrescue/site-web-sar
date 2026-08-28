@@ -695,8 +695,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Sinistres",
     intro:
       "Lorsqu'un sinistre bouleverse une communauté, les animaux doivent eux aussi être pris en charge. Sauvetage Animal Rescue soutient les autorités avec des équipes, du matériel et une capacité opérationnelle spécialement conçue pour les animaux.",
-    image: "/images/hero-accueil.jpg",
-    imageTailleNaturelle: { largeur: 2400, hauteur: 1350 },
+    image: "/images/sinistres-hero.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1160 },
     blocs: [
       {
         titre: "Intégrer les animaux à la réponse d'urgence",

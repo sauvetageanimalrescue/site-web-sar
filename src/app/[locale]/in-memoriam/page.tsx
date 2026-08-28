@@ -17,7 +17,7 @@ export default async function PageMemoriam({
         titre={t("titre")}
         intro={t("dedicace")}
         image="/images/memoriam-ruban.jpg"
-        imageTailleNaturelle={{ largeur: 2248, hauteur: 1300 }}
+        imageLargeurComplete
       />
 
       {/* Même gabarit que partout ailleurs: une image en seize neuf, coins

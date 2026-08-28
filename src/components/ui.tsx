@@ -37,6 +37,7 @@ export function EnTetePage({
   imagePosition,
   imageFit = "cover",
   imageTailleNaturelle,
+  imageLargeurComplete,
 }: {
   surtitre?: string;
   titre: string;
@@ -53,16 +54,23 @@ export function EnTetePage({
   // Un agrandissement de fenêtre ne fait que révéler plus de bleu marine à
   // gauche (l'image reste ancrée à droite par défaut), jamais un zoom.
   imageTailleNaturelle?: { largeur: number; hauteur: number };
+  // La photo couvre toujours toute la largeur du bandeau (jamais de bleu sur
+  // les côtés), mise à l'échelle au minimum nécessaire pour y arriver :
+  // contrairement à `cover`, l'échelle suit uniquement la largeur, jamais la
+  // hauteur, donc pas de changement de zoom imprévisible au redimensionnement.
+  imageLargeurComplete?: boolean;
 }) {
   return (
     <section className="relative isolate flex min-h-[23rem] items-start overflow-hidden bg-marine sm:min-h-[27rem]">
-      {image && imageTailleNaturelle && (
+      {image && (imageTailleNaturelle || imageLargeurComplete) && (
         <div
           aria-hidden
           className="absolute inset-0 opacity-45"
           style={{
             backgroundImage: `url(${image})`,
-            backgroundSize: `${imageTailleNaturelle.largeur}px ${imageTailleNaturelle.hauteur}px`,
+            backgroundSize: imageLargeurComplete
+              ? "100% auto"
+              : `${imageTailleNaturelle!.largeur}px ${imageTailleNaturelle!.hauteur}px`,
             backgroundPosition: imagePosition ?? "right center",
             backgroundRepeat: "no-repeat",
           }}

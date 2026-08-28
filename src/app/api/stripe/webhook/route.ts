@@ -183,11 +183,12 @@ const CONFIRMATION_DON = {
       <p style="margin:0 0 14px;line-height:1.6;">Nous avons bien reçu votre don${
         mensuel ? " mensuel" : ""
       } de <strong>${montant}</strong>.</p>
-      <p style="margin:0;line-height:1.6;">${
+      <p style="margin:0 0 14px;line-height:1.6;">${
         mensuel
           ? "Ce montant sera prélevé automatiquement chaque mois. Vous pouvez annuler en tout temps en écrivant à info@sar.quebec."
           : "Chaque don contribue directement à financer nos interventions."
-      }</p>`,
+      }</p>
+      <p style="margin:0;line-height:1.6;font-size:13px;color:#5a6b78;">Ce courriel confirme votre don, mais ne constitue pas un reçu aux fins de l'impôt. Sauvetage Animal Rescue est un organisme à but non lucratif provincial, sans le statut d'organisme de bienfaisance enregistré auprès de l'Agence du revenu du Canada.</p>`,
   },
   en: {
     sujet: (mensuel: boolean) =>
@@ -197,11 +198,12 @@ const CONFIRMATION_DON = {
       <p style="margin:0 0 14px;line-height:1.6;">We have received your${
         mensuel ? " monthly" : ""
       } donation of <strong>${montant}</strong>.</p>
-      <p style="margin:0;line-height:1.6;">${
+      <p style="margin:0 0 14px;line-height:1.6;">${
         mensuel
           ? "This amount will be charged automatically every month. You may cancel at any time by writing to info@sar.quebec."
           : "Every donation directly funds our interventions."
-      }</p>`,
+      }</p>
+      <p style="margin:0;line-height:1.6;font-size:13px;color:#5a6b78;">This email confirms your donation but is not a tax receipt. Sauvetage Animal Rescue is a provincial non-profit organization, not a registered charity with the Canada Revenue Agency.</p>`,
   },
   es: {
     sujet: (mensuel: boolean) =>
@@ -211,11 +213,12 @@ const CONFIRMATION_DON = {
       <p style="margin:0 0 14px;line-height:1.6;">Hemos recibido su donación${
         mensuel ? " mensual" : ""
       } de <strong>${montant}</strong>.</p>
-      <p style="margin:0;line-height:1.6;">${
+      <p style="margin:0 0 14px;line-height:1.6;">${
         mensuel
           ? "Este monto se cobrará automáticamente cada mes. Puede cancelar en cualquier momento escribiendo a info@sar.quebec."
           : "Cada donación financia directamente nuestras intervenciones."
-      }</p>`,
+      }</p>
+      <p style="margin:0;line-height:1.6;font-size:13px;color:#5a6b78;">Este correo confirma su donación, pero no constituye un recibo fiscal. Sauvetage Animal Rescue es un organismo sin fines de lucro provincial, sin el estatus de organización benéfica registrada ante la Agencia de Ingresos de Canadá.</p>`,
   },
 } as const;
 

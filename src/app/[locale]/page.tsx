@@ -72,7 +72,7 @@ function Hero() {
           </Link>
           <Link
             href="/dons"
-            className="rounded-md border border-white/30 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
+            className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine/80"
           >
             {t("heroDons")}
           </Link>

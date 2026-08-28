@@ -307,6 +307,11 @@ export const PAGES_FR: CataloguePages = {
               "Le formulaire de don accepte un don ponctuel ou mensuel, par carte. Une confirmation vous est envoyée par courriel une fois le paiement complété.",
           },
           {
+            question: "Est-ce que je reçois un reçu pour fins d'impôt?",
+            reponse:
+              "Non. Sauvetage Animal Rescue est un organisme à but non lucratif provincial, mais n'a pas le statut d'organisme de bienfaisance enregistré auprès de l'Agence du revenu du Canada. La confirmation de don envoyée par courriel n'est donc pas un reçu aux fins de l'impôt.",
+          },
+          {
             question: "Comment devenir bénévole ou intervenant?",
             reponse:
               "Sauvetage Animal Rescue recrute des répartiteurs, des messagers, des secouristes et des sauveteurs. La page Recrutement présente les postes ainsi que le stage d'observation qui précède l'engagement.",

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { IconChevronDown } from "@tabler/icons-react";
+import { TexteRiche } from "@/components/texte-riche";
 
 export type ItemAccordeon = { question: string; reponse: string };
 
@@ -31,7 +32,7 @@ export function Accordeon({ items }: { items: ItemAccordeon[] }) {
             </button>
             {estOuvert && (
               <p className="px-5 pb-4 text-sm leading-relaxed text-muted">
-                {item.reponse}
+                <TexteRiche texte={item.reponse} />
               </p>
             )}
           </div>

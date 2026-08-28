@@ -284,17 +284,17 @@ export const PAGES_FR: CataloguePages = {
           {
             question: "Sur quel territoire intervenez-vous?",
             reponse:
-              "Nous intervenons sur l'ensemble du territoire de la Communauté métropolitaine de Montréal: 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Notre page Territoire desservi permet de vérifier si votre municipalité en fait partie.",
+              "Nous intervenons sur l'ensemble du territoire de la Communauté métropolitaine de Montréal: 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Vérifiez si votre municipalité en fait partie sur notre page [Territoire desservi](/territoire).",
           },
           {
             question: "Comment signaler un animal en détresse?",
             reponse:
-              "Pour une urgence, appelez notre ligne de signalement au 514-773-3911, jour et nuit. Le formulaire de signalement en ligne existe aussi, mais il ne remplace pas un appel lorsque la situation est urgente.",
+              "Composez notre ligne de signalement au 514-773-3911, ou sans frais au 1-833-773-3911, jour et nuit. Le formulaire de signalement en ligne mène à la même file de répartition: dans les deux cas, notre équipe analyse le signalement et communique avec vous dans les meilleurs délais.",
           },
           {
             question: "Puis-je vous amener un animal trouvé, ou en adopter un?",
             reponse:
-              "Non. Sauvetage Animal Rescue n'est pas un refuge et ne fait pas d'adoption. Un animal que nous secourons est remis à un refuge, à une clinique vétérinaire ou à son propriétaire, selon le cas. Pour une adoption, adressez-vous à votre service animalier municipal ou à un refuge.",
+              "Non. Sauvetage Animal Rescue n'est pas un refuge et ne fait pas d'adoption. Un animal que nous secourons est remis à un refuge, au service animalier municipal ou à son propriétaire, selon le cas. Pour une adoption, adressez-vous à votre service animalier municipal ou à un refuge.",
           },
           {
             question: "Pourquoi devenir membre?",

@@ -13,7 +13,8 @@ export type BlocPage = {
   // l'instant : la vérification du territoire desservi.
   composant?: "territoire" | "presse";
   // Foire aux questions: une question, une réponse repliée derrière un
-  // chevron. La réponse est du texte brut, sans balisage (**gras**, liens).
+  // chevron. La réponse accepte **gras** et [libellé](/adresse), comme un
+  // paragraphe éditorial.
   questions?: { question: string; reponse: string }[];
 };
 

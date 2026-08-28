@@ -271,7 +271,7 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Vos questions, nos réponses",
     titre: "Foire aux questions",
     intro:
-      "Un aperçu des questions qu'on nous pose le plus souvent, sur notre mission, notre territoire, l'adhésion et les dons. Pour tout le reste, la direction générale vous répond directement.",
+      "Vous avez une question sur nos interventions, notre territoire, nos services ou les différentes façons de soutenir Sauvetage Animal Rescue? Retrouvez ici les réponses aux questions qui nous sont le plus souvent posées.",
     image: "/images/hero-accueil.jpg",
     blocs: [
       {
@@ -279,52 +279,57 @@ export const PAGES_FR: CataloguePages = {
           {
             question: "Qu'est-ce que Sauvetage Animal Rescue?",
             reponse:
-              "Sauvetage Animal Rescue est une équipe de secours et de sauvetage technique pour les animaux. Nous ne sommes pas un refuge: nous intervenons directement sur le terrain pour sécuriser un animal en détresse, puis nous le remettons à un refuge, au service animalier municipal ou à son propriétaire, selon la situation.",
+              "Sauvetage Animal Rescue est une équipe spécialisée dans le secours et le sauvetage des animaux en détresse. Nous ne sommes pas un refuge: nos interventions se déroulent principalement sur le terrain. Selon la situation, l'animal peut être remis à son propriétaire, confié à un service animalier, un refuge ou une clinique vétérinaire, relâché sur place ou relocalisé dans un environnement approprié.",
           },
           {
             question: "Sur quel territoire intervenez-vous?",
             reponse:
-              "Nous intervenons sur l'ensemble du territoire de la Communauté métropolitaine de Montréal: 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Vérifiez si votre municipalité en fait partie sur notre page [Territoire desservi](/territoire).",
+              "Nos opérations quotidiennes couvrent les 82 municipalités de la Communauté métropolitaine de Montréal, réparties dans cinq régions administratives: Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. La page [Territoire desservi](/territoire) présente la liste complète et permet de vérifier rapidement si votre municipalité en fait partie.",
           },
           {
             question: "Comment signaler un animal en détresse?",
             reponse:
-              "Composez notre ligne de signalement au 514-773-3911, ou sans frais au 1-833-773-3911, jour et nuit. Le formulaire de signalement en ligne mène à la même file de répartition: dans les deux cas, notre équipe analyse le signalement et communique avec vous dans les meilleurs délais.",
+              "Vous pouvez signaler un animal en détresse en composant le 514-773-3911 ou, sans frais, le 1-833-773-3911. Un message peut être laissé 24 heures sur 24 et sera analysé par notre équipe de gestion des signalements. Vous pouvez aussi utiliser le [formulaire de signalement](/signalement) sur notre site, ou communiquer avec nous par Facebook Messenger.",
           },
           {
-            question: "Puis-je vous amener un animal trouvé, ou en adopter un?",
+            question: "Puis-je vous apporter un animal que j'ai trouvé?",
             reponse:
-              "Non. Sauvetage Animal Rescue n'est pas un refuge et ne fait pas d'adoption. Un animal que nous secourons est remis à un refuge, au service animalier municipal ou à son propriétaire, selon le cas. Pour une adoption, adressez-vous à votre service animalier municipal ou à un refuge.",
+              "Non. Sauvetage Animal Rescue n'est ni un refuge ni un service animalier, et nos installations ne sont pas conçues pour recevoir des animaux. L'adresse publique de l'organisation est une adresse de gestion du courrier: aucun animal ne peut y être déposé. Pour confier un animal trouvé, communiquez plutôt avec le service animalier qui dessert votre municipalité.",
+          },
+          {
+            question: "Est-il possible d'adopter un animal auprès de Sauvetage Animal Rescue?",
+            reponse:
+              "Nous ne sommes pas un refuge et n'avons normalement aucun animal disponible pour adoption. Exceptionnellement, une intervention peut mener à la prise en charge temporaire d'un animal abandonné ou dont le propriétaire ne peut être retrouvé, et une adoption peut alors devenir nécessaire. Ces situations demeurent toutefois très rares. Pour adopter, adressez-vous plutôt aux refuges et services animaliers de votre région.",
           },
           {
             question: "Pourquoi devenir membre?",
             reponse:
-              "Sauvetage Animal Rescue ne reçoit aucun financement public ni subvention gouvernementale. Ce sont les adhésions et les dons de nos membres qui financent nos interventions, notamment lorsqu'aucun propriétaire ou organisme ne peut raisonnablement en assumer les frais.",
+              "Sauvetage Animal Rescue ne reçoit aucune subvention ni aucun financement gouvernemental récurrent. Les cotisations annuelles de nos membres permettent notamment de financer les interventions auprès d'animaux sans famille et d'animaux de la faune, pour lesquels personne ne peut assumer directement les frais. En devenant membre, vous contribuez concrètement à rendre ces sauvetages possibles.",
           },
           {
-            question: "Comment faire un don?",
+            question: "Comment puis-je faire un don?",
             reponse:
-              "Le formulaire de don accepte un don ponctuel ou mensuel, par carte. Une confirmation vous est envoyée par courriel une fois le paiement complété.",
+              "La page [Faire un don](/dons) permet d'effectuer un don ponctuel ou mensuel, par carte de crédit ou de débit. Une confirmation est automatiquement transmise par courriel après la transaction. Chaque contribution soutient directement nos opérations et nous aide à poursuivre notre mission auprès des animaux en détresse.",
           },
           {
-            question: "Est-ce que je reçois un reçu pour fins d'impôt?",
+            question: "Est-ce que je recevrai un reçu aux fins de l'impôt?",
             reponse:
-              "Non. Sauvetage Animal Rescue est un organisme à but non lucratif provincial, mais n'a pas le statut d'organisme de bienfaisance enregistré auprès de l'Agence du revenu du Canada. La confirmation de don envoyée par courriel n'est donc pas un reçu aux fins de l'impôt.",
+              "Non. Sauvetage Animal Rescue est un organisme sans but lucratif constitué au Québec, mais ne possède pas le statut d'organisme de bienfaisance enregistré auprès de l'Agence du revenu du Canada. La confirmation transmise par courriel après un don atteste donc de votre contribution, mais ne constitue pas un reçu officiel utilisable aux fins de l'impôt.",
           },
           {
             question: "Comment devenir bénévole ou intervenant?",
             reponse:
-              "Sauvetage Animal Rescue recrute des répartiteurs, des messagers, des secouristes et des sauveteurs. La page Recrutement présente les postes ainsi que le stage d'observation qui précède l'engagement.",
+              "Sauvetage Animal Rescue recrute régulièrement des répartiteurs et répartitrices, messagers et messagères, secouristes ainsi que sauveteurs et sauveteuses. La page [Recrutement](/recrutement) présente les différents rôles et permet de soumettre votre candidature. Les personnes sélectionnées sont ensuite invitées à une rencontre en personne afin de poursuivre leur processus d'intégration au sein de l'équipe.",
           },
           {
-            question: "Intervenez-vous en dehors de la Communauté métropolitaine de Montréal?",
+            question: "Intervenez-vous à l'extérieur de la Communauté métropolitaine de Montréal?",
             reponse:
-              "Notre activité quotidienne se concentre sur ce territoire, mais nous pouvons être déployés ailleurs au pays ou à l'international lors d'un sinistre majeur, en renfort des équipes locales déjà mobilisées.",
+              "Oui, exceptionnellement. Nos opérations quotidiennes se concentrent dans la Communauté métropolitaine de Montréal, mais notre expertise peut nous amener à intervenir ailleurs lorsqu'aucune ressource locale ne peut répondre adéquatement à une situation. Nous pouvons aussi être déployés ailleurs au Canada ou à l'international lors de sinistres majeurs, afin de renforcer les équipes déjà mobilisées sur le terrain.",
           },
           {
-            question: "Comment associer mon entreprise ou ma municipalité à Sauvetage Animal Rescue?",
+            question: "Mon entreprise ou ma municipalité peut-elle faire affaire avec Sauvetage Animal Rescue?",
             reponse:
-              "Les entreprises peuvent devenir partenaires officiels, et les municipalités peuvent conclure une entente de services. Écrivez à la direction générale à e.dussault@sar.quebec pour en discuter.",
+              "Oui. Les municipalités, entreprises et institutions peuvent conclure une entente de services avec Sauvetage Animal Rescue afin de prévoir à l'avance les modalités d'intervention, de disponibilité et de facturation. Des partenariats peuvent aussi être développés selon les besoins de l'organisation. Pour discuter des différentes possibilités, communiquez directement avec la direction générale à e.dussault@sar.quebec.",
           },
         ],
       },

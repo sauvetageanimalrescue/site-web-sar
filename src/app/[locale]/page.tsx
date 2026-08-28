@@ -36,13 +36,7 @@ function Hero() {
     // Il ne descend jamais sous 20 % d'opacité, même tout à droite: sur un
     // téléphone, le texte s'étend sur presque toute la largeur, et une photo
     // qui redevient complètement nette y nuit à la lecture.
-    // Le rapport largeur/hauteur est fixe, comme pour les bannières des
-    // pages intérieures : sans ça, une fenêtre plus ou moins large fait
-    // varier la hauteur du bandeau de façon imprévisible. Un plancher
-    // garde la place nécessaire au titre, au texte et aux boutons sur un
-    // petit écran, et un plafond l'empêche de devenir démesuré sur un
-    // très grand écran.
-    <section className="relative isolate flex aspect-[8/3] min-h-[28rem] max-h-[34rem] items-center overflow-hidden bg-marine">
+    <section className="relative isolate overflow-hidden bg-marine">
       <div
         aria-hidden
         className="absolute inset-0 -z-20 bg-cover"
@@ -59,7 +53,7 @@ function Hero() {
             "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, rgba(11, 35, 56, 0.4) 78%)",
         }}
       />
-      <div className="relative mx-auto w-full max-w-7xl px-4">
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">
         <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">
           {t("heroSurtitre")}
         </p>

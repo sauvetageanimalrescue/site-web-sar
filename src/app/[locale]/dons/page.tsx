@@ -13,8 +13,8 @@ export default async function PageDons({ params }: PageProps<"/[locale]/dons">) 
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/carte-dons.jpg"
-        imageTailleNaturelle={{ largeur: 1400, hauteur: 1400 }}
+        image="/images/carte-dons-1900.jpg"
+        imageTailleNaturelle={{ largeur: 1900, hauteur: 1900 }}
       />
 
       <Section largeur="carte">

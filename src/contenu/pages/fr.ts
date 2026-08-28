@@ -91,8 +91,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Direction générale",
     intro:
       "Eric Dussault a fondé Sauvetage Animal Rescue et la dirige depuis. Le parcours d'un homme venu des services d'urgence, qui a constaté qu'il n'existait rien de comparable pour les animaux et a décidé de le bâtir.",
-    image: "/images/direction-terrain.jpg",
-    imageTailleNaturelle: { largeur: 1600, hauteur: 900 },
+    image: "/images/direction-terrain-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1069 },
     blocs: [
       {
         titre: "Tout part d'un constat",
@@ -253,8 +253,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Missions nationales",
     intro:
       "Lorsqu'un sinistre majeur touche une communauté et que des animaux ont besoin d'assistance, Sauvetage Animal Rescue peut être déployé partout au pays afin de soutenir les autorités et les équipes locales directement sur le terrain.",
-    image: "/images/mission-sainte-marthe-evacuation.jpg",
-    imageTailleNaturelle: { largeur: 700, hauteur: 467 },
+    image: "/images/mission-sainte-marthe-evacuation-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1268 },
     imagePosition: "right -140px",
     blocs: [
       {
@@ -453,8 +453,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Ateliers au primaire",
     intro:
       "Notre équipe se déplace directement en classe pour parler aux enfants de la protection des animaux, du travail de sauvetage et des gestes simples qui font une différence quand on croise un animal en difficulté.",
-    image: "/images/ecoles.jpg",
-    imageTailleNaturelle: { largeur: 1450, hauteur: 816 },
+    image: "/images/ecoles-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1069 },
     blocs: [
       {
         titre: "Ce que les élèves apprennent",
@@ -483,8 +483,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Ateliers au secondaire",
     intro:
       "Un atelier conçu pour des adolescents, qui parle de responsabilité, de conséquences et de choix de carrière plutôt que de bons sentiments. Le métier existe vraiment, et ceux qui le font viennent parfois le raconter.",
-    image: "/images/ecoles.jpg",
-    imageTailleNaturelle: { largeur: 1450, hauteur: 816 },
+    image: "/images/ecoles-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1069 },
     blocs: [
       {
         titre: "Un ton différent du primaire",
@@ -519,8 +519,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Nos services",
     intro:
       "Sauvetage Animal Rescue n'est pas un refuge. Nous sommes une équipe de secours technique: nous allons chercher l'animal là où il est coincé, nous le sécurisons, et nous le remettons entre de bonnes mains.",
-    image: "/images/services-urgence.png",
-    imageTailleNaturelle: { largeur: 1200, hauteur: 600 },
+    image: "/images/services-urgence-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 950 },
     blocs: [
       {
         titre: "Secours et sauvetage",
@@ -564,8 +564,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Solutions",
     intro:
       "Un raton laveur dans un cimetière, des goélands sur un entrepôt, un chevreuil sur une piste d'aéroport: le problème n'est jamais tout à fait le même selon le milieu. Voici les secteurs où nous intervenons et ce que nous y faisons.",
-    image: "/images/carte-services.jpg",
-    imageTailleNaturelle: { largeur: 1200, hauteur: 1200 },
+    image: "/images/carte-services-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1900 },
     blocs: [
       {
         titre: "Les milieux que nous desservons",
@@ -605,8 +605,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Inspection et évaluation",
     intro:
       "À la demande des autorités, Sauvetage Animal Rescue peut procéder à l'inspection d'un milieu de vie ou coordonner l'évaluation d'un animal jugé potentiellement dangereux, selon un processus structuré, documenté et sécuritaire.",
-    image: "/images/inspection-milieu.jpg",
-    imageTailleNaturelle: { largeur: 960, hauteur: 540 },
+    image: "/images/inspection-milieu-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1069 },
     blocs: [
       {
         titre: "Inspection du milieu de vie",
@@ -638,8 +638,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Capture",
     intro:
       "Capturer un animal en détresse exige de comprendre son comportement, de choisir la bonne méthode et de protéger autant l'animal que l'intervenant. Nos équipes privilégient toujours une capture sécuritaire, contrôlée et sans contact inutile.",
-    image: "/images/capture-bateau.jpg",
-    imageTailleNaturelle: { largeur: 900, hauteur: 340 },
+    image: "/images/capture-bateau-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 718 },
     blocs: [
       {
         titre: "Capturer sans blesser",
@@ -726,8 +726,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Patrouille",
     intro:
       "La majorité des appels ne demandent ni corde ni harnais. Un animal errant, blessé au sol, coincé derrière une clôture ou dans un garage: la patrouille s'en occupe, tous les jours, sur l'ensemble du territoire.",
-    image: "/images/carte-services.jpg",
-    imageTailleNaturelle: { largeur: 1200, hauteur: 1200 },
+    image: "/images/carte-services-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1900 },
     blocs: [
       {
         titre: "Ce que fait une patrouille",
@@ -757,8 +757,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Secours animalier",
     intro:
       "Le secours animalier consiste à intervenir lorsqu'un animal est blessé, malade, affaibli, piégé ou autrement en détresse. C'est le coeur de nos opérations quotidiennes et la forme d'intervention que nous réalisons le plus souvent.",
-    image: "/images/carte-signalement.jpg",
-    imageTailleNaturelle: { largeur: 1200, hauteur: 1200 },
+    image: "/images/carte-signalement-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1900 },
     blocs: [
       {
         titre: "Porter assistance aux animaux en détresse",
@@ -817,8 +817,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Sauvetage technique",
     intro:
       "Lorsque des animaux se retrouvent dans des environnements périlleux ou difficiles d'accès, nos sauveteurs déploient des techniques spécialisées et de l'équipement homologué afin de les atteindre, les sécuriser et les ramener en sécurité.",
-    image: "/images/sauvetage-technique.jpg",
-    imageTailleNaturelle: { largeur: 1200, hauteur: 420 },
+    image: "/images/sauvetage-technique-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 665 },
     blocs: [
       {
         titre: "Aller là où l'animal se trouve",
@@ -919,8 +919,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Services aux municipalités",
     intro:
       "Les appels concernant des animaux arrivent aux municipalités sans qu'elles disposent toujours de l'équipement ou de la formation pour y répondre. Nous agissons en soutien de vos services existants.",
-    image: "/images/territoire.jpg",
-    imageTailleNaturelle: { largeur: 1366, hauteur: 768 },
+    image: "/images/territoire-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1068 },
     blocs: [
       {
         titre: "Le problème que ça règle",
@@ -957,8 +957,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Devenir partenaire",
     intro:
       "Vingt certificats de partenaire sont émis chaque année. Ils s'adressent aux entreprises et aux organisations qui veulent associer leur nom au sauvetage animal, avec une visibilité concrète auprès d'une communauté engagée.",
-    image: "/images/certificat-partenaire.png",
-    imageTailleNaturelle: { largeur: 1500, hauteur: 971 },
+    image: "/images/certificat-partenaire-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 1230 },
     blocs: [
       {
         titre: "Ce que comprend le partenariat",
@@ -1104,8 +1104,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Formations aux services d'urgence",
     intro:
       "Des formations conçues pour les policiers, les pompiers et les intervenants de première ligne, afin qu'ils puissent reconnaître, anticiper et gérer les situations où des animaux sont impliqués.",
-    image: "/images/services-urgence.png",
-    imageTailleNaturelle: { largeur: 1200, hauteur: 600 },
+    image: "/images/services-urgence-1900.jpg",
+    imageTailleNaturelle: { largeur: 1900, hauteur: 950 },
     blocs: [
       {
         titre: "Pourquoi",

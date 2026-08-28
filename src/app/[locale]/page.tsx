@@ -36,7 +36,12 @@ function Hero() {
     // Il ne descend jamais sous 20 % d'opacité, même tout à droite: sur un
     // téléphone, le texte s'étend sur presque toute la largeur, et une photo
     // qui redevient complètement nette y nuit à la lecture.
-    <section className="relative isolate overflow-hidden bg-marine">
+    // Le rapport largeur/hauteur est fixe, comme pour les bannières des
+    // pages intérieures : sans ça, une fenêtre plus ou moins large fait
+    // varier la hauteur du bandeau de façon imprévisible. Un plancher
+    // garde la place nécessaire au titre, au texte et aux boutons sur un
+    // petit écran.
+    <section className="relative isolate flex aspect-[8/3] min-h-[28rem] items-center overflow-hidden bg-marine">
       <div
         aria-hidden
         className="absolute inset-0 -z-20 bg-cover"
@@ -53,7 +58,7 @@ function Hero() {
             "linear-gradient(to right, var(--marine) 0%, var(--marine) 42%, rgba(11, 35, 56, 0.4) 78%)",
         }}
       />
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28">
+      <div className="relative mx-auto w-full max-w-7xl px-4">
         <p className="font-[family-name:var(--font-titre)] text-lg font-semibold uppercase tracking-[0.22em] text-lime sm:text-2xl">
           {t("heroSurtitre")}
         </p>
@@ -72,15 +77,9 @@ function Hero() {
           </Link>
           <Link
             href="/dons"
-            className="rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine/80"
+            className="rounded-md border border-white/40 bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine/80"
           >
             {t("heroDons")}
-          </Link>
-          <Link
-            href="/signalement"
-            className="rounded-md bg-urgence px-6 py-3.5 font-semibold text-white transition hover:bg-urgence/90"
-          >
-            {t("heroSignaler")}
           </Link>
         </div>
       </div>

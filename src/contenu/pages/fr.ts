@@ -20,7 +20,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/mission-equipe-renard.jpg",
           alt: "Eric Dussault et trois intervenants devant un véhicule, avec un renard dans un transporteur",
-          position: "center -50px",
+          position: "center -60px",
         },
       },
       {

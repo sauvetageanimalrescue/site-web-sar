@@ -174,7 +174,7 @@ export function PiedSite() {
                     même une fois le héros de l'accueil loin derrière. */}
                 <Link
                   href="/signalement"
-                  className="mt-2 flex w-fit items-center gap-2 rounded-md bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
+                  className="mt-7 flex w-fit items-center gap-2 rounded-md bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
                 >
                   <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
                   {p("signalerBouton")}

@@ -39,11 +39,13 @@ export async function POST(requete: Request) {
   }
 
   const cle = process.env.RESEND_API_KEY;
+  const expediteur =
+    process.env.COURRIEL_EXPEDITEUR ?? "Sauvetage Animal Rescue <info@sar.quebec>";
   const reponse = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${cle}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      from: process.env.COURRIEL_EXPEDITEUR ?? "Sauvetage Animal Rescue <info@sar.quebec>",
+      from: expediteur,
       to: [membre.courriel],
       subject: `Votre carte de membre ${membre.annee}`,
       html: "<p>Test de diagnostic, carte en piece jointe.</p>",
@@ -62,5 +64,6 @@ export async function POST(requete: Request) {
     corps: texte,
     tailleAttachementBase64: Buffer.from(pdf).toString("base64").length,
     cleUtiliseePrefixe: cle ? cle.slice(0, 8) : null,
+    expediteurUtilise: JSON.stringify(expediteur),
   });
 }

@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { creerClientAdmin } from "@/lib/supabase/admin";
-import { envoyerCarteMembre, type Membre } from "@/lib/membres";
+import { genererCarteMembre } from "@/lib/carte/generer";
+import type { Membre } from "@/lib/membres";
 
 // Route temporaire, retiree juste apres verification de l'envoi Resend une
-// fois le domaine sar.quebec verifie. Protegee par la cle service role,
-// que seuls Eric et Claude possedent.
+// fois le domaine sar.quebec verifie. Expose la reponse brute de Resend
+// pour diagnostiquer un echec que envoyerCourriel avale normalement.
+// Protegee par la cle service role, que seuls Eric et Claude possedent.
 export async function POST(requete: Request) {
   const auth = requete.headers.get("authorization");
   if (auth !== `Bearer ${process.env.SUPABASE_SERVICE_ROLE_KEY}`) {
@@ -19,6 +21,46 @@ export async function POST(requete: Request) {
   if (error || !data) {
     return NextResponse.json({ erreur: "introuvable", detail: error }, { status: 404 });
   }
-  const envoye = await envoyerCarteMembre(data as unknown as Membre);
-  return NextResponse.json({ envoye });
+  const membre = data as unknown as Membre;
+
+  let pdf: Uint8Array;
+  try {
+    pdf = await genererCarteMembre({
+      prenom: membre.prenom,
+      nom: membre.nom,
+      numero: membre.numero,
+      annee: membre.annee,
+      expireLe: membre.expire_le,
+      jetonVerification: membre.jeton_verification,
+      langue: membre.langue,
+    });
+  } catch (e) {
+    return NextResponse.json({ etape: "pdf", erreur: String(e) }, { status: 500 });
+  }
+
+  const cle = process.env.RESEND_API_KEY;
+  const reponse = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${cle}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from: process.env.COURRIEL_EXPEDITEUR ?? "Sauvetage Animal Rescue <info@sar.quebec>",
+      to: [membre.courriel],
+      subject: `Votre carte de membre ${membre.annee}`,
+      html: "<p>Test de diagnostic, carte en piece jointe.</p>",
+      attachments: [
+        {
+          filename: `carte-membre-${membre.numero}.pdf`,
+          content: Buffer.from(pdf).toString("base64"),
+        },
+      ],
+    }),
+  });
+  const texte = await reponse.text();
+  return NextResponse.json({
+    statut: reponse.status,
+    ok: reponse.ok,
+    corps: texte,
+    tailleAttachementBase64: Buffer.from(pdf).toString("base64").length,
+    cleUtiliseePrefixe: cle ? cle.slice(0, 8) : null,
+  });
 }

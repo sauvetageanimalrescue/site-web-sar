@@ -20,6 +20,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/mission-equipe-renard.jpg",
           alt: "Eric Dussault et trois intervenants devant un véhicule, avec un renard dans un transporteur",
+          position: "center -50px",
         },
       },
       {
@@ -42,8 +43,8 @@ export const PAGES_FR: CataloguePages = {
       },
       {
         image: {
-          fichier: "/images/mission-equipe-abitibi.jpg",
-          alt: "Cinq intervenantes en forêt calcinée lors du déploiement en Abitibi-Témiscamingue",
+          fichier: "/images/mission-campagne-financement.jpg",
+          alt: "Une intervenante recueille un don auprès d'un automobiliste lors d'une campagne de financement",
         },
       },
       {
@@ -63,6 +64,12 @@ export const PAGES_FR: CataloguePages = {
         texte: [
           "Lorsqu'un être humain est en détresse, tout un mécanisme se déploie. Mais pour un animal, rien de tel n'existait ici. Les pompiers et les services animaliers faisaient de leur mieux, mais aucune structure n'était conçue spécifiquement pour le sauvetage animalier complexe. C'est ce vide que Sauvetage Animal Rescue est venu combler. En reprenant les principes du secours d'urgence et en les appliquant au monde animal, l'organisation a bâti une chaîne d'intervention structurée, de la prise d'appel jusqu'à la fin de la mission, avec des formations, des procédures, et une rigueur digne des services d'urgence.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/mission-chat-poteau.jpg",
+          alt: "Chat perché en haut d'un poteau électrique",
+        },
       },
       {
         titre: "Financé par ses membres",

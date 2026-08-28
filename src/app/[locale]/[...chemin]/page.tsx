@@ -44,6 +44,11 @@ function Bloc({ bloc }: { bloc: BlocPage }) {
             fill
             sizes="(max-width: 768px) 100vw, 42rem"
             className="object-cover"
+            style={
+              bloc.image.position
+                ? { objectPosition: bloc.image.position }
+                : undefined
+            }
           />
         </div>
         {bloc.image.legende && (

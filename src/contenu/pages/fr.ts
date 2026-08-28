@@ -208,7 +208,7 @@ export const PAGES_FR: CataloguePages = {
     intro:
       "Lorsqu'un sinistre majeur touche une communauté et que des animaux ont besoin d'assistance, Sauvetage Animal Rescue peut être déployé partout au pays afin de soutenir les autorités et les équipes locales directement sur le terrain.",
     image: "/images/mission-sainte-marthe-evacuation.jpg",
-    imagePosition: "center 150px",
+    imagePosition: "center 60px",
     blocs: [
       {
         titre: "Renforcer les équipes sur le terrain",
@@ -354,7 +354,7 @@ export const PAGES_FR: CataloguePages = {
     intro:
       "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
     image: "/images/medias-entrevue-cbc.jpg",
-    imagePosition: "center 200px",
+    imagePosition: "center 100px",
     blocs: [
       {
         titre: "Une expertise qui fait l'actualité",

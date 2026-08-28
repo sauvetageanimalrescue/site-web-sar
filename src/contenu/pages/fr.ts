@@ -166,7 +166,7 @@ export const PAGES_FR: CataloguePages = {
       "Sauvetage Animal Rescue intervient sur l'ensemble du territoire de la Communauté Métropolitaine de Montréal: 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière.",
     image: "/images/territoire-ville.jpg",
     imageTailleNaturelle: { largeur: 2400, hauteur: 1351 },
-    imagePosition: "right -40px",
+    imagePosition: "right -240px",
     blocs: [
       {
         titre: "Un territoire de 4 360 kilomètres carrés",

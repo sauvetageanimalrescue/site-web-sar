@@ -126,6 +126,7 @@ export default async function PageEditorialeVue({
         intro={page.intro}
         image={page.image}
         imagePosition={page.imagePosition}
+        imageFit={page.imageFit}
       />
 
       {page.blocs.map((bloc, index) => (

@@ -35,6 +35,7 @@ export function EnTetePage({
   intro,
   image,
   imagePosition,
+  imageFit = "cover",
 }: {
   surtitre?: string;
   titre: string;
@@ -43,6 +44,9 @@ export function EnTetePage({
   // Décalage du cadrage, ex. "center 200px" pour descendre la photo et
   // révéler ce qu'il y a plus haut dans l'image (des visages, par exemple).
   imagePosition?: string;
+  // "contain" : la photo au complet, sans recadrage, sur fond marine — pour
+  // une image où rien ne doit être coupé (un objet plutôt qu'une scène).
+  imageFit?: "cover" | "contain";
 }) {
   return (
     <section className="relative isolate flex min-h-[23rem] items-start overflow-hidden bg-marine sm:min-h-[27rem]">
@@ -56,7 +60,7 @@ export function EnTetePage({
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-45"
+            className={`opacity-45 ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
             style={imagePosition ? { objectPosition: imagePosition } : undefined}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/80 to-marine/35" />

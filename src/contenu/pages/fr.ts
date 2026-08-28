@@ -99,6 +99,12 @@ export const PAGES_FR: CataloguePages = {
         },
       },
       {
+        titre: "L'hiver qui a tout changé",
+        texte: [
+          "Le parcours est toutefois loin d'être linéaire. Au cours d'un hiver particulièrement calme, alors que les interventions se font rares et que la jeune organisation traverse une véritable saison morte, le doute s'installe. Eric envisage sérieusement de tourner la page. Puis survient un événement qui changera sa perception de la mission. Un chien est signalé à la dérive sur les glaces dans le secteur de Sorel-Tracy. Devant une situation qui ne relève véritablement d'aucun service traditionnel, les citoyens cherchent désespérément quelqu'un capable d'intervenir et finissent par se tourner vers Sauvetage Animal Rescue. L'équipe répond présente et se rend sur place. L'issue ne sera malheureusement pas celle espérée, mais l'intervention apporte une réponse définitive au doute qui s'était installé: ce service avait une raison d'exister. Pour Eric, il devient alors impossible d'imaginer abandonner en sachant qu'un autre animal pourrait, un jour, avoir besoin d'une équipe comme la sienne. À partir de ce moment, Sauvetage Animal Rescue n'est plus simplement une idée à essayer. C'est une mission à construire.",
+        ],
+      },
+      {
         image: {
           fichier: "/images/direction-charlene-2014.jpg",
           alt: "Eric Dussault ajustant le harnais d'une bénévole",
@@ -106,9 +112,9 @@ export const PAGES_FR: CataloguePages = {
         },
       },
       {
-        titre: "L'hiver qui a tout changé",
+        titre: "Bâtir sans suivre le modèle établi",
         texte: [
-          "Le parcours est toutefois loin d'être linéaire. Au cours d'un hiver particulièrement calme, alors que les interventions se font rares et que la jeune organisation traverse une véritable saison morte, le doute s'installe. Eric envisage sérieusement de tourner la page. Puis survient un événement qui changera sa perception de la mission. Un chien est signalé à la dérive sur les glaces dans le secteur de Sorel-Tracy. Devant une situation qui ne relève véritablement d'aucun service traditionnel, les citoyens cherchent désespérément quelqu'un capable d'intervenir et finissent par se tourner vers Sauvetage Animal Rescue. L'équipe répond présente et se rend sur place. L'issue ne sera malheureusement pas celle espérée, mais l'intervention apporte une réponse définitive au doute qui s'était installé: ce service avait une raison d'exister. Pour Eric, il devient alors impossible d'imaginer abandonner en sachant qu'un autre animal pourrait, un jour, avoir besoin d'une équipe comme la sienne. À partir de ce moment, Sauvetage Animal Rescue n'est plus simplement une idée à essayer. C'est une mission à construire.",
+          "Entrepreneur idéaliste et profondément anticonformiste, Eric Dussault n'a jamais cherché à bâtir Sauvetage Animal Rescue selon un modèle conventionnel. Son leadership repose moins sur le titre que sur l'exemple, l'expérience du terrain et la crédibilité acquise au fil des interventions et des formations. Il demeure d'abord et avant tout un sauveteur, avec la conviction qu'un dirigeant doit comprendre intimement la réalité de ceux qu'il appelle à intervenir. Cette façon de diriger influence encore aujourd'hui la culture de l'organisation: apprendre, expérimenter, remettre les méthodes en question et constamment chercher à faire mieux.",
         ],
       },
       {
@@ -117,12 +123,6 @@ export const PAGES_FR: CataloguePages = {
           alt: "Eric Dussault remettant un chaton noir à un citoyen",
           legende: "2012 - Eric Dussault accompagné de Milo, le chat, et son propriétaire",
         },
-      },
-      {
-        titre: "Bâtir sans suivre le modèle établi",
-        texte: [
-          "Entrepreneur idéaliste et profondément anticonformiste, Eric Dussault n'a jamais cherché à bâtir Sauvetage Animal Rescue selon un modèle conventionnel. Son leadership repose moins sur le titre que sur l'exemple, l'expérience du terrain et la crédibilité acquise au fil des interventions et des formations. Il demeure d'abord et avant tout un sauveteur, avec la conviction qu'un dirigeant doit comprendre intimement la réalité de ceux qu'il appelle à intervenir. Cette façon de diriger influence encore aujourd'hui la culture de l'organisation: apprendre, expérimenter, remettre les méthodes en question et constamment chercher à faire mieux.",
-        ],
       },
       {
         titre: "Un modèle mondial",
@@ -228,7 +228,7 @@ export const PAGES_FR: CataloguePages = {
     intro:
       "Lorsqu'un sinistre majeur touche une communauté et que des animaux ont besoin d'assistance, Sauvetage Animal Rescue peut être déployé partout au pays afin de soutenir les autorités et les équipes locales directement sur le terrain.",
     image: "/images/mission-sainte-marthe-evacuation.jpg",
-    imagePosition: "center 60px",
+    imagePosition: "center -140px",
     blocs: [
       {
         titre: "Renforcer les équipes sur le terrain",
@@ -276,11 +276,25 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/mission-sainte-marthe-evacuation.jpg",
+          alt: "Intervenants escortant une résidente évacuée à Sainte-Marthe-sur-le-Lac",
+          legende: "2019 - Évacuation à Sainte-Marthe-sur-le-Lac",
+        },
+      },
+      {
         titre: "Pourquoi nous répondons",
         texte: [
           "Un plan de sécurité civile prévoit l'évacuation des personnes. Presque aucun ne prévoit celle des animaux, et beaucoup de gens refusent de partir sans les leurs. Une équipe capable d'aller les chercher retire donc un obstacle à l'évacuation elle-même.",
           "C'est ce que nous apportons lors d'un sinistre: une capacité que les services d'urgence n'ont pas à développer, et qu'ils peuvent appeler.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/statistiques-transporteurs.jpg",
+          alt: "Deux transporteurs d'animaux à terre à Sainte-Marthe-sur-le-Lac",
+          legende: "2019 - Transporteurs à Sainte-Marthe-sur-le-Lac",
+        },
       },
       {
         titre: "Planification et sécurité civile",
@@ -374,7 +388,7 @@ export const PAGES_FR: CataloguePages = {
     intro:
       "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
     image: "/images/medias-entrevue-cbc.jpg",
-    imagePosition: "center 100px",
+    imagePosition: "center -100px",
     blocs: [
       {
         titre: "Une expertise qui fait l'actualité",

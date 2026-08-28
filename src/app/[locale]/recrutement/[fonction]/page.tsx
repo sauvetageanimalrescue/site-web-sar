@@ -49,56 +49,26 @@ export default async function PageFonction({
         image={poste.image}
       />
 
-      <Section>
-        <div className="space-y-12">
-          <div className="space-y-12">
-            <p className="max-w-3xl text-lg leading-relaxed text-foreground/90">
-              {fiche.description}
-            </p>
-
-            <div>
-              <h2 className="mb-4 font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-                {TITRES.taches[langue]}
-              </h2>
-              <ListePuces items={fiche.taches} />
-            </div>
-
-            <div>
-              <h2 className="mb-4 font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-                {TITRES.avantages[langue]}
-              </h2>
-              <ListePuces items={fiche.avantages} />
-            </div>
-          </div>
-
-          <section className="max-w-3xl border-t border-border pt-10">
-            <h2 className="mb-4 font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-              {TITRES.profil[langue]}
-            </h2>
-            <ul className="space-y-2.5">
-              {fiche.profil.map((p) => (
-                <li key={p} className="flex gap-3 text-foreground/90">
-                  <span
-                    className="mt-2 size-2 shrink-0 rounded-full bg-ciel"
-                    aria-hidden
-                  />
-                  {p}
-                </li>
-              ))}
-            </ul>
-          </section>
-        </div>
+      <Section largeur="carte">
+        <p className="paragraphe text-lg leading-relaxed text-foreground/90">
+          {fiche.description}
+        </p>
       </Section>
 
-      <Section fond>
-        <div className="mx-auto max-w-3xl rounded-xl border border-border bg-surface p-6 sm:p-8">
-          <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
-            {t("formulaireTitre")}
-          </h2>
-          <div className="mt-6">
-            <FormulaireCandidature posteInitial={poste.cle} />
-          </div>
-        </div>
+      <Section fond largeur="carte" titre={TITRES.taches[langue]}>
+        <ListePuces items={fiche.taches} />
+      </Section>
+
+      <Section largeur="carte" titre={TITRES.avantages[langue]}>
+        <ListePuces items={fiche.avantages} />
+      </Section>
+
+      <Section fond largeur="carte" titre={TITRES.profil[langue]}>
+        <ListePuces items={fiche.profil} />
+      </Section>
+
+      <Section largeur="carte" titre={t("formulaireTitre")}>
+        <FormulaireCandidature posteInitial={poste.cle} />
       </Section>
     </>
   );

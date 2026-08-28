@@ -137,6 +137,12 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/territoire-vehicule.jpg",
+          alt: "Véhicule sur le territoire desservi",
+        },
+      },
+      {
         titre: "Entre ville et nature",
         texte: [
           "Cette diversité impose une grande capacité d'adaptation. Secourir un chat coincé en hauteur dans un arrondissement montréalais, venir en aide à des canetons tombés dans une grille d'égout en banlieue ou intervenir auprès d'un cerf blessé dans une municipalité périphérique ne demandent ni le même équipement ni la même approche. La mission s'adapte au terrain et à la réalité locale de chaque intervention.",

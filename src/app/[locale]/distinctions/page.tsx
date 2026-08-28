@@ -15,6 +15,7 @@ export default async function PageDistinctions({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/distinctions-signature.jpg"
+        imageTailleNaturelle={{ largeur: 2268, hauteur: 1950 }}
       />
 
       {/* Le système de reconnaissance n'existe pas encore. Tant qu'il n'est

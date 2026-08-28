@@ -19,6 +19,7 @@ export default async function PageMembre({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/carte-membre-2026.jpg"
+        imageTailleNaturelle={{ largeur: 1246, hauteur: 700 }}
       />
 
       <Section titre={t("avantagesTitre")} largeur="carte">

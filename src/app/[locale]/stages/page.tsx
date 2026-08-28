@@ -33,6 +33,7 @@ export default async function PageStages({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/stages.jpg"
+        imageTailleNaturelle={{ largeur: 2000, hauteur: 3556 }}
       />
 
       <Section>

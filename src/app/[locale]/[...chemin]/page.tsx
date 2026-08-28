@@ -132,6 +132,7 @@ export default async function PageEditorialeVue({
         image={page.image}
         imagePosition={page.imagePosition}
         imageFit={page.imageFit}
+        imageTailleNaturelle={page.imageTailleNaturelle}
       />
 
       {page.blocs.map((bloc, index) => (

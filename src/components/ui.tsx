@@ -36,6 +36,7 @@ export function EnTetePage({
   image,
   imagePosition,
   imageFit = "cover",
+  imageTailleNaturelle,
 }: {
   surtitre?: string;
   titre: string;
@@ -47,10 +48,27 @@ export function EnTetePage({
   // "contain" : la photo au complet, sans recadrage, sur fond marine — pour
   // une image où rien ne doit être coupé (un objet plutôt qu'une scène).
   imageFit?: "cover" | "contain";
+  // Taille réelle (largeur/hauteur en pixels) de la photo : la photo ne se
+  // fait jamais recadrer à l'échelle, peu importe la largeur de la fenêtre.
+  // Un agrandissement de fenêtre ne fait que révéler plus de bleu marine à
+  // gauche (l'image reste ancrée à droite par défaut), jamais un zoom.
+  imageTailleNaturelle?: { largeur: number; hauteur: number };
 }) {
   return (
     <section className="relative isolate flex min-h-[23rem] items-start overflow-hidden bg-marine sm:min-h-[27rem]">
-      {image && (
+      {image && imageTailleNaturelle && (
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-45"
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: `${imageTailleNaturelle.largeur}px ${imageTailleNaturelle.hauteur}px`,
+            backgroundPosition: imagePosition ?? "right center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      )}
+      {image && !imageTailleNaturelle && (
         <>
           {/* La photo se voit vraiment : le dégradé la couvre à gauche, là où
               se lit le texte, et la laisse respirer à droite. */}
@@ -63,8 +81,10 @@ export function EnTetePage({
             className={`opacity-45 ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
             style={imagePosition ? { objectPosition: imagePosition } : undefined}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/80 to-marine/35" />
         </>
+      )}
+      {image && (
+        <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/80 to-marine/35" />
       )}
       <div className="relative mx-auto w-full max-w-7xl px-4 py-14 sm:py-20">
         {surtitre && (

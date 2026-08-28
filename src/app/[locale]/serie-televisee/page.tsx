@@ -23,7 +23,8 @@ export default async function PageSerie({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/serie-equipe-australie.jpg"
-        imagePosition="center -240px"
+        imageTailleNaturelle={{ largeur: 1920, hauteur: 1280 }}
+        imagePosition="right -240px"
       />
 
       {/* Les cartes du site, appliquées aux épisodes : la vignette occupe

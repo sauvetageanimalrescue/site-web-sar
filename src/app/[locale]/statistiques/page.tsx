@@ -37,6 +37,7 @@ export default async function PageStatistiques({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/statistiques-transporteurs.jpg"
+        imageTailleNaturelle={{ largeur: 700, hauteur: 467 }}
       />
 
       <CompteurSauvetages initiales={stats} />

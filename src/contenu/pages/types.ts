@@ -33,6 +33,7 @@ export type PageEditoriale = {
   // Décalage du cadrage de la photo d'en-tête, ex. "center 200px".
   imagePosition?: string;
   imageFit?: "cover" | "contain";
+  imageTailleNaturelle?: { largeur: number; hauteur: number };
   blocs: BlocPage[];
   // Boutons affichés en fin de page.
   actions?: { href: string; libelle: string; principal?: boolean }[];

@@ -25,6 +25,7 @@ export default async function PageEquipe({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/recrutement.jpg"
+        imageTailleNaturelle={{ largeur: 1620, hauteur: 1080 }}
       />
 
       <Section>

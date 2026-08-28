@@ -86,6 +86,7 @@ export default async function PageSignalement({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/hero-accueil.jpg"
+        imageTailleNaturelle={{ largeur: 2400, hauteur: 1350 }}
       />
 
       <Section largeur="carte">

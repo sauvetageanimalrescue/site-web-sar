@@ -30,6 +30,7 @@ export default async function PageFiches({
         titre={t("titre")}
         intro={t("intro")}
         image="/images/formations.jpg"
+        imageTailleNaturelle={{ largeur: 2000, hauteur: 1125 }}
       />
 
       <Section>

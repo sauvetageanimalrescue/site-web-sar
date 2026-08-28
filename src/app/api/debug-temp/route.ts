@@ -40,7 +40,7 @@ export async function POST(requete: Request) {
 
   const cle = process.env.RESEND_API_KEY;
   const expediteur =
-    process.env.COURRIEL_EXPEDITEUR ?? "Sauvetage Animal Rescue <info@sar.quebec>";
+    process.env.COURRIEL_EXPEDITEUR || "Sauvetage Animal Rescue <info@sar.quebec>";
   const reponse = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${cle}`, "Content-Type": "application/json" },

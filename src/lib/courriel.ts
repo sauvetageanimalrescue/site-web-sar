@@ -30,8 +30,11 @@ export async function envoyerCourriel({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        // || plutôt que ?? : une variable d'environnement existante mais
+        // vide (chaîne "") a déjà fait partir un courriel sans expéditeur,
+        // que Resend refuse. ?? ne se rabat que sur une variable absente.
         from:
-          process.env.COURRIEL_EXPEDITEUR ??
+          process.env.COURRIEL_EXPEDITEUR ||
           "Sauvetage Animal Rescue <info@sar.quebec>",
         to: [destinataire],
         subject: sujet,

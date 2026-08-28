@@ -87,7 +87,7 @@ export async function envoyerCandidature(
   // qui est déjà enregistrée en base.
   await envoyerCourriel({
     destinataire:
-      process.env.COURRIEL_RECRUTEMENT ?? ORGANISATION.courriels.direction,
+      process.env.COURRIEL_RECRUTEMENT || ORGANISATION.courriels.direction,
     sujet: `Nouvelle candidature — ${poste} — ${prenom} ${nom}`,
     repondreA: courriel,
     html: gabaritCourriel({

@@ -15,5 +15,5 @@ export function stripe(): Stripe {
 }
 
 export function urlSite() {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3003";
+  return process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3003";
 }

@@ -108,7 +108,7 @@ export const PAGES_FR: CataloguePages = {
         image: {
           fichier: "/images/direction-charlene-2014.jpg",
           alt: "Eric Dussault ajustant le harnais d'une bénévole",
-          legende: "2014 - Eric Dussault et Charlène, bénévole",
+          legende: "2014 - Eric Dussault et Charlène, une bénévole",
         },
       },
       {
@@ -142,7 +142,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Notre territoire",
     intro:
       "Sauvetage Animal Rescue intervient sur l'ensemble du territoire de la Communauté Métropolitaine de Montréal: 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière.",
-    image: "/images/territoire.jpg",
+    image: "/images/territoire-ville.jpg",
+    imagePosition: "center -40px",
     blocs: [
       {
         titre: "Un territoire de 4 360 kilomètres carrés",
@@ -388,7 +389,7 @@ export const PAGES_FR: CataloguePages = {
     intro:
       "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
     image: "/images/medias-entrevue-cbc.jpg",
-    imagePosition: "center -100px",
+    imagePosition: "center -200px",
     blocs: [
       {
         titre: "Une expertise qui fait l'actualité",

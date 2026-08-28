@@ -40,8 +40,9 @@ function Hero() {
     // pages intérieures : sans ça, une fenêtre plus ou moins large fait
     // varier la hauteur du bandeau de façon imprévisible. Un plancher
     // garde la place nécessaire au titre, au texte et aux boutons sur un
-    // petit écran.
-    <section className="relative isolate flex aspect-[8/3] min-h-[28rem] items-center overflow-hidden bg-marine">
+    // petit écran, et un plafond l'empêche de devenir démesuré sur un
+    // très grand écran.
+    <section className="relative isolate flex aspect-[8/3] min-h-[28rem] max-h-[34rem] items-center overflow-hidden bg-marine">
       <div
         aria-hidden
         className="absolute inset-0 -z-20 bg-cover"

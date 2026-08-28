@@ -55,8 +55,9 @@ export function EnTetePage({
     // hauteur mais perd toute la largeur, et le recadrage automatique
     // finit par ne montrer qu'un fragment de la photo (les pieds plutôt
     // que le visage, par exemple). Un plancher empêche le bandeau de
-    // devenir trop court pour le titre sur un très petit écran.
-    <section className="relative isolate flex aspect-[3/1] min-h-[18rem] items-start overflow-hidden bg-marine">
+    // devenir trop court sur un très petit écran, et un plafond l'empêche
+    // de devenir démesuré sur un très grand écran.
+    <section className="relative isolate flex aspect-[3/1] min-h-[18rem] max-h-[28rem] items-start overflow-hidden bg-marine">
       {image && (
         <>
           {/* La photo se voit vraiment : le dégradé la couvre à gauche, là où

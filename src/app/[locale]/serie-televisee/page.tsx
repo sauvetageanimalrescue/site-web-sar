@@ -22,7 +22,7 @@ export default async function PageSerie({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/serie-sauvetage-animal.jpg"
+        image="/images/serie-equipe-australie.jpg"
       />
 
       {/* Les cartes du site, appliquées aux épisodes : la vignette occupe

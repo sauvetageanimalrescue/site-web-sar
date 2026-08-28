@@ -200,7 +200,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Missions nationales",
     intro:
       "Lorsqu'un sinistre majeur touche une communauté et que des animaux ont besoin d'assistance, Sauvetage Animal Rescue peut être déployé partout au pays afin de soutenir les autorités et les équipes locales directement sur le terrain.",
-    image: "/images/sainte-marthe-2019.jpg",
+    image: "/images/mission-sainte-marthe-evacuation.jpg",
     blocs: [
       {
         titre: "Renforcer les équipes sur le terrain",
@@ -272,7 +272,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Foire aux questions",
     intro:
       "Vous avez une question sur nos interventions, notre territoire, nos services ou les différentes façons de soutenir Sauvetage Animal Rescue? Retrouvez ici les réponses aux questions qui nous sont le plus souvent posées.",
-    image: "/images/hero-accueil.jpg",
+    image: "/images/faq-sainte-marthe-2019.jpg",
     blocs: [
       {
         questions: [
@@ -345,7 +345,7 @@ export const PAGES_FR: CataloguePages = {
     titre: "Dans les médias",
     intro:
       "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
-    image: "/images/medias-entrevue.jpg",
+    image: "/images/medias-entrevue-cbc.jpg",
     blocs: [
       {
         titre: "Une expertise qui fait l'actualité",

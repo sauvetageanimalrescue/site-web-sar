@@ -36,7 +36,7 @@ export default async function PageStatistiques({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/territoire.jpg"
+        image="/images/statistiques-transporteurs.jpg"
       />
 
       <CompteurSauvetages initiales={stats} />

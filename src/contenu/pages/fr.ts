@@ -207,7 +207,7 @@ export const PAGES_FR: CataloguePages = {
       "Notre travail quotidien se concentre dans la Communauté métropolitaine de Montréal. Mais lorsque des animaux, ailleurs dans le monde, ont besoin de notre expertise, nous pouvons déployer une équipe spécialisée pour prêter main-forte sur le terrain.",
     image: "/images/australie-2020-1400.jpg",
     imageTailleNaturelle: { largeur: 1400, hauteur: 933 },
-    imagePosition: "right -20px",
+    imagePosition: "right -70px",
     blocs: [
       {
         titre: "Des ressources humaines sur le terrain",

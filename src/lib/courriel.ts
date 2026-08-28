@@ -13,7 +13,7 @@ export async function envoyerCourriel({
   pieces,
   repondreA,
 }: {
-  destinataire: string;
+  destinataire: string | string[];
   sujet: string;
   html: string;
   pieces?: PieceJointe[];
@@ -36,7 +36,7 @@ export async function envoyerCourriel({
         from:
           process.env.COURRIEL_EXPEDITEUR ||
           "Sauvetage Animal Rescue <info@sar.quebec>",
-        to: [destinataire],
+        to: Array.isArray(destinataire) ? destinataire : [destinataire],
         subject: sujet,
         html,
         ...(repondreA ? { reply_to: repondreA } : {}),

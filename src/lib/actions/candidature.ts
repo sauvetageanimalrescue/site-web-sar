@@ -86,8 +86,14 @@ export async function envoyerCandidature(
   // Avis à la direction. Un échec d'envoi ne doit pas perdre la candidature,
   // qui est déjà enregistrée en base.
   await envoyerCourriel({
-    destinataire:
-      process.env.COURRIEL_RECRUTEMENT || ORGANISATION.courriels.direction,
+    // Plusieurs destinataires possibles, séparés par une virgule dans la
+    // variable d'environnement (ex. Eric et Tania reçoivent chacun copie).
+    destinataire: (
+      process.env.COURRIEL_RECRUTEMENT || ORGANISATION.courriels.direction
+    )
+      .split(",")
+      .map((c) => c.trim())
+      .filter(Boolean),
     sujet: `Nouvelle candidature — ${poste} — ${prenom} ${nom}`,
     repondreA: courriel,
     html: gabaritCourriel({

@@ -704,7 +704,12 @@ export const PAGES_FR: CataloguePages = {
           "La présence d'animaux peut avoir une influence directe sur le déroulement d'une évacuation. Un citoyen qui ignore ce qu'il adviendra de son animal peut hésiter à quitter son domicile, tenter d'y retourner ou refuser de suivre certaines consignes. En intégrant dès le départ la prise en charge animale aux mesures de sécurité civile, les autorités peuvent mieux protéger l'ensemble de la population. Sauvetage Animal Rescue met à leur disposition des intervenants formés, de l'équipement spécialisé et une structure opérationnelle capable de prendre en charge les animaux touchés, tout en s'intégrant aux opérations déjà coordonnées sur le terrain.",
         ],
       },
-      // TODO photo 1 (Eric à confirmer) : réponse d'urgence / animaux en contexte de sinistre.
+      {
+        image: {
+          fichier: "/images/sinistres-transporteurs-eau.jpg",
+          alt: "Intervenants transportant des animaux dans des transporteurs à travers une rue inondée",
+        },
+      },
       {
         titre: "Situations dans lesquelles nous pouvons intervenir",
         liste: [
@@ -721,12 +726,23 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/sinistres-canot.jpg",
+          alt: "Intervenants tirant un canot avec un transporteur d'animal à travers une rue inondée",
+        },
+      },
+      {
         titre: "Une capacité animalière complète sur le terrain",
         texte: [
           "Un sinistre peut rapidement dépasser la capacité habituelle d'un service animalier municipal. Sauvetage Animal Rescue peut alors contribuer à mettre en place toute une infrastructure temporaire consacrée aux animaux: poste de commandement, zone d'accueil, identification et enregistrement, hébergement temporaire, alimentation, transport et réunification avec les propriétaires. Nos équipes peuvent également procéder à la recherche et à l'évacuation des animaux demeurés dans la zone sinistrée, soutenir les refuges locaux et, lorsque nécessaire, participer à la gestion sécuritaire des animaux décédés. L'objectif est d'offrir aux autorités une capacité supplémentaire immédiatement mobilisable lorsque les besoins deviennent exceptionnels.",
         ],
       },
-      // TODO photo 2 (Eric à confirmer) : une remorque prête pour les animaux, legende "Une remorque prête pour les animaux".
+      {
+        image: {
+          fichier: "/images/statistiques-transporteurs.jpg",
+          alt: "Deux transporteurs d'animaux prêts à terre",
+        },
+      },
       {
         texte: [
           "Selon le déploiement, notre matériel peut notamment comprendre:",
@@ -752,10 +768,22 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/sinistres-chien-transporteur.jpg",
+          alt: "Chien secouru dans un transporteur, en arrière-plan une zone inondée",
+        },
+      },
+      {
         titre: "Une expérience acquise lors de véritables sinistres",
         texte: [
           "Sauvetage Animal Rescue a déjà été appelé à intervenir lors de plusieurs événements majeurs, notamment les inondations de Sainte-Marthe-sur-le-Lac, les inondations de Saint-André-d'Argenteuil, les inondations de Rigaud ainsi que les feux de forêt en Abitibi-Témiscamingue. Ces déploiements ont permis à nos équipes de développer une expérience concrète de la gestion animalière en contexte de sécurité civile, autant pour les opérations de terrain que pour la logistique, le transport, l'hébergement temporaire et la collaboration avec les autorités.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/sinistres-reunification.jpg",
+          alt: "Intervenants réunissant un chien avec son propriétaire près d'un véhicule",
+        },
       },
       {
         titre: "Prévoir avant que le sinistre survienne",

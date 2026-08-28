@@ -92,6 +92,20 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/direction-filet.jpg",
+          alt: "Eric Dussault avec une épuisette en opération de sauvetage",
+          legende: "2017 - Eric Dussault en opération de sauvetage",
+        },
+      },
+      {
+        image: {
+          fichier: "/images/direction-charlene-2014.jpg",
+          alt: "Eric Dussault ajustant le harnais d'une bénévole",
+          legende: "2014 - Eric Dussault et Charlène, bénévole",
+        },
+      },
+      {
         titre: "L'hiver qui a tout changé",
         texte: [
           "Le parcours est toutefois loin d'être linéaire. Au cours d'un hiver particulièrement calme, alors que les interventions se font rares et que la jeune organisation traverse une véritable saison morte, le doute s'installe. Eric envisage sérieusement de tourner la page. Puis survient un événement qui changera sa perception de la mission. Un chien est signalé à la dérive sur les glaces dans le secteur de Sorel-Tracy. Devant une situation qui ne relève véritablement d'aucun service traditionnel, les citoyens cherchent désespérément quelqu'un capable d'intervenir et finissent par se tourner vers Sauvetage Animal Rescue. L'équipe répond présente et se rend sur place. L'issue ne sera malheureusement pas celle espérée, mais l'intervention apporte une réponse définitive au doute qui s'était installé: ce service avait une raison d'exister. Pour Eric, il devient alors impossible d'imaginer abandonner en sachant qu'un autre animal pourrait, un jour, avoir besoin d'une équipe comme la sienne. À partir de ce moment, Sauvetage Animal Rescue n'est plus simplement une idée à essayer. C'est une mission à construire.",

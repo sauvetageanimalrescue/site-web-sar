@@ -49,7 +49,14 @@ export function EnTetePage({
   imageFit?: "cover" | "contain";
 }) {
   return (
-    <section className="relative isolate flex min-h-[23rem] items-start overflow-hidden bg-marine sm:min-h-[27rem]">
+    // Le rapport largeur/hauteur est fixe (plutôt qu'une hauteur figée en
+    // rem) pour que le cadrage de la photo reste le même peu importe la
+    // largeur de la fenêtre : sans ça, une fenêtre étroite garde la même
+    // hauteur mais perd toute la largeur, et le recadrage automatique
+    // finit par ne montrer qu'un fragment de la photo (les pieds plutôt
+    // que le visage, par exemple). Un plancher empêche le bandeau de
+    // devenir trop court pour le titre sur un très petit écran.
+    <section className="relative isolate flex aspect-[3/1] min-h-[18rem] items-start overflow-hidden bg-marine">
       {image && (
         <>
           {/* La photo se voit vraiment : le dégradé la couvre à gauche, là où
@@ -61,7 +68,14 @@ export function EnTetePage({
             priority
             sizes="100vw"
             className={`opacity-45 ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
-            style={imagePosition ? { objectPosition: imagePosition } : undefined}
+            // Par défaut, le cadrage privilégie la droite : c'est le côté
+            // où la photo reste visible sous le dégradé (la gauche, sous le
+            // texte, est déjà assombrie), donc une fenêtre plus étroite doit
+            // rogner à gauche plutôt que de perdre le sujet à droite.
+            style={{
+              objectPosition:
+                imagePosition ?? (imageFit === "contain" ? "center" : "right"),
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/80 to-marine/35" />
         </>

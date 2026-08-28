@@ -12,6 +12,9 @@ export type BlocPage = {
   // Composant interactif inséré dans une page éditoriale. Un seul pour
   // l'instant : la vérification du territoire desservi.
   composant?: "territoire" | "presse";
+  // Foire aux questions: une question, une réponse repliée derrière un
+  // chevron. La réponse est du texte brut, sans balisage (**gras**, liens).
+  questions?: { question: string; reponse: string }[];
 };
 
 export type PageEditoriale = {

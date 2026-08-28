@@ -267,6 +267,69 @@ export const PAGES_FR: CataloguePages = {
     ],
   },
 
+  "foire-aux-questions": {
+    surtitre: "Vos questions, nos réponses",
+    titre: "Foire aux questions",
+    intro:
+      "Un aperçu des questions qu'on nous pose le plus souvent, sur notre mission, notre territoire, l'adhésion et les dons. Pour tout le reste, la direction générale vous répond directement.",
+    image: "/images/hero-accueil.jpg",
+    blocs: [
+      {
+        questions: [
+          {
+            question: "Qu'est-ce que Sauvetage Animal Rescue?",
+            reponse:
+              "Sauvetage Animal Rescue est une équipe de secours et de sauvetage technique pour les animaux. Nous ne sommes pas un refuge: nous intervenons directement sur le terrain pour sécuriser un animal en détresse, puis nous le remettons à un refuge, une clinique vétérinaire ou son propriétaire, selon la situation.",
+          },
+          {
+            question: "Sur quel territoire intervenez-vous?",
+            reponse:
+              "Nous intervenons sur l'ensemble du territoire de la Communauté métropolitaine de Montréal: 82 municipalités réparties dans cinq régions administratives, Montréal, Laval, la Montérégie, les Laurentides et Lanaudière. Notre page Territoire desservi permet de vérifier si votre municipalité en fait partie.",
+          },
+          {
+            question: "Comment signaler un animal en détresse?",
+            reponse:
+              "Pour une urgence, appelez notre ligne de signalement au 514-773-3911, jour et nuit. Le formulaire de signalement en ligne existe aussi, mais il ne remplace pas un appel lorsque la situation est urgente.",
+          },
+          {
+            question: "Puis-je vous amener un animal trouvé, ou en adopter un?",
+            reponse:
+              "Non. Sauvetage Animal Rescue n'est pas un refuge et ne fait pas d'adoption. Un animal que nous secourons est remis à un refuge, à une clinique vétérinaire ou à son propriétaire, selon le cas. Pour une adoption, adressez-vous à votre service animalier municipal ou à un refuge.",
+          },
+          {
+            question: "Pourquoi devenir membre?",
+            reponse:
+              "Sauvetage Animal Rescue ne reçoit aucun financement public ni subvention gouvernementale. Ce sont les adhésions et les dons de nos membres qui financent nos interventions, notamment lorsqu'aucun propriétaire ou organisme ne peut raisonnablement en assumer les frais.",
+          },
+          {
+            question: "Comment faire un don?",
+            reponse:
+              "Le formulaire de don accepte un don ponctuel ou mensuel, par carte. Une confirmation vous est envoyée par courriel une fois le paiement complété.",
+          },
+          {
+            question: "Comment devenir bénévole ou intervenant?",
+            reponse:
+              "Sauvetage Animal Rescue recrute des répartiteurs, des messagers, des secouristes et des sauveteurs. La page Recrutement présente les postes ainsi que le stage d'observation qui précède l'engagement.",
+          },
+          {
+            question: "Intervenez-vous en dehors de la Communauté métropolitaine de Montréal?",
+            reponse:
+              "Notre activité quotidienne se concentre sur ce territoire, mais nous pouvons être déployés ailleurs au pays ou à l'international lors d'un sinistre majeur, en renfort des équipes locales déjà mobilisées.",
+          },
+          {
+            question: "Comment associer mon entreprise ou ma municipalité à Sauvetage Animal Rescue?",
+            reponse:
+              "Les entreprises peuvent devenir partenaires officiels, et les municipalités peuvent conclure une entente de services. Écrivez à la direction générale à e.dussault@sar.quebec pour en discuter.",
+          },
+        ],
+      },
+    ],
+    actions: [
+      { href: "/membre", libelle: "Devenir membre", principal: true },
+      { href: "/contact", libelle: "Nous joindre" },
+    ],
+  },
+
   medias: {
     surtitre: "Couverture médiatique",
     titre: "Dans les médias",

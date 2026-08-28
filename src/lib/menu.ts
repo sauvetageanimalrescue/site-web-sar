@@ -24,6 +24,7 @@ export const MENU: SectionMenu[] = [
       { cle: "memoriam", href: "/in-memoriam" },
       { cle: "serie", href: "/serie-televisee" },
       { cle: "medias", href: "/medias" },
+      { cle: "faq", href: "/foire-aux-questions" },
     ],
   },
   {

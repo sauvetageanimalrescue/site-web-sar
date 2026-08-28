@@ -174,6 +174,83 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
   }
 }
 
+const CONFIRMATION_DON = {
+  fr: {
+    sujet: (mensuel: boolean) =>
+      mensuel ? "Merci pour votre don mensuel" : "Merci pour votre don",
+    titre: "Merci pour votre don",
+    corps: (montant: string, mensuel: boolean) => `
+      <p style="margin:0 0 14px;line-height:1.6;">Nous avons bien reçu votre don${
+        mensuel ? " mensuel" : ""
+      } de <strong>${montant}</strong>.</p>
+      <p style="margin:0;line-height:1.6;">${
+        mensuel
+          ? "Ce montant sera prélevé automatiquement chaque mois. Vous pouvez annuler en tout temps en écrivant à info@sar.quebec."
+          : "Chaque don contribue directement à financer nos interventions."
+      }</p>`,
+  },
+  en: {
+    sujet: (mensuel: boolean) =>
+      mensuel ? "Thank you for your monthly donation" : "Thank you for your donation",
+    titre: "Thank you for your donation",
+    corps: (montant: string, mensuel: boolean) => `
+      <p style="margin:0 0 14px;line-height:1.6;">We have received your${
+        mensuel ? " monthly" : ""
+      } donation of <strong>${montant}</strong>.</p>
+      <p style="margin:0;line-height:1.6;">${
+        mensuel
+          ? "This amount will be charged automatically every month. You may cancel at any time by writing to info@sar.quebec."
+          : "Every donation directly funds our interventions."
+      }</p>`,
+  },
+  es: {
+    sujet: (mensuel: boolean) =>
+      mensuel ? "Gracias por su donación mensual" : "Gracias por su donación",
+    titre: "Gracias por su donación",
+    corps: (montant: string, mensuel: boolean) => `
+      <p style="margin:0 0 14px;line-height:1.6;">Hemos recibido su donación${
+        mensuel ? " mensual" : ""
+      } de <strong>${montant}</strong>.</p>
+      <p style="margin:0;line-height:1.6;">${
+        mensuel
+          ? "Este monto se cobrará automáticamente cada mes. Puede cancelar en cualquier momento escribiendo a info@sar.quebec."
+          : "Cada donación financia directamente nuestras intervenciones."
+      }</p>`,
+  },
+} as const;
+
+function formaterMontant(montantCents: number, langue: Locale) {
+  const dollars = montantCents / 100;
+  const locale = langue === "fr" ? "fr-CA" : langue === "es" ? "es-ES" : "en-CA";
+  return new Intl.NumberFormat(locale, { style: "currency", currency: "CAD" }).format(dollars);
+}
+
+async function traiterDon(session: Stripe.Checkout.Session) {
+  const m = session.metadata ?? {};
+  const mensuel = m.type === "don_mensuel";
+  const courriel =
+    session.customer_details?.email ?? session.customer_email ?? "";
+  if (!courriel || !session.amount_total) return;
+
+  const langue = ((m.langue as Locale) ?? "fr") as keyof typeof CONFIRMATION_DON;
+  const textes = CONFIRMATION_DON[langue] ?? CONFIRMATION_DON.fr;
+  const montant = formaterMontant(session.amount_total, langue);
+
+  try {
+    await envoyerCourriel({
+      destinataire: courriel,
+      sujet: textes.sujet(mensuel),
+      html: gabaritCourriel({
+        titre: textes.titre,
+        corps: textes.corps(montant, mensuel),
+      }),
+    });
+  } catch {
+    // Le don est encaissé : un courriel raté ne doit pas provoquer un
+    // réessai de Stripe.
+  }
+}
+
 export async function POST(requete: NextRequest) {
   const signature = requete.headers.get("stripe-signature");
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -203,6 +280,9 @@ export async function POST(requete: NextRequest) {
     }
     if (type === "stage") {
       await traiterInscriptionStage(session);
+    }
+    if (type === "don" || type === "don_mensuel") {
+      await traiterDon(session);
     }
     await marquerCommandePayee(session, membreId);
   }

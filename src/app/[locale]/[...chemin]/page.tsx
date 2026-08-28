@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { VerificateurTerritoire } from "@/components/verificateur-territoire";
 import { RevuePresse } from "@/components/revue-presse";
 import { TexteRiche } from "@/components/texte-riche";
+import { Accordeon } from "@/components/accordeon";
 import { setRequestLocale } from "next-intl/server";
 import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import {
@@ -31,6 +32,7 @@ export function generateStaticParams() {
 function Bloc({ bloc }: { bloc: BlocPage }) {
   if (bloc.composant === "territoire") return <VerificateurTerritoire />;
   if (bloc.composant === "presse") return <RevuePresse />;
+  if (bloc.questions) return <Accordeon items={bloc.questions} />;
 
   if (bloc.image) {
     return (

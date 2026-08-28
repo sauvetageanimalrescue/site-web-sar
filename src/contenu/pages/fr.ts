@@ -183,6 +183,13 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/australie-wombat.jpg",
+          alt: "Eric Dussault tenant un wombat orphelin contre lui",
+          legende: "2020 - Eric Dussault et un wombat",
+        },
+      },
+      {
         titre: "Proposer une mission ou une collaboration",
         texte: [
           "Les organisations qui souhaitent soumettre une demande de déploiement international, discuter d'une collaboration ou évaluer la possibilité d'un soutien opérationnel peuvent communiquer directement avec la direction générale de Sauvetage Animal Rescue à e.dussault@sar.quebec",

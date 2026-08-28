@@ -279,7 +279,7 @@ export const PAGES_FR: CataloguePages = {
           {
             question: "Qu'est-ce que Sauvetage Animal Rescue?",
             reponse:
-              "Sauvetage Animal Rescue est une équipe de secours et de sauvetage technique pour les animaux. Nous ne sommes pas un refuge: nous intervenons directement sur le terrain pour sécuriser un animal en détresse, puis nous le remettons à un refuge, une clinique vétérinaire ou son propriétaire, selon la situation.",
+              "Sauvetage Animal Rescue est une équipe de secours et de sauvetage technique pour les animaux. Nous ne sommes pas un refuge: nous intervenons directement sur le terrain pour sécuriser un animal en détresse, puis nous le remettons à un refuge, au service animalier municipal ou à son propriétaire, selon la situation.",
           },
           {
             question: "Sur quel territoire intervenez-vous?",

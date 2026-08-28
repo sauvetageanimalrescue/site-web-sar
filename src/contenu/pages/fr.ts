@@ -694,25 +694,73 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "Incendies, inondations, évacuations",
     titre: "Sinistres",
     intro:
-      "Quand une famille est évacuée en pleine nuit, personne n'a prévu quoi faire du chat, du perroquet ou des poissons. C'est un angle mort des plans d'urgence, et c'est là que nous intervenons.",
+      "Lorsqu'un sinistre bouleverse une communauté, les animaux doivent eux aussi être pris en charge. Sauvetage Animal Rescue soutient les autorités avec des équipes, du matériel et une capacité opérationnelle spécialement conçue pour les animaux.",
     image: "/images/hero-accueil.jpg",
     imageTailleNaturelle: { largeur: 2400, hauteur: 1350 },
     blocs: [
       {
-        titre: "Ce que nous faisons sur un sinistre",
+        titre: "Intégrer les animaux à la réponse d'urgence",
+        texte: [
+          "La présence d'animaux peut avoir une influence directe sur le déroulement d'une évacuation. Un citoyen qui ignore ce qu'il adviendra de son animal peut hésiter à quitter son domicile, tenter d'y retourner ou refuser de suivre certaines consignes. En intégrant dès le départ la prise en charge animale aux mesures de sécurité civile, les autorités peuvent mieux protéger l'ensemble de la population. Sauvetage Animal Rescue met à leur disposition des intervenants formés, de l'équipement spécialisé et une structure opérationnelle capable de prendre en charge les animaux touchés, tout en s'intégrant aux opérations déjà coordonnées sur le terrain.",
+        ],
+      },
+      // TODO photo 1 (Eric à confirmer) : réponse d'urgence / animaux en contexte de sinistre.
+      {
+        titre: "Situations dans lesquelles nous pouvons intervenir",
         liste: [
-          "Récupération des animaux restés dans un bâtiment évacué",
-          "Prise en charge et transport vers un lieu sûr",
-          "Soutien aux sinistrés qui ne peuvent pas garder leur animal",
-          "Liaison avec les refuges et les cliniques vétérinaires",
-          "Assistance aux services d'incendie sur les lieux",
+          "Inondations majeures",
+          "Feux de forêt",
+          "Séismes",
+          "Verglas et pannes prolongées",
+          "Tempêtes et accumulations extrêmes",
+          "Communautés temporairement isolées",
+          "Évacuations de quartiers ou municipalités",
+          "Incendies ou sinistres d'envergure",
+          "Ruptures d'infrastructures essentielles",
+          "Toute situation nécessitant l'évacuation d'animaux",
         ],
       },
       {
-        titre: "Pourquoi ça compte",
+        titre: "Une capacité animalière complète sur le terrain",
         texte: [
-          "Des gens refusent d'évacuer, ou retournent dans un immeuble en feu, pour un animal. Ce n'est pas de l'imprudence, c'est un attachement que les plans d'urgence sous-estiment encore. Savoir qu'une équipe s'occupe de l'animal permet au sinistré de sortir, et aux pompiers de faire leur travail.",
-          "Pour organiser une entente préalable avec votre municipalité ou votre service d'incendie, écrivez à e.dussault@sar.quebec.",
+          "Un sinistre peut rapidement dépasser la capacité habituelle d'un service animalier municipal. Sauvetage Animal Rescue peut alors contribuer à mettre en place toute une infrastructure temporaire consacrée aux animaux: poste de commandement, zone d'accueil, identification et enregistrement, hébergement temporaire, alimentation, transport et réunification avec les propriétaires. Nos équipes peuvent également procéder à la recherche et à l'évacuation des animaux demeurés dans la zone sinistrée, soutenir les refuges locaux et, lorsque nécessaire, participer à la gestion sécuritaire des animaux décédés. L'objectif est d'offrir aux autorités une capacité supplémentaire immédiatement mobilisable lorsque les besoins deviennent exceptionnels.",
+        ],
+      },
+      // TODO photo 2 (Eric à confirmer) : une remorque prête pour les animaux, legende "Une remorque prête pour les animaux".
+      {
+        texte: [
+          "Selon le déploiement, notre matériel peut notamment comprendre:",
+        ],
+        liste: [
+          "Cages et transporteurs",
+          "Enclos et cages temporaires",
+          "Laisses et harnais",
+          "Colliers d'identification",
+          "Système d'identification temporaire",
+          "Nourriture pour chiens et chats",
+          "Bols et contenants d'eau",
+          "Litière et bacs",
+          "Couvertures et literie",
+          "Coussinets et tapis",
+          "Jouets et articles de réconfort",
+          "Matériel de nettoyage et désinfection",
+          "Équipement de protection individuelle",
+          "Éclairage autonome",
+          "Génératrices et alimentation électrique",
+          "Matériel de manutention et de transport",
+          "Équipement de premiers secours animaliers",
+        ],
+      },
+      {
+        titre: "Une expérience acquise lors de véritables sinistres",
+        texte: [
+          "Sauvetage Animal Rescue a déjà été appelé à intervenir lors de plusieurs événements majeurs, notamment les inondations de Sainte-Marthe-sur-le-Lac, les inondations de Saint-André-d'Argenteuil, les inondations de Rigaud ainsi que les feux de forêt en Abitibi-Témiscamingue. Ces déploiements ont permis à nos équipes de développer une expérience concrète de la gestion animalière en contexte de sécurité civile, autant pour les opérations de terrain que pour la logistique, le transport, l'hébergement temporaire et la collaboration avec les autorités.",
+        ],
+      },
+      {
+        titre: "Prévoir avant que le sinistre survienne",
+        texte: [
+          "La meilleure façon d'intégrer efficacement les animaux à un plan de sécurité civile est de prévoir les ressources avant qu'une urgence ne survienne. Les municipalités, autorités gouvernementales et organisations responsables de la sécurité civile qui souhaitent inclure Sauvetage Animal Rescue dans leur planification peuvent communiquer avec la direction générale afin d'établir une entente de services et les modalités de déploiement à e.dussault@sar.quebec",
         ],
       },
     ],

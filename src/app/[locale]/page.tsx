@@ -49,7 +49,7 @@ function Hero() {
           // révéler moins de largeur de la même photo, jamais un zoom.
           // Au-delà de 2489px de large, le fond marine prend le relais.
           backgroundSize: "2489px 1400px",
-          backgroundPosition: "calc(50% - 100px) calc(35% - 100px)",
+          backgroundPosition: "calc(50% - 400px) calc(35% - 200px)",
           backgroundRepeat: "no-repeat",
         }}
       />

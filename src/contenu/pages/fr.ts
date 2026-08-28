@@ -417,7 +417,7 @@ export const PAGES_FR: CataloguePages = {
       "La singularité de nos interventions attire régulièrement l'attention des médias. Qu'il s'agisse de couvrir nos opérations ou de commenter l'actualité animalière, Sauvetage Animal Rescue est devenu une référence fréquemment sollicitée.",
     image: "/images/medias-entrevue-cbc.jpg",
     imageTailleNaturelle: { largeur: 2400, hauteur: 1351 },
-    imagePosition: "right -200px",
+    imagePosition: "right -230px",
     blocs: [
       {
         titre: "Une expertise qui fait l'actualité",

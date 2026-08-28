@@ -125,6 +125,7 @@ export default async function PageEditorialeVue({
         titre={page.titre}
         intro={page.intro}
         image={page.image}
+        imagePosition={page.imagePosition}
       />
 
       {page.blocs.map((bloc, index) => (

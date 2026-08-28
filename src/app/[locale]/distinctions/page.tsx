@@ -14,7 +14,7 @@ export default async function PageDistinctions({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/distinctions-ecusson.jpg"
+        image="/images/distinctions-signature.jpg"
       />
 
       {/* Le système de reconnaissance n'existe pas encore. Tant qu'il n'est

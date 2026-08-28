@@ -34,11 +34,15 @@ export function EnTetePage({
   titre,
   intro,
   image,
+  imagePosition,
 }: {
   surtitre?: string;
   titre: string;
   intro?: string;
   image?: string;
+  // Décalage du cadrage, ex. "center 200px" pour descendre la photo et
+  // révéler ce qu'il y a plus haut dans l'image (des visages, par exemple).
+  imagePosition?: string;
 }) {
   return (
     <section className="relative isolate flex min-h-[23rem] items-start overflow-hidden bg-marine sm:min-h-[27rem]">
@@ -53,6 +57,7 @@ export function EnTetePage({
             priority
             sizes="100vw"
             className="object-cover opacity-45"
+            style={imagePosition ? { objectPosition: imagePosition } : undefined}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-marine via-marine/80 to-marine/35" />
         </>

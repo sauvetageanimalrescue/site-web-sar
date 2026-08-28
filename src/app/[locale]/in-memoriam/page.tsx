@@ -17,6 +17,7 @@ export default async function PageMemoriam({
         titre={t("titre")}
         intro={t("dedicace")}
         image="/images/memoriam-ruban.jpg"
+        imagePosition="center bottom"
       />
 
       {/* Même gabarit que partout ailleurs: une image en seize neuf, coins

@@ -21,6 +21,42 @@ const RESEAUX = [
   { href: ORGANISATION.reseaux.patreon, Icone: IconBrandPatreon, nom: "Patreon" },
 ];
 
+// Une colonne du menu de bas de page, à partir d'une liste explicite de
+// sections plutôt que de l'ordre du menu principal : Solutions (16 entrées)
+// doit rester collée sous Services, pas héritée d'un ordre pensé pour la
+// barre de navigation.
+function ColonneMenu({ cles }: { cles: string[] }) {
+  const t = useTranslations("nav");
+  return (
+    <div className="space-y-8">
+      {cles.map((cle) => {
+        const section = MENU.find((s) => s.cle === cle);
+        if (!section || section.liens.length === 0) return null;
+        return (
+          <div key={section.cle}>
+            <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime">
+              {t(section.cle)}
+            </p>
+            <ul className="mt-3 space-y-2 text-sm">
+              {section.liens.map((lien) => (
+                <li key={lien.cle}>
+                  {lien.href ? (
+                    <Link href={lien.href} className="transition hover:text-white">
+                      {t(lien.cle)}
+                    </Link>
+                  ) : (
+                    <span className="text-white/50">{t(lien.cle)}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export function PiedSite() {
   const t = useTranslations("nav");
   const p = useTranslations("pied");
@@ -63,38 +99,17 @@ export function PiedSite() {
                 </a>
               ))}
             </div>
-            {/* Signaler reste accessible depuis n'importe quelle page, même
-                une fois le héros de l'accueil loin derrière. */}
-            <Link
-              href="/signalement"
-              className="mt-5 flex w-fit items-center gap-2 rounded-md bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
-            >
-              <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
-              {p("signalerBouton")}
-            </Link>
           </div>
 
+          {/* Deux colonnes explicites plutôt qu'une grille en tableau : la
+              grille plaçait Solutions (16 entrées) juste sous Organisation,
+              ce qui allongeait démesurément une seule colonne, surtout sur
+              mobile. Ici, Solutions reste collée sous Services, et les trois
+              sections plus courtes s'empilent sous Organisation pour
+              équilibrer la hauteur des deux colonnes. */}
           <div className="grid grid-cols-2 gap-8 lg:col-span-2">
-            {MENU.filter((s) => s.liens.length > 0).map((section) => (
-              <div key={section.cle}>
-                <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime">
-                  {t(section.cle)}
-                </p>
-                <ul className="mt-3 space-y-2 text-sm">
-                  {section.liens.map((lien) => (
-                    <li key={lien.cle}>
-                      {lien.href ? (
-                        <Link href={lien.href} className="transition hover:text-white">
-                          {t(lien.cle)}
-                        </Link>
-                      ) : (
-                        <span className="text-white/50">{t(lien.cle)}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <ColonneMenu cles={["organisation", "contribuer", "formations", "fiches"]} />
+            <ColonneMenu cles={["services", "solutions"]} />
           </div>
 
           <div>
@@ -153,6 +168,17 @@ export function PiedSite() {
                   <IconMail className="size-4" aria-hidden />
                   {courriels.general}
                 </a>
+              </li>
+              <li>
+                {/* Signaler reste accessible depuis n'importe quelle page,
+                    même une fois le héros de l'accueil loin derrière. */}
+                <Link
+                  href="/signalement"
+                  className="mt-2 flex w-fit items-center gap-2 rounded-md bg-urgence px-4 py-2 text-sm font-semibold text-white transition hover:bg-urgence/90"
+                >
+                  <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
+                  {p("signalerBouton")}
+                </Link>
               </li>
             </ul>
           </div>

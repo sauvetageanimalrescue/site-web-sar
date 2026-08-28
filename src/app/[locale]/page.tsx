@@ -39,10 +39,18 @@ function Hero() {
     <section className="relative isolate overflow-hidden bg-marine">
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-cover"
+        className="absolute inset-0 -z-20"
         style={{
           backgroundImage: "url(/images/hero-raton-laveur.jpg)",
+          // Taille naturelle de la photo (2489 × 1400), jamais recalculée :
+          // avec `cover`, rétrécir la fenêtre changeait le niveau de zoom
+          // (la mise à l'échelle dépend du rapport largeur/hauteur du
+          // moment). En taille fixe, rétrécir la fenêtre ne fait que
+          // révéler moins de largeur de la même photo, jamais un zoom.
+          // Au-delà de 2489px de large, le fond marine prend le relais.
+          backgroundSize: "2489px 1400px",
           backgroundPosition: "center 35%",
+          backgroundRepeat: "no-repeat",
         }}
       />
       <div

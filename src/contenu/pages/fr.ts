@@ -17,6 +17,12 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/mission-equipe-renard.jpg",
+          alt: "Eric Dussault et trois intervenants devant un véhicule, avec un renard dans un transporteur",
+        },
+      },
+      {
         titre: "Notre vision",
         texte: [
           "La vision de Sauvetage Animal Rescue est de devenir une ressource essentielle en matière de protection et de sauvetage animalier à l'échelle nationale, tout en établissant un standard d'excellence reconnu bien au-delà de nos frontières. Par le développement de notre expertise, de nos méthodes d'intervention et de notre capacité opérationnelle, nous aspirons à devenir un modèle pour les organismes animaliers à travers le monde, et à contribuer à faire évoluer les pratiques de sauvetage animalier.",
@@ -33,6 +39,12 @@ export const PAGES_FR: CataloguePages = {
         texte: [
           "Les valeurs de Sauvetage Animal Rescue définissent autant notre façon d'intervenir que notre manière de travailler ensemble. L'altruisme nous pousse à agir dans l'intérêt des animaux et des personnes que nous servons, sans distinction et sans recherche de bénéfice personnel. La bravoure nous permet d'affronter avec courage et sang-froid des situations parfois complexes ou dangereuses. La collaboration nous rappelle que les meilleures interventions reposent sur le travail d'équipe et la coopération avec les citoyens, les organisations et les services d'urgence. La discipline assure la rigueur de nos méthodes, de notre formation et de nos pratiques afin de protéger autant nos équipes que les animaux secourus. Enfin, l'excellence nous pousse à maintenir les plus hauts standards, à apprendre constamment et à toujours chercher à nous améliorer.",
         ],
+      },
+      {
+        image: {
+          fichier: "/images/mission-equipe-abitibi.jpg",
+          alt: "Cinq intervenantes en forêt calcinée lors du déploiement en Abitibi-Témiscamingue",
+        },
       },
       {
         titre: "« Ensemble au service des animaux »",

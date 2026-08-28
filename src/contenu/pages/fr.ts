@@ -757,8 +757,8 @@ export const PAGES_FR: CataloguePages = {
     titre: "Secours animalier",
     intro:
       "Le secours animalier consiste à intervenir lorsqu'un animal est blessé, malade, affaibli, piégé ou autrement en détresse. C'est le coeur de nos opérations quotidiennes et la forme d'intervention que nous réalisons le plus souvent.",
-    image: "/images/carte-signalement-1900.jpg",
-    imageTailleNaturelle: { largeur: 1900, hauteur: 1900 },
+    image: "/images/secours-heron.jpg",
+    imageTailleNaturelle: { largeur: 2400, hauteur: 1651 },
     blocs: [
       {
         titre: "Porter assistance aux animaux en détresse",

@@ -800,6 +800,12 @@ export const PAGES_FR: CataloguePages = {
         ],
       },
       {
+        image: {
+          fichier: "/images/secours-pigeon.jpg",
+          alt: "Pigeon secouru transporté dans une boîte de fortune",
+        },
+      },
+      {
         titre: "Une chaîne, pas un geste isolé",
         texte: [
           "Une intervention ne commence pas lorsque nos sauveteurs arrivent sur place et ne se termine pas lorsque l'animal est entre leurs mains. Elle s'inscrit dans une véritable chaîne de secours qui débute avec le citoyen, le service d'urgence ou l'organisation qui nous signale la situation. Après l'intervention vient ensuite la prise en charge: transport vers une clinique vétérinaire, un refuge, un service animalier ou une ressource spécialisée selon les besoins de l'animal. Nos messagers et messagères jouent un rôle essentiel dans cette chaîne en assurant ces transports, permettant ainsi aux équipes de terrain de demeurer disponibles pour répondre à une nouvelle urgence.",

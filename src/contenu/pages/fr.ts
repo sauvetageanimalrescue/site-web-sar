@@ -1038,24 +1038,32 @@ export const PAGES_FR: CataloguePages = {
     surtitre: "2 000 $ par année",
     titre: "Devenir partenaire",
     intro:
-      "Vingt certificats de partenaire sont émis chaque année. Ils s'adressent aux entreprises et aux organisations qui veulent associer leur nom au sauvetage animal, avec une visibilité concrète auprès d'une communauté engagée.",
+      "Associez votre entreprise à une cause concrète et contribuez directement à sauver des animaux. Notre programme de partenariat transforme votre engagement en soutien opérationnel, tout en offrant à votre entreprise une visibilité distinctive auprès de notre communauté.",
     image: "/images/certificat-partenaire-1900.jpg",
     imageTailleNaturelle: { largeur: 1900, hauteur: 1230 },
     blocs: [
       {
-        titre: "Ce que comprend le partenariat",
-        liste: [
-          "Un certificat 11 x 17 pouces, numéroté et renouvelé chaque année",
-          "Une remise officielle captée en photo et en vidéo",
-          "Une diffusion en direct sur nos réseaux lors de la remise",
-          "Des publications dédiées sur Facebook, Instagram et TikTok",
-          "Une mention dans l'infolettre",
+        titre: "Un partenariat qui fait une différence",
+        texte: [
+          "Chaque année, Sauvetage Animal Rescue souhaite s'entourer d'un nombre limité d'entreprises partenaires qui choisissent de soutenir concrètement sa mission. Chaque partenariat est officialisé par la remise d'un certificat exclusif, encadré et numéroté, que l'entreprise peut fièrement afficher dans ses locaux. Plus qu'une contribution financière, ce partenariat témoigne publiquement de l'engagement de l'entreprise envers la protection et le sauvetage des animaux. Les sommes recueillies permettent directement de soutenir nos opérations, notre équipement et nos équipes sur le terrain. En devenant partenaire, une entreprise associe ainsi son nom à des interventions bien réelles et à des vies concrètement sauvées.",
         ],
       },
       {
-        titre: "Prendre entente",
+        image: {
+          fichier: "/images/partenariat-certificat-cadre.jpg",
+          alt: "Certificat de partenaire 2025 encadré, numéroté 01 sur 20",
+        },
+      },
+      {
+        titre: "Votre engagement mis en valeur",
         texte: [
-          "Le nombre de certificats étant limité, les ententes se prennent directement avec la direction générale. Écrivez à e.dussault@sar.quebec en précisant le nom de votre organisation et votre secteur d'activité.",
+          "Nous voulons également que nos partenaires puissent faire connaître leur engagement auprès de leur propre communauté. La remise du certificat peut faire l'objet d'une rencontre officielle, de photographies et de contenu destiné à nos plateformes numériques. Le partenariat peut être présenté sur nos réseaux sociaux, dans notre infolettre rejoignant plusieurs milliers de personnes et au moyen d'une campagne publicitaire géociblée dans le secteur de l'entreprise. Cette approche permet de faire rayonner à la fois la cause animale et les entreprises qui choisissent de la soutenir, auprès d'une communauté de plus de 100 000 personnes qui suit déjà nos activités.",
+        ],
+      },
+      {
+        titre: "Devenir partenaire",
+        texte: [
+          "Chaque proposition de partenariat est évaluée afin de nous assurer qu'elle correspond à la mission et aux valeurs de Sauvetage Animal Rescue. Pour discuter des possibilités, des modalités ou soumettre une proposition, communiquez directement avec la direction générale à e.dussault@sar.quebec",
         ],
       },
     ],

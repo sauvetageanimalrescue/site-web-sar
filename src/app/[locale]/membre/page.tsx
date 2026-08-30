@@ -28,7 +28,17 @@ export default async function PageMembre({
         </p>
       </Section>
 
-      {/* TODO photo (Eric à confirmer) : entre le paragraphe et la liste. Section fond. */}
+      <Section fond largeur="carte">
+        <div className="relative aspect-video overflow-hidden rounded-xl bg-marine">
+          <Image
+            src="/images/membre-carte-2026-main.jpg"
+            alt="Carte de membre 2026 tenue en main, illustrée d'un harfang des neiges"
+            fill
+            sizes="(max-width: 768px) 100vw, 42rem"
+            className="object-cover"
+          />
+        </div>
+      </Section>
 
       <Section titre={t("avantagesTitre")} largeur="carte">
         <ul className="space-y-2.5">

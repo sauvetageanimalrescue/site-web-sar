@@ -1035,7 +1035,7 @@ export const PAGES_FR: CataloguePages = {
   },
 
   partenariat: {
-    surtitre: "2 000 $ par année",
+    surtitre: "Partenariat",
     titre: "Devenir partenaire",
     intro:
       "Associez votre entreprise à une cause concrète et contribuez directement à sauver des animaux. Notre programme de partenariat transforme votre engagement en soutien opérationnel, tout en offrant à votre entreprise une visibilité distinctive auprès de notre communauté.",

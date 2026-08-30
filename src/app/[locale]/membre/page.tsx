@@ -22,6 +22,14 @@ export default async function PageMembre({
         imageTailleNaturelle={{ largeur: 1900, hauteur: 1067 }}
       />
 
+      <Section titre={t("pourquoiTitre")} largeur="carte">
+        <p className="paragraphe text-lg leading-relaxed text-foreground/90">
+          {t("pourquoiTexte")}
+        </p>
+      </Section>
+
+      {/* TODO photo (Eric à confirmer) : entre le paragraphe et la liste. Section fond. */}
+
       <Section titre={t("avantagesTitre")} largeur="carte">
         <ul className="space-y-2.5">
           {avantages.map((a) => (

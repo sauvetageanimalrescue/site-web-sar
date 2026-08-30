@@ -196,15 +196,18 @@
   "membre": {
     "titre": "Carte de membre 2026",
     "surtitre": "Cotisation annuelle",
-    "intro": "Sans subvention ni financement gouvernemental, nos membres rendent possibles les sauvetages d'animaux sans famille. Leur cotisation annuelle finance directement nos interventions et permet à Sauvetage Animal Rescue d'être présent lorsque personne d'autre ne peut l'être.",
-    "avantagesTitre": "Ce que la carte vous donne",
+    "intro": "Sans subvention ni financement gouvernemental, Sauvetage Animal Rescue compte d'abord sur ses membres. Leur cotisation annuelle finance nos interventions auprès des animaux de la faune et sans famille, et nous permet de sauver davantage de vies.",
+    "pourquoiTitre": "Pourquoi devenir membre?",
+    "pourquoiTexte": "Les membres sont au cœur du modèle de financement de Sauvetage Animal Rescue. Leur cotisation annuelle nous permet de maintenir nos équipes sur le terrain, d'acquérir et d'entretenir notre équipement, de former nos intervenants et d'assumer les dépenses liées aux opérations pour lesquelles aucun propriétaire ne peut payer. Plus notre communauté de membres grandit, plus notre capacité d'intervention augmente: davantage de ressources, davantage d'équipement et, ultimement, davantage d'animaux secourus. Devenir membre, ce n'est donc pas simplement recevoir une carte: c'est participer directement à la capacité de l'organisation d'exister, d'intervenir et de poursuivre sa mission.",
+    "avantagesTitre": "Votre adhésion comprend",
     "avantages": [
-      "Une carte de membre nominative en PDF, envoyée par courriel dès le paiement.",
-      "Un numéro de membre unique et un code QR vérifiable en ligne.",
-      "Un espace membre pour retélécharger votre carte en tout temps.",
-      "L'accès aux communications réservées aux membres.",
-      "Le droit de participer aux tirages et concours de l'organisation.",
-      "La certitude que 100 % de votre cotisation reste sur le terrain."
+      "Contribution pour les animaux de la faune et sans famille",
+      "Carte de membre électronique instantanée",
+      "Numéro de membre unique",
+      "Espace membre en ligne",
+      "Carte valide pour l'année en cours",
+      "Contribution directe à nos opérations",
+      "Le sentiment de faire la différence"
     ],
     "formulaireTitre": "Prendre ma carte",
     "renouvellementTitre": "Renouvellement automatique",

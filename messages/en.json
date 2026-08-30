@@ -356,12 +356,14 @@
     "surtitre": "Solo or as a duo",
     "intro": "Spend a day at the heart of our operations and discover, from inside a response vehicle, how an animal rescue mission actually unfolds, from the moment the call comes in to the animal's final handoff.",
     "equipesTitre": "A day with our teams",
-    "equipesTexte": "The observation day offers a privileged look at Sauvetage Animal Rescue from the inside. For eight hours, you ride along with our team in a response vehicle and live the day at the same pace as our rescuers. You witness calls coming in, the travel between calls, how situations are assessed, decisions made on the ground and, when circumstances allow, the handling of animals. Every day is different: there is no way to know in advance which calls will come in or what situations will arise. That unpredictability is exactly what makes the experience authentic and representative of our real operations.",
+    "equipesTexte": "The observation day offers a privileged look at Sauvetage Animal Rescue from the inside. For about eight hours, you ride along with our team in a response vehicle and live the day at the same pace as our rescuers. You witness calls coming in, the travel between calls, how situations are assessed, decisions made on the ground and, when circumstances allow, the handling of animals. Every day is different: there is no way to know in advance which calls will come in or what situations will arise. That unpredictability is exactly what makes the experience authentic and representative of our real operations.",
     "chaineTitre": "At the heart of the rescue chain",
     "chaineTexte": [
       "A rescue is not just the moment an animal is saved. The observation day reveals the different links of our response chain, from the first call to the animal's final handoff. You will see how information is assessed, how priorities are set, how a response is prepared, and how decisions evolve once the team is on scene.",
       "When the situation allows, simple animal handling may also take place under the direct supervision of our responders. Safety always comes first: no participant is ever asked to take part in a maneuver that could compromise their safety."
     ],
+    "engagerTitre": "Discover before you commit",
+    "engagerTexte": "For many participants, the observation day also becomes a first step toward volunteering. Spending a day with our teams gives you a real look at how we operate, our pace, and the different responsibilities that come with a response. It is not unusual for participants to later go on to apply and join Sauvetage Animal Rescue. The day comes with no obligation whatsoever: it simply lets you experience it from the inside and see whether it's the right fit for you.",
     "limiteeTitre": "A deliberately limited experience",
     "limiteeTexte": [
       "Observation days are offered to a very limited number of people each year. Dates are mainly scheduled during our high season, when call volume tends to be higher. No specific number of interventions can be guaranteed, since our days depend entirely on the calls we receive, but this period offers the best conditions for an experience representative of our operations.",
@@ -369,7 +371,9 @@
     ],
     "infosTitre": "Before you book",
     "infos": [
-      "Duration: 8 hours, 10 a.m. to 6 p.m.",
+      "Start time: 10 a.m.",
+      "Expected end time: around 6 p.m.",
+      "Typical duration: about 8 hours",
       "Meeting point: Montréal, near Namur metro station",
       "Minimum age: 14",
       "Under 18: parental authorization required",
@@ -384,6 +388,8 @@
       "Dates and spots: extremely limited",
       "Reminder: no reminder will be sent before your observation day"
     ],
+    "horaireTitre": "A schedule that follows our operations",
+    "horaireTexte": "The day begins at 10 a.m., and we do everything we can to wrap up around 6 p.m. That said, the nature of our operations can occasionally push the schedule a little later, particularly when a response is still underway. When that happens, we discuss it with participants before continuing, taking their own constraints into account. Our goal remains to stick to the announced schedule as closely as possible, while still allowing an already-started response to be properly completed.",
     "reservationTitre": "Booking, changes and cancellation",
     "reservationTexte": [
       "Once your date is selected and your contribution made, no refund is possible. Your spot may, however, be transferred to someone else.",

@@ -356,12 +356,14 @@
     "surtitre": "Solo o en pareja",
     "intro": "Pase un día en el corazón de nuestras operaciones y descubra, desde un vehículo de intervención, cómo se desarrolla realmente una misión de rescate animal, desde la recepción del aviso hasta la entrega final del animal.",
     "equipesTitre": "Un día con nuestros equipos",
-    "equipesTexte": "La jornada de observación ofrece una oportunidad privilegiada de descubrir Sauvetage Animal Rescue desde adentro. Durante ocho horas, usted acompaña a nuestro equipo a bordo de un vehículo de intervención y vive la jornada al mismo ritmo que nuestros rescatistas. Presencia la recepción de los avisos, los desplazamientos, el análisis de las situaciones, las decisiones tomadas sobre el terreno y, cuando las circunstancias lo permiten, la atención de los animales. Cada jornada es diferente: es imposible saber de antemano qué llamadas se recibirán o qué situaciones se presentarán. Precisamente eso es lo que hace la experiencia tan auténtica y representativa de nuestra realidad operativa.",
+    "equipesTexte": "La jornada de observación ofrece una oportunidad privilegiada de descubrir Sauvetage Animal Rescue desde adentro. Durante aproximadamente ocho horas, usted acompaña a nuestro equipo a bordo de un vehículo de intervención y vive la jornada al mismo ritmo que nuestros rescatistas. Presencia la recepción de los avisos, los desplazamientos, el análisis de las situaciones, las decisiones tomadas sobre el terreno y, cuando las circunstancias lo permiten, la atención de los animales. Cada jornada es diferente: es imposible saber de antemano qué llamadas se recibirán o qué situaciones se presentarán. Precisamente eso es lo que hace la experiencia tan auténtica y representativa de nuestra realidad operativa.",
     "chaineTitre": "En el corazón de la cadena de rescate",
     "chaineTexte": [
       "Una intervención no se resume al momento en que se rescata a un animal. La jornada permite descubrir los distintos eslabones de nuestra cadena de intervención, desde el primer aviso hasta la entrega final del animal. Podrá observar cómo se analiza la información, cómo se establecen las prioridades, cómo se prepara una intervención y cómo evolucionan las decisiones una vez que el equipo llega al lugar.",
       "Cuando la situación lo permite, también pueden realizarse algunas manipulaciones simples de animales bajo la supervisión directa de nuestros intervinientes. La seguridad sigue siendo prioritaria en todo momento: a ningún participante se le pedirá tomar parte en una maniobra que pueda comprometer su seguridad."
     ],
+    "engagerTitre": "Descubrir antes de comprometerse",
+    "engagerTexte": "Para muchos participantes, la jornada de observación también se convierte en una primera puerta de entrada al voluntariado. Pasar un día con nuestros equipos permite descubrir concretamente nuestro funcionamiento, nuestro ritmo operativo y las distintas responsabilidades que rodean una intervención. De hecho, no es raro que algunos participantes decidan posteriormente iniciar el proceso de reclutamiento y unirse a Sauvetage Animal Rescue. La jornada no impone, evidentemente, ningún compromiso: simplemente permite vivir la experiencia desde adentro y descubrir si esta realidad corresponde a lo que usted busca.",
     "limiteeTitre": "Una experiencia deliberadamente limitada",
     "limiteeTexte": [
       "Las jornadas de observación se ofrecen a un número muy limitado de personas cada año. Las fechas se proponen principalmente durante nuestra temporada alta, cuando el volumen de avisos suele ser mayor. No se puede garantizar un número preciso de intervenciones, ya que nuestras jornadas dependen enteramente de las llamadas recibidas, pero este período ofrece las mejores condiciones para vivir una experiencia representativa de nuestras operaciones.",
@@ -369,7 +371,9 @@
     ],
     "infosTitre": "Antes de reservar",
     "infos": [
-      "Duración: 8 horas, de 10 h a 18 h",
+      "Hora de inicio: 10 h",
+      "Hora de finalización prevista: alrededor de las 18 h",
+      "Duración habitual: aproximadamente 8 horas",
       "Punto de encuentro: Montreal, cerca del metro Namur",
       "Edad mínima: 14 años",
       "Menores de 18 años: autorización parental obligatoria",
@@ -384,11 +388,13 @@
       "Fechas y plazas: extremadamente limitadas",
       "Recordatorio: no se enviará ningún recordatorio antes de su jornada"
     ],
+    "horaireTitre": "Un horario sujeto a las operaciones",
+    "horaireTexte": "La jornada comienza a las 10 h y hacemos todo lo posible por terminar hacia las 18 h. Sin embargo, la naturaleza de nuestras operaciones puede ocasionalmente provocar un ligero retraso respecto al horario previsto, en particular cuando una intervención sigue en curso. Cuando se presenta tal situación, lo conversamos con los participantes antes de continuar, para tener en cuenta sus propias limitaciones. Nuestro objetivo sigue siendo respetar en la medida de lo posible el horario anunciado, permitiendo al mismo tiempo concluir correctamente una intervención ya iniciada.",
     "reservationTitre": "Reserva, cambios y cancelación",
     "reservationTexte": [
       "Una vez seleccionada su fecha y realizada su contribución, no es posible ningún reembolso. Sin embargo, su plaza puede transferirse a otra persona.",
       "En caso de imprevisto, podemos intentar trasladar su reserva a otra fecha disponible. Esta posibilidad sigue siendo condicional a las plazas disponibles y no puede garantizarse.",
-      "También corresponde al participante anotar cuidadosamente la fecha de su jornada y recordarla. No se enviará ningún recordatorio, incluso si la reserva se realizó con varios meses de anticipación. Recomendamos anotar la fecha en su calendario tan pronto como se confirme la reserva."
+      "Corresponde al participante anotar cuidadosamente la fecha de su jornada y recordarla. No se enviará ningún recordatorio, incluso si la reserva se realizó con varios meses de anticipación. Recomendamos anotar la fecha en su calendario tan pronto como se confirme la reserva."
     ],
     "souvenirTitre": "Un recuerdo de su paso",
     "souvenirTexte": "Al final de la jornada, se toma una foto de recuerdo con los participantes para inmortalizar su paso por nuestro equipo. Cada participante recibe también un certificado de participación y un escudo de Sauvetage Animal Rescue, como recuerdo de esta jornada vivida en el corazón de nuestras operaciones.",

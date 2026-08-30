@@ -359,12 +359,14 @@
     "surtitre": "En solo ou en duo",
     "intro": "Passez une journée au cœur de nos opérations et découvrez, depuis un véhicule d'intervention, comment se déroule concrètement une mission de sauvetage animal, de la réception du signalement jusqu'à la prise en charge.",
     "equipesTitre": "Une journée avec nos équipes",
-    "equipesTexte": "Le stage d'observation offre une occasion privilégiée de découvrir Sauvetage Animal Rescue de l'intérieur. Pendant huit heures, vous accompagnez notre équipe à bord d'un véhicule d'intervention et vivez la journée au même rythme que nos sauveteurs. Vous assistez à la réception des signalements, aux déplacements, à l'analyse des situations, aux décisions prises sur le terrain et, lorsque les circonstances le permettent, à la prise en charge des animaux. Chaque journée est différente: impossible de savoir à l'avance quels appels seront reçus ou quelles situations se présenteront. C'est précisément ce qui rend l'expérience aussi authentique et représentative de notre réalité opérationnelle.",
+    "equipesTexte": "Le stage d'observation offre une occasion privilégiée de découvrir Sauvetage Animal Rescue de l'intérieur. Pendant environ huit heures, vous accompagnez notre équipe à bord d'un véhicule d'intervention et vivez la journée au même rythme que nos sauveteurs. Vous assistez à la réception des signalements, aux déplacements, à l'analyse des situations, aux décisions prises sur le terrain et, lorsque les circonstances le permettent, à la prise en charge des animaux. Chaque journée est différente: impossible de savoir à l'avance quels appels seront reçus ou quelles situations se présenteront. C'est précisément ce qui rend l'expérience aussi authentique et représentative de notre réalité opérationnelle.",
     "chaineTitre": "Au cœur de la chaîne de secours",
     "chaineTexte": [
       "Une intervention ne se résume pas au moment où un animal est secouru. Le stage permet de découvrir les différents maillons de notre chaîne d'intervention, depuis le premier signalement jusqu'à la prise en charge finale de l'animal. Vous pourrez observer comment les informations sont analysées, comment les priorités sont établies, comment une intervention est préparée et comment les décisions évoluent une fois l'équipe arrivée sur les lieux.",
       "Lorsque la situation s'y prête, certaines manipulations simples d'animaux peuvent également être réalisées sous la supervision directe de nos intervenants. La sécurité demeure toutefois prioritaire en tout temps: aucun stagiaire ne sera invité à participer à une manœuvre pouvant compromettre sa sécurité."
     ],
+    "engagerTitre": "Découvrir avant de s'engager",
+    "engagerTexte": "Pour plusieurs participants, le stage d'observation devient également une première porte d'entrée vers le bénévolat. Passer une journée avec nos équipes permet de découvrir concrètement notre fonctionnement, notre rythme opérationnel et les différentes responsabilités qui entourent une intervention. Il n'est d'ailleurs pas rare que des stagiaires décident par la suite d'entreprendre le processus de recrutement et de joindre Sauvetage Animal Rescue. Le stage n'impose évidemment aucun engagement: il permet simplement de vivre l'expérience de l'intérieur et de découvrir si cette réalité correspond à ce que vous recherchez.",
     "limiteeTitre": "Une expérience volontairement limitée",
     "limiteeTexte": [
       "Les stages d'observation sont offerts à un nombre très limité de personnes chaque année. Les dates sont principalement proposées pendant notre saison haute, lorsque le volume de signalements est généralement plus important. Aucun nombre précis d'interventions ne peut être garanti, puisque nos journées dépendent entièrement des appels reçus, mais cette période offre les meilleures conditions pour vivre une expérience représentative de nos opérations.",
@@ -372,7 +374,9 @@
     ],
     "infosTitre": "À savoir avant de réserver",
     "infos": [
-      "Durée: 8 heures, de 10 h à 18 h",
+      "Heure de début: 10 h",
+      "Heure de fin prévue: vers 18 h",
+      "Durée habituelle: environ 8 heures",
       "Point de rencontre: Montréal, près du métro Namur",
       "Âge minimum: 14 ans",
       "Moins de 18 ans: autorisation parentale obligatoire",
@@ -387,11 +391,13 @@
       "Dates et places: extrêmement limitées",
       "Rappel: aucun rappel ne sera envoyé avant votre stage"
     ],
+    "horaireTitre": "Un horaire qui suit les opérations",
+    "horaireTexte": "Le stage débute à 10 h et nous faisons tout notre possible pour terminer la journée vers 18 h. Cependant, la nature de nos opérations peut exceptionnellement entraîner un léger dépassement de l'horaire prévu, notamment lorsqu'une intervention est toujours en cours. Lorsqu'une telle situation se présente, nous en discutons avec les stagiaires avant de poursuivre afin de tenir compte de leurs contraintes. Notre objectif demeure de respecter autant que possible l'horaire annoncé, tout en permettant de terminer correctement une intervention déjà amorcée.",
     "reservationTitre": "Réservation, changement et annulation",
     "reservationTexte": [
       "Une fois votre date sélectionnée et votre contribution effectuée, aucun remboursement n'est possible. Votre place peut toutefois être transférée à une autre personne.",
       "En cas d'imprévu, nous pouvons tenter de déplacer votre réservation vers une autre date disponible. Cette possibilité demeure toutefois conditionnelle aux places restantes et ne peut être garantie.",
-      "Il appartient également au participant de noter soigneusement la date de son stage et de s'en souvenir. Aucun rappel ne sera envoyé, même lorsque la réservation a été effectuée plusieurs mois à l'avance. Nous recommandons donc d'ajouter la date à votre calendrier dès la confirmation de votre réservation."
+      "Il appartient au participant de noter soigneusement la date de son stage et de s'en souvenir. Aucun rappel ne sera envoyé, même lorsque la réservation a été effectuée plusieurs mois à l'avance. Nous recommandons donc d'ajouter la date à votre calendrier dès la confirmation de votre réservation."
     ],
     "souvenirTitre": "Un souvenir de votre passage",
     "souvenirTexte": "À la fin de la journée, une photo souvenir est prise avec les stagiaires afin d'immortaliser leur passage au sein de notre équipe. Chaque participant reçoit également un certificat de participation ainsi qu'un écusson de Sauvetage Animal Rescue, en souvenir de cette journée passée au cœur de nos opérations.",

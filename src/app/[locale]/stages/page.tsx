@@ -14,6 +14,9 @@ export default async function PageStages({
   const t = await getTranslations({ locale, namespace: "stages" });
   const stages = await lireStagesAVenir();
   const infos = t.raw("infos") as string[];
+  const chaineTexte = t.raw("chaineTexte") as string[];
+  const limiteeTexte = t.raw("limiteeTexte") as string[];
+  const reservationTexte = t.raw("reservationTexte") as string[];
 
   return (
     <>
@@ -25,11 +28,53 @@ export default async function PageStages({
         imageTailleNaturelle={{ largeur: 2000, hauteur: 3556 }}
       />
 
-      <Section titre={t("infosTitre")} largeur="carte">
+      <Section titre={t("equipesTitre")} largeur="carte">
+        <p className="paragraphe text-lg leading-relaxed text-foreground/90">
+          {t("equipesTexte")}
+        </p>
+      </Section>
+
+      <Section fond titre={t("chaineTitre")} largeur="carte">
+        <div className="space-y-4">
+          {chaineTexte.map((p) => (
+            <p key={p.slice(0, 40)} className="paragraphe text-lg leading-relaxed text-foreground/90">
+              {p}
+            </p>
+          ))}
+        </div>
+      </Section>
+
+      <Section titre={t("limiteeTitre")} largeur="carte">
+        <div className="space-y-4">
+          {limiteeTexte.map((p) => (
+            <p key={p.slice(0, 40)} className="paragraphe text-lg leading-relaxed text-foreground/90">
+              {p}
+            </p>
+          ))}
+        </div>
+      </Section>
+
+      <Section fond titre={t("infosTitre")} largeur="carte">
         <ListePuces items={infos} />
       </Section>
 
-      <Section fond titre={t("formulaireTitre")} largeur="carte">
+      <Section titre={t("reservationTitre")} largeur="carte">
+        <div className="space-y-4">
+          {reservationTexte.map((p) => (
+            <p key={p.slice(0, 40)} className="paragraphe text-lg leading-relaxed text-foreground/90">
+              {p}
+            </p>
+          ))}
+        </div>
+      </Section>
+
+      <Section fond titre={t("souvenirTitre")} largeur="carte">
+        <p className="paragraphe text-lg leading-relaxed text-foreground/90">
+          {t("souvenirTexte")}
+        </p>
+      </Section>
+
+      <Section titre={t("formulaireTitre")} largeur="carte">
         <FormulaireStage stages={stages} />
       </Section>
     </>

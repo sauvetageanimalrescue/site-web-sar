@@ -357,17 +357,44 @@
   "stages": {
     "titre": "Stages d'observation",
     "surtitre": "En solo ou en duo",
-    "intro": "Accompagne notre équipe pendant huit heures et découvre concrètement notre travail: les appels qui entrent, les décisions qui se prennent, les animaux qui repartent en sécurité.",
-    "infosTitre": "Comment ça se passe",
-    "infos": [
-      "Le stage a lieu la fin de semaine, le samedi ou le dimanche, de 10 h à 18 h.",
-      "Le point de rencontre est au 5400, rue Jean-Talon Ouest, à Montréal.",
-      "Vous pouvez laisser votre véhicule sur place. En transport en commun, la station Namur est à cinq minutes à pied.",
-      "Le tarif est le même pour une ou deux personnes: venez avec un ami ou un membre de la famille.",
-      "Le stage se déroule beau temps mauvais temps. Portez des vêtements adaptés et des souliers fermés.",
-      "Âge minimum: 14 ans. Une décharge de responsabilité est signée sur place.",
-      "Aucun remboursement. Vous pouvez céder votre place à une autre personne."
+    "intro": "Passez une journée au cœur de nos opérations et découvrez, depuis un véhicule d'intervention, comment se déroule concrètement une mission de sauvetage animal, de la réception du signalement jusqu'à la prise en charge.",
+    "equipesTitre": "Une journée avec nos équipes",
+    "equipesTexte": "Le stage d'observation offre une occasion privilégiée de découvrir Sauvetage Animal Rescue de l'intérieur. Pendant huit heures, vous accompagnez notre équipe à bord d'un véhicule d'intervention et vivez la journée au même rythme que nos sauveteurs. Vous assistez à la réception des signalements, aux déplacements, à l'analyse des situations, aux décisions prises sur le terrain et, lorsque les circonstances le permettent, à la prise en charge des animaux. Chaque journée est différente: impossible de savoir à l'avance quels appels seront reçus ou quelles situations se présenteront. C'est précisément ce qui rend l'expérience aussi authentique et représentative de notre réalité opérationnelle.",
+    "chaineTitre": "Au cœur de la chaîne de secours",
+    "chaineTexte": [
+      "Une intervention ne se résume pas au moment où un animal est secouru. Le stage permet de découvrir les différents maillons de notre chaîne d'intervention, depuis le premier signalement jusqu'à la prise en charge finale de l'animal. Vous pourrez observer comment les informations sont analysées, comment les priorités sont établies, comment une intervention est préparée et comment les décisions évoluent une fois l'équipe arrivée sur les lieux.",
+      "Lorsque la situation s'y prête, certaines manipulations simples d'animaux peuvent également être réalisées sous la supervision directe de nos intervenants. La sécurité demeure toutefois prioritaire en tout temps: aucun stagiaire ne sera invité à participer à une manœuvre pouvant compromettre sa sécurité."
     ],
+    "limiteeTitre": "Une expérience volontairement limitée",
+    "limiteeTexte": [
+      "Les stages d'observation sont offerts à un nombre très limité de personnes chaque année. Les dates sont principalement proposées pendant notre saison haute, lorsque le volume de signalements est généralement plus important. Aucun nombre précis d'interventions ne peut être garanti, puisque nos journées dépendent entièrement des appels reçus, mais cette période offre les meilleures conditions pour vivre une expérience représentative de nos opérations.",
+      "Les stages sont offerts en échange d'une contribution à Sauvetage Animal Rescue. En plus de vivre une expérience unique sur le terrain, les participants contribuent ainsi directement au financement de nos activités et de nos interventions auprès des animaux."
+    ],
+    "infosTitre": "À savoir avant de réserver",
+    "infos": [
+      "Durée: 8 heures, de 10 h à 18 h",
+      "Point de rencontre: Montréal, près du métro Namur",
+      "Âge minimum: 14 ans",
+      "Moins de 18 ans: autorisation parentale obligatoire",
+      "Capacité: jusqu'à 2 stagiaires par véhicule",
+      "Certaines dates: jusqu'à 4 participants avec 2 véhicules",
+      "Tenue: vêtements adaptés aux conditions météorologiques",
+      "Chaussures fermées obligatoires",
+      "Équipement de protection: fourni au besoin par Sauvetage Animal Rescue",
+      "Repas et collations: sac à dos, nourriture, collations et bouteilles d'eau permis",
+      "Beau temps, mauvais temps: le stage est maintenu",
+      "Nombre d'interventions: impossible à garantir",
+      "Dates et places: extrêmement limitées",
+      "Rappel: aucun rappel ne sera envoyé avant votre stage"
+    ],
+    "reservationTitre": "Réservation, changement et annulation",
+    "reservationTexte": [
+      "Une fois votre date sélectionnée et votre contribution effectuée, aucun remboursement n'est possible. Votre place peut toutefois être transférée à une autre personne.",
+      "En cas d'imprévu, nous pouvons tenter de déplacer votre réservation vers une autre date disponible. Cette possibilité demeure toutefois conditionnelle aux places restantes et ne peut être garantie.",
+      "Il appartient également au participant de noter soigneusement la date de son stage et de s'en souvenir. Aucun rappel ne sera envoyé, même lorsque la réservation a été effectuée plusieurs mois à l'avance. Nous recommandons donc d'ajouter la date à votre calendrier dès la confirmation de votre réservation."
+    ],
+    "souvenirTitre": "Un souvenir de votre passage",
+    "souvenirTexte": "À la fin de la journée, une photo souvenir est prise avec les stagiaires afin d'immortaliser leur passage au sein de notre équipe. Chaque participant reçoit également un certificat de participation ainsi qu'un écusson de Sauvetage Animal Rescue, en souvenir de cette journée passée au cœur de nos opérations.",
     "datesTitre": "Dates disponibles",
     "unePlace": "Une place",
     "plusieursPlaces": "{places} places",

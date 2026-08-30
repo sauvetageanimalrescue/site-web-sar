@@ -353,18 +353,45 @@
   },
   "stages": {
     "titre": "Jornadas de observación",
-    "surtitre": "220 $ • una o dos personas",
-    "intro": "Acompañe a nuestro equipo durante ocho horas y descubra nuestro trabajo de cerca: las llamadas que entran, las decisiones que se toman, los animales que se van a salvo.",
-    "infosTitre": "Cómo funciona",
-    "infos": [
-      "La jornada se realiza el fin de semana, sábado o domingo, de 10 h a 18 h.",
-      "El punto de encuentro es 5400, rue Jean-Talon Ouest, en Montreal.",
-      "Puede dejar su vehículo allí. En transporte público, la estación Namur está a cinco minutos a pie.",
-      "El precio es el mismo para una o dos personas: venga con un amigo o un familiar.",
-      "La jornada se realiza haga el tiempo que haga. Lleve ropa adecuada y zapatos cerrados.",
-      "Edad mínima: 14 años. Se firma una exención de responsabilidad en el lugar.",
-      "Sin reembolso. Puede ceder su plaza a otra persona."
+    "surtitre": "Solo o en pareja",
+    "intro": "Pase un día en el corazón de nuestras operaciones y descubra, desde un vehículo de intervención, cómo se desarrolla realmente una misión de rescate animal, desde la recepción del aviso hasta la entrega final del animal.",
+    "equipesTitre": "Un día con nuestros equipos",
+    "equipesTexte": "La jornada de observación ofrece una oportunidad privilegiada de descubrir Sauvetage Animal Rescue desde adentro. Durante ocho horas, usted acompaña a nuestro equipo a bordo de un vehículo de intervención y vive la jornada al mismo ritmo que nuestros rescatistas. Presencia la recepción de los avisos, los desplazamientos, el análisis de las situaciones, las decisiones tomadas sobre el terreno y, cuando las circunstancias lo permiten, la atención de los animales. Cada jornada es diferente: es imposible saber de antemano qué llamadas se recibirán o qué situaciones se presentarán. Precisamente eso es lo que hace la experiencia tan auténtica y representativa de nuestra realidad operativa.",
+    "chaineTitre": "En el corazón de la cadena de rescate",
+    "chaineTexte": [
+      "Una intervención no se resume al momento en que se rescata a un animal. La jornada permite descubrir los distintos eslabones de nuestra cadena de intervención, desde el primer aviso hasta la entrega final del animal. Podrá observar cómo se analiza la información, cómo se establecen las prioridades, cómo se prepara una intervención y cómo evolucionan las decisiones una vez que el equipo llega al lugar.",
+      "Cuando la situación lo permite, también pueden realizarse algunas manipulaciones simples de animales bajo la supervisión directa de nuestros intervinientes. La seguridad sigue siendo prioritaria en todo momento: a ningún participante se le pedirá tomar parte en una maniobra que pueda comprometer su seguridad."
     ],
+    "limiteeTitre": "Una experiencia deliberadamente limitada",
+    "limiteeTexte": [
+      "Las jornadas de observación se ofrecen a un número muy limitado de personas cada año. Las fechas se proponen principalmente durante nuestra temporada alta, cuando el volumen de avisos suele ser mayor. No se puede garantizar un número preciso de intervenciones, ya que nuestras jornadas dependen enteramente de las llamadas recibidas, pero este período ofrece las mejores condiciones para vivir una experiencia representativa de nuestras operaciones.",
+      "Las jornadas se ofrecen a cambio de una contribución a Sauvetage Animal Rescue. Además de vivir una experiencia única sobre el terreno, los participantes contribuyen directamente al financiamiento de nuestras actividades y de nuestras intervenciones en favor de los animales."
+    ],
+    "infosTitre": "Antes de reservar",
+    "infos": [
+      "Duración: 8 horas, de 10 h a 18 h",
+      "Punto de encuentro: Montreal, cerca del metro Namur",
+      "Edad mínima: 14 años",
+      "Menores de 18 años: autorización parental obligatoria",
+      "Capacidad: hasta 2 participantes por vehículo",
+      "Algunas fechas: hasta 4 participantes con 2 vehículos",
+      "Vestimenta: ropa adecuada según las condiciones climáticas",
+      "Calzado cerrado obligatorio",
+      "Equipo de protección: proporcionado por Sauvetage Animal Rescue según sea necesario",
+      "Comidas y refrigerios: mochila, alimentos, refrigerios y botellas de agua permitidos",
+      "Haga sol o llueva: la jornada se mantiene",
+      "Número de intervenciones: imposible de garantizar",
+      "Fechas y plazas: extremadamente limitadas",
+      "Recordatorio: no se enviará ningún recordatorio antes de su jornada"
+    ],
+    "reservationTitre": "Reserva, cambios y cancelación",
+    "reservationTexte": [
+      "Una vez seleccionada su fecha y realizada su contribución, no es posible ningún reembolso. Sin embargo, su plaza puede transferirse a otra persona.",
+      "En caso de imprevisto, podemos intentar trasladar su reserva a otra fecha disponible. Esta posibilidad sigue siendo condicional a las plazas disponibles y no puede garantizarse.",
+      "También corresponde al participante anotar cuidadosamente la fecha de su jornada y recordarla. No se enviará ningún recordatorio, incluso si la reserva se realizó con varios meses de anticipación. Recomendamos anotar la fecha en su calendario tan pronto como se confirme la reserva."
+    ],
+    "souvenirTitre": "Un recuerdo de su paso",
+    "souvenirTexte": "Al final de la jornada, se toma una foto de recuerdo con los participantes para inmortalizar su paso por nuestro equipo. Cada participante recibe también un certificado de participación y un escudo de Sauvetage Animal Rescue, como recuerdo de esta jornada vivida en el corazón de nuestras operaciones.",
     "datesTitre": "Fechas disponibles",
     "unePlace": "Una plaza",
     "plusieursPlaces": "{places} plazas",

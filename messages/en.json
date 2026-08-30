@@ -353,18 +353,45 @@
   },
   "stages": {
     "titre": "Observation days",
-    "surtitre": "$220 • one or two people",
-    "intro": "Spend eight hours with our team and see the work first-hand: the calls coming in, the decisions being made, the animals leaving safely.",
-    "infosTitre": "How it works",
-    "infos": [
-      "Observation days run on weekends, Saturday or Sunday, from 10 a.m. to 6 p.m.",
-      "The meeting point is 5400 Jean-Talon Street West, in Montréal.",
-      "You can leave your car there. By transit, Namur station is a five-minute walk away.",
-      "The price is the same for one or two people: bring a friend or a family member.",
-      "The day goes ahead rain or shine. Wear suitable clothing and closed shoes.",
-      "Minimum age: 14. A liability waiver is signed on site.",
-      "No refunds. You may transfer your spot to someone else."
+    "surtitre": "Solo or as a duo",
+    "intro": "Spend a day at the heart of our operations and discover, from inside a response vehicle, how an animal rescue mission actually unfolds, from the moment the call comes in to the animal's final handoff.",
+    "equipesTitre": "A day with our teams",
+    "equipesTexte": "The observation day offers a privileged look at Sauvetage Animal Rescue from the inside. For eight hours, you ride along with our team in a response vehicle and live the day at the same pace as our rescuers. You witness calls coming in, the travel between calls, how situations are assessed, decisions made on the ground and, when circumstances allow, the handling of animals. Every day is different: there is no way to know in advance which calls will come in or what situations will arise. That unpredictability is exactly what makes the experience authentic and representative of our real operations.",
+    "chaineTitre": "At the heart of the rescue chain",
+    "chaineTexte": [
+      "A rescue is not just the moment an animal is saved. The observation day reveals the different links of our response chain, from the first call to the animal's final handoff. You will see how information is assessed, how priorities are set, how a response is prepared, and how decisions evolve once the team is on scene.",
+      "When the situation allows, simple animal handling may also take place under the direct supervision of our responders. Safety always comes first: no participant is ever asked to take part in a maneuver that could compromise their safety."
     ],
+    "limiteeTitre": "A deliberately limited experience",
+    "limiteeTexte": [
+      "Observation days are offered to a very limited number of people each year. Dates are mainly scheduled during our high season, when call volume tends to be higher. No specific number of interventions can be guaranteed, since our days depend entirely on the calls we receive, but this period offers the best conditions for an experience representative of our operations.",
+      "Observation days are offered in exchange for a contribution to Sauvetage Animal Rescue. Beyond a unique day in the field, participants directly help fund our activities and our interventions for animals."
+    ],
+    "infosTitre": "Before you book",
+    "infos": [
+      "Duration: 8 hours, 10 a.m. to 6 p.m.",
+      "Meeting point: Montréal, near Namur metro station",
+      "Minimum age: 14",
+      "Under 18: parental authorization required",
+      "Capacity: up to 2 participants per vehicle",
+      "Some dates: up to 4 participants with 2 vehicles",
+      "Attire: clothing suited to the weather",
+      "Closed shoes required",
+      "Protective equipment: provided by Sauvetage Animal Rescue as needed",
+      "Meals and snacks: backpack, food, snacks and water bottles allowed",
+      "Rain or shine: the day goes ahead as planned",
+      "Number of interventions: cannot be guaranteed",
+      "Dates and spots: extremely limited",
+      "Reminder: no reminder will be sent before your observation day"
+    ],
+    "reservationTitre": "Booking, changes and cancellation",
+    "reservationTexte": [
+      "Once your date is selected and your contribution made, no refund is possible. Your spot may, however, be transferred to someone else.",
+      "In case of an unforeseen event, we may try to move your booking to another available date. This remains conditional on remaining spots and cannot be guaranteed.",
+      "It is the participant's responsibility to carefully note the date of their observation day and to remember it. No reminder will be sent, even when the booking was made several months in advance. We recommend adding the date to your calendar as soon as your booking is confirmed."
+    ],
+    "souvenirTitre": "A keepsake from your visit",
+    "souvenirTexte": "At the end of the day, a souvenir photo is taken with participants to mark their time with our team. Each participant also receives a certificate of participation and a Sauvetage Animal Rescue patch, as a memento of their day at the heart of our operations.",
     "datesTitre": "Available dates",
     "unePlace": "One spot",
     "plusieursPlaces": "{places} spots",

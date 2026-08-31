@@ -115,27 +115,35 @@ export async function creerPaiementAdhesion(adhesion: Adhesion) {
 // abandonné bloquerait une place pour rien.
 export async function creerPaiementStage({
   stageId,
-  prenom,
-  nom,
+  scenario,
+  responsablePrenom,
+  responsableNom,
   courriel,
   telephone,
   nombrePersonnes,
-  accompagnateurPrenom,
-  accompagnateurNom,
+  participant1Prenom,
+  participant1Nom,
+  participant2Prenom,
+  participant2Nom,
   mineur1,
   mineur2,
+  autorisationSignature,
   langue,
 }: {
   stageId: string;
-  prenom: string;
-  nom: string;
+  scenario: "seul" | "avec" | "autre1" | "autres2";
+  responsablePrenom: string;
+  responsableNom: string;
   courriel: string;
   telephone: string;
   nombrePersonnes: 1 | 2;
-  accompagnateurPrenom: string | null;
-  accompagnateurNom: string | null;
+  participant1Prenom: string;
+  participant1Nom: string;
+  participant2Prenom: string | null;
+  participant2Nom: string | null;
   mineur1: boolean;
   mineur2: boolean;
+  autorisationSignature: string | null;
   langue: Locale;
 }) {
   const supabase = creerClientAdmin();
@@ -155,7 +163,9 @@ export async function creerPaiementStage({
     places_vendues: number;
     publie: boolean;
   };
-  if (!s.publie || s.places_vendues >= s.places) throw new Error("Stage complet");
+  if (!s.publie || s.places_vendues + nombrePersonnes > s.places) {
+    throw new Error("Stage complet");
+  }
 
   // Le tarif à deux n'est pas le double du tarif à une personne : c'est un
   // rabais de groupe fixe, indépendant du prix affiché sur la fiche du stage.
@@ -169,17 +179,22 @@ export async function creerPaiementStage({
       type: "stage",
       montant_cents: montantCents,
       courriel,
-      prenom,
-      nom,
+      prenom: responsablePrenom,
+      nom: responsableNom,
       langue,
       stage_id: s.id,
       metadonnees: {
         telephone,
+        scenario,
         nombrePersonnes,
-        accompagnateurPrenom,
-        accompagnateurNom,
+        participant1Prenom,
+        participant1Nom,
+        participant2Prenom,
+        participant2Nom,
         mineur1,
         mineur2,
+        autorisationSignature,
+        autorisationSigneeLe: autorisationSignature ? new Date().toISOString() : null,
         code: s.code,
       },
     })
@@ -193,6 +208,7 @@ export async function creerPaiementStage({
     mode: "payment",
     locale: langueStripe(langue),
     customer_email: courriel,
+    payment_intent_data: { receipt_email: courriel },
     line_items: [
       {
         quantity: 1,
@@ -211,13 +227,19 @@ export async function creerPaiementStage({
       commande_id: commande.id,
       type: "stage",
       stage_id: s.id,
-      prenom,
-      nom,
+      responsable_prenom: responsablePrenom,
+      responsable_nom: responsableNom,
       telephone,
-      accompagnateur_prenom: accompagnateurPrenom ?? "",
-      accompagnateur_nom: accompagnateurNom ?? "",
+      scenario,
+      nombre_personnes: String(nombrePersonnes),
+      participant1_prenom: participant1Prenom,
+      participant1_nom: participant1Nom,
+      participant2_prenom: participant2Prenom ?? "",
+      participant2_nom: participant2Nom ?? "",
       mineur1: mineur1 ? "1" : "",
       mineur2: mineur2 ? "1" : "",
+      autorisation_signature: autorisationSignature ?? "",
+      autorisation_signee_le: autorisationSignature ? new Date().toISOString() : "",
       langue,
     },
   });

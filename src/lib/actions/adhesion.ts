@@ -72,21 +72,45 @@ export async function demarrerStage(
   donnees: FormData,
 ): Promise<EtatPaiement> {
   const stageId = texte(donnees, "stage");
-  const prenom = texte(donnees, "prenom");
-  const nom = texte(donnees, "nom");
+  const scenario = texte(donnees, "scenario");
+  const responsablePrenom = texte(donnees, "responsablePrenom");
+  const responsableNom = texte(donnees, "responsableNom");
   const courriel = texte(donnees, "courriel");
   const telephone = texte(donnees, "telephone");
-  const nombrePersonnes = texte(donnees, "nombrePersonnes") === "2" ? 2 : 1;
-  const accompagnateurPrenom = texte(donnees, "accompagnateurPrenom");
-  const accompagnateurNom = texte(donnees, "accompagnateurNom");
+  const scenarios = ["seul", "avec", "autre1", "autres2"] as const;
+  if (!scenarios.includes(scenario as (typeof scenarios)[number])) {
+    return { etat: "erreur", motif: "champs" };
+  }
+  const responsableParticipe = scenario === "seul" || scenario === "avec";
+  const nombrePersonnes: 1 | 2 = scenario === "avec" || scenario === "autres2" ? 2 : 1;
+  const participant1Prenom = responsableParticipe
+    ? responsablePrenom
+    : texte(donnees, "participant1Prenom");
+  const participant1Nom = responsableParticipe
+    ? responsableNom
+    : texte(donnees, "participant1Nom");
+  const participant2Prenom = nombrePersonnes === 2
+    ? texte(donnees, "participant2Prenom")
+    : "";
+  const participant2Nom = nombrePersonnes === 2
+    ? texte(donnees, "participant2Nom")
+    : "";
+  const mineur1 = !responsableParticipe && donnees.get("mineur1") === "on";
+  const mineur2 = nombrePersonnes === 2 && donnees.get("mineur2") === "on";
+  const autorisationRequise = mineur1 || mineur2;
+  const autorisationSignature = texte(donnees, "autorisationSignature");
+  const autorisationAcceptee = donnees.get("autorisationAcceptee") === "on";
 
   if (
     !stageId ||
-    !prenom ||
-    !nom ||
+    !responsablePrenom ||
+    !responsableNom ||
     !courriel ||
     !telephone ||
-    (nombrePersonnes === 2 && (!accompagnateurPrenom || !accompagnateurNom))
+    !participant1Prenom ||
+    !participant1Nom ||
+    (nombrePersonnes === 2 && (!participant2Prenom || !participant2Nom)) ||
+    (autorisationRequise && (!autorisationAcceptee || !autorisationSignature))
   ) {
     return { etat: "erreur", motif: "champs" };
   }
@@ -95,15 +119,19 @@ export async function demarrerStage(
   try {
     url = await creerPaiementStage({
       stageId,
-      prenom,
-      nom,
+      scenario: scenario as "seul" | "avec" | "autre1" | "autres2",
+      responsablePrenom,
+      responsableNom,
       courriel,
       telephone,
       nombrePersonnes,
-      accompagnateurPrenom: nombrePersonnes === 2 ? accompagnateurPrenom : null,
-      accompagnateurNom: nombrePersonnes === 2 ? accompagnateurNom : null,
-      mineur1: donnees.get("mineur1") === "on",
-      mineur2: nombrePersonnes === 2 && donnees.get("mineur2") === "on",
+      participant1Prenom,
+      participant1Nom,
+      participant2Prenom: nombrePersonnes === 2 ? participant2Prenom : null,
+      participant2Nom: nombrePersonnes === 2 ? participant2Nom : null,
+      mineur1,
+      mineur2,
+      autorisationSignature: autorisationRequise ? autorisationSignature : null,
       langue: (await getLocale()) as Locale,
     });
   } catch (erreur) {

@@ -1,9 +1,15 @@
 import { NextResponse, type NextRequest } from "next/server";
 import type Stripe from "stripe";
-import { stripe } from "@/lib/stripe";
+import { stripe, urlSite } from "@/lib/stripe";
 import { creerClientAdmin } from "@/lib/supabase/admin";
 import { creerMembre, envoyerCarteMembre } from "@/lib/membres";
 import { envoyerCourriel, gabaritCourriel } from "@/lib/courriel";
+import {
+  genererAutorisationStage,
+  genererBilletsStage,
+  genererGuideStage,
+  type DonneesDocumentsStage,
+} from "@/lib/stages/documents";
 import type { Locale } from "@/i18n/routing";
 
 // Le webhook est la seule source de vérité d'un paiement : la page de retour
@@ -116,32 +122,81 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
 
   const supabase = creerClientAdmin();
 
+  // Stripe peut livrer le meme evenement plus d'une fois. Une commande deja
+  // inscrite ne doit jamais reserver les places ni envoyer les billets deux fois.
+  if (m.commande_id) {
+    const { data: existante } = await supabase
+      .from("inscriptions_stage")
+      .select("id")
+      .eq("commande_id", m.commande_id)
+      .maybeSingle();
+    if (existante) return;
+  }
+
+  const nombrePersonnes = m.nombre_personnes === "2" ? 2 : 1;
+
   // La place est décomptée de façon atomique : deux paiements simultanés sur
   // la dernière place ne peuvent pas passer tous les deux.
-  const { data: reservee } = await supabase.rpc("reserver_place_stage", {
+  const { data: reservee } = await supabase.rpc("reserver_places_stage", {
     p_stage_id: stageId,
+    p_nombre_places: nombrePersonnes,
   });
+
+  const billet1Jeton = crypto.randomUUID();
+  const billet2Jeton = nombrePersonnes === 2 ? crypto.randomUUID() : null;
+  const autorisationRequise = m.mineur1 === "1" || m.mineur2 === "1";
+  const autorisationTexte = autorisationRequise
+    ? "Je confirme etre autorise a inscrire le ou les participants mineurs nommes dans ce document et avoir obtenu l'accord de leur parent ou de leur tuteur legal."
+    : null;
 
   await supabase.from("inscriptions_stage").insert({
     stage_id: stageId,
     commande_id: m.commande_id ?? null,
-    prenom: m.prenom ?? "",
-    nom: m.nom ?? "",
+    prenom: m.participant1_prenom ?? "",
+    nom: m.participant1_nom ?? "",
     courriel,
     telephone: m.telephone ?? "",
-    accompagnateur_prenom: m.accompagnateur_prenom || null,
-    accompagnateur_nom: m.accompagnateur_nom || null,
+    accompagnateur_prenom: m.participant2_prenom || null,
+    accompagnateur_nom: m.participant2_nom || null,
     personne1_mineure: m.mineur1 === "1",
     personne2_mineure: m.mineur2 === "1",
+    scenario: m.scenario ?? null,
+    responsable_prenom: m.responsable_prenom ?? "",
+    responsable_nom: m.responsable_nom ?? "",
+    participant1_prenom: m.participant1_prenom ?? "",
+    participant1_nom: m.participant1_nom ?? "",
+    participant2_prenom: m.participant2_prenom || null,
+    participant2_nom: m.participant2_nom || null,
+    autorisation_requise: autorisationRequise,
+    autorisation_signature: m.autorisation_signature || null,
+    autorisation_signee_le: m.autorisation_signee_le || null,
+    autorisation_texte: autorisationTexte,
+    billet1_jeton: billet1Jeton,
+    billet2_jeton: billet2Jeton,
     langue: (m.langue as Locale) ?? "fr",
     // Si la dernière place vient de partir, l'inscription est quand même
     // enregistrée mais marquée, pour que l'équipe rappelle la personne.
     statut: reservee === false ? "annulee" : "confirmee",
   });
 
+  // Une autre transaction a pu prendre les dernières places entre l'ouverture
+  // de Stripe et le paiement. On ne doit jamais émettre de billets valides
+  // dans ce cas exceptionnel: l'équipe reprend le dossier manuellement.
+  if (reservee === false) {
+    await envoyerCourriel({
+      destinataire: [courriel, "e.dussault@sar.quebec"],
+      sujet: "Stage d'observation - réservation à vérifier",
+      html: gabaritCourriel({
+        titre: "Réservation à vérifier",
+        corps: `<p style="margin:0 0 14px;line-height:1.6;">Le paiement a été reçu, mais les places disponibles ont été prises au même moment par une autre réservation.</p><p style="margin:0;line-height:1.6;">Notre équipe communiquera avec vous afin de déplacer la réservation ou de procéder au remboursement. Aucun billet n'est émis pour le moment.</p>`,
+      }),
+    });
+    return;
+  }
+
   const { data: stage } = await supabase
     .from("stages")
-    .select("code, date_stage, heure_debut, heure_fin, lieu")
+    .select("code, date_stage, heure_debut, heure_fin, lieu, maitre_stage, vehicule")
     .eq("id", stageId)
     .maybeSingle();
 
@@ -152,13 +207,53 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
     heure_debut: string;
     heure_fin: string;
     lieu: string;
+    maitre_stage: string | null;
+    vehicule: string | null;
   };
 
   const langue = ((m.langue as Locale) ?? "fr") as keyof typeof CONFIRMATION_STAGE;
   const textes = CONFIRMATION_STAGE[langue] ?? CONFIRMATION_STAGE.fr;
   const [a, mo, j] = s.date_stage.split("-");
 
+  const participants = [
+    {
+      prenom: m.participant1_prenom ?? "",
+      nom: m.participant1_nom ?? "",
+      mineur: m.mineur1 === "1",
+      jeton: billet1Jeton,
+    },
+    ...(nombrePersonnes === 2 && billet2Jeton
+      ? [{
+          prenom: m.participant2_prenom ?? "",
+          nom: m.participant2_nom ?? "",
+          mineur: m.mineur2 === "1",
+          jeton: billet2Jeton,
+        }]
+      : []),
+  ];
+  const documents: DonneesDocumentsStage = {
+    code: s.code,
+    date: s.date_stage,
+    heureDebut: s.heure_debut,
+    heureFin: s.heure_fin,
+    lieu: s.lieu,
+    maitreStage: s.maitre_stage ?? "A confirmer",
+    vehicule: s.vehicule ?? "A confirmer",
+    responsablePrenom: m.responsable_prenom ?? "",
+    responsableNom: m.responsable_nom ?? "",
+    signature: m.autorisation_signature || null,
+    signeeLe: m.autorisation_signee_le || null,
+    participants,
+    langue: (m.langue as Locale) ?? "fr",
+    baseUrl: urlSite(),
+  };
+
   try {
+    const [guide, billets, autorisation] = await Promise.all([
+      genererGuideStage(documents),
+      genererBilletsStage(documents),
+      autorisationRequise ? genererAutorisationStage(documents) : Promise.resolve(null),
+    ]);
     await envoyerCourriel({
       destinataire: courriel,
       sujet: textes.sujet(s.code),
@@ -170,6 +265,13 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
           s.lieu,
         ),
       }),
+      pieces: [
+        { filename: `guide-stage-${s.code}.pdf`, content: Buffer.from(guide).toString("base64") },
+        { filename: `billets-stage-${s.code}.pdf`, content: Buffer.from(billets).toString("base64") },
+        ...(autorisation
+          ? [{ filename: `autorisation-parentale-${s.code}.pdf`, content: Buffer.from(autorisation).toString("base64") }]
+          : []),
+      ],
     });
   } catch {
     // Le paiement est encaissé et l'inscription enregistrée : un courriel

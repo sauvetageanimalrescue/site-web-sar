@@ -119,7 +119,11 @@ export async function creerPaiementStage({
   nom,
   courriel,
   telephone,
-  accompagnateur,
+  nombrePersonnes,
+  accompagnateurPrenom,
+  accompagnateurNom,
+  mineur1,
+  mineur2,
   langue,
 }: {
   stageId: string;
@@ -127,14 +131,18 @@ export async function creerPaiementStage({
   nom: string;
   courriel: string;
   telephone: string;
-  accompagnateur: string | null;
+  nombrePersonnes: 1 | 2;
+  accompagnateurPrenom: string | null;
+  accompagnateurNom: string | null;
+  mineur1: boolean;
+  mineur2: boolean;
   langue: Locale;
 }) {
   const supabase = creerClientAdmin();
 
   const { data: stage, error: erreurStage } = await supabase
     .from("stages")
-    .select("id, code, date_stage, prix_cents, places, places_vendues, publie")
+    .select("id, code, date_stage, places, places_vendues, publie")
     .eq("id", stageId)
     .maybeSingle();
 
@@ -143,24 +151,37 @@ export async function creerPaiementStage({
     id: string;
     code: string;
     date_stage: string;
-    prix_cents: number;
     places: number;
     places_vendues: number;
     publie: boolean;
   };
   if (!s.publie || s.places_vendues >= s.places) throw new Error("Stage complet");
 
+  // Le tarif à deux n'est pas le double du tarif à une personne : c'est un
+  // rabais de groupe fixe, indépendant du prix affiché sur la fiche du stage.
+  const montantCents = Math.round(
+    (nombrePersonnes === 2 ? TARIFS.stageDuo : TARIFS.stage) * 100,
+  );
+
   const { data: commande, error } = await supabase
     .from("commandes")
     .insert({
       type: "stage",
-      montant_cents: s.prix_cents,
+      montant_cents: montantCents,
       courriel,
       prenom,
       nom,
       langue,
       stage_id: s.id,
-      metadonnees: { telephone, accompagnateur, code: s.code },
+      metadonnees: {
+        telephone,
+        nombrePersonnes,
+        accompagnateurPrenom,
+        accompagnateurNom,
+        mineur1,
+        mineur2,
+        code: s.code,
+      },
     })
     .select("id")
     .single();
@@ -177,7 +198,7 @@ export async function creerPaiementStage({
         quantity: 1,
         price_data: {
           currency: "cad",
-          unit_amount: s.prix_cents,
+          unit_amount: montantCents,
           product_data: {
             name: `Stage d'observation ${s.code} — ${s.date_stage}`,
           },
@@ -193,7 +214,10 @@ export async function creerPaiementStage({
       prenom,
       nom,
       telephone,
-      accompagnateur: accompagnateur ?? "",
+      accompagnateur_prenom: accompagnateurPrenom ?? "",
+      accompagnateur_nom: accompagnateurNom ?? "",
+      mineur1: mineur1 ? "1" : "",
+      mineur2: mineur2 ? "1" : "",
       langue,
     },
   });

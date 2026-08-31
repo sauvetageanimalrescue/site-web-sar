@@ -76,8 +76,18 @@ export async function demarrerStage(
   const nom = texte(donnees, "nom");
   const courriel = texte(donnees, "courriel");
   const telephone = texte(donnees, "telephone");
+  const nombrePersonnes = texte(donnees, "nombrePersonnes") === "2" ? 2 : 1;
+  const accompagnateurPrenom = texte(donnees, "accompagnateurPrenom");
+  const accompagnateurNom = texte(donnees, "accompagnateurNom");
 
-  if (!stageId || !prenom || !nom || !courriel || !telephone) {
+  if (
+    !stageId ||
+    !prenom ||
+    !nom ||
+    !courriel ||
+    !telephone ||
+    (nombrePersonnes === 2 && (!accompagnateurPrenom || !accompagnateurNom))
+  ) {
     return { etat: "erreur", motif: "champs" };
   }
 
@@ -89,7 +99,11 @@ export async function demarrerStage(
       nom,
       courriel,
       telephone,
-      accompagnateur: texte(donnees, "accompagnateur") || null,
+      nombrePersonnes,
+      accompagnateurPrenom: nombrePersonnes === 2 ? accompagnateurPrenom : null,
+      accompagnateurNom: nombrePersonnes === 2 ? accompagnateurNom : null,
+      mineur1: donnees.get("mineur1") === "on",
+      mineur2: nombrePersonnes === 2 && donnees.get("mineur2") === "on",
       langue: (await getLocale()) as Locale,
     });
   } catch (erreur) {

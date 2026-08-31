@@ -13,6 +13,8 @@ export type Stage = {
   places: number;
   places_vendues: number;
   prix_cents: number;
+  maitre_stage: string | null;
+  vehicule: string | null;
 };
 
 export type StageDisponible = Stage & { restantes: number };

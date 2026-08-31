@@ -44,6 +44,8 @@ export const ANNEE_CARTE = 2026;
 // Tarifs 2026, en dollars canadiens.
 export const TARIFS = {
   carteMembre: 30,
-  stage: 220,
+  stage: 249.99,
+  // Le tarif à deux n'est pas le double : c'est un rabais de groupe.
+  stageDuo: 399.99,
   certificatPartenaire: 2000,
 } as const;

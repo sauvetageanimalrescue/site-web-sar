@@ -129,7 +129,10 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
     nom: m.nom ?? "",
     courriel,
     telephone: m.telephone ?? "",
-    accompagnateur_nom: m.accompagnateur || null,
+    accompagnateur_prenom: m.accompagnateur_prenom || null,
+    accompagnateur_nom: m.accompagnateur_nom || null,
+    personne1_mineure: m.mineur1 === "1",
+    personne2_mineure: m.mineur2 === "1",
     langue: (m.langue as Locale) ?? "fr",
     // Si la dernière place vient de partir, l'inscription est quand même
     // enregistrée mais marquée, pour que l'équipe rappelle la personne.

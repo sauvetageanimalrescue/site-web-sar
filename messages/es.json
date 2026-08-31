@@ -391,11 +391,7 @@
     "horaireTitre": "Un horario sujeto a las operaciones",
     "horaireTexte": "La jornada comienza a las 10 h y hacemos todo lo posible por terminar hacia las 18 h. Sin embargo, la naturaleza de nuestras operaciones puede ocasionalmente provocar un ligero retraso respecto al horario previsto, en particular cuando una intervención sigue en curso. Cuando se presenta tal situación, lo conversamos con los participantes antes de continuar, para tener en cuenta sus propias limitaciones. Nuestro objetivo sigue siendo respetar en la medida de lo posible el horario anunciado, permitiendo al mismo tiempo concluir correctamente una intervención ya iniciada.",
     "reservationTitre": "Reserva, cambios y cancelación",
-    "reservationTexte": [
-      "Una vez seleccionada su fecha y realizada su contribución, no es posible ningún reembolso. Sin embargo, su plaza puede transferirse a otra persona.",
-      "En caso de imprevisto, podemos intentar trasladar su reserva a otra fecha disponible. Esta posibilidad sigue siendo condicional a las plazas disponibles y no puede garantizarse.",
-      "Corresponde al participante anotar cuidadosamente la fecha de su jornada y recordarla. No se enviará ningún recordatorio, incluso si la reserva se realizó con varios meses de anticipación. Recomendamos anotar la fecha en su calendario tan pronto como se confirme la reserva."
-    ],
+    "reservationTexte": "Una vez seleccionada su fecha y realizada su contribución, no es posible ningún reembolso, aunque su plaza puede transferirse a otra persona. En caso de imprevisto, podemos intentar trasladar su reserva a otra fecha disponible, sujeto a las plazas disponibles y sin garantía. Corresponde al participante anotar cuidadosamente la fecha de su jornada y recordarla: no se enviará ningún recordatorio, incluso si la reserva se realizó con varios meses de anticipación. Recomendamos anotar la fecha en su calendario tan pronto como se confirme la reserva.",
     "souvenirTitre": "Un recuerdo de su paso",
     "souvenirTexte": "Al final de la jornada, se toma una foto de recuerdo con los participantes para inmortalizar su paso por nuestro equipo. Cada participante recibe también un certificado de participación y un escudo de Sauvetage Animal Rescue, como recuerdo de esta jornada vivida en el corazón de nuestras operaciones.",
     "datesTitre": "Fechas disponibles",

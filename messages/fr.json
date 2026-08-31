@@ -394,11 +394,7 @@
     "horaireTitre": "Un horaire qui suit les opérations",
     "horaireTexte": "Le stage débute à 10 h et nous faisons tout notre possible pour terminer la journée vers 18 h. Cependant, la nature de nos opérations peut exceptionnellement entraîner un léger dépassement de l'horaire prévu, notamment lorsqu'une intervention est toujours en cours. Lorsqu'une telle situation se présente, nous en discutons avec les stagiaires avant de poursuivre afin de tenir compte de leurs contraintes. Notre objectif demeure de respecter autant que possible l'horaire annoncé, tout en permettant de terminer correctement une intervention déjà amorcée.",
     "reservationTitre": "Réservation, changement et annulation",
-    "reservationTexte": [
-      "Une fois votre date sélectionnée et votre contribution effectuée, aucun remboursement n'est possible. Votre place peut toutefois être transférée à une autre personne.",
-      "En cas d'imprévu, nous pouvons tenter de déplacer votre réservation vers une autre date disponible. Cette possibilité demeure toutefois conditionnelle aux places restantes et ne peut être garantie.",
-      "Il appartient au participant de noter soigneusement la date de son stage et de s'en souvenir. Aucun rappel ne sera envoyé, même lorsque la réservation a été effectuée plusieurs mois à l'avance. Nous recommandons donc d'ajouter la date à votre calendrier dès la confirmation de votre réservation."
-    ],
+    "reservationTexte": "Une fois votre date sélectionnée et votre contribution effectuée, aucun remboursement n'est possible, mais votre place peut être transférée à une autre personne. En cas d'imprévu, nous pouvons tenter de déplacer votre réservation vers une autre date disponible, sous réserve des places restantes et sans garantie. Il appartient au participant de noter soigneusement la date de son stage et de s'en souvenir: aucun rappel ne sera envoyé, même lorsque la réservation a été effectuée plusieurs mois à l'avance. Nous recommandons donc d'ajouter la date à votre calendrier dès la confirmation de votre réservation.",
     "souvenirTitre": "Un souvenir de votre passage",
     "souvenirTexte": "À la fin de la journée, une photo souvenir est prise avec les stagiaires afin d'immortaliser leur passage au sein de notre équipe. Chaque participant reçoit également un certificat de participation ainsi qu'un écusson de Sauvetage Animal Rescue, en souvenir de cette journée passée au cœur de nos opérations.",
     "datesTitre": "Dates disponibles",

@@ -41,7 +41,6 @@ export default async function PageStages({
   const infos = t.raw("infos") as string[];
   const chaineTexte = t.raw("chaineTexte") as string[];
   const limiteeTexte = t.raw("limiteeTexte") as string[];
-  const reservationTexte = t.raw("reservationTexte") as string[];
 
   return (
     <>
@@ -112,30 +111,25 @@ export default async function PageStages({
         </p>
       </Section>
 
-      <Section fond titre={t("reservationTitre")} largeur="carte">
-        <div className="space-y-4">
-          {reservationTexte.map((p) => (
-            <p key={p.slice(0, 40)} className="paragraphe text-lg leading-relaxed text-foreground/90">
-              {p}
-            </p>
-          ))}
-        </div>
-      </Section>
-
-      <Section titre={t("souvenirTitre")} largeur="carte">
+      <Section fond titre={t("souvenirTitre")} largeur="carte">
         <p className="paragraphe text-lg leading-relaxed text-foreground/90">
           {t("souvenirTexte")}
         </p>
       </Section>
 
       <PhotoStage
-        fond
         fichier="/images/stages-groupe-camion.jpg"
         alt="Trois intervenants souriants devant un véhicule de Sauvetage Animal Rescue"
       />
 
-      <Section titre={t("formulaireTitre")} largeur="carte">
+      <Section fond titre={t("formulaireTitre")} largeur="carte">
         <FormulaireStage stages={stages} />
+      </Section>
+
+      <Section titre={t("reservationTitre")} largeur="carte">
+        <p className="paragraphe text-lg leading-relaxed text-foreground/90">
+          {t("reservationTexte")}
+        </p>
       </Section>
     </>
   );

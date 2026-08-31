@@ -391,11 +391,7 @@
     "horaireTitre": "A schedule that follows our operations",
     "horaireTexte": "The day begins at 10 a.m., and we do everything we can to wrap up around 6 p.m. That said, the nature of our operations can occasionally push the schedule a little later, particularly when a response is still underway. When that happens, we discuss it with participants before continuing, taking their own constraints into account. Our goal remains to stick to the announced schedule as closely as possible, while still allowing an already-started response to be properly completed.",
     "reservationTitre": "Booking, changes and cancellation",
-    "reservationTexte": [
-      "Once your date is selected and your contribution made, no refund is possible. Your spot may, however, be transferred to someone else.",
-      "In case of an unforeseen event, we may try to move your booking to another available date. This remains conditional on remaining spots and cannot be guaranteed.",
-      "It is the participant's responsibility to carefully note the date of their observation day and to remember it. No reminder will be sent, even when the booking was made several months in advance. We recommend adding the date to your calendar as soon as your booking is confirmed."
-    ],
+    "reservationTexte": "Once your date is selected and your contribution made, no refund is possible, but your spot may be transferred to someone else. In case of an unforeseen event, we may try to move your booking to another available date, subject to remaining spots and without guarantee. It is the participant's responsibility to carefully note the date of their observation day and remember it: no reminder will be sent, even when the booking was made several months in advance. We recommend adding the date to your calendar as soon as your booking is confirmed.",
     "souvenirTitre": "A keepsake from your visit",
     "souvenirTexte": "At the end of the day, a souvenir photo is taken with participants to mark their time with our team. Each participant also receives a certificate of participation and a Sauvetage Animal Rescue patch, as a memento of their day at the heart of our operations.",
     "datesTitre": "Available dates",

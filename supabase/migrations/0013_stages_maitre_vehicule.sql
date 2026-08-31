@@ -13,11 +13,13 @@ alter table public.inscriptions_stage
   add column if not exists personne1_mineure boolean not null default false,
   add column if not exists personne2_mineure boolean not null default false;
 
--- Dates d'avril à juillet 2026, toutes avec Eric Dussault au véhicule 0631
+-- Dates d'avril à juillet 2026, toutes avec Éric Dussault au véhicule 0631
 -- (Dodge Charger). D'autres dates avec Steven Amorosa (véhicule 0621, Ford
 -- Explorer) s'ajouteront plus tard, une fois ses disponibilités connues.
-insert into public.stages (code, date_stage, maitre_stage, vehicule, places, prix_cents)
-select code, date_stage, 'Eric Dussault', '0631 - Dodge Charger', 2, 24999
+insert into public.stages (code, date_stage, maitre_stage, vehicule, lieu, places, prix_cents)
+select code, date_stage, 'Éric Dussault', '0631 - Dodge Charger',
+  'Stationnement du Walmart, 5400, rue Jean-Talon Ouest, Montréal (Québec) H4P 2H1',
+  2, 24999
 from (values
   ('2622', date '2026-04-16'),
   ('2623', date '2026-04-17'),

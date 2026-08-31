@@ -3,7 +3,7 @@ import QRCode from "qrcode";
 import type { Locale } from "@/i18n/routing";
 
 const MARINE = rgb(0.043, 0.137, 0.22);
-const OR = rgb(0.788, 0.635, 0.153);
+const CIEL = rgb(0.18, 0.525, 0.757);
 const GRIS = rgb(0.35, 0.42, 0.47);
 const BLANC = rgb(1, 1, 1);
 const LARGEUR = 612;
@@ -55,8 +55,8 @@ function lignes(texte: string, police: PDFFont, taille: number, largeur: number)
 
 function entete(page: PDFPage, titre: string, sousTitre?: string) {
   page.drawRectangle({ x: 0, y: HAUTEUR - 92, width: LARGEUR, height: 92, color: MARINE });
-  page.drawRectangle({ x: 0, y: HAUTEUR - 5, width: LARGEUR, height: 5, color: OR });
-  page.drawText("SAUVETAGE ANIMAL RESCUE", { x: 42, y: HAUTEUR - 35, size: 11, color: OR });
+  page.drawRectangle({ x: 0, y: HAUTEUR - 5, width: LARGEUR, height: 5, color: CIEL });
+  page.drawText("SAUVETAGE ANIMAL RESCUE", { x: 42, y: HAUTEUR - 35, size: 11, color: CIEL });
   page.drawText(titre, { x: 42, y: HAUTEUR - 62, size: 20, color: BLANC });
   if (sousTitre) page.drawText(sousTitre, { x: 42, y: HAUTEUR - 79, size: 9, color: BLANC });
 }
@@ -68,8 +68,13 @@ function paragraphe(page: PDFPage, texte: string, y: number, police: PDFFont, ta
 }
 
 function formaterDate(iso: string) {
-  const [a, m, j] = iso.split("-");
-  return `${j}/${m}/${a}`;
+  return new Intl.DateTimeFormat("fr-CA", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${iso}T12:00:00Z`));
 }
 
 export async function genererGuideStage(d: DonneesDocumentsStage) {
@@ -80,16 +85,27 @@ export async function genererGuideStage(d: DonneesDocumentsStage) {
   entete(page, "GUIDE DU STAGE D'OBSERVATION", `Réservation ${d.code}`);
 
   let y = 660;
+  page.drawText("VOTRE JOURNÉE", { x: 42, y, size: 11, font: gras, color: CIEL });
+  y -= 19;
+  page.drawText(formaterDate(d.date), { x: 42, y, size: 11, font: gras, color: MARINE });
+  page.drawText(`De ${d.heureDebut.slice(0, 2)} h à ${d.heureFin.slice(0, 2)} h`, { x: 42, y: y - 17, size: 10.5, font: normal, color: MARINE });
+  page.drawText("Point de rencontre:", { x: 42, y: y - 42, size: 10.5, font: gras, color: MARINE });
+  page.drawText(d.lieu, { x: 42, y: y - 59, size: 10.5, font: normal, color: MARINE });
+  page.drawText("Au fond du stationnement, à côté du restaurant Thaï Express.", { x: 42, y: y - 76, size: 10.5, font: normal, color: MARINE });
+  page.drawText("Vous pouvez y laisser votre véhicule pour toute la journée.", { x: 42, y: y - 93, size: 10.5, font: normal, color: MARINE });
+  page.drawText(`Maître de stage: ${d.maitreStage}`, { x: 42, y: y - 116, size: 10.5, font: normal, color: MARINE });
+  page.drawText(`Véhicule: ${d.vehicule}`, { x: 42, y: y - 133, size: 10.5, font: normal, color: MARINE });
+  y -= 158;
+
   const sections = [
-    ["VOTRE JOURNÉE", `${formaterDate(d.date)}, de ${d.heureDebut.slice(0, 5)} à ${d.heureFin.slice(0, 5)}. Point de rencontre: ${d.lieu}. Maître de stage: ${d.maitreStage}. Véhicule: ${d.vehicule}.`],
     ["AVANT DE PARTIR", "Arrivez quinze minutes avant l'heure prévue. Portez des vêtements adaptés à la météo et des chaussures fermées. Vous pouvez apporter un sac à dos, un repas, des collations et des bouteilles d'eau. L'équipement de protection est fourni lorsque la situation l'exige."],
     ["PENDANT LE STAGE", "Vous accompagnez l'équipe pendant ses opérations. Le nombre et la nature des interventions ne peuvent jamais être garantis. Toute participation à une manipulation demeure à la discrétion du maître de stage et la sécurité passe avant toute autre considération."],
     ["HORAIRE ET MÉTÉO", "Le stage est maintenu beau temps, mauvais temps. Nous faisons tout notre possible pour terminer à l'heure annoncée, mais une intervention en cours peut occasionner un retard. Le maître de stage en discute alors avec les participants."],
     ["CHANGEMENT ET ANNULATION", "La contribution n'est pas remboursable. La place peut être transférée à une autre personne en nous avisant. Un changement de date peut être tenté selon les places encore disponibles, sans garantie."],
-    ["À RETENIR", "Conservez vos billets et présentez-les le matin du stage. Aucun rappel distinct n'est garanti: ajoutez immédiatement la date à votre calendrier. Pour toute question, écrivez à info@sar.quebec."],
+    ["À RETENIR", "Conservez vos billets et présentez-les le matin du stage. Aucun rappel distinct n'est garanti: ajoutez immédiatement la date à votre calendrier. Pour toute information, écrivez à e.dussault@sar.quebec. Le matin du stage, si vous avez une question ou prévoyez être en retard, téléphonez à l'officier de garde au 514-270-3636."],
   ];
   for (const [titre, texte] of sections) {
-    page.drawText(titre, { x: 42, y, size: 11, font: gras, color: OR });
+    page.drawText(titre, { x: 42, y, size: 11, font: gras, color: CIEL });
     y = paragraphe(page, texte, y - 18, normal) - 16;
   }
   page.drawText("sar.quebec | 514-773-3911", { x: 42, y: 28, size: 8.5, font: normal, color: GRIS });
@@ -105,8 +121,8 @@ export async function genererBilletsStage(d: DonneesDocumentsStage) {
     const page = pdf.addPage([LARGEUR, HAUTEUR]);
     entete(page, "BILLET - STAGE D'OBSERVATION", `Réservation ${d.code}`);
     page.drawText(`${participant.prenom} ${participant.nom}`.toUpperCase(), { x: 42, y: 625, size: 25, font: gras, color: MARINE });
-    page.drawText(formaterDate(d.date), { x: 42, y: 575, size: 24, font: gras, color: OR });
-    page.drawText(`${d.heureDebut.slice(0, 5)} - ${d.heureFin.slice(0, 5)}`, { x: 42, y: 547, size: 15, font: gras, color: MARINE });
+    page.drawText(formaterDate(d.date), { x: 42, y: 575, size: 20, font: gras, color: CIEL });
+    page.drawText(`${d.heureDebut.slice(0, 2)} h à ${d.heureFin.slice(0, 2)} h`, { x: 42, y: 547, size: 15, font: gras, color: MARINE });
     page.drawText(d.lieu, { x: 42, y: 515, size: 11, font: normal, color: GRIS });
     page.drawText(`Maître de stage: ${d.maitreStage}`, { x: 42, y: 480, size: 11, font: normal, color: MARINE });
     page.drawText(`Véhicule: ${d.vehicule}`, { x: 42, y: 460, size: 11, font: normal, color: MARINE });
@@ -129,7 +145,7 @@ export async function genererAutorisationStage(d: DonneesDocumentsStage) {
   const page = pdf.addPage([LARGEUR, HAUTEUR]);
   entete(page, "AUTORISATION POUR PARTICIPANT MINEUR", `Réservation ${d.code}`);
   let y = 650;
-  page.drawText("PARTICIPANT(S) MINEUR(S)", { x: 42, y, size: 11, font: gras, color: OR });
+  page.drawText("PARTICIPANT(S) MINEUR(S)", { x: 42, y, size: 11, font: gras, color: CIEL });
   y -= 25;
   for (const p of d.participants.filter((p) => p.mineur)) {
     page.drawText(`${p.prenom} ${p.nom}`, { x: 42, y, size: 13, font: gras, color: MARINE });
@@ -137,7 +153,7 @@ export async function genererAutorisationStage(d: DonneesDocumentsStage) {
   }
   y -= 16;
   y = paragraphe(page, "Je confirme être autorisé à inscrire le ou les participants mineurs nommés dans ce document et avoir obtenu l'accord de leur parent ou de leur tuteur légal pour leur participation au stage d'observation de Sauvetage Animal Rescue.", y, normal, 11) - 30;
-  page.drawText("SIGNATURE ÉLECTRONIQUE", { x: 42, y, size: 11, font: gras, color: OR });
+  page.drawText("SIGNATURE ÉLECTRONIQUE", { x: 42, y, size: 11, font: gras, color: CIEL });
   page.drawText(d.signature ?? "", { x: 42, y: y - 32, size: 18, font: gras, color: MARINE });
   page.drawLine({ start: { x: 42, y: y - 40 }, end: { x: 360, y: y - 40 }, thickness: 1, color: GRIS });
   page.drawText(`Responsable de la réservation: ${d.responsablePrenom} ${d.responsableNom}`, { x: 42, y: y - 70, size: 10, font: normal, color: MARINE });

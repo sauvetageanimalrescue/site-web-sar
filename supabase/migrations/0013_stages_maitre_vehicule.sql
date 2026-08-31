@@ -13,7 +13,7 @@ alter table public.inscriptions_stage
   add column if not exists personne1_mineure boolean not null default false,
   add column if not exists personne2_mineure boolean not null default false;
 
--- Dates d'avril à juillet 2026, toutes avec Éric Dussault au véhicule 0631
+-- Treize dates d'avril à juillet 2027, toutes avec Éric Dussault au véhicule 0631
 -- (Dodge Charger). D'autres dates avec Steven Amorosa (véhicule 0621, Ford
 -- Explorer) s'ajouteront plus tard, une fois ses disponibilités connues.
 insert into public.stages (code, date_stage, maitre_stage, vehicule, lieu, places, prix_cents)
@@ -21,20 +21,19 @@ select code, date_stage, 'Éric Dussault', '0631 - Dodge Charger',
   'Stationnement du Walmart, 5400, rue Jean-Talon Ouest, Montréal (Québec) H4P 2H1',
   2, 24999
 from (values
-  ('2622', date '2026-04-16'),
-  ('2623', date '2026-04-17'),
-  ('2624', date '2026-04-30'),
-  ('2625', date '2026-05-01'),
-  ('2626', date '2026-05-14'),
-  ('2627', date '2026-05-15'),
-  ('2628', date '2026-05-28'),
-  ('2629', date '2026-05-29'),
-  ('2630', date '2026-06-11'),
-  ('2631', date '2026-06-12'),
-  ('2632', date '2026-06-25'),
-  ('2633', date '2026-06-26'),
-  ('2634', date '2026-07-09'),
-  ('2635', date '2026-07-10')
+  ('2701', date '2027-04-16'),
+  ('2702', date '2027-04-17'),
+  ('2703', date '2027-04-30'),
+  ('2704', date '2027-05-01'),
+  ('2705', date '2027-05-14'),
+  ('2706', date '2027-05-15'),
+  ('2707', date '2027-05-28'),
+  ('2708', date '2027-05-29'),
+  ('2709', date '2027-06-11'),
+  ('2710', date '2027-06-12'),
+  ('2711', date '2027-06-25'),
+  ('2712', date '2027-06-26'),
+  ('2713', date '2027-07-09')
 ) as nouvelles_dates(code, date_stage)
 where not exists (
   select 1 from public.stages where stages.code = nouvelles_dates.code

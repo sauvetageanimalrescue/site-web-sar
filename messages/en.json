@@ -296,6 +296,8 @@
       "ville": "City",
       "codePostal": "Postal code",
       "dateNaissance": "Date of birth",
+      "photo": "Photo",
+      "photoAide": "Upload a photo of yourself in the format of your choice. Maximum size: 4 MB.",
       "vehicule": "I have access to a vehicle",
       "permis": "I hold a valid driver's licence",
       "disponibilites": "Availability",
@@ -327,7 +329,8 @@
     },
     "succesTitre": "Application received",
     "succesTexte": "Thank you. Your application is with us and we will get back to you shortly. In the meantime, write to us at {courriel}.",
-    "erreurChamps": "Please fill in the required fields: position, first name, last name, email, phone and city.",
+    "erreurChamps": "Please complete every required field, including your date of birth and photo.",
+    "erreurPhoto": "Upload a valid photo of 4 MB or less.",
     "erreurEnvoi": "Sending failed. Try again or write to us at {courriel}."
   },
   "dons": {

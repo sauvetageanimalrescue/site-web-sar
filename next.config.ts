@@ -5,6 +5,11 @@ import { REDIRECTIONS, MOTIFS } from "./src/lib/redirections";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Une photo récente dépasse souvent la limite par défaut d'une Server
+    // Action, qui est de 1 Mo.
+    serverActions: { bodySizeLimit: "4mb" },
+  },
   // La génération des cartes de membre lit les gabarits PDF et les polices ;
   // on force leur inclusion dans la fonction serverless sur Vercel.
   outputFileTracingIncludes: {

@@ -299,6 +299,8 @@
       "ville": "Ville",
       "codePostal": "Code postal",
       "dateNaissance": "Date de naissance",
+      "photo": "Photo",
+      "photoAide": "Téléversez une photo de vous, dans le format de votre choix. Taille maximale: 4 Mo.",
       "vehicule": "J'ai accès à un véhicule",
       "permis": "J'ai un permis de conduire valide",
       "disponibilites": "Disponibilités",
@@ -330,7 +332,8 @@
     },
     "succesTitre": "Candidature reçue",
     "succesTexte": "Merci. Votre candidature est entre nos mains et nous revenons vers vous rapidement. Si vous avez des questions entre-temps, écrivez-nous à {courriel}.",
-    "erreurChamps": "Remplissez les champs obligatoires: poste, prénom, nom, courriel, téléphone et ville.",
+    "erreurChamps": "Remplissez tous les champs obligatoires, y compris votre date de naissance et votre photo.",
+    "erreurPhoto": "Téléversez une photo valide de 4 Mo ou moins.",
     "erreurEnvoi": "L'envoi a échoué. Réessayez ou écrivez-nous à {courriel}."
   },
   "dons": {

@@ -9,7 +9,7 @@ import type { Locale } from "@/i18n/routing";
 export type EtatCandidature =
   | { etat: "inactif" }
   | { etat: "succes" }
-  | { etat: "erreur"; motif: "champs" | "envoi" };
+  | { etat: "erreur"; motif: "champs" | "photo" | "envoi" };
 
 const POSTES_VALIDES = [
   "repartiteur",
@@ -26,6 +26,24 @@ function texte(donnees: FormData, cle: string) {
   return typeof valeur === "string" ? valeur.trim() : "";
 }
 
+function age(dateNaissance: string) {
+  const naissance = new Date(`${dateNaissance}T12:00:00`);
+  if (Number.isNaN(naissance.getTime())) return null;
+  const maintenant = new Date();
+  let resultat = maintenant.getFullYear() - naissance.getFullYear();
+  const anniversairePasse =
+    maintenant.getMonth() > naissance.getMonth() ||
+    (maintenant.getMonth() === naissance.getMonth() &&
+      maintenant.getDate() >= naissance.getDate());
+  if (!anniversairePasse) resultat -= 1;
+  return resultat >= 0 && resultat <= 120 ? resultat : null;
+}
+
+function estPhoto(fichier: File) {
+  if (fichier.type.startsWith("image/")) return true;
+  return /\.(avif|bmp|gif|heic|heif|jpe?g|png|tiff?|webp)$/i.test(fichier.name);
+}
+
 export async function envoyerCandidature(
   _precedent: EtatCandidature,
   donnees: FormData,
@@ -36,6 +54,8 @@ export async function envoyerCandidature(
   const courriel = texte(donnees, "courriel");
   const telephone = texte(donnees, "telephone");
   const ville = texte(donnees, "ville");
+  const dateNaissance = texte(donnees, "dateNaissance");
+  const photo = donnees.get("photo");
 
   if (
     !POSTES_VALIDES.includes(poste) ||
@@ -43,15 +63,36 @@ export async function envoyerCandidature(
     !nom ||
     !courriel ||
     !telephone ||
-    !ville
+    !ville ||
+    !dateNaissance ||
+    !(photo instanceof File) ||
+    photo.size === 0
   ) {
     return { etat: "erreur", motif: "champs" };
+  }
+
+  const ageCandidat = age(dateNaissance);
+  if (ageCandidat === null || !estPhoto(photo) || photo.size > 4_000_000) {
+    return { etat: "erreur", motif: "photo" };
   }
 
   const langue = (await getLocale()) as Locale;
   const cases = (cle: string) =>
     donnees.getAll(cle).filter((v): v is string => typeof v === "string");
   const disponibilites = cases("disponibilites");
+  const extension =
+    photo.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") ||
+    "image";
+  const cheminPhoto = `${new Date().getFullYear()}/${crypto.randomUUID()}.${extension}`;
+
+  const { error: erreurPhoto } = await creerClientAdmin()
+    .storage.from("candidatures")
+    .upload(cheminPhoto, photo, {
+      contentType: photo.type || undefined,
+      upsert: false,
+    });
+
+  if (erreurPhoto) return { etat: "erreur", motif: "envoi" };
 
   const { error } = await creerClientAdmin().from("candidatures").insert({
     poste,
@@ -63,7 +104,8 @@ export async function envoyerCandidature(
     adresse_rue: texte(donnees, "adresseRue") || null,
     province: texte(donnees, "province") || null,
     code_postal: texte(donnees, "codePostal") || null,
-    date_naissance: texte(donnees, "dateNaissance") || null,
+    date_naissance: dateNaissance,
+    photo_url: cheminPhoto,
     langue,
     a_vehicule: donnees.get("vehicule") === "on",
     a_permis: donnees.get("permis") === "on",
@@ -81,7 +123,10 @@ export async function envoyerCandidature(
     reference: texte(donnees, "reference") || null,
   });
 
-  if (error) return { etat: "erreur", motif: "envoi" };
+  if (error) {
+    await creerClientAdmin().storage.from("candidatures").remove([cheminPhoto]);
+    return { etat: "erreur", motif: "envoi" };
+  }
 
   // Avis à la direction. Un échec d'envoi ne doit pas perdre la candidature,
   // qui est déjà enregistrée en base.
@@ -104,6 +149,8 @@ export async function envoyerCandidature(
         <strong>Courriel :</strong> ${courriel}<br>
         <strong>Téléphone :</strong> ${telephone}<br>
         <strong>Ville :</strong> ${ville}<br>
+        <strong>Date de naissance :</strong> ${dateNaissance} (${ageCandidat} ans)<br>
+        <strong>Photo :</strong> reçue et conservée avec la candidature<br>
         <strong>Véhicule :</strong> ${donnees.get("vehicule") === "on" ? "oui" : "non"}<br>
         <strong>Permis :</strong> ${donnees.get("permis") === "on" ? "oui" : "non"}<br>
         <strong>Disponibilités :</strong> ${disponibilites.join(", ") || "non précisées"}</p>

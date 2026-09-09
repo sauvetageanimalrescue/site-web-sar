@@ -101,13 +101,15 @@ export function FormulaireCandidature({
   }
 
   return (
-    <form action={action} className="space-y-5">
+    <form action={action} encType="multipart/form-data" className="space-y-5">
       {etat.etat === "erreur" && (
         <p className="flex items-start gap-2 rounded-md border border-urgence bg-urgence-doux p-4 text-sm text-urgence">
           <IconAlertTriangleFilled className="mt-0.5 size-5 shrink-0" aria-hidden />
           {etat.motif === "champs"
             ? t("erreurChamps")
-            : t("erreurEnvoi", { courriel: ORGANISATION.courriels.direction })}
+            : etat.motif === "photo"
+              ? t("erreurPhoto")
+              : t("erreurEnvoi", { courriel: ORGANISATION.courriels.direction })}
         </p>
       )}
 
@@ -179,13 +181,22 @@ export function FormulaireCandidature({
           <input name="codePostal" className={CLASSE_CHAMP} />
         </label>
         <label className="block">
-          <span className="mb-1 block text-sm font-medium">
-            {c("dateNaissance")}{" "}
-            <span className="font-normal text-muted">({c("facultatif")})</span>
-          </span>
-          <input type="date" name="dateNaissance" className={CLASSE_CHAMP} />
+          <span className="mb-1 block text-sm font-medium">{c("dateNaissance")}</span>
+          <input type="date" name="dateNaissance" required className={CLASSE_CHAMP} />
         </label>
       </div>
+
+      <label className="block">
+        <span className="mb-1 block text-sm font-medium">{c("photo")}</span>
+        <input
+          type="file"
+          name="photo"
+          accept="image/*,.heic,.heif"
+          required
+          className="block w-full cursor-pointer rounded-md border border-border bg-surface px-3 py-2 text-sm file:mr-3 file:rounded-md file:border-0 file:bg-marine file:px-3 file:py-1.5 file:font-medium file:text-white hover:file:bg-marine-clair"
+        />
+        <span className="mt-1 block text-xs text-muted">{c("photoAide")}</span>
+      </label>
 
       <label className="block">
         <span className="mb-1 block text-sm font-medium">{c("occupation")}</span>

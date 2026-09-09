@@ -296,6 +296,8 @@
       "ville": "Ciudad",
       "codePostal": "Código postal",
       "dateNaissance": "Fecha de nacimiento",
+      "photo": "Foto",
+      "photoAide": "Suba una foto suya en el formato que prefiera. Tamaño máximo: 4 MB.",
       "vehicule": "Tengo acceso a un vehículo",
       "permis": "Tengo licencia de conducir vigente",
       "disponibilites": "Disponibilidad",
@@ -327,7 +329,8 @@
     },
     "succesTitre": "Candidatura recibida",
     "succesTexte": "Gracias. Su candidatura está en nuestras manos y le responderemos pronto. Mientras tanto, escríbanos a {courriel}.",
-    "erreurChamps": "Complete los campos obligatorios: puesto, nombre, apellido, correo, teléfono y ciudad.",
+    "erreurChamps": "Complete todos los campos obligatorios, incluida su fecha de nacimiento y su foto.",
+    "erreurPhoto": "Suba una foto válida de 4 MB o menos.",
     "erreurEnvoi": "El envío ha fallado. Inténtelo de nuevo o escríbanos a {courriel}."
   },
   "dons": {

@@ -253,6 +253,38 @@ export async function creerPaiementStage({
   return session.url;
 }
 
+export async function creerPaiementFormation({
+  formationId, prenom, nom, courriel, telephone, langue,
+}: {
+  formationId: string; prenom: string; nom: string; courriel: string; telephone: string; langue: Locale;
+}) {
+  const supabase = creerClientAdmin();
+  const { data: formation, error: erreurFormation } = await supabase
+    .from("formations")
+    .select("id, code, titre, date_debut, date_fin, prix_cents, places, places_vendues, publie")
+    .eq("id", formationId).maybeSingle();
+  if (erreurFormation || !formation) throw new Error("Formation introuvable");
+  const f = formation as { id: string; code: string; titre: string; date_debut: string; date_fin: string; prix_cents: number; places: number; places_vendues: number; publie: boolean };
+  if (!f.publie || f.places_vendues >= f.places) throw new Error("Formation complete");
+  const { data: commande, error } = await supabase.from("commandes").insert({
+    type: "formation", montant_cents: f.prix_cents, courriel, prenom, nom, langue,
+    metadonnees: { telephone, formation_id: f.id, code: f.code },
+  }).select("id").single();
+  if (error || !commande) throw new Error("Création de commande impossible");
+  const base = urlSite();
+  const session = await stripe().checkout.sessions.create({
+    mode: "payment", locale: langueStripe(langue), customer_email: courriel,
+    payment_intent_data: { receipt_email: courriel },
+    line_items: [{ quantity: 1, price_data: { currency: "cad", unit_amount: f.prix_cents, product_data: { name: `${f.titre} — ${f.date_debut} et ${f.date_fin}` } } }],
+    success_url: `${base}/${langue}/formations/premiers-secours-animal/merci?session={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${base}/${langue}/formations/premiers-secours-animal`,
+    metadata: { commande_id: commande.id, type: "formation", formation_id: f.id, prenom, nom, telephone, langue },
+  });
+  await supabase.from("commandes").update({ stripe_session_id: session.id }).eq("id", commande.id);
+  if (!session.url) throw new Error("Stripe n'a pas retourné d'URL de paiement");
+  return session.url;
+}
+
 // Don ponctuel ou mensuel. Le montant est choisi par le donateur, borné pour
 // éviter les saisies accidentelles.
 export async function creerPaiementDon({

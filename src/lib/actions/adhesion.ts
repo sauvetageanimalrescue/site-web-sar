@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import {
   creerPaiementAdhesion,
   creerPaiementDon,
+  creerPaiementFormation,
   creerPaiementStage,
 } from "@/lib/paiement";
 import type { Locale } from "@/i18n/routing";
@@ -142,6 +143,30 @@ export async function demarrerStage(
     };
   }
 
+  redirect(url);
+}
+
+export async function demarrerFormation(
+  _precedent: EtatPaiement,
+  donnees: FormData,
+): Promise<EtatPaiement> {
+  const formationId = texte(donnees, "formation");
+  const prenom = texte(donnees, "prenom");
+  const nom = texte(donnees, "nom");
+  const courriel = texte(donnees, "courriel");
+  const telephone = texte(donnees, "telephone");
+  if (!formationId || !prenom || !nom || !courriel || !telephone) {
+    return { etat: "erreur", motif: "champs" };
+  }
+  let url: string;
+  try {
+    url = await creerPaiementFormation({
+      formationId, prenom, nom, courriel, telephone,
+      langue: (await getLocale()) as Locale,
+    });
+  } catch (erreur) {
+    return { etat: "erreur", motif: erreur instanceof Error && erreur.message === "Formation complete" ? "complet" : "paiement" };
+  }
   redirect(url);
 }
 

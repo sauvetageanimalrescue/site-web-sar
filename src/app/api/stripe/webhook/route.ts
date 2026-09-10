@@ -279,6 +279,35 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
   }
 }
 
+async function traiterInscriptionFormation(session: Stripe.Checkout.Session) {
+  const m = session.metadata ?? {};
+  const formationId = m.formation_id;
+  const courriel = session.customer_details?.email ?? session.customer_email ?? "";
+  if (!formationId || !courriel) return;
+  const supabase = creerClientAdmin();
+  if (m.commande_id) {
+    const { data: existante } = await supabase.from("inscriptions_formation").select("id").eq("commande_id", m.commande_id).maybeSingle();
+    if (existante) return;
+  }
+  const { data: reservee } = await supabase.rpc("reserver_place_formation", { p_formation_id: formationId });
+  if (reservee === false) {
+    await envoyerCourriel({ destinataire: [courriel, "e.dussault@sar.quebec"], sujet: "Formation - inscription à vérifier", html: gabaritCourriel({ titre: "Inscription à vérifier", corps: "<p>Le paiement a été reçu, mais la formation vient d’être remplie. Notre équipe communiquera avec vous pour proposer une autre date ou un remboursement.</p>" }) });
+    return;
+  }
+  const { data: formation } = await supabase.from("formations").select("code, titre, date_debut, date_fin, heure_debut, heure_fin").eq("id", formationId).maybeSingle();
+  if (!formation) return;
+  await supabase.from("inscriptions_formation").insert({ formation_id: formationId, commande_id: m.commande_id ?? null, prenom: m.prenom ?? "", nom: m.nom ?? "", courriel, telephone: m.telephone ?? "", langue: (m.langue as Locale) ?? "fr" });
+  const longDate = (iso: string) => new Intl.DateTimeFormat("fr-CA", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date(`${iso}T12:00:00`));
+  try {
+    await envoyerCourriel({
+      destinataire: courriel,
+      repondreA: "e.dussault@sar.quebec",
+      sujet: `${formation.titre} - inscription confirmée`,
+      html: gabaritCourriel({ titre: "Votre inscription est confirmée", corps: `<p style="margin:0 0 14px;line-height:1.6;">Votre place à la formation <strong>${formation.titre}</strong> est réservée.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Dates:</strong> ${longDate(formation.date_debut)} et ${longDate(formation.date_fin)}<br><strong>Horaire:</strong> 10h à 18h les deux journées<br><strong>Lieu:</strong> Collège Ellis, campus de Montréal, 760, rue Saint-Zotique Est, Montréal (Québec) H2S 1M5</p><p style="margin:0 0 14px;line-height:1.6;"><strong>À l’arrivée:</strong> entrez par la porte principale sur Saint-Zotique. Montez jusqu’au troisième étage. Une porte ouverte donne accès au couloir; le local se trouve à droite, tout de suite après la cafétéria.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Transport et stationnement:</strong> le campus se trouve à environ 280 m du métro Beaubien et 585 m du métro Jean-Talon. L’autobus 56 Saint-Hubert dessert le secteur, près de Saint-Hubert et Saint-Zotique. Le stationnement no 24, derrière l’IGA Famille Barceló, est accessible par les rues Saint-André et Boyer; il se trouve à environ 175 m du campus.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Sur place:</strong> une cafétéria et des salles de bain sont accessibles. Il n’y a pas de distributrices. Apportez votre repas ou profitez des nombreux restaurants à proximité, notamment sur la Plaza Saint-Hubert. L’IGA se trouve à environ 125 m.</p><p style="margin:0;line-height:1.6;">Pour toute question avant la formation, écrivez à e.dussault@sar.quebec.</p>` }),
+    });
+  } catch { /* L'inscription et le paiement restent valides si Resend echoue. */ }
+}
+
 const CONFIRMATION_DON = {
   fr: {
     sujet: (mensuel: boolean) =>
@@ -388,6 +417,9 @@ export async function POST(requete: NextRequest) {
     }
     if (type === "stage") {
       await traiterInscriptionStage(session);
+    }
+    if (type === "formation") {
+      await traiterInscriptionFormation(session);
     }
     if (type === "don" || type === "don_mensuel") {
       await traiterDon(session);

@@ -24,5 +24,9 @@ export function lirePageEditoriale(
 
 // Tous les chemins connus, pour le prérendu statique et le plan du site.
 export function cheminsEditoriaux(): string[] {
-  return Object.keys(PAGES_FR);
+  // Cette fiche est devenue une page transactionnelle distincte: le routeur
+  // statique la rend avec le calendrier et le formulaire de reservation.
+  return Object.keys(PAGES_FR).filter(
+    (chemin) => chemin !== "formations/premiers-secours-animal",
+  );
 }

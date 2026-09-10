@@ -190,7 +190,7 @@ export const PAGES_ES: CataloguePages = {
         titre: "Tres recorridos",
         liste: [
           "Iniciación al Socorro Animal: 25 módulos, 8 horas, una jornada",
-          "Primeros Auxilios Animal: 50 módulos, 16 horas",
+          "Primeros Auxilios Animal: 40 módulos, 16 horas",
           "Formaciones a medida para servicios de emergencia",
         ],
       },
@@ -252,7 +252,7 @@ export const PAGES_ES: CataloguePages = {
   },
 
   "formations/premiers-secours-animal": {
-    surtitre: "50 módulos • 16 horas",
+    surtitre: "40 módulos • 16 horas",
     titre: "Primeros Auxilios Animal",
     intro:
       "La formación completa para propietarios que quieren estar realmente preparados. Cubre el conjunto de urgencias frecuentes y de patologías que puede sufrir un animal de compañía.",

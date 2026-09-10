@@ -1081,7 +1081,7 @@ export const PAGES_FR: CataloguePages = {
         titre: "Trois parcours",
         liste: [
           "Initiation Secours Animal: 25 modules, 8 heures, une journée",
-          "Premiers Secours Animal: 50 modules, 16 heures",
+          "Premiers Secours Animal: 40 modules, 16 heures",
           "Formations sur mesure pour les services d'urgence",
         ],
       },
@@ -1144,7 +1144,7 @@ export const PAGES_FR: CataloguePages = {
   },
 
   "formations/premiers-secours-animal": {
-    surtitre: "50 modules • 16 heures",
+    surtitre: "40 modules • 16 heures",
     titre: "Premiers Secours Animal",
     intro:
       "La formation complète destinée aux propriétaires d'animaux qui veulent être réellement préparés. Elle couvre l'ensemble des urgences courantes et des pathologies que rencontre un animal de compagnie.",

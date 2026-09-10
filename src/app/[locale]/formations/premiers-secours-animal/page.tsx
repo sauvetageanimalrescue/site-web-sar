@@ -5,21 +5,46 @@ import { FormulaireFormation } from "@/components/formulaire-formation";
 import { lireFormationsAVenir } from "@/lib/formations";
 
 const SUJETS = [
-  "La préparation aux urgences et aux sinistres, la trousse et le sac d’évacuation",
-  "Les responsabilités envers les animaux et le cadre légal au Québec",
-  "Les particularités des interventions auprès des animaux de la faune",
-  "La sécurité des lieux, l’approche de l’animal et la lecture de son comportement",
-  "Les repères anatomiques, les vérifications primaire et secondaire, les signes vitaux et les renseignements à transmettre au vétérinaire",
-  "L’appel d’urgence, les ressources disponibles et le relais vétérinaire",
-  "La manipulation, la contention, l’immobilisation et le transport",
-  "Les hémorragies, l’état de choc, les plaies, les brûlures et les blessures aux yeux, aux os et aux articulations",
-  "L’étouffement, la respiration artificielle et la réanimation cardiorespiratoire",
-  "Le coup de chaleur, l’hypothermie, les engelures et la déshydratation",
-  "La noyade, l’électrisation, les intoxications et les réactions allergiques",
-  "Les convulsions et les urgences neurologiques, cardiorespiratoires et digestives",
-  "Les collisions, les animaux laissés dans un véhicule à la chaleur et la sécurité en voiture",
-  "Les maladies chroniques, les zoonoses et les situations préoccupantes entourant la mise bas",
-  "La prévention au quotidien et des mises en situation pour appliquer les apprentissages",
+  "01 - Introduction",
+  "02 - Les animaux et la loi au Québec",
+  "03 - Préparation aux urgences",
+  "04 - Trousse et sac d’évacuation",
+  "05 - Animaux de la faune",
+  "06 - Anatomie et physiologie",
+  "07 - Sécurité de la scène",
+  "08 - Approche et comportement",
+  "09 - Vérification primaire",
+  "10 - Vérification secondaire",
+  "11 - Signes vitaux",
+  "12 - Anamnèse",
+  "13 - Appel d’urgence et relais vétérinaire",
+  "14 - Manipulation, contention et muselière",
+  "15 - Hémorragies",
+  "16 - État de choc",
+  "17 - Obstruction des voies respiratoires",
+  "18 - Respiration artificielle et RCR",
+  "19 - Réactions allergiques",
+  "20 - Hyperthermie et coup de chaleur",
+  "21 - Hypothermie et engelures",
+  "22 - Déshydratation",
+  "23 - Noyade et submersion",
+  "24 - Électrisation",
+  "25 - Intoxications",
+  "26 - Urgences neurologiques",
+  "27 - Urgences cardiorespiratoires",
+  "28 - Urgences digestives et abdominales",
+  "29 - Contusions et plaies",
+  "30 - Blessures aux yeux",
+  "31 - Brûlures",
+  "32 - Traumatismes musculosquelettiques",
+  "33 - Immobilisation, déplacement et évacuation",
+  "34 - Les animaux et les véhicules",
+  "35 - Maladies chroniques et particularités",
+  "36 - Zoonoses et prévention des infections",
+  "37 - Mise bas",
+  "38 - Prévention au quotidien",
+  "39 - Ressources externes",
+  "40 - Mises en situation et évaluation",
 ];
 
 const INCLUS = [
@@ -39,10 +64,10 @@ export default async function PagePremiersSecoursAnimal({ params }: { params: Pr
   setRequestLocale(locale);
   const formations = await lireFormationsAVenir();
   return <>
-    <EnTetePage surtitre="50 modules • 16 heures" titre="Premiers Secours Animal" intro="La formation complète destinée aux propriétaires d’animaux qui veulent être réellement préparés. Elle couvre l’ensemble des urgences courantes et des pathologies que rencontre un animal de compagnie." image="/images/formations.jpg" imageTailleNaturelle={{ largeur: 2000, hauteur: 1125 }} />
+    <EnTetePage surtitre="40 modules • 16 heures" titre="Premiers Secours Animal" intro="La formation complète destinée aux propriétaires d’animaux qui veulent être réellement préparés. Elle couvre l’ensemble des urgences courantes et des pathologies que rencontre un animal de compagnie." image="/images/formations.jpg" imageTailleNaturelle={{ largeur: 2000, hauteur: 1125 }} />
     <Section titre="Se préparer à agir" largeur="carte"><p className="paragraphe text-lg leading-relaxed text-foreground/90">La formation <strong>Premiers Secours Animal</strong> de Sauvetage Animal Rescue s’adresse aux propriétaires de chiens et de chats qui souhaitent savoir quoi faire lorsqu’une urgence survient. Vous apprendrez à reconnaître les signes de détresse, à observer votre animal et à poser les premiers gestes pour lui porter secours en sécurité. L’objectif: éviter d’aggraver la situation, limiter les complications et faciliter une prise en charge vétérinaire rapide. À travers des explications illustrées et des mises en situation, vous développerez des repères concrets pour réagir avec méthode. Cette formation vous prépare à agir dans l’attente de l’aide vétérinaire, sans jamais la remplacer.</p></Section>
     <Section fond largeur="carte"><Photo fichier="/images/formation-premiers-secours-1.jpg" alt="Une formation de premiers secours animaliers donnée par Sauvetage Animal Rescue" /></Section>
-    <Section titre="Au programme" largeur="carte"><ListePuces items={SUJETS} /></Section>
+    <Section titre="Les 40 modules" largeur="carte"><ListePuces items={SUJETS} /></Section>
     <Section fond largeur="carte"><Photo fichier="/images/formation-premiers-secours-materiel.jpg" alt="Manuel, certificat, mannequin et écusson de Premiers Secours Animal disposés dans une salle de formation" /></Section>
     <Section titre="Inclus dans la tarification" largeur="carte"><ListePuces items={INCLUS} /></Section>
     <Section fond titre="Réserver votre place" largeur="carte"><FormulaireFormation initiales={formations} /></Section>

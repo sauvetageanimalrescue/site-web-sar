@@ -190,7 +190,7 @@ export const PAGES_EN: CataloguePages = {
         titre: "Three paths",
         liste: [
           "Animal Rescue Basics: 25 modules, 8 hours, one day",
-          "Animal First Aid: 50 modules, 16 hours",
+          "Animal First Aid: 40 modules, 16 hours",
           "Custom training for emergency services",
         ],
       },
@@ -248,7 +248,7 @@ export const PAGES_EN: CataloguePages = {
   },
 
   "formations/premiers-secours-animal": {
-    surtitre: "50 modules • 16 hours",
+    surtitre: "40 modules • 16 hours",
     titre: "Animal First Aid",
     intro:
       "The full course for pet owners who want to be genuinely prepared. It covers the range of common emergencies and conditions a companion animal can face.",

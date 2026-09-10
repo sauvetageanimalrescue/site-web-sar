@@ -74,11 +74,13 @@ export const MENU: SectionMenu[] = [
   {
     cle: "formations",
     liens: [
-      { cle: "isa", href: "/formations/initiation-secours-animal" },
+      // Ces formations sont conservées dans le site, mais ne sont pas
+      // annoncées tant que leurs prochaines sessions ne sont pas prêtes.
+      { cle: "isa" },
       { cle: "psa", href: "/formations/premiers-secours-animal" },
-      { cle: "servicesUrgence", href: "/formations/services-urgence" },
-      { cle: "atelierPrimaire", href: "/ateliers/primaire" },
-      { cle: "atelierSecondaire", href: "/ateliers/secondaire" },
+      { cle: "servicesUrgence" },
+      { cle: "atelierPrimaire" },
+      { cle: "atelierSecondaire" },
     ],
   },
   {

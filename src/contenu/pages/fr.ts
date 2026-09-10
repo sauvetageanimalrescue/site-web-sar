@@ -1094,13 +1094,9 @@ export const PAGES_FR: CataloguePages = {
     ],
     actions: [
       {
-        href: "/formations/initiation-secours-animal",
-        libelle: "Initiation Secours Animal",
-        principal: true,
-      },
-      {
         href: "/formations/premiers-secours-animal",
         libelle: "Premiers Secours Animal",
+        principal: true,
       },
     ],
   },

@@ -277,7 +277,7 @@ export async function creerPaiementFormation({
     payment_intent_data: { receipt_email: courriel },
     line_items: [
       { quantity: 1, price_data: { currency: "cad", unit_amount: f.prix_cents, product_data: { name: `${f.titre} — ${f.date_debut} et ${f.date_fin}` } } },
-      ...(manuelImprime ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 2999, product_data: { name: "Manuel de formation, version imprimée" } } }] : []),
+      ...(manuelImprime ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 2999, product_data: { name: "Manuel de formation version imprimée" } } }] : []),
       ...(carteParticipation ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 999, product_data: { name: "Carte plastifiée de participation" } } }] : []),
     ],
     success_url: `${base}/${langue}/formations/premiers-secours-animal/merci?session={CHECKOUT_SESSION_ID}`,

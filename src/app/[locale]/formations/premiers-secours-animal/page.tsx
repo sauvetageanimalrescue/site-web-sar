@@ -23,7 +23,7 @@ const SUJETS = [
 ];
 
 const INCLUS = [
-  "Manuel de formation, version électronique",
+  "Manuel de formation en version électronique",
   "Certificat de participation",
   "Écusson et autocollant",
 ];
@@ -42,7 +42,7 @@ export default async function PagePremiersSecoursAnimal({ params }: { params: Pr
     <EnTetePage surtitre="50 modules • 16 heures" titre="Premiers Secours Animal" intro="La formation complète destinée aux propriétaires d’animaux qui veulent être réellement préparés. Elle couvre l’ensemble des urgences courantes et des pathologies que rencontre un animal de compagnie." image="/images/formations.jpg" imageTailleNaturelle={{ largeur: 2000, hauteur: 1125 }} />
     <Section titre="Se préparer à agir" largeur="carte"><p className="paragraphe text-lg leading-relaxed text-foreground/90">La formation <strong>Premiers Secours Animal</strong> de Sauvetage Animal Rescue s’adresse aux propriétaires de chiens et de chats qui souhaitent savoir quoi faire lorsqu’une urgence survient. Vous apprendrez à reconnaître les signes de détresse, à observer votre animal et à poser les premiers gestes pour lui porter secours en sécurité. L’objectif: éviter d’aggraver la situation, limiter les complications et faciliter une prise en charge vétérinaire rapide. À travers des explications illustrées et des mises en situation, vous développerez des repères concrets pour réagir avec méthode. Cette formation vous prépare à agir dans l’attente de l’aide vétérinaire, sans jamais la remplacer.</p></Section>
     <Section fond largeur="carte"><Photo fichier="/images/formation-premiers-secours-1.jpg" alt="Une formation de premiers secours animaliers donnée par Sauvetage Animal Rescue" /></Section>
-    <Section titre="La formation couvre notamment" largeur="carte"><ListePuces items={SUJETS} /></Section>
+    <Section titre="Au programme" largeur="carte"><ListePuces items={SUJETS} /></Section>
     <Section fond largeur="carte"><Photo fichier="/images/formation-premiers-secours-2.jpg" alt="Des participants à une formation de premiers secours animaliers" /></Section>
     <Section titre="Inclus dans la tarification" largeur="carte"><ListePuces items={INCLUS} /></Section>
     <Section fond titre="Réserver votre place" largeur="carte"><FormulaireFormation initiales={formations} /></Section>

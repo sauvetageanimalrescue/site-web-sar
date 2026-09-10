@@ -87,7 +87,7 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
         <legend className="font-semibold text-marine">Options</legend>
         <label className="flex cursor-pointer items-start gap-3 rounded-md border border-border p-4 transition hover:border-ciel">
           <input type="checkbox" name="manuelImprime" checked={manuelImprime} onChange={(e) => setManuelImprime(e.target.checked)} className="mt-1 size-4 rounded border-border" />
-          <span><span className="block font-medium text-foreground">Manuel de formation, version imprimée</span><span className="mt-1 block text-sm text-muted">29,99$</span></span>
+          <span><span className="block font-medium text-foreground">Manuel de formation version imprimée</span><span className="mt-1 block text-sm text-muted">29,99$</span></span>
         </label>
         <label className="flex cursor-pointer items-start gap-3 rounded-md border border-border p-4 transition hover:border-ciel">
           <input type="checkbox" name="carteParticipation" checked={carteParticipation} onChange={(e) => setCarteParticipation(e.target.checked)} className="mt-1 size-4 rounded border-border" />

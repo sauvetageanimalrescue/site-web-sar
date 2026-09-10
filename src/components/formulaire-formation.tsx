@@ -24,6 +24,8 @@ function disponibilite(restantes: number) {
 export function FormulaireFormation({ initiales }: { initiales: FormationDisponible[] }) {
   const [formations, setFormations] = useState(initiales);
   const [choix, setChoix] = useState(initiales[0]?.id ?? "");
+  const [manuelImprime, setManuelImprime] = useState(false);
+  const [carteParticipation, setCarteParticipation] = useState(false);
   const [etat, action, enCours] = useActionState<EtatPaiement, FormData>(demarrerFormation, { etat: "inactif" });
 
   useEffect(() => {
@@ -41,6 +43,7 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
   }, []);
 
   const ouvertes = formations.filter((formation) => formation.restantes > 0);
+  const total = 249.99 + (manuelImprime ? 29.99 : 0) + (carteParticipation ? 9.99 : 0);
 
   return (
     <form action={action} className="space-y-7">
@@ -54,6 +57,7 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
       <fieldset className="space-y-3">
         <legend className="font-semibold text-marine">Choisissez votre formation</legend>
         <div className="space-y-3">
+          {formations.length === 0 && <p className="rounded-md bg-surface-2 p-4 text-sm text-muted">Aucune formation n’est affichée pour le moment.</p>}
           {formations.map((formation) => {
             const etatPlace = disponibilite(formation.restantes);
             const selectionnee = choix === formation.id;
@@ -75,13 +79,24 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
 
       <fieldset className="space-y-5 border-t border-border pt-6">
         <legend className="font-semibold text-marine">Vos coordonnées</legend>
-        <p className="text-sm text-muted">Elles servent à confirmer votre inscription et à vous joindre au besoin avant la formation.</p>
         <div className="grid gap-5 sm:grid-cols-2"><Champ nom="prenom" libelle="Prénom" /><Champ nom="nom" libelle="Nom" /></div>
         <div className="grid gap-5 sm:grid-cols-2"><Champ nom="courriel" libelle="Courriel" type="email" /><Champ nom="telephone" libelle="Téléphone" type="tel" /></div>
       </fieldset>
 
+      <fieldset className="space-y-4 border-t border-border pt-6">
+        <legend className="font-semibold text-marine">Options</legend>
+        <label className="flex cursor-pointer items-start gap-3 rounded-md border border-border p-4 transition hover:border-ciel">
+          <input type="checkbox" name="manuelImprime" checked={manuelImprime} onChange={(e) => setManuelImprime(e.target.checked)} className="mt-1 size-4 rounded border-border" />
+          <span><span className="block font-medium text-foreground">Manuel de formation, version imprimée</span><span className="mt-1 block text-sm text-muted">29,99$</span></span>
+        </label>
+        <label className="flex cursor-pointer items-start gap-3 rounded-md border border-border p-4 transition hover:border-ciel">
+          <input type="checkbox" name="carteParticipation" checked={carteParticipation} onChange={(e) => setCarteParticipation(e.target.checked)} className="mt-1 size-4 rounded border-border" />
+          <span><span className="block font-medium text-foreground">Carte plastifiée de participation</span><span className="mt-1 block text-sm text-muted">9,99$</span></span>
+        </label>
+      </fieldset>
+
       <button type="submit" disabled={enCours || !ouvertes.length} className="w-full rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair disabled:opacity-60">
-        {enCours ? "Redirection vers le paiement..." : "Réserver ma place • 249,99$"}
+        {enCours ? "Redirection vers le paiement..." : `Réserver ma place • ${total.toFixed(2).replace('.', ',')}$`}
       </button>
       <p className="text-center text-xs text-muted">Après le paiement, vous recevrez votre confirmation et toutes les consignes pratiques par courriel.</p>
     </form>

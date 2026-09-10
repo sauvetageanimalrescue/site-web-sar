@@ -16,7 +16,11 @@ const SUJETS = [
   "Pathologies chroniques fréquentes, zoonoses, mise bas et sécurité en voiture",
 ];
 
-const INCLUS = ["Cahier de formation", "Carte et certificat de participation", "Écusson et autocollant"];
+const INCLUS = [
+  "Manuel de formation, version électronique",
+  "Certificat de participation",
+  "Écusson et autocollant",
+];
 
 function Photo({ fichier, alt }: { fichier: string; alt: string }) {
   return <div className="relative aspect-video overflow-hidden rounded-xl bg-marine"><Image src={fichier} alt={alt} fill sizes="(max-width: 768px) 100vw, 42rem" className="object-cover" /></div>;
@@ -34,7 +38,7 @@ export default async function PagePremiersSecoursAnimal({ params }: { params: Pr
     <Section fond largeur="carte"><Photo fichier="/images/formation-premiers-secours-1.jpg" alt="Une formation de premiers secours animaliers donnée par Sauvetage Animal Rescue" /></Section>
     <Section titre="Ce que couvre la formation" largeur="carte"><ListePuces items={SUJETS} /></Section>
     <Section fond largeur="carte"><Photo fichier="/images/formation-premiers-secours-2.jpg" alt="Des participants à une formation de premiers secours animaliers" /></Section>
-    <Section titre="Inclus" largeur="carte"><ListePuces items={INCLUS} /></Section>
+    <Section titre="Inclus dans la tarification" largeur="carte"><ListePuces items={INCLUS} /></Section>
     <Section fond titre="Réserver votre place" largeur="carte"><FormulaireFormation initiales={formations} /></Section>
   </>;
 }

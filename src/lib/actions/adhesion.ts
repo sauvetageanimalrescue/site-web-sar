@@ -162,6 +162,8 @@ export async function demarrerFormation(
   try {
     url = await creerPaiementFormation({
       formationId, prenom, nom, courriel, telephone,
+      manuelImprime: donnees.get("manuelImprime") === "on",
+      carteParticipation: donnees.get("carteParticipation") === "on",
       langue: (await getLocale()) as Locale,
     });
   } catch (erreur) {

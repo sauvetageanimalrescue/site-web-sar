@@ -31,6 +31,8 @@ create table if not exists public.inscriptions_formation (
   nom text not null,
   courriel text not null,
   telephone text not null,
+  manuel_imprime boolean not null default false,
+  carte_participation boolean not null default false,
   langue text not null default 'fr' check (langue in ('fr', 'en', 'es')),
   statut text not null default 'confirmee'
     check (statut in ('confirmee', 'annulee', 'presente', 'absente'))

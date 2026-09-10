@@ -254,9 +254,9 @@ export async function creerPaiementStage({
 }
 
 export async function creerPaiementFormation({
-  formationId, prenom, nom, courriel, telephone, langue,
+  formationId, prenom, nom, courriel, telephone, manuelImprime, carteParticipation, langue,
 }: {
-  formationId: string; prenom: string; nom: string; courriel: string; telephone: string; langue: Locale;
+  formationId: string; prenom: string; nom: string; courriel: string; telephone: string; manuelImprime: boolean; carteParticipation: boolean; langue: Locale;
 }) {
   const supabase = creerClientAdmin();
   const { data: formation, error: erreurFormation } = await supabase
@@ -268,17 +268,21 @@ export async function creerPaiementFormation({
   if (!f.publie || f.places_vendues >= f.places) throw new Error("Formation complete");
   const { data: commande, error } = await supabase.from("commandes").insert({
     type: "formation", montant_cents: f.prix_cents, courriel, prenom, nom, langue,
-    metadonnees: { telephone, formation_id: f.id, code: f.code },
+    metadonnees: { telephone, formation_id: f.id, code: f.code, manuel_imprime: manuelImprime, carte_participation: carteParticipation },
   }).select("id").single();
   if (error || !commande) throw new Error("Création de commande impossible");
   const base = urlSite();
   const session = await stripe().checkout.sessions.create({
     mode: "payment", locale: langueStripe(langue), customer_email: courriel,
     payment_intent_data: { receipt_email: courriel },
-    line_items: [{ quantity: 1, price_data: { currency: "cad", unit_amount: f.prix_cents, product_data: { name: `${f.titre} — ${f.date_debut} et ${f.date_fin}` } } }],
+    line_items: [
+      { quantity: 1, price_data: { currency: "cad", unit_amount: f.prix_cents, product_data: { name: `${f.titre} — ${f.date_debut} et ${f.date_fin}` } } },
+      ...(manuelImprime ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 2999, product_data: { name: "Manuel de formation, version imprimée" } } }] : []),
+      ...(carteParticipation ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 999, product_data: { name: "Carte plastifiée de participation" } } }] : []),
+    ],
     success_url: `${base}/${langue}/formations/premiers-secours-animal/merci?session={CHECKOUT_SESSION_ID}`,
     cancel_url: `${base}/${langue}/formations/premiers-secours-animal`,
-    metadata: { commande_id: commande.id, type: "formation", formation_id: f.id, prenom, nom, telephone, langue },
+    metadata: { commande_id: commande.id, type: "formation", formation_id: f.id, prenom, nom, telephone, manuel_imprime: manuelImprime ? "1" : "", carte_participation: carteParticipation ? "1" : "", langue },
   });
   await supabase.from("commandes").update({ stripe_session_id: session.id }).eq("id", commande.id);
   if (!session.url) throw new Error("Stripe n'a pas retourné d'URL de paiement");

@@ -68,7 +68,7 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
                   <span className="min-w-0 flex-1">
                     <span className="block font-semibold text-marine">{dateLongue(formation.date_debut)} et {dateLongue(formation.date_fin)}</span>
                     <span className="mt-1 block text-sm text-muted">10h à 18h les deux journées</span>
-                    <span className="mt-1 block text-sm text-muted">Montréal • 760, rue Saint-Zotique Est</span>
+                    <span className="mt-1 block text-sm text-muted">Montréal • Collège Ellis</span>
                     <span className="mt-1 block text-sm text-muted">249,99$</span>
                     <span className="mt-3 flex items-center gap-2 text-sm font-medium text-foreground"><span className={`size-2.5 rounded-full ${etatPlace.classe}`} aria-hidden />{etatPlace.texte}</span>
                   </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { IconAlertTriangleFilled } from "@tabler/icons-react";
 import { demarrerStage, type EtatPaiement } from "@/lib/actions/adhesion";
@@ -16,6 +16,13 @@ function formaterPrix(montant: number) {
   return montant.toFixed(2).replace(".", ",");
 }
 
+function disponibilite(restantes: number) {
+  if (restantes === 0) return { classe: "bg-muted", texte: "Complet" };
+  if (restantes <= 3) return { classe: "bg-urgence", texte: `${restantes} place${restantes > 1 ? "s" : ""} disponible${restantes > 1 ? "s" : ""}` };
+  if (restantes <= 10) return { classe: "bg-amber-500", texte: `${restantes} places disponibles` };
+  return { classe: "bg-emerald-600", texte: `${restantes} places disponibles` };
+}
+
 export function FormulaireStage({ stages, stageInitial }: { stages: StageDisponible[]; stageInitial?: string }) {
   const t = useTranslations("stages");
   const c = useTranslations("stages.champs");
@@ -24,7 +31,9 @@ export function FormulaireStage({ stages, stageInitial }: { stages: StageDisponi
   const [scenario, setScenario] = useState<Scenario>("seul");
   const [mineur1, setMineur1] = useState(false);
   const [mineur2, setMineur2] = useState(false);
-  const ouverts = stages.filter((s) => s.restantes > 0);
+  const [stagesActuels, setStagesActuels] = useState(stages);
+  const [stageChoisi, setStageChoisi] = useState(stageInitial ?? "");
+  const ouverts = stagesActuels.filter((s) => s.restantes > 0);
   const nombrePersonnes = scenario === "avec" || scenario === "autres2" ? 2 : 1;
   const responsableParticipe = scenario === "seul" || scenario === "avec";
   const unMineur = (!responsableParticipe && mineur1) || (nombrePersonnes === 2 && mineur2);
@@ -34,6 +43,20 @@ export function FormulaireStage({ stages, stageInitial }: { stages: StageDisponi
     new Date(`${iso}T12:00:00`).toLocaleDateString(locale, {
       weekday: "long", day: "2-digit", month: "long", year: "numeric",
     });
+
+  useEffect(() => {
+    const actualiser = async () => {
+      const reponse = await fetch("/api/stages", { cache: "no-store" });
+      if (!reponse.ok) return;
+      const prochains = (await reponse.json()) as StageDisponible[];
+      setStagesActuels(prochains);
+      setStageChoisi((courant) => prochains.some((s) => s.id === courant && s.restantes > 0)
+        ? courant
+        : prochains.find((s) => s.restantes > 0)?.id ?? "");
+    };
+    const intervalle = window.setInterval(actualiser, 15000);
+    return () => window.clearInterval(intervalle);
+  }, []);
 
   return (
     <form action={action} className="space-y-7">
@@ -46,17 +69,25 @@ export function FormulaireStage({ stages, stageInitial }: { stages: StageDisponi
 
       <fieldset className="space-y-5">
         <legend className="font-semibold text-marine">{c("reservationTitre")}</legend>
-        <label className="block">
-          <span className="mb-1 block text-sm font-medium">{t("choisirDate")}</span>
-          <select name="stage" required defaultValue={stageInitial ?? ""} className={CLASSE_CHAMP}>
-            <option value="">{c("choisir")}</option>
-            {ouverts.map((s) => (
-              <option key={s.id} value={s.id}>
-                {formaterDate(s.date_stage)}{s.maitre_stage ? ` - ${s.maitre_stage}` : ""}{s.vehicule ? ` (${s.vehicule})` : ""}
-              </option>
-            ))}
-          </select>
-        </label>
+        <div className="space-y-3">
+          {stagesActuels.length === 0 && <p className="rounded-md bg-surface-2 p-4 text-sm text-muted">Aucune date n’est affichée pour le moment.</p>}
+          {stagesActuels.map((stage) => {
+            const etatPlace = disponibilite(stage.restantes);
+            const selectionne = stageChoisi === stage.id;
+            return (
+              <label key={stage.id} className={`block rounded-md border p-4 transition ${stage.restantes > 0 ? "cursor-pointer border-border hover:border-ciel" : "cursor-not-allowed border-border opacity-60"} ${selectionne ? "border-ciel bg-ciel/5" : ""}`}>
+                <div className="flex items-start gap-3">
+                  <input type="radio" name="stage" value={stage.id} checked={selectionne} onChange={() => setStageChoisi(stage.id)} disabled={stage.restantes === 0} className="mt-1 size-4" required />
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-semibold text-marine">{formaterDate(stage.date_stage)}</span>
+                    <span className="mt-1 block text-sm text-muted">10h à 18h</span>
+                    <span className="mt-3 flex items-center gap-2 text-sm font-medium text-foreground"><span className={`size-2.5 rounded-full ${etatPlace.classe}`} aria-hidden />{etatPlace.texte}</span>
+                  </span>
+                </div>
+              </label>
+            );
+          })}
+        </div>
         <label className="block">
           <span className="mb-1 block text-sm font-medium">{c("scenario")}</span>
           <select

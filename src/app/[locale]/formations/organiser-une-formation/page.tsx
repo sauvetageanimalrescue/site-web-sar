@@ -28,12 +28,12 @@ export default async function PageOrganiserFormation({
 
       <Section fond largeur="carte">
         <figure>
-          <div className="relative mx-auto aspect-[2/3] max-w-md overflow-hidden rounded-xl border border-border">
+          <div className="relative aspect-video overflow-hidden rounded-xl border border-border">
             <Image
-              src="/images/formation-organiser.jpg"
-              alt="Instructeur de Sauvetage Animal Rescue en uniforme"
+              src="/images/formation-premiers-secours-1.jpg"
+              alt="Participants à une formation de premiers secours animaliers"
               fill
-              sizes="(max-width: 768px) 100vw, 448px"
+              sizes="(max-width: 768px) 100vw, 672px"
               className="object-cover"
             />
           </div>

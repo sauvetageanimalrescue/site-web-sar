@@ -81,6 +81,7 @@ export const MENU: SectionMenu[] = [
       { cle: "servicesUrgence" },
       { cle: "atelierPrimaire" },
       { cle: "atelierSecondaire" },
+      { cle: "organiserFormation", href: "/formations/organiser-une-formation" },
     ],
   },
   {

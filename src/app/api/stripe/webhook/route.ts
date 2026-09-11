@@ -254,6 +254,14 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
       genererBilletsStage(documents),
       autorisationRequise ? genererAutorisationStage(documents) : Promise.resolve(null),
     ]);
+    const pieces = [
+      { filename: `guide-stage-${s.code}.pdf`, content: Buffer.from(guide).toString("base64") },
+      { filename: `billets-stage-${s.code}.pdf`, content: Buffer.from(billets).toString("base64") },
+      ...(autorisation
+        ? [{ filename: `autorisation-parentale-${s.code}.pdf`, content: Buffer.from(autorisation).toString("base64") }]
+        : []),
+    ];
+
     await envoyerCourriel({
       destinataire: courriel,
       sujet: textes.sujet(s.code),
@@ -265,13 +273,17 @@ async function traiterInscriptionStage(session: Stripe.Checkout.Session) {
           s.lieu,
         ),
       }),
-      pieces: [
-        { filename: `guide-stage-${s.code}.pdf`, content: Buffer.from(guide).toString("base64") },
-        { filename: `billets-stage-${s.code}.pdf`, content: Buffer.from(billets).toString("base64") },
-        ...(autorisation
-          ? [{ filename: `autorisation-parentale-${s.code}.pdf`, content: Buffer.from(autorisation).toString("base64") }]
-          : []),
-      ],
+      pieces,
+    });
+
+    await envoyerCourriel({
+      destinataire: "e.dussault@sar.quebec",
+      sujet: `Nouvelle réservation de stage - ${s.code}`,
+      html: gabaritCourriel({
+        titre: "Nouvelle réservation de stage",
+        corps: `<p style="margin:0 0 14px;line-height:1.6;"><strong>Date:</strong> ${j}/${mo}/${a}<br><strong>Horaire:</strong> ${s.heure_debut.slice(0, 5)} à ${s.heure_fin.slice(0, 5)}<br><strong>Responsable:</strong> ${m.responsable_prenom ?? ""} ${m.responsable_nom ?? ""}<br><strong>Courriel:</strong> ${courriel}<br><strong>Téléphone:</strong> ${m.telephone ?? ""}</p><p style="margin:0;line-height:1.6;"><strong>Participant${nombrePersonnes === 2 ? "s" : ""}:</strong> ${participants.map((participant) => `${participant.prenom} ${participant.nom}`).join(" et ")}</p>`,
+      }),
+      pieces,
     });
   } catch {
     // Le paiement est encaissé et l'inscription enregistrée : un courriel

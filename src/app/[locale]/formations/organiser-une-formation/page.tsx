@@ -42,7 +42,7 @@ export default async function PageOrganiserFormation({
 
       <Section titre="Organiser une date" largeur="carte">
         <p className="paragraphe text-lg leading-relaxed text-foreground/90">
-          Pour discuter d’une formation dans vos installations, écrivez à <a className="font-semibold text-ciel underline underline-offset-4" href="mailto:e.dussault@sar.quebec">e.dussault@sar.quebec</a>.
+          Pour connaître les disponibilités de nos instructeurs et les possibilités offertes dans votre région, communiquez avec nous. Nous pourrons discuter du lieu, du format souhaité et d’une date adaptée à votre groupe. Écrivez à <a className="font-semibold text-ciel underline underline-offset-4" href="mailto:e.dussault@sar.quebec">e.dussault@sar.quebec</a>.
         </p>
       </Section>
     </>

@@ -18,8 +18,7 @@ function formaterPrix(montant: number) {
 
 function disponibilite(restantes: number) {
   if (restantes === 0) return { classe: "bg-muted", texte: "Complet" };
-  if (restantes <= 3) return { classe: "bg-urgence", texte: `${restantes} place${restantes > 1 ? "s" : ""} disponible${restantes > 1 ? "s" : ""}` };
-  if (restantes <= 10) return { classe: "bg-amber-500", texte: `${restantes} places disponibles` };
+  if (restantes === 1) return { classe: "bg-amber-500", texte: "1 place disponible" };
   return { classe: "bg-emerald-600", texte: `${restantes} places disponibles` };
 }
 

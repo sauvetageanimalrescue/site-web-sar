@@ -7,11 +7,12 @@ export const ORGANISATION = {
   nom: "Sauvetage Animal Rescue",
   fondation: 2010,
   adresse: {
-    rue: "2180, rue Sainte-Catherine Ouest",
+    bureau: "159-925",
+    rue: "Boulevard de Maisonneuve Ouest",
     ville: "Montréal",
     province: "Québec",
     pays: "Canada",
-    codePostal: "H3H 1M7",
+    codePostal: "H3A 0A5",
   },
   telephones: {
     signalement: "514-773-3911",

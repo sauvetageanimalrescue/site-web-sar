@@ -57,6 +57,39 @@ function ColonneMenu({ cles }: { cles: string[] }) {
   );
 }
 
+function LiensUtiles() {
+  const t = useTranslations("nav");
+  return (
+    <div>
+      <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime">
+        {t("liens")}
+      </p>
+      <ul className="mt-3 space-y-2 text-sm">
+        <li>
+          <a
+            href="https://animalerte.ca"
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-white"
+          >
+            {t("animAlerte")}
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.spca.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-white"
+          >
+            {t("spcaMontreal")}
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 export function PiedSite() {
   const t = useTranslations("nav");
   const p = useTranslations("pied");
@@ -109,7 +142,10 @@ export function PiedSite() {
               équilibrer la hauteur des deux colonnes. */}
           <div className="grid grid-cols-2 gap-8 lg:col-span-2">
             <ColonneMenu cles={["organisation", "contribuer", "formations", "fiches"]} />
-            <ColonneMenu cles={["services", "solutions"]} />
+            <div className="space-y-8">
+              <ColonneMenu cles={["services", "solutions"]} />
+              <LiensUtiles />
+            </div>
           </div>
 
           <div>
@@ -155,9 +191,13 @@ export function PiedSite() {
                   {p("adresse")}
                 </span>
                 <span className="block leading-relaxed">
+                  {adresse.bureau}
+                  <br />
                   {adresse.rue}
                   <br />
-                  {adresse.ville} ({adresse.province}) {adresse.codePostal}
+                  {adresse.ville} ({adresse.province})
+                  <br />
+                  {adresse.codePostal}
                 </span>
               </li>
               <li>
@@ -179,6 +219,26 @@ export function PiedSite() {
                   <IconAlertTriangleFilled className="size-4 shrink-0" aria-hidden />
                   {p("signalerBouton")}
                 </Link>
+              </li>
+              <li className="pt-5">
+                <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime">
+                  {t("connexion")}
+                </p>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>
+                    <span className="text-white/50">{t("espaceMembre")}</span>
+                  </li>
+                  <li>
+                    <a
+                      href="https://sar-intranet.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="transition hover:text-white"
+                    >
+                      {t("connexionIntervenant")}
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

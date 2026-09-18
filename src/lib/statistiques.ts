@@ -25,6 +25,7 @@ export type Statistiques = CompteurPeriodes & {
   // mission compte dès qu'une équipe s'est rendue sur les lieux, prise en
   // charge de l'animal ou non.
   deplacements: CompteurPeriodes;
+  especes?: { code: string; sauves: number }[];
   familles: { famille: string; sauves: number }[];
   mensuel: { mois: string; sauves: number }[];
   genere_a: string;

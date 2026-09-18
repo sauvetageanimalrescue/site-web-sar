@@ -29,6 +29,12 @@ export default async function PageStatistiques({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "statistiques" });
   const stats = await lireStatistiques();
+  const ratonsDirect = stats?.especes?.find((espece) => espece.code === "204")?.sauves ?? 0;
+  const parEspece = PAR_ESPECE.map((espece) =>
+    espece.libelle === "Raton laveur"
+      ? { ...espece, valeur: espece.valeur + ratonsDirect }
+      : espece,
+  );
 
   return (
     <>
@@ -46,14 +52,20 @@ export default async function PageStatistiques({
       {/* Les quatre chiffres qui résument l'année. */}
       <Section titre={t("anneeTitre")}>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Chiffre valeur={TOTAL_MISSIONS.toString()} legende={t("chiffreMissions")} />
-          <Chiffre valeur={ANIMAUX.toString()} legende={t("chiffreAnimaux")} />
+          <Chiffre
+            valeur={(stats?.deplacements.annee ?? TOTAL_MISSIONS).toString()}
+            legende={t("chiffreMissions")}
+          />
+          <Chiffre
+            valeur={(stats?.annee ?? ANIMAUX).toString()}
+            legende={t("chiffreAnimaux")}
+          />
           <Chiffre
             valeur={MUNICIPALITES_DESSERVIES.toString()}
             legende={t("chiffreMunicipalites")}
           />
           <Chiffre
-            valeur={PAR_ESPECE[0].valeur.toString()}
+            valeur={parEspece[0].valeur.toString()}
             legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle.toLowerCase() })}
           />
         </div>
@@ -97,7 +109,7 @@ export default async function PageStatistiques({
       <Section titre={t("animauxTitre")} largeur="carte">
         <CarteVues
           vues={[
-            { titre: t("parEspece"), donnees: PAR_ESPECE },
+            { titre: t("parEspece"), donnees: parEspece },
             { titre: t("parEtat"), donnees: PAR_ETAT, couleur: "var(--vert)" },
           ]}
         />

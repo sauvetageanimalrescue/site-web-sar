@@ -492,7 +492,7 @@
     "anneeIntro": "Du premier janvier au vingt et un août deux mille vingt-six. Chaque nombre vient de missions réellement accomplies, consignées une par une.",
     "chiffreMissions": "missions",
     "chiffreAnimaux": "animaux secourus",
-    "chiffreEspece": "missions pour un {espece}",
+      "chiffreEspece": "animaux secourus, {espece}",
     "rythmeTitre": "Les déplacements",
     "deplacementsDirectTitre": "En direct",
     "deplacementsAnnee": "déplacements cette année",

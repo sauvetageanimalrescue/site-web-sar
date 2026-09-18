@@ -492,7 +492,7 @@
     "anneeIntro": "Del 1 de enero al 21 de agosto de 2026. Cada número proviene de intervenciones realmente realizadas, registradas una por una.",
     "chiffreMissions": "intervenciones",
     "chiffreAnimaux": "animales socorridos",
-    "chiffreEspece": "intervenciones por un {espece}",
+      "chiffreEspece": "animales rescatados, {espece}",
     "rythmeTitre": "Los desplazamientos",
     "deplacementsDirectTitre": "En vivo",
     "deplacementsAnnee": "desplazamientos este año",

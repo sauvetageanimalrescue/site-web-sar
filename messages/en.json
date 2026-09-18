@@ -492,7 +492,7 @@
     "anneeIntro": "From 1 January to 21 August 2026. Every number comes from operations actually carried out, recorded one by one.",
     "chiffreMissions": "operations",
     "chiffreAnimaux": "animals assisted",
-    "chiffreEspece": "operations for a {espece}",
+      "chiffreEspece": "animals rescued, {espece}",
     "rythmeTitre": "Call-outs",
     "deplacementsDirectTitre": "Live",
     "deplacementsAnnee": "call-outs this year",

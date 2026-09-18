@@ -57,10 +57,6 @@ export default async function PageStatistiques({
             legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle.toLowerCase() })}
           />
         </div>
-        {/* La provenance des chiffres se lit après eux, discrètement. */}
-        <p className="paragraphe mt-4 text-xs leading-relaxed text-muted">
-          {t("anneeIntro")}
-        </p>
       </Section>
 
       <Section titre={t("rythmeTitre")} fond largeur="carte">

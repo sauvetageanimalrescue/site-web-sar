@@ -1,5 +1,5 @@
--- La définition active doit inclure les déplacements et les espèces depuis
--- le 22 août 2026, en complément du rapport historique du site public.
+-- Chaque carte d'appel vaut un déplacement. Les animaux sont uniquement la
+-- somme du dénombrement adultes + juvéniles, sans dépendre du code de fin.
 create or replace function public.codes_deplacement()
 returns text[]
 language sql
@@ -19,47 +19,36 @@ language sql
 security definer
 set search_path = public
 as $$
-  with reussies as (
+  with cartes as (
     select
-      m.fermee_at at time zone 'America/Toronto' as ferme_local,
+      m.created_at at time zone 'America/Toronto' as cree_local,
       m.espece_code,
-      public.animaux_sauves(m.nb_adultes, m.nb_juveniles, m.nb_deces) as sauves
+      greatest(coalesce(m.nb_adultes, 0), 0) + greatest(coalesce(m.nb_juveniles, 0), 0) as sauves
     from public.missions m
-    where m.statut = 'fermee'
-      and m.fermee_at is not null
-      and m.code_fin = any (public.codes_fin_succes())
-      and (m.fermee_at at time zone 'America/Toronto')::date > date '2026-08-21'
-  ),
-  deplacements as (
-    select m.fermee_at at time zone 'America/Toronto' as ferme_local
-    from public.missions m
-    where m.statut = 'fermee'
-      and m.fermee_at is not null
-      and m.code_fin = any (public.codes_deplacement())
-      and (m.fermee_at at time zone 'America/Toronto')::date > date '2026-08-21'
+    where (m.created_at at time zone 'America/Toronto')::date > date '2026-08-21'
   ),
   maintenant as (
     select now() at time zone 'America/Toronto' as local
   )
   select json_build_object(
-    'jour', (select coalesce(sum(sauves), 0) from reussies, maintenant where ferme_local >= date_trunc('day', local)),
-    'semaine', (select coalesce(sum(sauves), 0) from reussies, maintenant where ferme_local >= date_trunc('week', local)),
-    'mois', (select coalesce(sum(sauves), 0) from reussies, maintenant where ferme_local >= date_trunc('month', local)),
-    'annee', (select coalesce(sum(sauves), 0) from reussies, maintenant where ferme_local >= date_trunc('year', local)),
-    'total', (select coalesce(sum(sauves), 0) from reussies),
-    'missions_annee', (select count(*) from deplacements, maintenant where ferme_local >= date_trunc('year', local)),
+    'jour', (select coalesce(sum(sauves), 0) from cartes, maintenant where cree_local::date = local::date),
+    'semaine', (select coalesce(sum(sauves), 0) from cartes, maintenant where cree_local::date >= date_trunc('week', local)::date),
+    'mois', (select coalesce(sum(sauves), 0) from cartes, maintenant where cree_local::date >= date_trunc('month', local)::date),
+    'annee', (select coalesce(sum(sauves), 0) from cartes, maintenant where cree_local::date >= date_trunc('year', local)::date),
+    'total', (select coalesce(sum(sauves), 0) from cartes),
+    'missions_annee', (select count(*) from cartes, maintenant where cree_local::date >= date_trunc('year', local)::date),
     'deplacements', json_build_object(
-      'jour', (select count(*) from deplacements, maintenant where ferme_local >= date_trunc('day', local)),
-      'semaine', (select count(*) from deplacements, maintenant where ferme_local >= date_trunc('week', local)),
-      'mois', (select count(*) from deplacements, maintenant where ferme_local >= date_trunc('month', local)),
-      'annee', (select count(*) from deplacements, maintenant where ferme_local >= date_trunc('year', local)),
-      'total', (select count(*) from deplacements)
+      'jour', (select count(*) from cartes, maintenant where cree_local::date = local::date),
+      'semaine', (select count(*) from cartes, maintenant where cree_local::date >= date_trunc('week', local)::date),
+      'mois', (select count(*) from cartes, maintenant where cree_local::date >= date_trunc('month', local)::date),
+      'annee', (select count(*) from cartes, maintenant where cree_local::date >= date_trunc('year', local)::date),
+      'total', (select count(*) from cartes)
     ),
     'especes', (
       select coalesce(json_agg(e order by e.sauves desc), '[]'::json)
       from (
         select espece_code as code, sum(sauves)::int as sauves
-        from reussies
+        from cartes
         where espece_code is not null
         group by espece_code
         having sum(sauves) > 0
@@ -71,8 +60,8 @@ as $$
         select
           case when espece_code is null or espece_code !~ '^\\d{3}$' then '000' else left(espece_code, 1) || '00' end as famille,
           sum(sauves)::int as sauves
-        from reussies, maintenant
-        where ferme_local >= date_trunc('year', local)
+        from cartes, maintenant
+        where cree_local::date >= date_trunc('year', local)::date
         group by 1
         having sum(sauves) > 0
       ) f
@@ -80,9 +69,9 @@ as $$
     'mensuel', (
       select coalesce(json_agg(m order by m.mois), '[]'::json)
       from (
-        select to_char(date_trunc('month', ferme_local), 'YYYY-MM') as mois, sum(sauves)::int as sauves
-        from reussies, maintenant
-        where ferme_local >= date_trunc('month', local) - interval '11 months'
+        select to_char(date_trunc('month', cree_local), 'YYYY-MM') as mois, sum(sauves)::int as sauves
+        from cartes, maintenant
+        where cree_local::date >= (date_trunc('month', local) - interval '11 months')::date
         group by 1
       ) m
     ),

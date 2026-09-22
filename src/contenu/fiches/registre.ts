@@ -7,7 +7,7 @@ export const FICHES: Fiche[] = [
     slug: "animal-autoroute",
     categorie: "general",
     urgence: "urgente",
-    image: "/images/fiches-informatives-hydro-quebec.png",
+    image: "/images/fiche-animal-autoroute-ours.jpg",
     especes: [],
   },
   {

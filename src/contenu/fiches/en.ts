@@ -1,6 +1,83 @@
 import type { CatalogueFiches } from "./types";
 
 export const FICHES_EN: CatalogueFiches = {
+  "animal-autoroute": {
+    titre: "Animal on a highway",
+    resume:
+      "An animal on a highway can create a danger for itself, motorists and responders. Learn how to report the situation safely, provide the right information and reach the appropriate resource.",
+    intro: [
+      "An animal seen on a highway or along the roadside may be injured, disoriented or simply trying to cross. In every case, its presence creates a real risk to its safety, to motorists and to the responders called to the scene. The priority is to report the situation without putting yourself at risk. Note the details you can see from a safe location, then contact the resource responsible for the road network. Authorities can assess what measures are needed based on the location, traffic and the animal’s behaviour. Never stop on travel lanes or ramps to approach it.",
+    ],
+    contact: {
+      titre: "Who to contact",
+      texte:
+        "For an animal on a highway or near traffic lanes, call Québec 511.",
+      lignes: [
+        "Ministry of Transport and Sustainable Mobility",
+        "Québec 511: report a dangerous or at-risk situation",
+        "511, option 2",
+        "1-888-355-0511, option 2",
+        "24 hours a day, 7 days a week",
+      ],
+      actions: [
+        { href: "tel:511", libelle: "Call Québec 511", principal: true },
+        { href: "tel:+18883550511", libelle: "1-888-355-0511" },
+        { href: "tel:911", libelle: "Immediate danger: call 911" },
+      ],
+    },
+    faire: [
+      "Provide the highway or road number and the direction of travel.",
+      "Give the exit, kilometre marker or another identifiable landmark.",
+      "Specify whether the animal is in a travel lane, on the shoulder, in the median or along the roadside.",
+      "Describe the type of animal, its approximate size, the number of animals and its apparent condition, without approaching to check.",
+      "Mention the time of the sighting, its direction of travel if it is moving, and any risks you observed for traffic.",
+      "Call 911 when there is immediate danger to people or when vehicles are braking or swerving.",
+    ],
+    eviter: [
+      "Chasing the animal or trying to capture it in traffic.",
+      "Entering traffic lanes, setting up an improvised roadblock or stopping to observe or photograph the animal.",
+      "Going back onto the roadway to complete the report or get a photo.",
+      "Moving an animal that appears dead: do not assume that stillness confirms death.",
+    ],
+    appeler: [
+      "Québec 511 to report an animal on a highway or on a road network managed by the Ministry of Transport and Sustainable Mobility.",
+      "911 if the situation presents an immediate danger to people or traffic.",
+      "Your municipality or local animal services provider for a municipal street when there is no immediate danger.",
+    ],
+    sections: [
+      {
+        titre: "We cannot intervene alone",
+        texte: [
+          "Sauvetage Animal Rescue cannot intervene along a highway without the collaboration or, at a minimum, the authorization of the Ministry of Transport or the Sûreté du Québec. The proximity of traffic requires coordination with authorities before any intervention.",
+          "A request sent to Sauvetage Animal Rescue therefore does not mean that a team can immediately attempt a capture. Authorization or collaboration from authorities does not, by itself, confirm that our team will deploy.",
+        ],
+      },
+      {
+        titre: "Large wildlife, an immobile animal and municipal streets",
+        texte: [
+          "The Government of Québec also recommends calling 511 to report a dangerous or unusual situation involving a deer, moose or other large mammal. While driving, watch the roadside, respect the speed limit and, if a collision is imminent, slow down and brake gradually without sudden manoeuvres.",
+          "If the animal appears dead, report its location and apparent condition without putting yourself at risk to check whether it is breathing. This fact sheet primarily concerns highways and roads under the Ministry’s responsibility. On a municipal street, the appropriate resource may be different; check with the municipality or the local animal services provider.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        libelle: "Ministry of Transport contact information and reports",
+        href: "https://www.quebec.ca/gouvernement/ministeres-organismes/transports/coordonnees-structure/generales",
+      },
+      {
+        libelle: "Driving in the presence of large wildlife",
+        href: "https://www.quebec.ca/transports/circulation-securite-routiere/regles-conseils-vehicules/presence-grande-faune",
+      },
+      {
+        libelle: "Restrictions on stopping a vehicle on a public road",
+        href: "https://www.quebec.ca/transports/circulation-securite-routiere/regles-conseils-vehicules/arreter-vehicule-chemin-public",
+      },
+    ],
+    question: "Who should I call about an animal on a highway?",
+    reponse:
+      "Call Québec 511, option 2, to report the situation on the road network. If there is immediate danger to people or traffic, call 911. Do not try to capture the animal or stop on traffic lanes.",
+  },
   "chat-dans-un-arbre": {
     titre: "A cat is stuck up a tree",
     resume:

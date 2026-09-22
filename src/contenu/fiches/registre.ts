@@ -4,6 +4,13 @@ import type { Fiche } from "./types";
 // en premier: ce sont celles qui remplissent la ligne de signalement.
 export const FICHES: Fiche[] = [
   {
+    slug: "animal-autoroute",
+    categorie: "general",
+    urgence: "urgente",
+    image: "/images/fiches-informatives-hydro-quebec.png",
+    especes: [],
+  },
+  {
     slug: "chat-dans-un-arbre",
     categorie: "domestique",
     urgence: "moderee",

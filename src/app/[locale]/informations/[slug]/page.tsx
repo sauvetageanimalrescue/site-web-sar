@@ -86,6 +86,30 @@ export default async function PageFiche({
               </p>
             ))}
 
+            {texte.contact && (
+              <div className="mt-8 rounded-xl border border-urgence/30 bg-urgence-doux p-5">
+                <p className="font-[family-name:var(--font-titre)] text-lg font-bold uppercase tracking-wide text-urgence">
+                  {texte.contact.titre}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {texte.contact.actions.map((action) => (
+                    <a
+                      key={action.href}
+                      href={action.href}
+                      className={
+                        action.principal
+                          ? "flex items-center gap-2 rounded-md bg-urgence px-5 py-3 font-semibold text-white transition hover:bg-urgence/90"
+                          : "rounded-md border border-urgence px-5 py-3 font-semibold text-urgence transition hover:bg-urgence hover:text-white"
+                      }
+                    >
+                      {action.principal && <IconPhoneFilled className="size-5" aria-hidden />}
+                      {action.libelle}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <h2 className="mt-10 flex items-center gap-2 font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-vert">
               <IconCircleCheckFilled className="size-6" aria-hidden />
               {t("faire")}
@@ -146,10 +170,15 @@ export default async function PageFiche({
 
           <section className="max-w-3xl border-t border-border pt-10">
             <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-urgence">
-              {t("appeler")}
+              {texte.contact?.titre ?? t("appeler")}
             </h2>
+            {texte.contact?.texte && (
+              <p className="mt-4 text-lg leading-relaxed text-foreground/90">
+                {texte.contact.texte}
+              </p>
+            )}
             <ul className="mt-4 space-y-2.5">
-              {texte.appeler.map((item) => (
+              {(texte.contact?.lignes ?? texte.appeler).map((item) => (
                 <li key={item} className="flex gap-3 text-foreground/90">
                   <span
                     className="mt-2 size-2 shrink-0 rounded-full bg-urgence"
@@ -160,21 +189,62 @@ export default async function PageFiche({
               ))}
             </ul>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href={lienTelephone(ORGANISATION.telephones.signalement)}
-                className="flex items-center gap-2 rounded-md bg-urgence px-6 py-3.5 font-semibold text-white transition hover:bg-urgence/90"
-              >
-                <IconPhoneFilled className="size-5" aria-hidden />
-                {ORGANISATION.telephones.signalement}
-              </a>
-              <Link
-                href="/signalement"
-                className="rounded-md border border-urgence px-6 py-3.5 font-semibold text-urgence transition hover:bg-urgence hover:text-white"
-              >
-                {t("ctaAction")}
-              </Link>
+              {texte.contact ? (
+                texte.contact.actions.map((action) => (
+                  <a
+                    key={action.href}
+                    href={action.href}
+                    className={
+                      action.principal
+                        ? "flex items-center gap-2 rounded-md bg-urgence px-6 py-3.5 font-semibold text-white transition hover:bg-urgence/90"
+                        : "rounded-md border border-urgence px-6 py-3.5 font-semibold text-urgence transition hover:bg-urgence hover:text-white"
+                    }
+                  >
+                    {action.principal && <IconPhoneFilled className="size-5" aria-hidden />}
+                    {action.libelle}
+                  </a>
+                ))
+              ) : (
+                <>
+                  <a
+                    href={lienTelephone(ORGANISATION.telephones.signalement)}
+                    className="flex items-center gap-2 rounded-md bg-urgence px-6 py-3.5 font-semibold text-white transition hover:bg-urgence/90"
+                  >
+                    <IconPhoneFilled className="size-5" aria-hidden />
+                    {ORGANISATION.telephones.signalement}
+                  </a>
+                  <Link
+                    href="/signalement"
+                    className="rounded-md border border-urgence px-6 py-3.5 font-semibold text-urgence transition hover:bg-urgence hover:text-white"
+                  >
+                    {t("ctaAction")}
+                  </Link>
+                </>
+              )}
             </div>
           </section>
+
+          {texte.sources && (
+            <section className="max-w-3xl border-t border-border pt-10">
+              <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">
+                {t("sources")}
+              </h2>
+              <ul className="mt-4 space-y-3">
+                {texte.sources.map((source) => (
+                  <li key={source.href}>
+                    <a
+                      href={source.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-semibold text-ciel underline-offset-4 hover:underline"
+                    >
+                      {source.libelle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section>
             <h2 className="font-[family-name:var(--font-titre)] text-2xl font-bold uppercase tracking-wide text-marine">

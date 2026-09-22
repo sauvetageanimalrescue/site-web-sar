@@ -28,6 +28,15 @@ export type TexteFiche = {
   eviter: string[];
   appeler: string[];
   sections?: { titre: string; texte: string[] }[];
+  // Certaines situations ont une ressource principale autre que SAR. Ce bloc
+  // rend la bonne porte visible avant le reste de la fiche.
+  contact?: {
+    titre: string;
+    texte?: string;
+    lignes: string[];
+    actions: { href: string; libelle: string; principal?: boolean }[];
+  };
+  sources?: { libelle: string; href: string }[];
   // Question et réponse reprises telles quelles dans les données structurées
   // FAQ, ce qui donne droit à un extrait enrichi dans les résultats.
   question: string;

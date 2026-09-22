@@ -1,6 +1,84 @@
 import type { CatalogueFiches } from "./types";
 
 export const FICHES_FR: CatalogueFiches = {
+  "animal-autoroute": {
+    titre: "Animal sur une autoroute: qui contacter?",
+    resume:
+      "Québec 511 est la ressource à joindre pour signaler un animal sur une autoroute ou en bordure des voies.",
+    intro: [
+      "Un animal aperçu sur une autoroute ou en bordure des voies peut se trouver en détresse et présenter un risque pour la circulation. Le signalement doit permettre aux autorités de localiser la situation et d’en évaluer les risques.",
+      "Communiquez avec Québec 511, le service du ministère des Transports et de la Mobilité durable qui reçoit les signalements sur le réseau routier. En cas de danger immédiat pour les personnes ou la circulation, appelez le 911.",
+    ],
+    contact: {
+      titre: "La ressource à contacter",
+      texte:
+        "Pour un animal sur une autoroute ou près des voies, privilégiez l’appel téléphonique à Québec 511.",
+      lignes: [
+        "Ministère des Transports et de la Mobilité durable du Québec",
+        "Québec 511: signalement d’une situation dangereuse ou à risque",
+        "511, option 2",
+        "1-888-355-0511, option 2",
+        "24 h sur 24, 7 jours sur 7",
+      ],
+      actions: [
+        { href: "tel:511", libelle: "Appeler Québec 511", principal: true },
+        { href: "tel:+18883550511", libelle: "1-888-355-0511" },
+        { href: "tel:911", libelle: "Danger immédiat: appeler le 911" },
+      ],
+    },
+    faire: [
+      "Indiquez le numéro de l’autoroute ou de la route ainsi que le sens de circulation.",
+      "Donnez la sortie, la borne kilométrique ou un autre repère identifiable.",
+      "Précisez si l’animal est dans une voie, sur l’accotement, dans le terre-plein ou en bordure.",
+      "Décrivez le type d’animal, sa taille approximative, le nombre d’animaux et son état apparent, sans vous approcher pour le vérifier.",
+      "Mentionnez l’heure de l’observation, sa direction s’il se déplace et les risques constatés pour la circulation.",
+      "Appelez le 911 lorsqu’il y a un danger immédiat pour les personnes ou que des véhicules freinent ou font des écarts.",
+    ],
+    eviter: [
+      "Poursuivre l’animal ou tenter de le capturer dans la circulation.",
+      "Entrer sur les voies, improviser un barrage ou vous arrêter pour observer ou photographier l’animal.",
+      "Retourner sur les voies pour compléter le signalement ou obtenir une photo.",
+      "Déplacer un animal qui semble décédé: ne présumez pas que son immobilité confirme le décès.",
+    ],
+    appeler: [
+      "Québec 511 pour un signalement sur une autoroute ou le réseau relevant du ministère des Transports et de la Mobilité durable.",
+      "Le 911 si la situation présente un danger immédiat pour les personnes ou la circulation.",
+      "Votre municipalité ou le service animalier local pour une rue municipale, lorsque la situation ne présente pas de danger immédiat.",
+    ],
+    sections: [
+      {
+        titre: "Pourquoi Sauvetage Animal Rescue ne peut pas intervenir seul",
+        texte: [
+          "Sauvetage Animal Rescue ne peut intervenir en bordure d’une autoroute sans la collaboration ou, à tout le moins, l’autorisation du ministère des Transports ou de la Sûreté du Québec. La proximité des véhicules exige une coordination avec les autorités avant toute intervention.",
+          "Une demande transmise à Sauvetage Animal Rescue ne signifie donc pas qu’une équipe peut procéder immédiatement à une capture. L’autorisation ou la collaboration des autorités ne constitue pas, à elle seule, une confirmation de déploiement de notre équipe.",
+        ],
+      },
+      {
+        titre: "Grande faune, animal immobile et rues municipales",
+        texte: [
+          "Le gouvernement du Québec recommande aussi le 511 pour signaler une situation dangereuse ou inhabituelle impliquant un cerf, un orignal ou un autre grand mammifère. En conduisant, surveillez les abords de la route, respectez la vitesse permise et, lorsqu’une collision est imminente, ralentissez et freinez progressivement sans manœuvre brusque.",
+          "Si l’animal semble décédé, signalez son emplacement et son état apparent sans vous exposer pour vérifier s’il respire. Cette fiche concerne d’abord les autoroutes et le réseau relevant du ministère. Sur une rue municipale, la ressource peut être différente; vérifiez auprès de la municipalité ou du service animalier local.",
+        ],
+      },
+    ],
+    sources: [
+      {
+        libelle: "Coordonnées et signalements au ministère des Transports",
+        href: "https://www.quebec.ca/gouvernement/ministeres-organismes/transports/coordonnees-structure/generales",
+      },
+      {
+        libelle: "Circuler en présence de la grande faune",
+        href: "https://www.quebec.ca/transports/circulation-securite-routiere/regles-conseils-vehicules/presence-grande-faune",
+      },
+      {
+        libelle: "Restrictions pour arrêter un véhicule sur un chemin public",
+        href: "https://www.quebec.ca/transports/circulation-securite-routiere/regles-conseils-vehicules/arreter-vehicule-chemin-public",
+      },
+    ],
+    question: "Qui appeler pour un animal sur une autoroute?",
+    reponse:
+      "Appelez Québec 511, option 2, afin de signaler la situation sur le réseau routier. En cas de danger immédiat pour les personnes ou la circulation, appelez le 911. Ne tentez pas de capturer l’animal ni de vous arrêter sur les voies.",
+  },
   "chat-dans-un-arbre": {
     titre: "Un chat est coincé dans un arbre",
     resume:

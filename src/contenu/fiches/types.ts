@@ -17,6 +17,9 @@ export type Fiche = {
   categorie: CategorieFiche;
   urgence: Urgence;
   image: string;
+  // Photos qui ponctuent une fiche éditoriale, dans l'ordre de lecture après
+  // l'introduction, puis entre les grands blocs de texte.
+  illustrations?: string[];
   especes: string[];
 };
 

@@ -6,8 +6,7 @@ export const FICHES_FR: CatalogueFiches = {
     resume:
       "Un animal sur une autoroute peut créer un danger pour lui-même, les automobilistes et les intervenants. Apprenez à signaler la situation de façon sécuritaire, à transmettre les bonnes informations et à joindre la ressource appropriée.",
     intro: [
-      "Un animal aperçu sur une autoroute ou en bordure des voies peut se trouver en détresse et présenter un risque pour la circulation. Le signalement doit permettre aux autorités de localiser la situation et d’en évaluer les risques.",
-      "Communiquez avec Québec 511, le service du ministère des Transports et de la Mobilité durable qui reçoit les signalements sur le réseau routier. En cas de danger immédiat pour les personnes ou la circulation, appelez le 911.",
+      "Un animal aperçu sur une autoroute ou en bordure des voies peut être blessé, désorienté ou simplement tenter de traverser. Dans tous les cas, sa présence crée un risque réel pour sa sécurité, celle des automobilistes et celle des intervenants appelés sur place. La priorité est de signaler la situation sans vous exposer. Notez les renseignements visibles depuis un endroit sûr, puis communiquez avec la ressource responsable du réseau routier. Les autorités pourront évaluer les mesures nécessaires selon l’emplacement, la circulation et le comportement de l’animal. Ne vous arrêtez jamais sur les voies ou leurs bretelles pour vous en approcher.",
     ],
     contact: {
       titre: "La ressource à contacter",

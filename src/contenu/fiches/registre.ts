@@ -8,6 +8,12 @@ export const FICHES: Fiche[] = [
     categorie: "general",
     urgence: "urgente",
     image: "/images/fiche-animal-autoroute-ours.jpg",
+    illustrations: [
+      "/images/fiche-animal-autoroute-chevreuil.jpg",
+      "/images/fiche-animal-autoroute-raton.jpg",
+      "/images/fiche-animal-autoroute-bordure.jpg",
+      "/images/fiche-animal-autoroute-ville.jpg",
+    ],
     especes: [],
   },
   {

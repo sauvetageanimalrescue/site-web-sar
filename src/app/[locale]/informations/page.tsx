@@ -29,8 +29,8 @@ export default async function PageFiches({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
-        image="/images/formations.jpg"
-        imageTailleNaturelle={{ largeur: 2000, hauteur: 1125 }}
+        image="/images/fiches-informatives-hydro-quebec.png"
+        imageTailleNaturelle={{ largeur: 1200, hauteur: 600 }}
       />
 
       <Section>

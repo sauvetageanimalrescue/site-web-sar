@@ -18,8 +18,8 @@ export const REFUGES: Refuge[] = [
   { nom: "Le Nichoir", adresse: "637 rue Main, Hudson (Québec) J0P 1H0", telephone: "450-458-2809", latitude: 45.466015, longitude: -74.160050, rive: "nord" },
 ];
 
-export const ESPECES_75_KM = ["raton", "moufette", "renard", "coyote", "canide", "cerf"] as const;
-export const ESPECES_INTERDITES = ["raton", "moufette", "renard", "coyote"] as const;
+export const ESPECES_75_KM = ["raton", "moufette", "renardRoux", "renardGris", "coyote", "cerf"] as const;
+export const ESPECES_INTERDITES = ["raton", "moufette", "renardRoux", "renardGris", "coyote"] as const;
 
 export function distanceKm(a: { latitude: number; longitude: number }, b: { latitude: number; longitude: number }) {
   const rad = Math.PI / 180;

@@ -11,6 +11,6 @@ export default async function PageLocalisateurRefuges({ params }: { params: Prom
     <Section titre={t("commentTitre")} largeur="carte">
       <p className="paragraphe text-lg leading-relaxed text-foreground/90">{t("commentTexte")}</p>
     </Section>
-    <Section fond titre={t("rechercherTitre")} largeur="carte"><LocalisateurRefuges /></Section>
+    <Section fond titre={t("rechercherTitre")} largeur="carte"><LocalisateurRefuges cleGoogle={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY} /></Section>
   </>;
 }

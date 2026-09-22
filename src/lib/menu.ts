@@ -85,15 +85,12 @@ export const MENU: SectionMenu[] = [
     ],
   },
   {
-    // Deux familles de contenu, pas quatre : les fiches d'urgence (quoi
-    // faire, quoi éviter, qui appeler) existent déjà sur /informations.
-    // Les fiches informatives (la rage, l'Halloween, la micropuce...) sont
-    // un format plus libre, pas encore construit.
+    // La page regroupe les fiches sous forme de sujets consultables. Les
+    // nouvelles fiches informatives et les fiches d'urgence y vivent au même
+    // endroit, sans détour par un deuxième niveau de menu.
     cle: "fiches",
-    liens: [
-      { cle: "estCeUneUrgence", href: "/informations" },
-      { cle: "ficheInformative" },
-    ],
+    href: "/informations",
+    liens: [],
   },
 ];
 

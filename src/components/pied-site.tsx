@@ -31,7 +31,25 @@ function ColonneMenu({ cles }: { cles: string[] }) {
     <div className="space-y-8">
       {cles.map((cle) => {
         const section = MENU.find((s) => s.cle === cle);
-        if (!section || section.liens.length === 0) return null;
+        if (!section) return null;
+
+        // Certaines sections, comme Informations, sont une porte directe
+        // vers leur index plutôt qu'un sous-menu. Leur titre reste cliquable
+        // dans le pied de page afin de ne pas les faire disparaître ici.
+        if (section.href) {
+          return (
+            <div key={section.cle}>
+              <Link
+                href={section.href}
+                className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime transition hover:text-white"
+              >
+                {t(section.cle)}
+              </Link>
+            </div>
+          );
+        }
+
+        if (section.liens.length === 0) return null;
         return (
           <div key={section.cle}>
             <p className="font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-lime">

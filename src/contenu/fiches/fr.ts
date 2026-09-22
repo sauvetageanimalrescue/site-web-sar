@@ -46,7 +46,7 @@ export const FICHES_FR: CatalogueFiches = {
     ],
     sections: [
       {
-        titre: "Pourquoi Sauvetage Animal Rescue ne peut pas intervenir seul",
+        titre: "Nous ne pouvons intervenir seuls",
         texte: [
           "Sauvetage Animal Rescue ne peut intervenir en bordure d’une autoroute sans la collaboration ou, à tout le moins, l’autorisation du ministère des Transports ou de la Sûreté du Québec. La proximité des véhicules exige une coordination avec les autorités avant toute intervention.",
           "Une demande transmise à Sauvetage Animal Rescue ne signifie donc pas qu’une équipe peut procéder immédiatement à une capture. L’autorisation ou la collaboration des autorités ne constitue pas, à elle seule, une confirmation de déploiement de notre équipe.",

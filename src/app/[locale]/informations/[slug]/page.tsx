@@ -59,7 +59,7 @@ export default async function PageFiche({
       />
 
       <EnTetePage
-        surtitre={t(`categories.${fiche.categorie}`)}
+        surtitre={t("fiche")}
         titre={texte.titre}
         intro={texte.resume}
         image={fiche.image}

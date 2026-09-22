@@ -2,9 +2,9 @@ import type { CatalogueFiches } from "./types";
 
 export const FICHES_FR: CatalogueFiches = {
   "animal-autoroute": {
-    titre: "Animal sur une autoroute: qui contacter?",
+    titre: "Animal sur une autoroute",
     resume:
-      "Québec 511 est la ressource à joindre pour signaler un animal sur une autoroute ou en bordure des voies.",
+      "Un animal sur une autoroute peut créer un danger pour lui-même, les automobilistes et les intervenants. Apprenez à signaler la situation de façon sécuritaire, à transmettre les bonnes informations et à joindre la ressource appropriée.",
     intro: [
       "Un animal aperçu sur une autoroute ou en bordure des voies peut se trouver en détresse et présenter un risque pour la circulation. Le signalement doit permettre aux autorités de localiser la situation et d’en évaluer les risques.",
       "Communiquez avec Québec 511, le service du ministère des Transports et de la Mobilité durable qui reçoit les signalements sur le réseau routier. En cas de danger immédiat pour les personnes ou la circulation, appelez le 911.",

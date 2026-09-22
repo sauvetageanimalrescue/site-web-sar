@@ -159,7 +159,7 @@ export function EnteteSite() {
       >
         <div className="mx-auto flex max-w-7xl items-center gap-1 px-4">
           {MENU.map((section) =>
-            section.href ? (
+            section.href && section.liens.length === 0 ? (
               <Link
                 key={section.cle}
                 href={section.href}
@@ -176,19 +176,45 @@ export function EnteteSite() {
               onMouseEnter={() => setSectionOuverte(section.cle)}
               onMouseLeave={() => setSectionOuverte(null)}
             >
-              <button
-                type="button"
-                aria-expanded={sectionOuverte === section.cle}
-                onClick={() =>
-                  setSectionOuverte(
-                    sectionOuverte === section.cle ? null : section.cle,
-                  )
-                }
-                className="flex items-center gap-1 rounded-md px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-surface"
-              >
-                {t(section.cle)}
-                <IconChevronDown className="size-4 text-muted" aria-hidden />
-              </button>
+              <div className="flex items-center rounded-md transition hover:bg-surface">
+                {section.href ? (
+                  <Link
+                    href={section.href}
+                    className={`px-3 py-2.5 text-sm font-medium transition ${
+                      actif(section.href) ? "text-marine" : "text-foreground"
+                    }`}
+                    onClick={() => setSectionOuverte(null)}
+                  >
+                    {t(section.cle)}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    aria-expanded={sectionOuverte === section.cle}
+                    onClick={() =>
+                      setSectionOuverte(
+                        sectionOuverte === section.cle ? null : section.cle,
+                      )
+                    }
+                    className="px-3 py-2.5 text-sm font-medium text-foreground"
+                  >
+                    {t(section.cle)}
+                  </button>
+                )}
+                <button
+                  type="button"
+                  aria-label={t(section.cle)}
+                  aria-expanded={sectionOuverte === section.cle}
+                  onClick={() =>
+                    setSectionOuverte(
+                      sectionOuverte === section.cle ? null : section.cle,
+                    )
+                  }
+                  className="-ml-2 p-2.5 text-muted"
+                >
+                  <IconChevronDown className="size-4" aria-hidden />
+                </button>
+              </div>
               {sectionOuverte === section.cle && (
                 <div className="absolute left-0 top-full w-64 rounded-lg border border-border bg-surface p-2 shadow-lg">
                   {section.liens.map((lien) => (
@@ -234,20 +260,38 @@ export function EnteteSite() {
               const ouverte = sectionMobileOuverte === section.cle;
               return (
                 <div key={section.cle} className="border-t border-border py-2">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setSectionMobileOuverte(ouverte ? null : section.cle)
-                    }
-                    aria-expanded={ouverte}
-                    className="flex w-full items-center justify-between px-1 py-1 text-left font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-ciel"
-                  >
-                    {t(section.cle)}
-                    <IconChevronDown
-                      className={`size-4 shrink-0 transition ${ouverte ? "rotate-180" : ""}`}
-                      aria-hidden
-                    />
-                  </button>
+                  <div className="flex items-center justify-between">
+                    {section.href ? (
+                      <Link
+                        href={section.href}
+                        onClick={() => setMobileOuvert(false)}
+                        className="px-1 py-1 font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-ciel"
+                      >
+                        {t(section.cle)}
+                      </Link>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setSectionMobileOuverte(ouverte ? null : section.cle)}
+                        aria-expanded={ouverte}
+                        className="px-1 py-1 text-left font-[family-name:var(--font-titre)] text-sm font-semibold uppercase tracking-wider text-ciel"
+                      >
+                        {t(section.cle)}
+                      </button>
+                    )}
+                    <button
+                      type="button"
+                      aria-label={t(section.cle)}
+                      onClick={() => setSectionMobileOuverte(ouverte ? null : section.cle)}
+                      aria-expanded={ouverte}
+                      className="p-1 text-ciel"
+                    >
+                      <IconChevronDown
+                        className={`size-4 shrink-0 transition ${ouverte ? "rotate-180" : ""}`}
+                        aria-hidden
+                      />
+                    </button>
+                  </div>
                   {ouverte && (
                     <div className="mt-1">
                       {section.liens.map((lien) => (

@@ -90,7 +90,9 @@ export const MENU: SectionMenu[] = [
     // endroit, sans détour par un deuxième niveau de menu.
     cle: "fiches",
     href: "/informations",
-    liens: [],
+    liens: [
+      { cle: "animalAutoroute", href: "/informations/animal-autoroute" },
+    ],
   },
 ];
 

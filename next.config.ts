@@ -6,6 +6,8 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   experimental: {
+    // Limite les processus de génération statique sur le poste de travail.
+    cpus: 2,
     // Une photo récente dépasse souvent la limite par défaut d'une Server
     // Action, qui est de 1 Mo.
     serverActions: { bodySizeLimit: "4mb" },

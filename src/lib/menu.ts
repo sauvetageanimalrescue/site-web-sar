@@ -25,7 +25,7 @@ export const MENU: SectionMenu[] = [
       { cle: "serie", href: "/serie-televisee" },
       { cle: "medias", href: "/medias" },
       { cle: "faq", href: "/foire-aux-questions" },
-      { cle: "localisateurRefuges" },
+      { cle: "localisateurRefuges", href: "/localisateur-refuges" },
     ],
   },
   {

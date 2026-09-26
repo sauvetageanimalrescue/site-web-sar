@@ -84,6 +84,7 @@
   },
   "compteur": {
     "titre": "Animaux secourus",
+    "deplacements": "Déplacements",
     "sousTitre": "Statistiques en direct",
     "jour": "Aujourd'hui",
     "semaine": "Cette semaine",
@@ -487,7 +488,7 @@
   "statistiques": {
     "titre": "Statistiques de sauvetage",
     "surtitre": "Registre opérationnel",
-    "intro": "Ces chiffres ne sont pas saisis à la main. Ils sont calculés directement à partir du registre des missions, à partir des interventions fermées avec un dénouement favorable pour l'animal.",
+    "intro": "Ces chiffres ne sont pas saisis à la main. Les déplacements proviennent des cartes d'appel et les animaux secourus, de leur dénombrement, quelle que soit l'issue de l'intervention.",
     "methodeTitre": "Comment nous comptons",
     "methodeTexte": "Une mission est comptée dès qu'une équipe se déplace pour porter secours à un animal, quelle que soit l'issue. Un sauvetage, une capture ou un transport vers un refuge comptent chacun pour une mission: dans chaque cas, du temps et des ressources ont été engagés pour cet animal. Le nombre d'animaux additionne les adultes et les juvéniles consignés à chaque mission.",
     "vide": "Les statistiques ne sont pas disponibles pour le moment.",
@@ -496,7 +497,21 @@
     "anneeIntro": "Du premier janvier au vingt et un août deux mille vingt-six. Chaque nombre vient de missions réellement accomplies, consignées une par une.",
     "chiffreMissions": "missions",
     "chiffreAnimaux": "animaux secourus",
-      "chiffreEspece": "animaux secourus, {espece}",
+    "chiffreEspeceGenerique": "animaux de l'espèce {espece}",
+    "especesPluriel": {
+      "204": "ratons laveurs",
+      "101": "chats",
+      "205": "moufettes",
+      "302": "bernaches",
+      "301": "canards",
+      "399": "oiseaux sauvages",
+      "201": "écureuils",
+      "305": "goélands",
+      "309": "pigeons",
+      "206": "marmottes",
+      "207": "lapins à queue blanche",
+      "212": "renards roux"
+    },
     "rythmeTitre": "Les déplacements",
     "deplacementsDirectTitre": "En direct",
     "deplacementsAnnee": "déplacements cette année",
@@ -517,7 +532,7 @@
     "chiffreMunicipalites": "municipalités desservies",
     "precedent": "Vue précédente",
     "suivant": "Vue suivante",
-    "uniteBarres": "Tous les graphiques de cette page comptent des déplacements, jamais des animaux. Une mission auprès de trois canetons compte pour un déplacement."
+    "uniteBarres": "Les graphiques de répartition des appels comptent des déplacements. Le nombre d'animaux secourus additionne les adultes et les juvéniles consignés sur chaque carte d'appel."
   },
   "signalement": {
     "titre": "Signaler un animal en détresse",

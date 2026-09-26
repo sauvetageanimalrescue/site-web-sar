@@ -5,7 +5,11 @@ import { Link } from "@/i18n/navigation";
 import { Declaration } from "@/components/ui";
 import { CarteImage, GrilleCartes } from "@/components/cartes";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
+import { StatistiquesDirect } from "@/components/statistiques-direct";
 import { lireStatistiques } from "@/lib/statistiques";
+
+// Le compteur ne doit jamais rester figé sur la photographie d'un déploiement.
+export const dynamic = "force-dynamic";
 
 // Deux rangées de quatre, séparées par une déclaration. La première regroupe
 // les gestes que le visiteur peut poser tout de suite, la seconde ce que
@@ -145,7 +149,9 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
       {/* Le compteur ferme la page : après l'argument du financement, il en
           apporte la preuve chiffrée. Le fil des interventions vit désormais
           uniquement sur la page des statistiques. */}
-      <CompteurSauvetages initiales={stats} />
+      <StatistiquesDirect initiales={stats}>
+        <CompteurSauvetages />
+      </StatistiquesDirect>
     </>
   );
 }

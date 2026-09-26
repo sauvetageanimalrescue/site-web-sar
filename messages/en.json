@@ -84,6 +84,7 @@
   },
   "compteur": {
     "titre": "Animals assisted",
+    "deplacements": "Call-outs",
     "sousTitre": "Live statistics",
     "jour": "Today",
     "semaine": "This week",
@@ -487,7 +488,7 @@
   "statistiques": {
     "titre": "Rescue statistics",
     "surtitre": "Operational registry",
-    "intro": "These figures are not entered by hand. They are computed straight from our mission registry, from calls closed with a favourable outcome for the animal.",
+    "intro": "These figures are not entered by hand. Call-outs come from call records, and animals assisted from their animal counts, regardless of the outcome.",
     "methodeTitre": "How we count",
     "methodeTexte": "An operation is counted as soon as a team travels to help an animal, whatever the outcome. A rescue, a capture or a transport to a shelter each count as one operation: in every case, time and resources were committed for that animal. The animal figure adds up the adults and juveniles recorded for each operation.",
     "vide": "Statistics are unavailable at the moment.",
@@ -496,7 +497,21 @@
     "anneeIntro": "From 1 January to 21 August 2026. Every number comes from operations actually carried out, recorded one by one.",
     "chiffreMissions": "operations",
     "chiffreAnimaux": "animals assisted",
-      "chiffreEspece": "animals rescued, {espece}",
+    "chiffreEspeceGenerique": "animals of the species {espece}",
+    "especesPluriel": {
+      "204": "raccoons",
+      "101": "cats",
+      "205": "skunks",
+      "302": "Canada geese",
+      "301": "ducks",
+      "399": "wild birds",
+      "201": "squirrels",
+      "305": "gulls",
+      "309": "pigeons",
+      "206": "groundhogs",
+      "207": "cottontail rabbits",
+      "212": "red foxes"
+    },
     "rythmeTitre": "Call-outs",
     "deplacementsDirectTitre": "Live",
     "deplacementsAnnee": "call-outs this year",
@@ -517,7 +532,7 @@
     "chiffreMunicipalites": "municipalities served",
     "precedent": "Previous view",
     "suivant": "Next view",
-    "uniteBarres": "Every chart on this page counts call-outs, never animals. One operation for three ducklings counts as one call-out."
+    "uniteBarres": "The call distribution charts count call-outs. The animals assisted figure adds up the adults and juveniles recorded for each call."
   },
   "signalement": {
     "titre": "Report an animal in distress",

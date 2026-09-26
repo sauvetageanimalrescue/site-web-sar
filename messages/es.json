@@ -84,6 +84,7 @@
   },
   "compteur": {
     "titre": "Animales socorridos",
+    "deplacements": "Desplazamientos",
     "sousTitre": "Estadísticas en directo",
     "jour": "Hoy",
     "semaine": "Esta semana",
@@ -487,7 +488,7 @@
   "statistiques": {
     "titre": "Estadísticas de rescate",
     "surtitre": "Registro operativo",
-    "intro": "Estas cifras no se introducen a mano. Se calculan directamente a partir de nuestro registro de misiones, con las intervenciones cerradas con un desenlace favorable para el animal.",
+    "intro": "Estas cifras no se introducen a mano. Los desplazamientos provienen de las fichas de intervención y los animales socorridos, de sus recuentos, sea cual sea el desenlace.",
     "methodeTitre": "Cómo contamos",
     "methodeTexte": "Una intervención se cuenta desde el momento en que un equipo se desplaza para socorrer a un animal, sea cual sea el desenlace. Un rescate, una captura o un transporte a un refugio cuentan cada uno como una intervención: en cada caso se comprometieron tiempo y recursos por ese animal. La cifra de animales suma los adultos y juveniles registrados en cada intervención.",
     "vide": "Las estadísticas no están disponibles por el momento.",
@@ -496,7 +497,21 @@
     "anneeIntro": "Del 1 de enero al 21 de agosto de 2026. Cada número proviene de intervenciones realmente realizadas, registradas una por una.",
     "chiffreMissions": "intervenciones",
     "chiffreAnimaux": "animales socorridos",
-      "chiffreEspece": "animales rescatados, {espece}",
+    "chiffreEspeceGenerique": "animales de la especie {espece}",
+    "especesPluriel": {
+      "204": "mapaches",
+      "101": "gatos",
+      "205": "mofetas",
+      "302": "barnaclas canadienses",
+      "301": "patos",
+      "399": "aves silvestres",
+      "201": "ardillas",
+      "305": "gaviotas",
+      "309": "palomas",
+      "206": "marmotas",
+      "207": "conejos de cola blanca",
+      "212": "zorros rojos"
+    },
     "rythmeTitre": "Los desplazamientos",
     "deplacementsDirectTitre": "En vivo",
     "deplacementsAnnee": "desplazamientos este año",
@@ -517,7 +532,7 @@
     "chiffreMunicipalites": "municipios atendidos",
     "precedent": "Vista anterior",
     "suivant": "Vista siguiente",
-    "uniteBarres": "Todos los gráficos de esta página cuentan desplazamientos, nunca animales. Una intervención por tres patitos cuenta como un desplazamiento."
+    "uniteBarres": "Los gráficos de distribución de llamadas cuentan desplazamientos. La cifra de animales socorridos suma los adultos y juveniles registrados en cada intervención."
   },
   "signalement": {
     "titre": "Reportar un animal en peligro",

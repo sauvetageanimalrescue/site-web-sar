@@ -4,9 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { IconArrowRight, IconPointFilled } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
-import type { Statistiques } from "@/lib/statistiques";
-
-type Props = { initiales: Statistiques | null };
+import { useStatistiquesDirect } from "@/components/statistiques-direct";
 
 // Compte de 0 (ou de la valeur précédente) jusqu'à la cible. Les chiffres d'un
 // compteur de sauvetages méritent d'être vus bouger.
@@ -77,32 +75,10 @@ function Case({
   );
 }
 
-export function CompteurSauvetages({ initiales }: Props) {
+export function CompteurSauvetages() {
   const t = useTranslations("compteur");
   const locale = useLocale();
-  const [stats, setStats] = useState(initiales);
-
-  // Rafraîchissement périodique : le registre est alimenté en continu par les
-  // équipes sur le terrain, le compteur suit sans rechargement de page.
-  useEffect(() => {
-    const rafraichir = async () => {
-      try {
-        const res = await fetch("/api/statistiques", { cache: "no-store" });
-        if (res.ok) setStats(await res.json());
-      } catch {
-        // Réseau instable : on garde simplement les derniers chiffres connus.
-      }
-    };
-    const minuterie = setInterval(rafraichir, 60_000);
-    const surRetour = () => {
-      if (document.visibilityState === "visible") rafraichir();
-    };
-    document.addEventListener("visibilitychange", surRetour);
-    return () => {
-      clearInterval(minuterie);
-      document.removeEventListener("visibilitychange", surRetour);
-    };
-  }, []);
+  const stats = useStatistiquesDirect();
 
   if (!stats) {
     return (
@@ -155,6 +131,16 @@ export function CompteurSauvetages({ initiales }: Props) {
           <Case valeur={stats.semaine} etiquette={t("semaine")} />
           <Case valeur={stats.mois} etiquette={t("mois")} />
           <Case valeur={stats.annee} etiquette={t("annee")} />
+        </div>
+
+        <h2 className="mt-12 font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
+          {t("deplacements")}
+        </h2>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Case valeur={stats.deplacements.jour} etiquette={t("jour")} vedette />
+          <Case valeur={stats.deplacements.semaine} etiquette={t("semaine")} />
+          <Case valeur={stats.deplacements.mois} etiquette={t("mois")} />
+          <Case valeur={stats.deplacements.annee} etiquette={t("annee")} />
         </div>
 
         <p className="mt-4 text-right text-xs text-white/40">

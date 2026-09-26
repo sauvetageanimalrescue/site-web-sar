@@ -1,16 +1,12 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { EnTetePage, Section } from "@/components/ui";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
-import { Chiffre } from "@/components/barres";
+import { ChiffresAnnuels, GraphiquesEspeces } from "@/components/chiffres-annuels";
+import { StatistiquesDirect } from "@/components/statistiques-direct";
 import { CarteVues } from "@/components/carte-vues";
 import { lireStatistiques } from "@/lib/statistiques";
 import {
-  TOTAL_MISSIONS,
-  ANIMAUX,
-  MUNICIPALITES_DESSERVIES,
   MISSIONS_PAR_MOIS,
-  PAR_ESPECE,
-  PAR_ETAT,
   PAR_REGION,
   PAR_MUNICIPALITE,
   PAR_LIEU,
@@ -19,8 +15,8 @@ import {
   PAR_HEURE,
 } from "@/contenu/statistiques-2026";
 
-// Les compteurs du haut bougent en continu ; le reste de la page est figé.
-export const revalidate = 60;
+// Le bilan initial et les compteurs doivent lire les chiffres du même instant.
+export const dynamic = "force-dynamic";
 
 export default async function PageStatistiques({
   params,
@@ -29,12 +25,6 @@ export default async function PageStatistiques({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "statistiques" });
   const stats = await lireStatistiques();
-  const ratonsDirect = stats?.especes?.find((espece) => espece.code === "204")?.sauves ?? 0;
-  const parEspece = PAR_ESPECE.map((espece) =>
-    espece.libelle === "Raton laveur"
-      ? { ...espece, valeur: espece.valeur + ratonsDirect }
-      : espece,
-  );
 
   return (
     <>
@@ -47,54 +37,16 @@ export default async function PageStatistiques({
         imagePosition="right calc(50% - 80px)"
       />
 
-      <CompteurSauvetages initiales={stats} />
+      <StatistiquesDirect initiales={stats}>
+      <CompteurSauvetages />
 
       {/* Les quatre chiffres qui résument l'année. */}
       <Section titre={t("anneeTitre")}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Chiffre
-            valeur={(stats?.deplacements.annee ?? TOTAL_MISSIONS).toString()}
-            legende={t("chiffreMissions")}
-          />
-          <Chiffre
-            valeur={(stats?.annee ?? ANIMAUX).toString()}
-            legende={t("chiffreAnimaux")}
-          />
-          <Chiffre
-            valeur={MUNICIPALITES_DESSERVIES.toString()}
-            legende={t("chiffreMunicipalites")}
-          />
-          <Chiffre
-            valeur={parEspece[0].valeur.toString()}
-            legende={t("chiffreEspece", { espece: PAR_ESPECE[0].libelle.toLowerCase() })}
-          />
-        </div>
+        <ChiffresAnnuels />
       </Section>
 
       <Section titre={t("rythmeTitre")} fond largeur="carte">
-        {/* Les deux chiffres du haut sont en direct, à l'inverse des trois
-            graphiques qui suivent : ils viennent du rapport figé 2026. Les
-            deux comptent la même unité, le déplacement, pour que le lecteur
-            passe de l'un à l'autre sans changer de repère. */}
-        {stats && (
-          <>
-            <p className="text-xs font-semibold uppercase tracking-wider text-ciel">
-              {t("deplacementsDirectTitre")}
-            </p>
-            <div className="mt-3 grid gap-4 sm:grid-cols-2">
-              <Chiffre
-                valeur={stats.deplacements.annee.toString()}
-                legende={t("deplacementsAnnee")}
-              />
-              <Chiffre
-                valeur={stats.deplacements.mois.toString()}
-                legende={t("deplacementsMois")}
-              />
-            </div>
-          </>
-        )}
         <CarteVues
-          className={stats ? "mt-8" : undefined}
           vues={[
             { titre: t("parMois"), donnees: MISSIONS_PAR_MOIS },
             { titre: t("parJour"), donnees: PAR_JOUR },
@@ -107,12 +59,7 @@ export default async function PageStatistiques({
       </Section>
 
       <Section titre={t("animauxTitre")} largeur="carte">
-        <CarteVues
-          vues={[
-            { titre: t("parEspece"), donnees: parEspece },
-            { titre: t("parEtat"), donnees: PAR_ETAT, couleur: "var(--vert)" },
-          ]}
-        />
+        <GraphiquesEspeces />
       </Section>
 
       <Section titre={t("geoTitre")} fond largeur="carte">
@@ -131,9 +78,8 @@ export default async function PageStatistiques({
             { titre: t("parLieu"), donnees: PAR_LIEU, couleur: "var(--vert)" },
           ]}
         />
-        {/* L'unité de toutes ces barres est le déplacement, jamais l'animal :
-            sans cette ligne, la section des espèces se lirait comme un nombre
-            d'animaux. */}
+        {/* La répartition des appels et le dénombrement des animaux n'ont pas
+            la même unité; la précision évite de les confondre. */}
         <p className="paragraphe mt-8 text-xs leading-relaxed text-muted">
           {t("uniteBarres")}
         </p>
@@ -150,6 +96,7 @@ export default async function PageStatistiques({
           {t("note")}
         </p>
       </Section>
+      </StatistiquesDirect>
     </>
   );
 }

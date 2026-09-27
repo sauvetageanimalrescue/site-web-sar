@@ -133,16 +133,6 @@ export function CompteurSauvetages() {
           <Case valeur={stats.annee} etiquette={t("annee")} />
         </div>
 
-        <h2 className="mt-12 font-[family-name:var(--font-titre)] text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
-          {t("deplacements")}
-        </h2>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <Case valeur={stats.deplacements.jour} etiquette={t("jour")} vedette />
-          <Case valeur={stats.deplacements.semaine} etiquette={t("semaine")} />
-          <Case valeur={stats.deplacements.mois} etiquette={t("mois")} />
-          <Case valeur={stats.deplacements.annee} etiquette={t("annee")} />
-        </div>
-
         <p className="mt-4 text-right text-xs text-white/40">
           {t("miseAJour", { heure })}
         </p>

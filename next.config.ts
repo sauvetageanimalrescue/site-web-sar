@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
   // on force leur inclusion dans la fonction serverless sur Vercel.
   outputFileTracingIncludes: {
     "/api/carte/*": ["./src/lib/carte/**/*"],
+    "/[locale]/recrutement/*": ["./node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf"],
   },
   // Redirections permanentes depuis l'ancien site Shopify. Chaque entrée est
   // déclinée en trois : la version sans préfixe part vers le français, et les

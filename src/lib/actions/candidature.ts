@@ -3,7 +3,8 @@
 import { getLocale } from "next-intl/server";
 import { creerClientAdmin } from "@/lib/supabase/admin";
 import { envoyerCourriel, gabaritCourriel } from "@/lib/courriel";
-import { ORGANISATION } from "@/lib/constantes";
+import { genererPdfCandidature } from "@/lib/candidatures/generer-pdf";
+import { OCCUPATIONS, EXPERIENCES_ANIMAUX, EXPERIENCES_CONNEXES } from "@/contenu/experiences";
 import type { Locale } from "@/i18n/routing";
 
 export type EtatCandidature =
@@ -20,6 +21,34 @@ const POSTES_VALIDES = [
   "eclaireur",
   "patrouilleur",
 ];
+
+const DESTINATAIRES_RECRUTEMENT = [
+  "e.dussault@sar.quebec",
+  "t.tscherne@sar.quebec",
+  "c.taillefer@sar.quebec",
+];
+
+const JOURS: Record<string, string> = {
+  semaineJour: "Semaine, jour",
+  semaineSoir: "Semaine, soir",
+  finSemaineJour: "Fin de semaine, jour",
+  finSemaineSoir: "Fin de semaine, soir",
+  nuit: "Nuit",
+  surAppel: "Sur appel",
+};
+
+const POSTES: Record<string, string> = {
+  repartiteur: "Répartiteur ou répartitrice",
+  messager: "Messager ou messagère",
+  secouriste: "Secouriste",
+  sauveteur: "Sauveteur ou sauveteuse",
+  eclaireur: "Éclaireur ou éclaireuse",
+  patrouilleur: "Patrouilleur ou patrouilleuse",
+};
+
+function libelles(cles: string[], choix: { cle: string; fr: string }[]) {
+  return cles.map((cle) => choix.find((item) => item.cle === cle)?.fr ?? cle);
+}
 
 function texte(donnees: FormData, cle: string) {
   const valeur = donnees.get(cle);
@@ -92,9 +121,12 @@ export async function envoyerCandidature(
       upsert: false,
     });
 
-  if (erreurPhoto) return { etat: "erreur", motif: "envoi" };
+  if (erreurPhoto) {
+    console.error("Téléversement de photo de candidature impossible:", erreurPhoto.message);
+    return { etat: "erreur", motif: "envoi" };
+  }
 
-  const { error } = await creerClientAdmin().from("candidatures").insert({
+  const candidature = {
     poste,
     prenom,
     nom,
@@ -121,44 +153,88 @@ export async function envoyerCandidature(
     experience: texte(donnees, "experience") || null,
     motivation: texte(donnees, "motivation") || null,
     reference: texte(donnees, "reference") || null,
-  });
+  };
+  const { data: enregistrement, error } = await creerClientAdmin()
+    .from("candidatures")
+    .insert(candidature)
+    .select("id, cree_le")
+    .single();
 
-  if (error) {
+  if (error || !enregistrement) {
+    console.error("Enregistrement de candidature impossible:", error?.message);
     await creerClientAdmin().storage.from("candidatures").remove([cheminPhoto]);
     return { etat: "erreur", motif: "envoi" };
   }
 
-  // Avis à la direction. Un échec d'envoi ne doit pas perdre la candidature,
-  // qui est déjà enregistrée en base.
-  await envoyerCourriel({
-    // Plusieurs destinataires possibles, séparés par une virgule dans la
-    // variable d'environnement (ex. Eric et Tania reçoivent chacun copie).
-    destinataire: (
-      process.env.COURRIEL_RECRUTEMENT || ORGANISATION.courriels.direction
-    )
-      .split(",")
-      .map((c) => c.trim())
-      .filter(Boolean),
-    sujet: `Nouvelle candidature — ${poste} — ${prenom} ${nom}`,
+  // Le dossier est déjà conservé: une erreur de PDF ou de courriel ne doit
+  // jamais pousser la personne à soumettre une deuxième candidature.
+  const pieces: { filename: string; content: string }[] = [];
+  try {
+    const resultat = await genererPdfCandidature({
+      id: enregistrement.id,
+      creeLe: enregistrement.cree_le,
+      poste: POSTES[poste] ?? poste,
+      prenom,
+      nom,
+      courriel,
+      telephone,
+      adresseRue: texte(donnees, "adresseRue"),
+      ville,
+      province: texte(donnees, "province"),
+      codePostal: texte(donnees, "codePostal"),
+      dateNaissance,
+      occupation: OCCUPATIONS.find((item) => item.cle === candidature.occupation)?.fr ?? candidature.occupation ?? "",
+      vehicule: candidature.a_vehicule,
+      permis: candidature.a_permis,
+      disponibilites: disponibilites.map((jour) => JOURS[jour] ?? jour),
+      disponibilitesTexte: texte(donnees, "disponibilitesTexte"),
+      experienceAnimaux: libelles(candidature.experience_animaux, EXPERIENCES_ANIMAUX),
+      experience: texte(donnees, "experience"),
+      experienceConnexe: libelles(candidature.experience_connexe, EXPERIENCES_CONNEXES),
+      experienceConnexeTexte: texte(donnees, "experienceConnexeTexte"),
+      motivation: texte(donnees, "motivation"),
+      reference: texte(donnees, "reference"),
+      confirmeSelection: candidature.confirme_selection,
+      confirmeMajeur: candidature.confirme_majeur,
+      photo: new Uint8Array(await photo.arrayBuffer()),
+    });
+    pieces.push({
+      filename: `candidature-${enregistrement.id.slice(0, 8)}.pdf`,
+      content: Buffer.from(resultat.pdf).toString("base64"),
+    });
+    // Le PDF reste aussi dans le même dossier privé que la photo: il peut
+    // être retrouvé dans Supabase même si un courriel a été effacé.
+    const cheminPdf = cheminPhoto.replace(/\.[^.]+$/, ".pdf");
+    const { error: erreurArchive } = await creerClientAdmin()
+      .storage.from("candidatures")
+      .upload(cheminPdf, resultat.pdf, {
+        contentType: "application/pdf",
+        upsert: false,
+      });
+    if (erreurArchive) {
+      console.error("Archivage du PDF de candidature impossible:", erreurArchive.message);
+    }
+    if (!resultat.photoIntegree) {
+      pieces.push({
+        filename: photo.name.replace(/[^a-zA-Z0-9._-]/g, "_").slice(0, 100) || "photo",
+        content: Buffer.from(await photo.arrayBuffer()).toString("base64"),
+      });
+    }
+  } catch (erreur) {
+    console.error("PDF de candidature impossible:", erreur instanceof Error ? erreur.message : erreur);
+  }
+
+  const courrielEnvoye = await envoyerCourriel({
+    destinataire: DESTINATAIRES_RECRUTEMENT,
+    sujet: `Nouvelle candidature - ${poste} - ${prenom} ${nom}`.replace(/[\r\n]/g, " "),
     repondreA: courriel,
     html: gabaritCourriel({
       titre: "Nouvelle candidature",
-      corps: `
-        <p style="margin:0 0 14px;line-height:1.6;"><strong>Poste :</strong> ${poste}<br>
-        <strong>Nom :</strong> ${prenom} ${nom}<br>
-        <strong>Courriel :</strong> ${courriel}<br>
-        <strong>Téléphone :</strong> ${telephone}<br>
-        <strong>Ville :</strong> ${ville}<br>
-        <strong>Date de naissance :</strong> ${dateNaissance} (${ageCandidat} ans)<br>
-        <strong>Photo :</strong> reçue et conservée avec la candidature<br>
-        <strong>Véhicule :</strong> ${donnees.get("vehicule") === "on" ? "oui" : "non"}<br>
-        <strong>Permis :</strong> ${donnees.get("permis") === "on" ? "oui" : "non"}<br>
-        <strong>Disponibilités :</strong> ${disponibilites.join(", ") || "non précisées"}</p>
-        <p style="margin:0;line-height:1.6;"><strong>Motivation :</strong><br>${
-          texte(donnees, "motivation") || "(vide)"
-        }</p>`,
+      corps: `<p style="margin:0 0 14px;line-height:1.6;">Une nouvelle candidature a été enregistrée pour le poste de ${POSTES[poste] ?? poste}.</p><p style="margin:0;line-height:1.6;">${pieces.length ? "La fiche complète est jointe en PDF. Si la photo n'a pas pu y être intégrée, son fichier original est joint séparément." : "La fiche PDF n'a pas pu être produite. Le dossier et la photo restent accessibles dans Supabase."}</p>`,
     }),
+    pieces,
   });
+  if (!courrielEnvoye) console.error("Avis de candidature non envoyé:", enregistrement.id);
 
   return { etat: "succes" };
 }

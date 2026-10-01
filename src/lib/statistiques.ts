@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { denombrementSecourus } from "./statistiques-denombrement";
 import {
   REPORT_ANNEE,
   REPORT_DEPLACEMENTS_ANNEE,
@@ -6,10 +7,8 @@ import {
 } from "@/contenu/compteur";
 
 // Les compteurs viennent du registre des missions, qui est une base Supabase
-// distincte de celle du site public. On n'y accède qu'à travers deux fonctions
-// SECURITY DEFINER accordées au rôle anon : aucune ligne de mission, aucune
-// donnée de demandeur ne traverse jamais la frontière.
-// Voir supabase/migrations/0009_deplacements_et_coupure_par_date.sql
+// distincte de celle du site public. Le calcul s'effectue côté serveur sur
+// les seules données de dénombrement; aucune donnée de demandeur n'est publiée.
 
 export type CompteurPeriodes = {
   jour: number;
@@ -44,6 +43,7 @@ type MissionCompteur = {
   espece_code: string | null;
   nb_adultes: number | null;
   nb_juveniles: number | null;
+  animaux: unknown;
 };
 
 function clientRegistre() {
@@ -85,12 +85,12 @@ export async function lireStatistiques(): Promise<Statistiques | null> {
     : null;
   if (!supabase) return null;
 
-  // Seules ces quatre colonnes non sensibles quittent le registre. La règle
+  // Seules ces colonnes de dénombrement quittent le registre. La règle
   // opérationnelle est volontairement indépendante du code de fin: une carte
   // d'appel vaut un déplacement et son dénombrement vaut les animaux secourus.
   const { data, error } = await supabase
     .from("missions")
-    .select("created_at,espece_code,nb_adultes,nb_juveniles")
+    .select("created_at,espece_code,nb_adultes,nb_juveniles,animaux")
     .gt("created_at", "2026-08-21T23:59:59-04:00");
   if (error || !data) return null;
 
@@ -107,7 +107,8 @@ export async function lireStatistiques(): Promise<Statistiques | null> {
 
   for (const mission of data as MissionCompteur[]) {
     const date = cleDateToronto(new Date(mission.created_at));
-    const nombre = Math.max(0, mission.nb_adultes ?? 0) + Math.max(0, mission.nb_juveniles ?? 0);
+    const denombrement = denombrementSecourus(mission);
+    const nombre = denombrement.total;
     const ajouter = (compteur: CompteurPeriodes, valeur: number) => {
       compteur.total += valeur;
       if (date.startsWith(annee)) compteur.annee += valeur;
@@ -118,8 +119,8 @@ export async function lireStatistiques(): Promise<Statistiques | null> {
     ajouter(animaux, nombre);
     ajouter(deplacements, 1);
     mensuel.set(date.slice(0, 7), (mensuel.get(date.slice(0, 7)) ?? 0) + nombre);
-    if (mission.espece_code && nombre > 0) {
-      especes.set(mission.espece_code, (especes.get(mission.espece_code) ?? 0) + nombre);
+    for (const [code, quantite] of denombrement.especes) {
+      especes.set(code, (especes.get(code) ?? 0) + quantite);
     }
   }
 

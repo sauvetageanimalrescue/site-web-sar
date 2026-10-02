@@ -14,6 +14,7 @@ const ROUTES = [
   "signalement",
   "membre",
   "dons",
+  "loterie",
   "stages",
   "recrutement",
   "equipe",

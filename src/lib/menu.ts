@@ -67,6 +67,7 @@ export const MENU: SectionMenu[] = [
     liens: [
       { cle: "membre", href: "/membre" },
       { cle: "dons", href: "/dons" },
+      { cle: "loterie", href: "/loterie" },
       { cle: "partenariat", href: "/partenariat" },
       { cle: "recrutement", href: "/recrutement" },
       { cle: "stages", href: "/stages" },

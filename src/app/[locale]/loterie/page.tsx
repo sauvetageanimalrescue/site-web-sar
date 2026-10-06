@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AppelAction, Section, EnTetePage } from "@/components/ui";
 import { WidgetTirage } from "@/components/lotterie/widget-tirage";
@@ -19,24 +18,15 @@ export default async function PageLoterie({
         surtitre={t("surtitre")}
         titre={t("titre")}
         intro={t("intro")}
+        image="/images/loterie-hero.jpg"
+        imagePosition="right center"
       />
 
-      <Section largeur="carte">
-        <Image
-          src="/images/logo-tirage-o-sar.png"
-          alt={t("logoAlt")}
-          width={1528}
-          height={1028}
-          priority
-          className="h-auto w-full"
-        />
-      </Section>
-
-      <Section titre={t("achatTitre")} fond largeur="pleine">
+      <Section largeur="pleine">
         <WidgetTirage chargement={t("widgetChargement")} erreur={t("widgetErreur")} />
       </Section>
 
-      <Section titre={t("documentsTitre")} largeur="carte">
+      <Section titre={t("documentsTitre")} fond largeur="carte">
         <div className="flex flex-wrap gap-3">
           <a
             href={REGLEMENTS}

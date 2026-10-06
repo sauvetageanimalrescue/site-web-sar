@@ -315,10 +315,18 @@ export function FormulaireCandidature({
         <input name="reference" className={CLASSE_CHAMP} />
       </label>
 
-      {/* Les deux confirmations du formulaire actuel. Elles protègent autant
-          la personne que l'organisation : personne ne repart en croyant être
-          retenu, et l'âge minimal est établi avant l'entrevue. */}
+      {/* Ces confirmations précisent la nature bénévole du poste, les limites
+          de la candidature et l'âge minimal avant l'entrevue. */}
       <div className="space-y-2 rounded-md border border-border bg-surface-2 p-4">
+        <label className="flex cursor-pointer items-start gap-3 text-sm">
+          <input
+            type="checkbox"
+            name="confirmeBenevolat"
+            required
+            className="mt-0.5 size-4 shrink-0 accent-[var(--marine)]"
+          />
+          {c("confirmeBenevolat")}
+        </label>
         <label className="flex cursor-pointer items-start gap-3 text-sm">
           <input
             type="checkbox"

@@ -87,6 +87,7 @@ export async function envoyerCandidature(
   const photo = donnees.get("photo");
 
   if (
+    donnees.get("confirmeBenevolat") !== "on" ||
     !POSTES_VALIDES.includes(poste) ||
     !prenom ||
     !nom ||

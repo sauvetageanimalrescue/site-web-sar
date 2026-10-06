@@ -7,6 +7,7 @@ import { CarteImage, GrilleCartes } from "@/components/cartes";
 import { CompteurSauvetages } from "@/components/compteur-sauvetages";
 import { StatistiquesDirect } from "@/components/statistiques-direct";
 import { lireStatistiques } from "@/lib/statistiques";
+import { WidgetTirage } from "@/components/lotterie/widget-tirage";
 
 // Le compteur ne doit jamais rester figé sur la photographie d'un déploiement.
 export const dynamic = "force-dynamic";
@@ -120,11 +121,19 @@ export default async function PageAccueil({ params }: PageProps<"/[locale]">) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "accueil" });
+  const loterie = await getTranslations({ locale, namespace: "loterie" });
   const stats = await lireStatistiques();
 
   return (
     <>
       <Hero />
+      <section aria-label={loterie("titre")} className="mx-auto max-w-7xl px-4 pt-8">
+        <WidgetTirage
+          format="banner"
+          chargement={loterie("widgetChargement")}
+          erreur={loterie("widgetErreur")}
+        />
+      </section>
       {/* La déclaration coupe la grille en deux : sur un téléphone, huit
           cartes à la suite se traversent sans jamais rencontrer de texte. */}
       <Cartes debut={0} fin={4} />

@@ -3,11 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 
 type Props = {
+  format?: "full" | "banner";
   chargement: string;
   erreur: string;
 };
 
-export function WidgetTirage({ chargement, erreur }: Props) {
+export function WidgetTirage({ format = "full", chargement, erreur }: Props) {
   const [messageErreur, setMessageErreur] = useState(false);
   const [chargementEnCours, setChargementEnCours] = useState(true);
   const conteneurRef = useRef<HTMLDivElement>(null);
@@ -65,14 +66,16 @@ export function WidgetTirage({ chargement, erreur }: Props) {
       observateur.disconnect();
       conteneurRef.current?.replaceChildren();
     };
-  }, []);
+  }, [format]);
 
   return (
     <div className="w-full" aria-busy={chargementEnCours}>
       <div
         ref={conteneurRef}
         raffle-id="1084"
-        raffle-format="full"
+        raffle-format={format}
+        display-logo={format === "banner" ? "true" : undefined}
+        display-qrcode={format === "banner" ? "false" : undefined}
         lang="fr"
       />
       {chargementEnCours && <p role="status" className="sr-only">{chargement}</p>}

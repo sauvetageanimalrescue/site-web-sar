@@ -83,6 +83,20 @@
     "faq": "FAQ",
     "localisateurRefuges": "Wildlife centre locator"
   },
+  "loterie": {
+    "surtitre": "Lottery",
+    "titre": "Tirage-O-SAR",
+    "intro": "Every Tirage-O-SAR ticket helps fund the equipment our teams need to rescue animals in distress. By taking part, you directly support our field teams and help give them the means to respond when animals need us.",
+    "logoAlt": "Tirage-O-SAR logo featuring a dog, a cat and lottery tickets",
+    "achatTitre": "Enter the raffle",
+    "widgetChargement": "Loading the ticket module…",
+    "widgetErreur": "The ticket module could not be loaded. Please try again later.",
+    "documentsTitre": "Official documents",
+    "reglements": "Contest rules",
+    "licence": "Lottery licence",
+    "membreBouton": "Become a member",
+    "donBouton": "Donate"
+  },
   "compteur": {
     "titre": "Animals assisted",
     "sousTitre": "Live statistics",

@@ -83,6 +83,20 @@
     "faq": "Preguntas frecuentes",
     "localisateurRefuges": "Localizador de refugios"
   },
+  "loterie": {
+    "surtitre": "Lotería",
+    "titre": "Tirage-O-SAR",
+    "intro": "Cada boleto de Tirage-O-SAR ayuda a financiar el equipo que nuestros equipos necesitan para rescatar animales en peligro. Al participar, apoya directamente a nuestros equipos en el terreno y les da medios para intervenir cuando los animales lo necesitan.",
+    "logoAlt": "Logotipo de Tirage-O-SAR con un perro, un gato y boletos de lotería",
+    "achatTitre": "Participa en el sorteo",
+    "widgetChargement": "Cargando el módulo de boletos…",
+    "widgetErreur": "No se pudo cargar el módulo de boletos. Inténtelo de nuevo más tarde.",
+    "documentsTitre": "Documentos oficiales",
+    "reglements": "Reglamento del sorteo",
+    "licence": "Licencia de lotería",
+    "membreBouton": "Hacerse miembro",
+    "donBouton": "Hacer una donación"
+  },
   "compteur": {
     "titre": "Animales socorridos",
     "sousTitre": "Estadísticas en directo",

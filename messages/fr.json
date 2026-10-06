@@ -83,6 +83,20 @@
     "faq": "Foire aux questions",
     "localisateurRefuges": "Localisateur de refuges"
   },
+  "loterie": {
+    "surtitre": "Loterie",
+    "titre": "Tirage-O-SAR",
+    "intro": "Chaque billet du Tirage-O-SAR contribue à financer l'équipement nécessaire au sauvetage des animaux en détresse. En participant, vous soutenez nos équipes sur le terrain et les aidez à intervenir auprès des animaux qui ont besoin d'aide.",
+    "logoAlt": "Logo du Tirage-O-SAR avec un chien, un chat et des billets de loterie",
+    "achatTitre": "Participez au tirage",
+    "widgetChargement": "Chargement du module de billetterie…",
+    "widgetErreur": "Le module de billetterie n'a pas pu être chargé. Réessayez plus tard.",
+    "documentsTitre": "Documents officiels",
+    "reglements": "Règlement du concours",
+    "licence": "Licence de loterie",
+    "membreBouton": "Devenir membre",
+    "donBouton": "Faire un don"
+  },
   "compteur": {
     "titre": "Animaux secourus",
     "sousTitre": "Statistiques en direct",

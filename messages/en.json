@@ -726,7 +726,15 @@
     "sourceIntro": "Source:",
     "sourceRefuges": "ministry list of 2026-2027 permit holders",
     "sourceNote": "A permit is not an accreditation. The published address is a holding site, not necessarily a drop-off point.",
-    "sourceSansAdresse": "One permit holder in Saint-Fulgence is omitted from the results because the official list provides only a lot number, with no geocodable street address.",
+    "sourceSansAdresse": "Contacts whose precise location could not be verified appear at the end of the results without a distance. Inclusion in SAR’s selection does not guarantee admission.",
+    "distanceIndisponible": "Distance unavailable",
+    "profils": {
+      "confirmer": "Contact this establishment directly to confirm accepted animals and admissions before travelling.",
+      "nichoir": "Wild birds. Le Nichoir does not accept pigeons, birds of prey, or domestic, exotic or farmed birds. Call before travelling.",
+      "reptiles": "Reptiles. Confirm accepted species and admissions before travelling.",
+      "reptilesAmphibiens": "Reptiles and amphibians. Confirm accepted species and admissions before travelling.",
+      "rapacesSanctuaire": "Sanctuary for non-releasable birds of prey. Any new admission must be confirmed directly with the centre."
+    },
     "erreurs": {
       "requete": "Invalid search. Please try again.",
       "champs": "Complete every field and enter a full street address.",

@@ -726,7 +726,15 @@
     "sourceIntro": "Source:",
     "sourceRefuges": "liste ministérielle des titulaires de permis 2026-2027",
     "sourceNote": "Un permis n’est pas une accréditation et l’adresse publiée est celle du lieu de garde, pas nécessairement un point de dépôt.",
-    "sourceSansAdresse": "Une titulaire à Saint-Fulgence n’apparaît pas dans les résultats, car la liste officielle ne fournit qu’un numéro de lot, sans adresse civique géocodable.",
+    "sourceSansAdresse": "Les contacts dont la position précise n’a pas pu être vérifiée figurent à la fin des résultats, sans distance. Cette sélection de SAR ne constitue pas une liste d’admissions garanties.",
+    "distanceIndisponible": "Distance non disponible",
+    "profils": {
+      "confirmer": "Animaux accueillis et admissions à confirmer directement auprès de cet établissement avant tout déplacement.",
+      "nichoir": "Oiseaux sauvages. Le Nichoir n’accepte pas les pigeons, les oiseaux de proie ni les oiseaux domestiques, exotiques ou d’élevage. Téléphonez avant tout déplacement.",
+      "reptiles": "Reptiles. Espèces acceptées et admissions à confirmer avant tout déplacement.",
+      "reptilesAmphibiens": "Reptiles et amphibiens. Espèces acceptées et admissions à confirmer avant tout déplacement.",
+      "rapacesSanctuaire": "Sanctuaire pour oiseaux de proie non relâchables. Toute nouvelle admission doit être confirmée directement auprès du centre."
+    },
     "erreurs": {
       "requete": "Recherche invalide. Réessayez.",
       "champs": "Remplissez tous les champs et indiquez une adresse civique complète.",

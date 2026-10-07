@@ -48,8 +48,10 @@ export async function POST(requete: Request) {
     adresseTrouvee = candidat.address;
   }
   // Le classement informe sur la proximité, jamais sur la légalité du transport.
-  const refuges = REFUGES.map((refuge) => ({ ...refuge, distanceExacte: distanceKm(point, refuge) }))
-    .sort((a, b) => a.distanceExacte - b.distanceExacte)
-    .map(({ distanceExacte, ...refuge }) => ({ ...refuge, distance: Math.round(distanceExacte * 10) / 10 }));
+  const refuges = REFUGES.map((refuge) => ({ ...refuge, distanceExacte:
+    typeof refuge.latitude === "number" && typeof refuge.longitude === "number"
+      ? distanceKm(point, { latitude: refuge.latitude, longitude: refuge.longitude }) : null }))
+    .sort((a, b) => (a.distanceExacte ?? Infinity) - (b.distanceExacte ?? Infinity) || a.nom.localeCompare(b.nom, "fr"))
+    .map(({ distanceExacte, ...refuge }) => ({ ...refuge, distance: distanceExacte === null ? null : Math.round(distanceExacte * 10) / 10 }));
   return NextResponse.json({ adresseTrouvee, refuges });
 }

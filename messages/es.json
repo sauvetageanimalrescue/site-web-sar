@@ -726,7 +726,15 @@
     "sourceIntro": "Fuente:",
     "sourceRefuges": "lista ministerial de titulares de permisos 2026-2027",
     "sourceNote": "Un permiso no es una acreditación. La dirección publicada es un lugar de custodia y no necesariamente un punto de entrega.",
-    "sourceSansAdresse": "Una titular en Saint-Fulgence no aparece en los resultados porque la lista oficial solo indica un número de lote, sin dirección geocodificable.",
+    "sourceSansAdresse": "Los contactos cuya ubicación precisa no se pudo verificar aparecen al final de los resultados, sin distancia. La selección de SAR no garantiza la admisión.",
+    "distanceIndisponible": "Distancia no disponible",
+    "profils": {
+      "confirmer": "Confirme directamente con este establecimiento los animales aceptados y las admisiones antes de desplazarse.",
+      "nichoir": "Aves silvestres. Le Nichoir no acepta palomas, aves rapaces ni aves domésticas, exóticas o de cría. Llame antes de desplazarse.",
+      "reptiles": "Reptiles. Confirme las especies aceptadas y las admisiones antes de desplazarse.",
+      "reptilesAmphibiens": "Reptiles y anfibios. Confirme las especies aceptadas y las admisiones antes de desplazarse.",
+      "rapacesSanctuaire": "Santuario para aves rapaces que no pueden ser liberadas. Toda nueva admisión debe confirmarse directamente con el centro."
+    },
     "erreurs": {
       "requete": "Búsqueda no válida. Inténtelo de nuevo.",
       "champs": "Complete todos los campos e indique una dirección completa.",

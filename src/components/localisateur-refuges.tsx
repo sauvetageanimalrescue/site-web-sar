@@ -5,7 +5,7 @@ import Script from "next/script";
 import { useLocale, useTranslations } from "next-intl";
 import { SOURCE_REFUGES, type Refuge } from "@/lib/refuges";
 
-type Reponse = { adresseTrouvee?: string; refuges?: (Refuge & { distance: number })[]; erreur?: string };
+type Reponse = { adresseTrouvee?: string; refuges?: (Refuge & { distance: number | null })[]; erreur?: string };
 type ElementGoogle = HTMLElement & { includedRegionCodes: string[]; placeholder: string };
 type FenetreGoogle = Window & { initialiserGoogleRefuges?: () => void; google?: { maps: { importLibrary: (nom: string) => Promise<{ PlaceAutocompleteElement: new () => ElementGoogle }> } } };
 type EvenementSelection = Event & { placePrediction: { toPlace: () => { fetchFields: (options: { fields: string[] }) => Promise<void>; formattedAddress?: string; location?: { lat: () => number; lng: () => number } } } };
@@ -119,13 +119,14 @@ export function LocalisateurRefuges({ cleGoogle }: { cleGoogle?: string }) {
           <p className="mt-2 text-sm text-muted">{t("adresseTrouvee", { adresse: reponse.adresseTrouvee ?? "" })}</p>
           {reponse.refuges.length === 0 ? <p className="mt-5">{t("aucun")}</p> : <ul className="mt-5 divide-y divide-gray-300">
             {reponse.refuges.map((refuge) => <li key={refuge.nom} className="space-y-2 py-6 break-words">
-              <p className="text-lg font-bold text-marine">{t("distance", { distance: new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(refuge.distance) })}</p>
+              <p className="text-lg font-bold text-marine">{refuge.distance === null ? t("distanceIndisponible") : t("distance", { distance: new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(refuge.distance) })}</p>
               <h4 className="font-[family-name:var(--font-titre)] text-xl font-bold uppercase text-marine">{refuge.nom}</h4>
+              <p className="text-sm text-muted">{t(`profils.${refuge.profil ?? "confirmer"}`)}</p>
               <p className="mt-2">{refuge.adresse}</p>
               <p>{t("telephone")}: <a className="text-ciel underline" href={`tel:${refuge.telephone}`}>{refuge.telephone}</a></p>
               {refuge.courriel && <p>{t("courriel")}: <a className="text-ciel underline" href={`mailto:${refuge.courriel}`}>{refuge.courriel}</a></p>}
               {refuge.siteWeb && <p>{t("siteWeb")}: <a className="text-ciel underline" href={refuge.siteWeb} target="_blank" rel="noopener noreferrer">{refuge.siteWeb}</a></p>}
-              <a className="mt-2 inline-block text-ciel underline" href={`https://www.google.com/maps/search/?api=1&query=${refuge.latitude}%2C${refuge.longitude}`} target="_blank" rel="noopener noreferrer">{t("itineraire")}</a>
+              {refuge.latitude != null && refuge.longitude != null && <a className="mt-2 inline-block text-ciel underline" href={`https://www.google.com/maps/search/?api=1&query=${refuge.latitude}%2C${refuge.longitude}`} target="_blank" rel="noopener noreferrer">{t("itineraire")}</a>}
             </li>)}
           </ul>}
           <p className="mt-5 text-sm text-muted">{t("avantDeplacer")}</p>

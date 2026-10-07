@@ -1,9 +1,8 @@
 // Lieux et coordonnées du tableau ministériel des permis 2026-2027.
 // Le permis n'atteste ni la disponibilité ni l'admission d'une espèce.
 export const SOURCE_REFUGES = "https://cdn-contenu.quebec.ca/cdn-contenu/faune/documents/garde-captivite/liste-detenteurs-permis-garde-captivite.pdf";
-export const SOURCE_INTERDICTION = "https://cdn-contenu.quebec.ca/cdn-contenu/faune/Rage-chez-les-animaux/documents/liste-municipalites-visees-deplacement-animaux.pdf";
 
-export type Refuge = { nom: string; adresse: string; telephone: string; latitude: number; longitude: number; rive: "nord" | "sud" };
+export type Refuge = { nom: string; adresse: string; telephone: string; courriel?: string; siteWeb?: string; latitude: number; longitude: number; rive: "nord" | "sud" };
 
 export const REFUGES: Refuge[] = [
   { nom: "Société protectrice des animaux de Québec", adresse: "1130 avenue de Galilée, Québec (Québec) G1P 4B7", telephone: "418-527-9104", latitude: 46.804557, longitude: -71.298633, rive: "nord" },
@@ -17,9 +16,6 @@ export const REFUGES: Refuge[] = [
   { nom: "Josée Bragagnolo", adresse: "161 chemin Lafrenière, Saint-Damien-de-Brandon (Québec) J0K 2N1", telephone: "450-917-2707", latitude: 46.345748, longitude: -73.398675, rive: "nord" },
   { nom: "Le Nichoir", adresse: "637 rue Main, Hudson (Québec) J0P 1H0", telephone: "450-458-2809", latitude: 45.466015, longitude: -74.160050, rive: "nord" },
 ];
-
-export const ESPECES_75_KM = ["raton", "moufette", "renardRoux", "renardGris", "coyote", "cerf"] as const;
-export const ESPECES_INTERDITES = ["raton", "moufette", "renardRoux", "renardGris", "coyote"] as const;
 
 export function distanceKm(a: { latitude: number; longitude: number }, b: { latitude: number; longitude: number }) {
   const rad = Math.PI / 180;

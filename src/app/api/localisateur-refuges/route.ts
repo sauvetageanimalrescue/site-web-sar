@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
-import { distanceKm, ESPECES_75_KM, ESPECES_INTERDITES, REFUGES } from "@/lib/refuges";
-import { municipaliteVisee } from "@/lib/municipalites-rage";
-import { trouverTerritoire } from "@/lib/rives";
+import { distanceKm, REFUGES } from "@/lib/refuges";
 
 const GEOCODEUR = "https://servicescarto.mrnf.gouv.qc.ca/pes/rest/services/Territoire/Adresse_Geocodage/GeocodeServer/findAddressCandidates";
-const ESPECES = new Set(["raton", "moufette", "renardRoux", "renardGris", "coyote", "loup", "cerf", "autres"]);
 
 type Candidat = {
   address: string;
@@ -14,12 +11,11 @@ type Candidat = {
 };
 
 export async function POST(requete: Request) {
-  let donnees: { adresse?: string; espece?: string; pointGoogle?: { latitude?: number; longitude?: number } };
+  let donnees: { adresse?: string; pointGoogle?: { latitude?: number; longitude?: number } } | null;
   try { donnees = await requete.json(); } catch { return NextResponse.json({ erreur: "requete" }, { status: 400 }); }
-  const adresse = donnees.adresse?.trim() ?? "";
+  const adresse = typeof donnees?.adresse === "string" ? donnees.adresse.trim() : "";
   const numero = Number(adresse.match(/^\s*(\d+)/)?.[1]);
-  const espece = donnees.espece ?? "";
-  if (adresse.length < 8 || adresse.length > 180 || !numero || !ESPECES.has(espece)) {
+  if (!donnees || adresse.length < 8 || adresse.length > 180) {
     return NextResponse.json({ erreur: "champs" }, { status: 400 });
   }
 
@@ -31,6 +27,7 @@ export async function POST(requete: Request) {
       return NextResponse.json({ erreur: "adresse" }, { status: 422 });
     }
   } else {
+    if (!numero || donnees.pointGoogle != null) return NextResponse.json({ erreur: "champs" }, { status: 400 });
     const url = new URL(GEOCODEUR);
     url.searchParams.set("SingleLine", `${adresse}, Québec`);
     url.searchParams.set("f", "json");
@@ -50,20 +47,9 @@ export async function POST(requete: Request) {
     point = { latitude: candidat.location.y, longitude: candidat.location.x };
     adresseTrouvee = candidat.address;
   }
-  const territoire = await trouverTerritoire(point);
-  if (!territoire) return NextResponse.json({ erreur: "rive" }, { status: 422 });
-  const { ville, rive } = territoire;
-  const date = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Toronto", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-  if (date > "2026-10-06" && ESPECES_INTERDITES.some((nom) => nom === espece)) {
-    return NextResponse.json({ erreur: "restrictionARevoir" }, { status: 409 });
-  }
-  const interdiction = date <= "2026-10-06" && ESPECES_INTERDITES.some((nom) => nom === espece) && municipaliteVisee(ville);
-  if (interdiction) return NextResponse.json({ interdiction: true, ville, adresseTrouvee });
-
-  const limite75 = ESPECES_75_KM.some((nom) => nom === espece);
+  // Le classement informe sur la proximité, jamais sur la légalité du transport.
   const refuges = REFUGES.map((refuge) => ({ ...refuge, distanceExacte: distanceKm(point, refuge) }))
-    .filter((refuge) => !limite75 || (refuge.distanceExacte <= 75 && !(rive === "sud" && refuge.rive === "nord")))
-    .map(({ distanceExacte, ...refuge }) => ({ ...refuge, distance: Math.round(distanceExacte) }))
-    .sort((a, b) => a.distance - b.distance);
-  return NextResponse.json({ adresseTrouvee, ville, rive, refuges, limite75, interdiction: false });
+    .sort((a, b) => a.distanceExacte - b.distanceExacte)
+    .map(({ distanceExacte, ...refuge }) => ({ ...refuge, distance: Math.round(distanceExacte * 10) / 10 }));
+  return NextResponse.json({ adresseTrouvee, refuges });
 }

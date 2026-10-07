@@ -7,7 +7,7 @@ import { SOURCE_REFUGES, type Refuge } from "@/lib/refuges";
 
 type Reponse = { adresseTrouvee?: string; refuges?: (Refuge & { distance: number })[]; erreur?: string };
 type ElementGoogle = HTMLElement & { includedRegionCodes: string[]; placeholder: string };
-type FenetreGoogle = Window & { google?: { maps: { importLibrary: (nom: string) => Promise<{ PlaceAutocompleteElement: new () => ElementGoogle }> } } };
+type FenetreGoogle = Window & { initialiserGoogleRefuges?: () => void; google?: { maps: { importLibrary: (nom: string) => Promise<{ PlaceAutocompleteElement: new () => ElementGoogle }> } } };
 type EvenementSelection = Event & { placePrediction: { toPlace: () => { fetchFields: (options: { fields: string[] }) => Promise<void>; formattedAddress?: string; location?: { lat: () => number; lng: () => number } } } };
 
 export function LocalisateurRefuges({ cleGoogle }: { cleGoogle?: string }) {
@@ -16,11 +16,27 @@ export function LocalisateurRefuges({ cleGoogle }: { cleGoogle?: string }) {
   const [adresse, setAdresse] = useState("");
   const [pointGoogle, setPointGoogle] = useState<{ latitude: number; longitude: number } | null>(null);
   const [googlePret, setGooglePret] = useState(false);
+  const [rappelGooglePret, setRappelGooglePret] = useState(false);
   const [googleErreur, setGoogleErreur] = useState(false);
   const zoneGoogle = useRef<HTMLDivElement>(null);
   const versionAdresse = useRef(0);
   const [charge, setCharge] = useState(false);
   const [reponse, setReponse] = useState<Reponse | null>(null);
+
+  useEffect(() => {
+    if (!cleGoogle) return;
+    const fenetre = window as FenetreGoogle;
+    let actif = true;
+    const delai = window.setTimeout(() => { if (actif) setGoogleErreur(true); }, 15000);
+    // Le chargement du fichier ne garantit pas que Maps a fini son initialisation.
+    fenetre.initialiserGoogleRefuges = () => {
+      window.clearTimeout(delai);
+      if (actif) setGooglePret(true);
+    };
+    setRappelGooglePret(true);
+    if (fenetre.google?.maps?.importLibrary) fenetre.initialiserGoogleRefuges();
+    return () => { actif = false; window.clearTimeout(delai); };
+  }, [cleGoogle]);
 
   useEffect(() => {
     if (!cleGoogle || !googlePret || googleErreur || !zoneGoogle.current) return;
@@ -80,7 +96,7 @@ export function LocalisateurRefuges({ cleGoogle }: { cleGoogle?: string }) {
 
   return (
     <div className="space-y-8">
-      {cleGoogle && !googleErreur && <Script src={`https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(cleGoogle)}&loading=async&v=weekly`} strategy="afterInteractive" onReady={() => setGooglePret(true)} onError={() => setGoogleErreur(true)} />}
+      {cleGoogle && rappelGooglePret && !googleErreur && <Script src={`https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(cleGoogle)}&loading=async&v=weekly&callback=initialiserGoogleRefuges`} strategy="afterInteractive" onError={() => setGoogleErreur(true)} />}
       <form onSubmit={chercher} className="space-y-5">
         <div>
           <label htmlFor={cleGoogle && !googleErreur ? undefined : "adresse-refuge"} className="mb-2 block font-semibold text-marine">{t("adresse")}</label>

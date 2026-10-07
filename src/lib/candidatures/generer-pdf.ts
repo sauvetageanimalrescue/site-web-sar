@@ -38,6 +38,7 @@ export type DonneesPdfCandidature = {
   experienceConnexeTexte: string;
   motivation: string;
   reference: string;
+  confirmeBenevolat: boolean;
   confirmeSelection: boolean;
   confirmeMajeur: boolean;
   photo: Uint8Array;
@@ -210,6 +211,7 @@ export async function genererPdfCandidature(d: DonneesPdfCandidature) {
   champ("Personne de référence", d.reference);
 
   section("Confirmations");
+  champ("Comprend qu’il s’agit d’un poste bénévole", d.confirmeBenevolat ? "Oui" : "Non");
   champ("Comprend que la candidature ne garantit pas la sélection", d.confirmeSelection ? "Oui" : "Non");
   champ("Confirme avoir au moins 18 ans", d.confirmeMajeur ? "Oui" : "Non");
   if (!photoIntegree) champ("Photo", "Le fichier original est joint séparément au courriel et conservé dans Supabase.");

@@ -195,6 +195,7 @@ export async function envoyerCandidature(
       experienceConnexeTexte: texte(donnees, "experienceConnexeTexte"),
       motivation: texte(donnees, "motivation"),
       reference: texte(donnees, "reference"),
+      confirmeBenevolat: donnees.get("confirmeBenevolat") === "on",
       confirmeSelection: candidature.confirme_selection,
       confirmeMajeur: candidature.confirme_majeur,
       photo: new Uint8Array(await photo.arrayBuffer()),

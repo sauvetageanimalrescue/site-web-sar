@@ -35,13 +35,14 @@ const exemple = {
   experienceConnexeTexte: "Formation complémentaire en sécurité et travail d'équipe.",
   motivation: "Je souhaite contribuer au sauvetage des animaux et mettre mes compétences au service de l'équipe. ".repeat(10),
   reference: "Alex Exemple, superviseur",
+  confirmeBenevolat: true,
   confirmeSelection: true,
   confirmeMajeur: true,
   photo,
 };
 
 const { pdf, photoIntegree } = await genererPdfCandidature(exemple);
-const destination = path.join(process.cwd(), "output", "pdf", "exemple-candidature.pdf");
+const destination = process.argv[2] ? path.resolve(process.argv[2]) : path.join(process.cwd(), "output", "pdf", "exemple-candidature.pdf");
 await mkdir(path.dirname(destination), { recursive: true });
 await writeFile(destination, pdf);
 console.log(JSON.stringify({ destination, photoIntegree, octets: pdf.length }));

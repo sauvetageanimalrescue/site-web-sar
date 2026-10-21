@@ -4,7 +4,7 @@
 
 Appliquer `supabase/migrations/0018_rabais_formations.sql` dans l'éditeur SQL Supabase avant de publier ce code. La migration est idempotente. Elle ne change ni les politiques RLS ni les droits des tables. La nouvelle fonction est SECURITY INVOKER; un appel anonyme ne peut pas lire ou modifier les commandes.
 
-Ne pas publier le code sans cette migration : les paiements de formation auraient un webhook en erreur. Aucun accès SQL de production n'a été établi lors de cette intervention. Les droits de publication Vercel n'ont pas été validés. Aucun coupon, produit ou paiement réel n'a été créé pendant les tests.
+Ne pas publier le code sans cette migration : les paiements de formation auraient un webhook en erreur. Elle a été appliquée au projet SAR sous la version `20261021202227` et vérifiée avec le rôle serveur dans une transaction annulée intégralement. La publication utilise l'intégration GitHub/Vercel existante de ce dépôt. Aucun coupon ou paiement réel n'a été créé pendant les tests.
 
 Le catalogue public vérifié le 21/10/2026 associe :
 
@@ -21,7 +21,7 @@ Les courriels demeurent des envois au mieux après transaction, sans file de rel
 
 ## Crédit nominatif de 96 CAD : préparation après confirmation seulement
 
-Ne pas créer ni émettre le crédit de Julia avant sa confirmation. Le paiement historique et l'absence de remboursement restent à vérifier. Ne pas ajouter d'expiration par défaut.
+Ne pas créer ni émettre de crédit nominatif avant confirmation du destinataire et vérification du dossier financier. Ne pas ajouter d'expiration par défaut.
 
 Une fois le dossier validé :
 
@@ -39,4 +39,4 @@ Les restrictions Stripe portent sur le Customer et le produit, pas sur les seuls
 - `npm install --no-save --package-lock=false --ignore-scripts @electric-sql/pglite`, puis `node --test scripts/test-rabais-sql.cjs` : exécution PostgreSQL locale des migrations, idempotence, contraintes, dernière place, rollback et refus de mutation anonyme. La dépendance est temporaire, absente du manifeste/lock de production.
 - `npm ci --ignore-scripts`, puis `npm run build` : compilation avec dépendances verrouillées. Le build nécessite les polices Google.
 
-À effectuer avant publication : appliquer et vérifier la migration de production via un accès autorisé, puis déployer et vérifier un Checkout sans facturation. Aucun test réel Stripe de bout en bout n'a été effectué ici. Les tests ne prétendent pas démontrer la configuration des taxes ou des événements webhook du compte de production.
+À vérifier avant chaque publication : présence de la migration sur la bonne base, puis déploiement et contrôle d'un Checkout sans facturation. Les tests locaux ne prétendent pas démontrer la configuration des taxes ou des événements webhook du compte de production. Le test de contention par deux appels MCP n'a pas établi de chevauchement des transactions; il n'est pas compté comme réussi.

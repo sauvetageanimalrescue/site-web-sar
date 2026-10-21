@@ -1,4 +1,12 @@
 {
+  "paiementFormation": {
+    "reserver": "Reservar mi plaza • {montant}",
+    "code": "Podrá introducir su código de descuento en la página de pago de Stripe. El importe final se mostrará antes de pagar.",
+    "retourTitre": "Regreso del pago",
+    "retourIntro": "Su inscripción se confirmará por correo una vez verificados el pago y la disponibilidad.",
+    "retourAide": "Si no recibe el correo en unos minutos, revise la carpeta de spam. También puede escribir a e.dussault@sar.quebec.",
+    "bilan": "Importe pagado: {total}. Descuento aplicado: {rabais}. Impuestos: {taxes}."
+  },
   "meta": {
     "titre": "Sauvetage Animal Rescue • Rescate técnico de animales en peligro",
     "description": "Sauvetage Animal Rescue rescata animales en peligro en todo el territorio de la Comunidad Metropolitana de Montreal: árboles, tejados, alcantarillas, hielo. Socorro y rescate técnico. Línea de aviso abierta a toda hora."

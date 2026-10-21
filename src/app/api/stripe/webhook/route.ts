@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import type Stripe from "stripe";
+import { getTranslations } from "next-intl/server";
 import { stripe, urlSite } from "@/lib/stripe";
 import { creerClientAdmin } from "@/lib/supabase/admin";
 import { creerMembre, envoyerCarteMembre } from "@/lib/membres";
@@ -11,6 +12,7 @@ import {
   type DonneesDocumentsStage,
 } from "@/lib/stages/documents";
 import type { Locale } from "@/i18n/routing";
+import { bilanPaiement, paiementConfirme } from "@/lib/rabais-formation";
 
 // Le webhook est la seule source de vérité d'un paiement : la page de retour
 // du navigateur peut être fermée avant d'être chargée, Stripe réessaie.
@@ -297,12 +299,21 @@ async function traiterInscriptionFormation(session: Stripe.Checkout.Session) {
   const courriel = session.customer_details?.email ?? session.customer_email ?? "";
   if (!formationId || !courriel) return;
   const supabase = creerClientAdmin();
-  if (m.commande_id) {
-    const { data: existante } = await supabase.from("inscriptions_formation").select("id").eq("commande_id", m.commande_id).maybeSingle();
-    if (existante) return;
-  }
-  const { data: reservee } = await supabase.rpc("reserver_place_formation", { p_formation_id: formationId });
-  if (reservee === false) {
+  if (!m.commande_id) throw new Error("Commande de formation manquante");
+  const bilan = bilanPaiement(session);
+  const { data: resultat, error: erreurConfirmation } = await supabase.rpc("confirmer_commande_formation", {
+    p_commande_id: m.commande_id,
+    p_session_id: session.id,
+    p_formation_id: formationId,
+    p_montant_cents: bilan.montant_cents,
+    p_sous_total_cents: bilan.sous_total_cents,
+    p_rabais_cents: bilan.rabais_cents,
+    p_taxes_cents: bilan.taxes_cents,
+    p_paiement_id: typeof session.payment_intent === "string" ? session.payment_intent : null,
+  });
+  if (erreurConfirmation || !resultat) throw new Error("Confirmation de formation impossible");
+  if (!resultat.nouvelle) return;
+  if (resultat.statut === "annulee") {
     await envoyerCourriel({ destinataire: [courriel, "e.dussault@sar.quebec"], sujet: "Formation - inscription à vérifier", html: gabaritCourriel({ titre: "Inscription à vérifier", corps: "<p>Le paiement a été reçu, mais la formation vient d’être remplie. Notre équipe communiquera avec vous pour proposer une autre date ou un remboursement.</p>" }) });
     return;
   }
@@ -310,14 +321,20 @@ async function traiterInscriptionFormation(session: Stripe.Checkout.Session) {
   if (!formation) return;
   const manuelImprime = m.manuel_imprime === "1";
   const carteParticipation = m.carte_participation === "1";
-  await supabase.from("inscriptions_formation").insert({ formation_id: formationId, commande_id: m.commande_id ?? null, prenom: m.prenom ?? "", nom: m.nom ?? "", courriel, telephone: m.telephone ?? "", manuel_imprime: manuelImprime, carte_participation: carteParticipation, langue: (m.langue as Locale) ?? "fr" });
+  const langue = (m.langue as Locale) ?? "fr";
+  const t = await getTranslations({ locale: langue, namespace: "paiementFormation" });
+  const recapitulatif = t("bilan", {
+    total: formaterMontant(bilan.montant_cents, langue),
+    rabais: formaterMontant(bilan.rabais_cents, langue),
+    taxes: formaterMontant(bilan.taxes_cents, langue),
+  });
   const longDate = (iso: string) => new Intl.DateTimeFormat("fr-CA", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date(`${iso}T12:00:00`));
   try {
     await envoyerCourriel({
       destinataire: courriel,
       repondreA: "e.dussault@sar.quebec",
       sujet: `${formation.titre} - inscription confirmée`,
-      html: gabaritCourriel({ titre: "Votre inscription est confirmée", corps: `<p style="margin:0 0 14px;line-height:1.6;">Votre place à la formation <strong>${formation.titre}</strong> est réservée.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Dates:</strong> ${longDate(formation.date_debut)} et ${longDate(formation.date_fin)}<br><strong>Horaire:</strong> 10h à 18h les deux journées<br><strong>Lieu:</strong> Collège Ellis, campus de Montréal, 760, rue Saint-Zotique Est, Montréal (Québec) H2S 1M5</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Options choisies:</strong> ${[manuelImprime ? "manuel de formation version imprimée" : "", carteParticipation ? "carte plastifiée de participation" : ""].filter(Boolean).join(", ") || "aucune"}</p><p style="margin:0 0 14px;line-height:1.6;"><strong>À l’arrivée:</strong> entrez par la porte principale sur Saint-Zotique. Montez jusqu’au troisième étage. Une porte ouverte donne accès au couloir; le local se trouve à droite, tout de suite après la cafétéria.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Transport et stationnement:</strong> le campus se trouve à environ 280 m du métro Beaubien et 585 m du métro Jean-Talon. L’autobus 56 Saint-Hubert dessert le secteur, près de Saint-Hubert et Saint-Zotique. Le stationnement no 24, derrière l’IGA Famille Barceló, est accessible par les rues Saint-André et Boyer; il se trouve à environ 175 m du campus.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Sur place:</strong> une cafétéria et des salles de bain sont accessibles. Il n’y a pas de distributrices. Apportez votre repas ou profitez des nombreux restaurants à proximité, notamment sur la Plaza Saint-Hubert. L’IGA se trouve à environ 125 m.</p><p style="margin:0;line-height:1.6;">Pour toute question avant la formation, écrivez à e.dussault@sar.quebec.</p>` }),
+      html: gabaritCourriel({ titre: "Votre inscription est confirmée", corps: `<p>${recapitulatif}</p><p style="margin:0 0 14px;line-height:1.6;">Votre place à la formation <strong>${formation.titre}</strong> est réservée.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Dates:</strong> ${longDate(formation.date_debut)} et ${longDate(formation.date_fin)}<br><strong>Horaire:</strong> 10h à 18h les deux journées<br><strong>Lieu:</strong> Collège Ellis, campus de Montréal, 760, rue Saint-Zotique Est, Montréal (Québec) H2S 1M5</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Options choisies:</strong> ${[manuelImprime ? "manuel de formation version imprimée" : "", carteParticipation ? "carte plastifiée de participation" : ""].filter(Boolean).join(", ") || "aucune"}</p><p style="margin:0 0 14px;line-height:1.6;"><strong>À l’arrivée:</strong> entrez par la porte principale sur Saint-Zotique. Montez jusqu’au troisième étage. Une porte ouverte donne accès au couloir; le local se trouve à droite, tout de suite après la cafétéria.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Transport et stationnement:</strong> le campus se trouve à environ 280 m du métro Beaubien et 585 m du métro Jean-Talon. L’autobus 56 Saint-Hubert dessert le secteur, près de Saint-Hubert et Saint-Zotique. Le stationnement no 24, derrière l’IGA Famille Barceló, est accessible par les rues Saint-André et Boyer; il se trouve à environ 175 m du campus.</p><p style="margin:0 0 14px;line-height:1.6;"><strong>Sur place:</strong> une cafétéria et des salles de bain sont accessibles. Il n’y a pas de distributrices. Apportez votre repas ou profitez des nombreux restaurants à proximité, notamment sur la Plaza Saint-Hubert. L’IGA se trouve à environ 125 m.</p><p style="margin:0;line-height:1.6;">Pour toute question avant la formation, écrivez à e.dussault@sar.quebec.</p>` }),
     });
   } catch { /* L'inscription et le paiement restent valides si Resend echoue. */ }
 }
@@ -420,8 +437,11 @@ export async function POST(requete: NextRequest) {
     return NextResponse.json({ erreur: "signature invalide" }, { status: 400 });
   }
 
-  if (evenement.type === "checkout.session.completed") {
+  if (evenement.type === "checkout.session.completed" || evenement.type === "checkout.session.async_payment_succeeded") {
     const session = evenement.data.object;
+    // Un Checkout terminé peut encore attendre son paiement. Les commandes
+    // entièrement réduites sont confirmées sans PaymentIntent.
+    if (!paiementConfirme(session)) return NextResponse.json({ recu: true });
     const type = session.metadata?.type;
 
     let membreId: string | null = null;
@@ -438,7 +458,8 @@ export async function POST(requete: NextRequest) {
     if (type === "don" || type === "don_mensuel") {
       await traiterDon(session);
     }
-    await marquerCommandePayee(session, membreId);
+    // La formation et son montant final sont déjà enregistrés dans une transaction.
+    if (type !== "formation") await marquerCommandePayee(session, membreId);
   }
 
   // Reconduction annuelle : Stripe prélève, on prolonge l'adhésion d'un an et

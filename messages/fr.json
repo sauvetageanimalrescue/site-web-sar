@@ -1,4 +1,12 @@
 {
+  "paiementFormation": {
+    "reserver": "Réserver ma place • {montant}",
+    "code": "Vous pourrez saisir votre code de rabais sur la page de paiement Stripe. Le montant final y sera affiché avant de payer.",
+    "retourTitre": "Retour du paiement",
+    "retourIntro": "Votre inscription sera confirmée par courriel après la validation du paiement et de la place disponible.",
+    "retourAide": "Si vous ne voyez pas le courriel dans les prochaines minutes, vérifiez vos indésirables. Vous pouvez aussi écrire à e.dussault@sar.quebec.",
+    "bilan": "Montant réglé: {total}. Rabais appliqué: {rabais}. Taxes: {taxes}."
+  },
   "meta": {
     "titre": "Sauvetage Animal Rescue • Secours technique d'animaux en détresse",
     "description": "Sauvetage Animal Rescue secourt les animaux en détresse sur le territoire de la Communauté Métropolitaine de Montréal: arbres, toits, égouts, glaces. Secours et sauvetage technique. Ligne de signalement ouverte en tout temps."

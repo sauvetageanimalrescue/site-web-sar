@@ -1,4 +1,12 @@
 {
+  "paiementFormation": {
+    "reserver": "Reserve my spot • {montant}",
+    "code": "You can enter your discount code on the Stripe payment page. The final amount will appear before you pay.",
+    "retourTitre": "Return from payment",
+    "retourIntro": "Your registration will be confirmed by email once payment and availability have been verified.",
+    "retourAide": "If the email does not arrive within a few minutes, check your spam folder. You can also write to e.dussault@sar.quebec.",
+    "bilan": "Amount paid: {total}. Discount applied: {rabais}. Taxes: {taxes}."
+  },
   "meta": {
     "titre": "Sauvetage Animal Rescue • Technical rescue for animals in distress",
     "description": "Sauvetage Animal Rescue rescues animals in distress across the Montréal Metropolitan Community: trees, rooftops, sewers, ice. Rescue and technical rescue. Reporting line open at all hours."

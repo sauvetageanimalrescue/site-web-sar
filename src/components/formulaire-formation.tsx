@@ -4,6 +4,8 @@ import { useActionState, useEffect, useState } from "react";
 import { IconAlertTriangleFilled } from "@tabler/icons-react";
 import { demarrerFormation, type EtatPaiement } from "@/lib/actions/adhesion";
 import type { FormationDisponible } from "@/lib/formations";
+import { useLocale, useTranslations } from "next-intl";
+import { totalFormation } from "@/lib/tarifs-formation";
 
 const CLASSE_CHAMP =
   "w-full rounded-md border border-border bg-surface px-3 py-2.5 text-foreground outline-none transition focus:border-ciel focus:ring-2 focus:ring-ciel/30";
@@ -22,6 +24,9 @@ function disponibilite(restantes: number) {
 }
 
 export function FormulaireFormation({ initiales }: { initiales: FormationDisponible[] }) {
+  const t = useTranslations("paiementFormation");
+  const locale = useLocale();
+  const montant = (cents: number) => new Intl.NumberFormat(locale, { style: "currency", currency: "CAD" }).format(cents / 100);
   const [formations, setFormations] = useState(initiales);
   const [choix, setChoix] = useState(initiales[0]?.id ?? "");
   const [manuelImprime, setManuelImprime] = useState(false);
@@ -43,7 +48,8 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
   }, []);
 
   const ouvertes = formations.filter((formation) => formation.restantes > 0);
-  const total = 249.99 + (manuelImprime ? 29.99 : 0) + (carteParticipation ? 9.99 : 0);
+  const selection = formations.find((formation) => formation.id === choix);
+  const total = selection ? totalFormation(selection.prix_cents, manuelImprime, carteParticipation) : 0;
 
   return (
     <form action={action} className="space-y-7">
@@ -69,7 +75,7 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
                     <span className="block font-semibold text-marine">{dateLongue(formation.date_debut)} et {dateLongue(formation.date_fin)}</span>
                     <span className="mt-1 block text-sm text-muted">10h à 18h les deux journées</span>
                     <span className="mt-1 block text-sm text-muted">Montréal • Collège Ellis</span>
-                    <span className="mt-1 block text-sm text-muted">249,99$</span>
+                    <span className="mt-1 block text-sm text-muted">{montant(formation.prix_cents)}</span>
                     <span className="mt-3 flex items-center gap-2 text-sm font-medium text-foreground"><span className={`size-2.5 rounded-full ${etatPlace.classe}`} aria-hidden />{etatPlace.texte}</span>
                   </span>
                 </div>
@@ -98,8 +104,9 @@ export function FormulaireFormation({ initiales }: { initiales: FormationDisponi
       </fieldset>
 
       <button type="submit" disabled={enCours || !ouvertes.length} className="w-full rounded-md bg-marine px-6 py-3.5 font-semibold text-white transition hover:bg-marine-clair disabled:opacity-60">
-        {enCours ? "Redirection vers le paiement..." : `Réserver ma place • ${total.toFixed(2).replace('.', ',')}$`}
+        {enCours ? "Redirection vers le paiement..." : t("reserver", { montant: montant(total) })}
       </button>
+      <p className="text-center text-sm text-muted">{t("code")}</p>
       <p className="text-center text-xs text-muted">Après le paiement, vous recevrez votre confirmation et toutes les consignes pratiques par courriel.</p>
     </form>
   );

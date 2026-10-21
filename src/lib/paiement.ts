@@ -3,6 +3,8 @@ import { stripe, urlSite } from "@/lib/stripe";
 import { creerClientAdmin } from "@/lib/supabase/admin";
 import { TARIFS, ANNEE_CARTE, ORGANISATION } from "@/lib/constantes";
 import type { Locale } from "@/i18n/routing";
+import { obtenirProduitFormation } from "@/lib/rabais-formation";
+import { totalFormation, PRIX_MANUEL_CENTS, PRIX_CARTE_CENTS } from "@/lib/tarifs-formation";
 
 // Stripe accepte fr, en et es en langue de page de paiement.
 function langueStripe(locale: Locale) {
@@ -254,9 +256,12 @@ export async function creerPaiementStage({
 }
 
 export async function creerPaiementFormation({
-  formationId, prenom, nom, courriel, telephone, manuelImprime, carteParticipation, langue,
+  formationId, prenom, nom, courriel, telephone, manuelImprime, carteParticipation, langue, clientStripeId,
 }: {
   formationId: string; prenom: string; nom: string; courriel: string; telephone: string; manuelImprime: boolean; carteParticipation: boolean; langue: Locale;
+  // Réservé à une préparation administrative côté serveur. Le formulaire public
+  // ne transmet jamais ce champ : un courriel saisi ne prouve pas l'identité.
+  clientStripeId?: string;
 }) {
   const supabase = creerClientAdmin();
   const { data: formation, error: erreurFormation } = await supabase
@@ -266,25 +271,41 @@ export async function creerPaiementFormation({
   if (erreurFormation || !formation) throw new Error("Formation introuvable");
   const f = formation as { id: string; code: string; titre: string; date_debut: string; date_fin: string; prix_cents: number; places: number; places_vendues: number; publie: boolean };
   if (!f.publie || f.places_vendues >= f.places) throw new Error("Formation complete");
+  if (f.date_debut < new Date().toISOString().slice(0, 10)) throw new Error("Formation complete");
+  const montantCents = totalFormation(f.prix_cents, manuelImprime, carteParticipation);
+  if (clientStripeId) {
+    const client = await stripe().customers.retrieve(clientStripeId);
+    if (client.deleted || client.email?.trim().toLowerCase() !== courriel.trim().toLowerCase()) {
+      throw new Error("Destinataire Stripe incompatible");
+    }
+  }
+  const produitFormation = await obtenirProduitFormation(stripe(), f);
   const { data: commande, error } = await supabase.from("commandes").insert({
-    type: "formation", montant_cents: f.prix_cents, courriel, prenom, nom, langue,
+    type: "formation", montant_cents: montantCents, courriel, prenom, nom, langue,
     metadonnees: { telephone, formation_id: f.id, code: f.code, manuel_imprime: manuelImprime, carte_participation: carteParticipation },
   }).select("id").single();
   if (error || !commande) throw new Error("Création de commande impossible");
   const base = urlSite();
   const session = await stripe().checkout.sessions.create({
-    mode: "payment", locale: langueStripe(langue), customer_email: courriel,
+    mode: "payment", locale: langueStripe(langue),
+    ...(clientStripeId ? { customer: clientStripeId } : { customer_email: courriel }),
+    allow_promotion_codes: true,
     payment_intent_data: { receipt_email: courriel },
     line_items: [
-      { quantity: 1, price_data: { currency: "cad", unit_amount: f.prix_cents, product_data: { name: `${f.titre} — ${f.date_debut} et ${f.date_fin}` } } },
-      ...(manuelImprime ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 2999, product_data: { name: "Manuel de formation version imprimée" } } }] : []),
-      ...(carteParticipation ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: 999, product_data: { name: "Carte plastifiée de participation" } } }] : []),
+      { quantity: 1, price_data: { currency: "cad", unit_amount: f.prix_cents, product: produitFormation } },
+      ...(manuelImprime ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: PRIX_MANUEL_CENTS, product_data: { name: "Manuel de formation version imprimée" } } }] : []),
+      ...(carteParticipation ? [{ quantity: 1, price_data: { currency: "cad", unit_amount: PRIX_CARTE_CENTS, product_data: { name: "Carte plastifiée de participation" } } }] : []),
     ],
     success_url: `${base}/${langue}/formations/premiers-secours-animal/merci?session={CHECKOUT_SESSION_ID}`,
     cancel_url: `${base}/${langue}/formations/premiers-secours-animal`,
     metadata: { commande_id: commande.id, type: "formation", formation_id: f.id, prenom, nom, telephone, manuel_imprime: manuelImprime ? "1" : "", carte_participation: carteParticipation ? "1" : "", langue },
   });
-  await supabase.from("commandes").update({ stripe_session_id: session.id }).eq("id", commande.id);
+  const { error: erreurSession } = await supabase.from("commandes").update({ stripe_session_id: session.id }).eq("id", commande.id);
+  if (erreurSession) {
+    // Ne pas exposer un Checkout que le webhook ne pourra pas rattacher.
+    await stripe().checkout.sessions.expire(session.id);
+    throw new Error("Rattachement de la session impossible");
+  }
   if (!session.url) throw new Error("Stripe n'a pas retourné d'URL de paiement");
   return session.url;
 }

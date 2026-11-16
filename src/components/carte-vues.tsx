@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Chevron } from "@/components/ui";
 import { Barres } from "@/components/barres";
@@ -14,18 +14,30 @@ export type Vue = { titre: string; donnees: Mesure[]; couleur?: string };
 export function CarteVues({
   vues,
   className,
+  limite,
 }: {
   vues: Vue[];
   className?: string;
+  limite?: number;
 }) {
   const t = useTranslations("statistiques");
   const [i, setI] = useState(0);
+  const [complet, setComplet] = useState(false);
+  const geste = useRef<{ x: number; y: number } | null>(null);
   const vue = vues[i];
-  const aller = (pas: number) => setI((n) => (n + pas + vues.length) % vues.length);
+  const aller = (pas: number) => { setComplet(false); setI((n) => (n + pas + vues.length) % vues.length); };
 
   return (
     <div
       className={`mx-auto max-w-2xl rounded-xl border border-border bg-surface p-5 sm:p-7 ${className ?? ""}`}
+      onTouchStart={e => { const p = e.touches[0]; geste.current = { x: p.clientX, y: p.clientY }; }}
+      onTouchCancel={() => { geste.current = null; }}
+      onTouchEnd={e => {
+        if (!geste.current) return;
+        const p = e.changedTouches[0], dx = p.clientX - geste.current.x, dy = p.clientY - geste.current.y;
+        geste.current = null;
+        if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) aller(dx < 0 ? 1 : -1);
+      }}
     >
       <div className="flex items-center justify-between gap-4">
         <Bouton libelle={t("precedent")} sens="gauche" onClick={() => aller(-1)} />
@@ -48,10 +60,14 @@ export function CarteVues({
             }`}
             aria-hidden={n !== i}
           >
-            <Barres donnees={v.donnees} couleur={v.couleur} />
+            {v.donnees.length ? <Barres donnees={limite && !(complet && n === i) ? v.donnees.slice(0, limite) : v.donnees} couleur={v.couleur} /> : <p className="text-sm text-muted">{t("aucuneDonnee")}</p>}
           </div>
         ))}
       </div>
+
+      {limite && vue.donnees.length > limite ? <button type="button" aria-expanded={complet}
+        className="mt-4 text-sm font-semibold text-marine underline underline-offset-4"
+        onClick={() => setComplet(v => !v)}>{t(complet ? "voirMoins" : "voirPlus")}</button> : null}
 
       {/* Les pastilles disent combien de vues existent et où l'on se trouve ;
           sans elles, rien n'indique qu'il y a autre chose à voir. */}
@@ -62,7 +78,7 @@ export function CarteVues({
             type="button"
             aria-label={v.titre}
             aria-current={n === i}
-            onClick={() => setI(n)}
+            onClick={() => { setComplet(false); setI(n); }}
             className={`h-2 rounded-full transition-all ${
               n === i ? "w-6 bg-marine" : "w-2 bg-border hover:bg-ciel"
             }`}

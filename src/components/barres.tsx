@@ -15,8 +15,8 @@ export function Barres({
 
   return (
     <ul className="space-y-2.5">
-      {donnees.map((d) => (
-        <li key={d.libelle} className="grid grid-cols-[1fr_auto] gap-x-3">
+      {donnees.map((d, i) => (
+        <li key={`${d.libelle}-${i}`} className="grid grid-cols-[1fr_auto] gap-x-3">
           <span className="text-sm text-foreground">{d.libelle}</span>
           <span className="chiffres-tabulaires text-sm font-semibold text-marine">
             {d.valeur}
@@ -25,7 +25,7 @@ export function Barres({
             <span
               className="block h-full rounded-full"
               style={{
-                width: `${Math.max((d.valeur / sommet) * 100, 1.5)}%`,
+                width: `${d.valeur > 0 ? Math.max((d.valeur / sommet) * 100, 1.5) : 0}%`,
                 backgroundColor: couleur,
               }}
             />

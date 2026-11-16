@@ -1,151 +1,51 @@
+import 'server-only';
 import { createClient } from "@supabase/supabase-js";
-import { denombrementSecourus } from "./statistiques-denombrement";
-import {
-  REPORT_ANNEE,
-  REPORT_DEPLACEMENTS_ANNEE,
-  REPORT_MOIS,
-} from "@/contenu/compteur";
-
-// Les compteurs viennent du registre des missions, qui est une base Supabase
-// distincte de celle du site public. Le calcul s'effectue côté serveur sur
-// les seules données de dénombrement; aucune donnée de demandeur n'est publiée.
-
-export type CompteurPeriodes = {
-  jour: number;
-  semaine: number;
-  mois: number;
-  annee: number;
-  total: number;
-};
-
-export type Statistiques = CompteurPeriodes & {
-  missions_annee: number;
-  // Même dénombrement, mais en déplacements plutôt qu'en animaux : une
-  // mission compte dès qu'une équipe s'est rendue sur les lieux, prise en
-  // charge de l'animal ou non.
-  deplacements: CompteurPeriodes;
-  especes?: { code: string; sauves: number }[];
-  familles: { famille: string; sauves: number }[];
-  mensuel: { mois: string; sauves: number }[];
-  genere_a: string;
-};
+import { unstable_cache } from "next/cache";
+import { calculerStatistiquesPubliques, dateToronto, type MissionCompteur, type Statistiques } from "./statistiques-calculs";
+export type { Statistiques, CompteurPeriodes } from "./statistiques-calculs";
 
 export type InterventionRecente = {
-  ferme_a: string;
-  ville: string | null;
-  espece_code: string | null;
-  code_fin: string | null;
-  sauves: number;
+  ferme_a: string; ville: string | null; espece_code: string | null;
+  code_fin: string | null; sauves: number;
 };
-
-type MissionCompteur = {
-  created_at: string;
-  espece_code: string | null;
-  nb_adultes: number | null;
-  nb_juveniles: number | null;
-  animaux: unknown;
-};
-
 function clientRegistre() {
   const url = process.env.REGISTRE_SUPABASE_URL;
   const cle = process.env.REGISTRE_SUPABASE_ANON_KEY;
-  if (!url || !cle) return null;
-  return createClient(url, cle, {
-    auth: { autoRefreshToken: false, persistSession: false },
-  });
+  return url && cle ? createClient(url, cle, { auth: { autoRefreshToken: false, persistSession: false } }) : null;
 }
 
-function cleDateToronto(date: Date) {
-  const morceaux = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/Toronto",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(date);
-  const valeur = (type: Intl.DateTimeFormatPartTypes) =>
-    morceaux.find((morceau) => morceau.type === type)?.value ?? "";
-  return `${valeur("year")}-${valeur("month")}-${valeur("day")}`;
-}
-
-function debutSemaine(cle: string) {
-  const [annee, mois, jour] = cle.split("-").map(Number);
-  const date = new Date(Date.UTC(annee, mois - 1, jour));
-  const decalage = (date.getUTCDay() + 6) % 7;
-  date.setUTCDate(date.getUTCDate() - decalage);
-  return date.toISOString().slice(0, 10);
-}
-
-// Retourne null plutôt que de lever : une panne du registre ne doit jamais
-// empêcher la page d'accueil de s'afficher.
-export async function lireStatistiques(): Promise<Statistiques | null> {
+// Seul le résultat agrégé et publiable entre dans le cache partagé. Les clés,
+// les fiches, les identifiants et les coordonnées restent côté serveur.
+async function chargerStatistiques(jour: string): Promise<Statistiques> {
   const url = process.env.REGISTRE_SUPABASE_URL;
   const cle = process.env.REGISTRE_SUPABASE_SERVICE_ROLE_KEY;
-  const supabase = url && cle
-    ? createClient(url, cle, { auth: { autoRefreshToken: false, persistSession: false } })
-    : null;
-  if (!supabase) return null;
-
-  // Seules ces colonnes de dénombrement quittent le registre. La règle
-  // opérationnelle est volontairement indépendante du code de fin: une carte
-  // d'appel vaut un déplacement et son dénombrement vaut les animaux secourus.
-  const { data, error } = await supabase
-    .from("missions")
-    .select("created_at,espece_code,nb_adultes,nb_juveniles,animaux")
-    .gt("created_at", "2026-08-21T23:59:59-04:00");
-  if (error || !data) return null;
-
+  if (!url || !cle) throw new Error("Statistiques indisponibles");
+  const supabase = createClient(url, cle, { auth: { autoRefreshToken: false, persistSession: false } });
   const maintenant = new Date();
-  const aujourdHui = cleDateToronto(maintenant);
-  const semaine = debutSemaine(aujourdHui);
-  const mois = aujourdHui.slice(0, 7);
-  const annee = aujourdHui.slice(0, 4);
-  const periodes = () => ({ jour: 0, semaine: 0, mois: 0, annee: 0, total: 0 });
-  const animaux = periodes();
-  const deplacements = periodes();
-  const especes = new Map<string, number>();
-  const mensuel = new Map<string, number>();
-
-  for (const mission of data as MissionCompteur[]) {
-    const date = cleDateToronto(new Date(mission.created_at));
-    const denombrement = denombrementSecourus(mission);
-    const nombre = denombrement.total;
-    const ajouter = (compteur: CompteurPeriodes, valeur: number) => {
-      compteur.total += valeur;
-      if (date.startsWith(annee)) compteur.annee += valeur;
-      if (date.startsWith(mois)) compteur.mois += valeur;
-      if (date >= semaine) compteur.semaine += valeur;
-      if (date === aujourdHui) compteur.jour += valeur;
-    };
-    ajouter(animaux, nombre);
-    ajouter(deplacements, 1);
-    mensuel.set(date.slice(0, 7), (mensuel.get(date.slice(0, 7)) ?? 0) + nombre);
-    for (const [code, quantite] of denombrement.especes) {
-      especes.set(code, (especes.get(code) ?? 0) + quantite);
-    }
+  if (dateToronto(maintenant) !== jour) throw new Error("Changement de journée, lecture à reprendre");
+  const missions: MissionCompteur[] = [];
+  const delai = AbortSignal.timeout(25_000);
+  let offset = 0;
+  // Pagination ordonnée, pas de total silencieusement tronqué à 1 000 lignes.
+  // Une réponse incomplète ou un budget dépassé conserve les anciens chiffres.
+  for (let page = 0; page < 100; page++) {
+    const { data, error, count } = await supabase.from("missions")
+      .select(`id,created_at,statut,espece_code,nb_adultes,nb_juveniles,nb_deces,animaux,etat_animal,
+        ville,region_administrative,demandeur_type,code_emplacement,
+        mission_assignations(profile_id,role,profiles(prenom,nom))`, { count: "exact" })
+      .neq("statut", "radiee").gte("created_at", "2026-08-22T00:00:00-04:00")
+      .lte("created_at", maintenant.toISOString()).order("id").range(offset, offset + 499).abortSignal(delai);
+    if (error || !data || count === null || (!data.length && offset < count)) throw new Error("Lecture des statistiques interrompue");
+    missions.push(...data as unknown as MissionCompteur[]);
+    offset += data.length;
+    if (offset >= count) return calculerStatistiquesPubliques(missions, maintenant);
   }
-
-  const memeMois =
-    Number(annee) === REPORT_MOIS.annee &&
-    Number(mois.slice(5, 7)) === REPORT_MOIS.mois;
-  return {
-    ...animaux,
-    mois: animaux.mois + (memeMois ? REPORT_MOIS.animaux : 0),
-    annee: animaux.annee + REPORT_ANNEE,
-    total: animaux.total + REPORT_ANNEE,
-    missions_annee: deplacements.annee + REPORT_DEPLACEMENTS_ANNEE,
-    deplacements: {
-      ...deplacements,
-      mois: deplacements.mois + (memeMois ? REPORT_MOIS.deplacements : 0),
-      annee: deplacements.annee + REPORT_DEPLACEMENTS_ANNEE,
-      total: deplacements.total + REPORT_DEPLACEMENTS_ANNEE,
-    },
-    especes: [...especes.entries()].map(([code, sauves]) => ({ code, sauves })),
-    familles: [],
-    mensuel: [...mensuel.entries()]
-      .map(([mois, sauves]) => ({ mois, sauves }))
-      .sort((a, b) => a.mois.localeCompare(b.mois)),
-    genere_a: maintenant.toISOString(),
-  };
+  throw new Error("Volume des statistiques dépassé");
+}
+const lireAgregats = unstable_cache(chargerStatistiques, ["statistiques-publiques-v2"], { revalidate: 60 });
+export async function lireStatistiques(): Promise<Statistiques | null> {
+  try { return await lireAgregats(dateToronto(new Date())); }
+  catch { return null; }
 }
 
 export async function lireInterventionsRecentes(

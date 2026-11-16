@@ -89,7 +89,8 @@
     "entreprisesUsines": "Entreprises et usines",
     "cimetieres": "Cimetières",
     "faq": "Foire aux questions",
-    "localisateurRefuges": "Localisateur de refuges"
+    "localisateurRefuges": "Localisateur de refuges",
+    "declarationPrimaute": "Déclaration de primauté"
   },
   "loterie": {
     "surtitre": "Loterie",
@@ -770,5 +771,8 @@
       "balado": "Balados"
     },
     "presseNote": "Cette revue est partielle et s'enrichit au fil du temps. Chaque lien mène au média d'origine."
+  },
+  "documentEditorial": {
+    "telecharger": "Télécharger le PDF"
   }
 }

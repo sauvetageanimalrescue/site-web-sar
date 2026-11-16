@@ -16,6 +16,7 @@ export const MENU: SectionMenu[] = [
       { cle: "mission", href: "/mission" },
       { cle: "direction", href: "/direction" },
       { cle: "equipe", href: "/equipe" },
+      { cle: "declarationPrimaute", href: "/declaration-de-primaute" },
       { cle: "territoire", href: "/territoire" },
       { cle: "statistiques", href: "/statistiques" },
       { cle: "missionsInternationales", href: "/missions-internationales" },

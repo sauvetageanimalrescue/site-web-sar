@@ -34,6 +34,7 @@ export type PageEditoriale = {
   imagePosition?: string;
   imageFit?: "cover" | "contain";
   imageTailleNaturelle?: { largeur: number; hauteur: number };
+  document?: { href: string; nom: string };
   blocs: BlocPage[];
   // Boutons affichés en fin de page.
   actions?: { href: string; libelle: string; principal?: boolean }[];

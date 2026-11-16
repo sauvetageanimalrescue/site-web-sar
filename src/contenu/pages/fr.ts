@@ -1,8 +1,10 @@
 import type { CataloguePages } from "./types";
+import { DECLARATION_PRIMAUTE } from "./declaration-primaute";
 
 // La clé est le chemin, sans la locale. Le contenu reprend et resserre celui
 // de l'ancien site Shopify, archivé dans contenu-source/texte.
 export const PAGES_FR: CataloguePages = {
+  "declaration-de-primaute": DECLARATION_PRIMAUTE,
   mission: {
     surtitre: "Depuis deux mille dix",
     titre: "Notre mission",

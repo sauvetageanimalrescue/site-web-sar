@@ -89,7 +89,8 @@
     "entreprisesUsines": "Empresas y fábricas",
     "cimetieres": "Cementerios",
     "faq": "Preguntas frecuentes",
-    "localisateurRefuges": "Localizador de refugios"
+    "localisateurRefuges": "Localizador de refugios",
+    "declarationPrimaute": "Declaración de primacía"
   },
   "loterie": {
     "surtitre": "Lotería",
@@ -770,5 +771,8 @@
       "balado": "Pódcast"
     },
     "presseNote": "Esta reseña es parcial y crece con el tiempo. Cada enlace lleva al medio de origen."
+  },
+  "documentEditorial": {
+    "telecharger": "Descargar el PDF (francés)"
   }
 }

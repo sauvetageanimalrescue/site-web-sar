@@ -89,7 +89,8 @@
     "entreprisesUsines": "Businesses and factories",
     "cimetieres": "Cemeteries",
     "faq": "FAQ",
-    "localisateurRefuges": "Wildlife centre locator"
+    "localisateurRefuges": "Wildlife centre locator",
+    "declarationPrimaute": "Declaration of Primacy"
   },
   "loterie": {
     "surtitre": "Lottery",
@@ -770,5 +771,8 @@
       "balado": "Podcasts"
     },
     "presseNote": "This review is partial and grows over time. Each link leads to the original outlet."
+  },
+  "documentEditorial": {
+    "telecharger": "Download the PDF (French)"
   }
 }

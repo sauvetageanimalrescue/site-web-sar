@@ -4,7 +4,7 @@ import { VerificateurTerritoire } from "@/components/verificateur-territoire";
 import { RevuePresse } from "@/components/revue-presse";
 import { TexteRiche } from "@/components/texte-riche";
 import { Accordeon } from "@/components/accordeon";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { EnTetePage, Section, AppelAction } from "@/components/ui";
 import {
   lirePageEditoriale,
@@ -122,6 +122,7 @@ export default async function PageEditorialeVue({
 
   const page = lirePageEditoriale(chemin.join("/"), locale as Locale);
   if (!page) notFound();
+  const document = page.document ? await getTranslations("documentEditorial") : null;
 
   return (
     <>
@@ -134,6 +135,15 @@ export default async function PageEditorialeVue({
         imageFit={page.imageFit}
         imageTailleNaturelle={page.imageTailleNaturelle}
       />
+
+      {page.document && document && (
+        <Section largeur="carte">
+          <a href={page.document.href} download={page.document.nom}
+            className="inline-flex min-h-11 items-center rounded-md bg-marine px-6 py-3 font-semibold text-white hover:bg-marine/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ciel">
+            {document("telecharger")}
+          </a>
+        </Section>
+      )}
 
       {page.blocs.map((bloc, index) => (
         <Section

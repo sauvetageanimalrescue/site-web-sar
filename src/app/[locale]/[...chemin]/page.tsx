@@ -136,15 +136,6 @@ export default async function PageEditorialeVue({
         imageTailleNaturelle={page.imageTailleNaturelle}
       />
 
-      {page.document && document && (
-        <Section largeur="carte">
-          <a href={page.document.href} download={page.document.nom}
-            className="inline-flex min-h-11 items-center rounded-md bg-marine px-6 py-3 font-semibold text-white hover:bg-marine/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ciel">
-            {document("telecharger")}
-          </a>
-        </Section>
-      )}
-
       {page.blocs.map((bloc, index) => (
         <Section
           key={bloc.titre ?? bloc.encadre?.titre ?? index}
@@ -161,6 +152,15 @@ export default async function PageEditorialeVue({
       {page.actions && page.actions.length > 0 && (
         <AppelAction titre={page.titre} actions={page.actions} />
       )}
+      {page.document && document && (
+        <Section largeur="carte">
+          <a href={page.document.href} download={page.document.nom}
+            className="inline-flex min-h-11 items-center rounded-md bg-marine px-6 py-3 font-semibold text-white hover:bg-marine/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ciel">
+            {document("telecharger")}
+          </a>
+        </Section>
+      )}
+
     </>
   );
 }

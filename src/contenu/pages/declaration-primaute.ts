@@ -58,12 +58,6 @@ export const DECLARATION_PRIMAUTE: PageEditoriale = {
       "texte": [
         "Par la présente Déclaration de primauté, Sauvetage Animal Rescue affirme solennellement sa volonté de consacrer son avenir à l'essentiel. Nous choisissons la mission plutôt que la rivalité, la dignité plutôt que la confrontation et l'intégrité plutôt que la controverse. Nous affirmons que notre engagement envers les animaux doit transcender les divergences, les critiques et les différends qui peuvent survenir au fil de notre histoire. Que nos gestes témoignent de nos convictions, que nos réalisations parlent d'elles-mêmes et que notre détermination à protéger la vie animale demeure plus forte que toute division. Car notre véritable raison d'être ne se trouve pas dans les différends qui nous opposent, mais dans les vies que nous avons le pouvoir de sauver."
       ]
-    },
-    {
-      "texte": [
-        "Fait et proclamé à Montréal, le seizième jour de novembre de l’an deux mille vingt-six.",
-        "Eric Dussault, Fondateur et Directeur Général"
-      ]
     }
   ],
   "actions": [

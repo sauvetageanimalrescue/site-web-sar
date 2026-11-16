@@ -91,6 +91,7 @@ export function CompteurSauvetages() {
   }
 
   const heure = new Date(stats.genere_a).toLocaleTimeString(locale, {
+    timeZone: "America/Toronto",
     hour: "2-digit",
     minute: "2-digit",
   });

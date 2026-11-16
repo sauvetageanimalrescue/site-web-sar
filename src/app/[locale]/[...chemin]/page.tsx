@@ -149,9 +149,6 @@ export default async function PageEditorialeVue({
         </Section>
       ))}
 
-      {page.actions && page.actions.length > 0 && (
-        <AppelAction titre={page.titre} actions={page.actions} />
-      )}
       {page.document && document && (
         <Section largeur="carte">
           <a href={page.document.href} download={page.document.nom}
@@ -161,6 +158,9 @@ export default async function PageEditorialeVue({
         </Section>
       )}
 
+      {page.actions && page.actions.length > 0 && (
+        <AppelAction titre={page.titre} actions={page.actions} />
+      )}
     </>
   );
 }
